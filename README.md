@@ -52,7 +52,37 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 - **Çoxsaylı Platformalar:** Java desktop, veb, mobil və server tətbiqləri üçün uyğundur.
 
 **2. JVM, JRE və JDK arasındakı fərq nədir?**
-3. **public static void main(String[] args)** metodunun rolu nədir?
+
+**Cavab:**
+
+****JVM, JRE və JDK Java-nın işləməsi üçün zəruri olan üç əsas komponentdir, lakin onların funksiyaları və istifadə sahələri fərqlidir:****
+
+- JVM (Java Virtual Machine - Java Virtual Maşını):
+  - JVM Java proqramlarını icra etmək üçün virtual mühit təmin edən icra mühərrikidir.
+  - Java kodunun bytecode-unu maşın dilinə çevirir və həmin platformada icra edir.
+  - Əsas komponentləri: `Class Loader`, `Bytecode Verifier`, `Interpreter`, `JIT Compiler` və `Garbage Collector`.
+  - JVM platformaya xasdır (Windows, Linux və s. üçün fərqli JVM-lər var).
+  - Məqsədi: Platformadan asılı olmayaraq Java kodunun icrasını təmin etmək.
+ 
+- JRE (Java Runtime Environment - Java İcra Mühiti):
+  - JRE, Java proqramlarını işə salmaq üçün lazım olan mühitdir.
+  - JVM-i və Java-nın əsas kitabxanalarını (Java Class Library) ehtiva edir.
+  - JRE yalnız icra üçün lazımdır, yəni Java proqramlarını inkişaf etdirmək üçün kifayət deyil.
+  - Məqsədi: Java tətbiqlərinin icrasını təmin etmək (son istifadəçilər üçün).
+
+- JDK (Java Development Kit - Java İnkişaf Dəsti):
+  - JDK, Java tətbiqləri inkişaf etdirmək və icra etmək üçün tam alətlər dəstidir.
+  - JRE-ni (yəni JVM və kitabxanaları) və əlavə inkişaf alətlərini (javac, javadoc, jar və s.) ehtiva edir.
+  - Məqsədi: Java proqramlarının yazılması, kompilyasiyası və icrası üçün bütün zəruri alətləri təmin etmək.
+
+- Fərqlər:
+  - JVM yalnız icra mühərrikidir, JRE isə JVM-i və icra üçün lazım olan kitabxanaları ehtiva edir.
+  - JDK JRE-ni və inkişaf alətlərini ehtiva edir, yəni daha genişdir.
+  - Son istifadəçi yalnız JRE-yə ehtiyac duyur, geliştirici isə JDK-ya.
+
+**3. **public static void main(String[] args)** metodunun rolu nədir?**
+
+
 4. **Garbage Collection** (Zibil Toplama) nədir?
 5. Java-da **bytecode** nədir və necə işləyir?
 6. Java-nın **WORA** (Write Once, Run Anywhere) prinsipi nə deməkdir?
