@@ -575,3 +575,346 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 198. Hibernate-da **soft delete** (yumşaq silmə) necə həyata keçirilir?
 199. Hibernate-da **event system** (hadisə sistemi) necə işləyir?
 200. Hibernate-da **Spring Framework** ilə inteqrasiya necə aparılır?
+
+---
+
+# Spring Boot Müsahibə Sualları
+
+Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java, Hibernate və Spring Boot-un əsas və qabaqcıl mövzularını başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](##ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+  - [Ümumi Suallar](#spring-boot-ümumi-suallar)
+  - [Arxitektura və Konfiqurasiya](#arxitektura-və-konfiqurasiya)
+  - [REST API və Web](#rest-api-və-web)
+  - [Spring Data və JPA](#spring-data-və-jpa)
+  - [Security](#security)
+  - [Testing](#testing)
+  - [Microservices](#microservices)
+  - [Performance və Optimization](#performance-və-optimization)
+  - [Actuator və Monitoring](#actuator-və-monitoring)
+  - [Digər Mövzular](#spring-boot-digər-mövzular)
+
+## Spring Boot
+
+### Spring Boot Ümumi Suallar
+1. **Spring Boot** nədir və nə üçün istifadə olunur?
+2. **Spring Framework** ilə **Spring Boot** arasındakı fərq nədir?
+3. Spring Boot-un əsas xüsusiyyətləri hansılardır?
+4. **Auto-configuration** (Avtomatik konfiqurasiya) Spring Boot-da nədir?
+5. Spring Boot-un digər Java framework-ləri ilə müqayisədə üstünlükləri nələrdir?
+6. Spring Boot-un **starter dependencies** (başlanğıc asılılıqlar) nədir?
+7. **Spring Initializr** nədir və necə istifadə olunur?
+8. Spring Boot-un **embedded server** (daxili server) mexanizmi necə işləyir?
+9. Spring Boot-da **Tomcat**, **Jetty** və **Undertow** serverləri arasındakı fərq nədir?
+10. Spring Boot-un açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
+11. Spring Boot-un hansı layihə növləri üçün uyğun olduğunu düşünürsünüz?
+12. **Spring Boot CLI** nədir və necə istifadə olunur?
+13. Spring Boot-un inkişaf tarixi haqqında nə bilirsiniz?
+14. Spring Boot ilə **monolith** ( monolitik) və **microservices** (mikroservis) arxitekturaları arasındakı fərq nədir?
+15. Spring Boot-da **dependency injection** (asılılıq yeridilməsi) necə işləyir?
+
+### Arxitektura və Konfiqurasiya
+16. **Spring Boot Application** necə işə salınır?
+17. **@SpringBootApplication** annotasiyasının daxilində hansı annotasiyalar var?
+18. **@EnableAutoConfiguration** annotasiyasının rolu nədir?
+19. **@ComponentScan** annotasiyası nə üçün istifadə olunur?
+20. **@Configuration** annotasiyası nədir?
+21. **application.properties** və **application.yml** faylları arasındakı fərq nədir?
+22. Spring Boot-da **profiles** (profillər) necə istifadə olunur?
+23. **@Profile** annotasiyası nə üçün istifadə olunur?
+24. Spring Boot-da **externalized configuration** (xarici konfiqurasiya) necə həyata keçirilir?
+25. **@Value** annotasiyası ilə xassələrə (properties) necə daxil olunur?
+26. **@ConfigurationProperties** annotasiyası nədir?
+27. Spring Boot-da **custom properties** (xüsusi xassələr) necə təyin olunur?
+28. **Spring Boot Starter** necə yaradılır?
+29. **@Bean** annotasiyası nə üçün istifadə olunur?
+30. Spring Boot-da **conditional beans** (şərtli bean-lər) necə təyin olunur?
+31. **@ConditionalOnProperty** annotasiyası nədir?
+32. **@ConditionalOnClass** və **@ConditionalOnMissingClass** annotasiyaları nədir?
+33. Spring Boot-da **banner** (başlıq) necə fərdiləşdirilir?
+34. **Spring Boot Actuator** nədir və necə konfiqurasiya olunur?
+35. Spring Boot-da **logging** (qeydiyyat) necə konfiqurasiya olunur?
+36. **Logback**, **Log4j2** və **SLF4J** arasındakı fərq nədir?
+37. Spring Boot-da **log levels** (qeyd səviyyələri) necə təyin olunur?
+38. **@PropertySource** annotasiyası nə üçün istifadə olunur?
+39. Spring Boot-da **environment** (mühit) obyekti nədir?
+40. **SpringApplication** sinfi nə üçün istifadə olunur?
+41. Spring Boot-da **application context** (tətbiq konteksti) necə işləyir?
+42. **ApplicationRunner** və **CommandLineRunner** arasındakı fərq nədir?
+43. Spring Boot-da **graceful shutdown** (nəzakətli dayandırma) necə həyata keçirilir?
+44. **Spring Boot DevTools** nədir və necə istifadə olunur?
+45. Spring Boot-da **hot swapping** (isti dəyişmə) necə işləyir?
+
+### REST API və Web
+46. Spring Boot-da **REST API** necə yaradılır?
+47. **@RestController** annotasiyası nədir?
+48. **@Controller** ilə **@RestController** arasındakı fərq nədir?
+49. **@RequestMapping** annotasiyasının rolu nədir?
+50. **@GetMapping**, **@PostMapping**, **@PutMapping** və **@DeleteMapping** annotasiyaları nədir?
+51. **@PathVariable** ilə **@RequestParam** arasındakı fərq nədir?
+52. **@RequestBody** annotasiyası nə üçün istifadə olunur?
+53. **@ResponseBody** annotasiyasının məqsədi nədir?
+54. Spring Boot-da **HTTP status codes** (HTTP status kodları) necə idarə olunur?
+55. **ResponseEntity** sinfi nə üçün istifadə olunur?
+56. Spring Boot-da **exception handling** (istisna idarəetmə) REST API-lərdə necə həyata keçirilir?
+57. **@ExceptionHandler** annotasiyası nədir?
+58. **@ControllerAdvice** annotasiyasının rolu nədir?
+59. Spring Boot-da **global exception handling** (qlobal istisna idarəetmə) necə təyin olunur?
+60. **@ResponseStatus** annotasiyası nə üçün istifadə olunur?
+61. Spring Boot-da **CORS** (Cross-Origin Resource Sharing) necə konfiqurasiya olunur?
+62. **WebMvcConfigurer** nədir və necə istifadə olunur?
+63. Spring Boot-da **content negotiation** (məzmun razılaşması) necə işləyir?
+64. **Jackson** ilə JSON serializasiyası necə fərdiləşdirilir?
+65. **@JsonProperty** annotasiyası nədir?
+66. **@JsonIgnore** və **@JsonInclude** annotasiyaları nə üçün istifadə olunur?
+67. Spring Boot-da **HATEOAS** (Hypermedia as the Engine of Application State) necə həyata keçirilir?
+68. **@RestControllerAdvice** annotasiyası nədir?
+69. Spring Boot-da **file upload** (fayl yükləmə) necə həyata keçirilir?
+70. Spring Boot-da **multipart requests** (çoxhissəli sorğular) necə idarə olunur?
+71. **Spring WebFlux** nədir və Spring Boot ilə necə istifadə olunur?
+72. **Reactive programming** (reaktiv proqramlaşdırma) Spring Boot-da necə dəstəklənir?
+73. **Mono** və **Flux** sinifləri nədir?
+74. **WebClient** ilə **RestTemplate** arasındakı fərq nədir?
+75. Spring Boot-da **server-sent events** (server tərəfindən göndərilən hadisələr) necə həyata keçirilir?
+76. **Spring MVC** ilə **Spring WebFlux** arasındakı fərq nədir?
+77. Spring Boot-da **interceptors** (araya daxil olanlar) necə təyin olunur?
+78. **HandlerInterceptor** nədir?
+79. Spring Boot-da **custom HTTP headers** (xüsusi HTTP başlıqları) necə əlavə olunur?
+80. Spring Boot-da **REST versioning** (REST versiyalaşdırma) necə aparılır?
+
+### Spring Data və JPA
+81. **Spring Data JPA** nədir?
+82. **Spring Data** ilə Hibernate arasındakı əlaqə nədir?
+83. **@Repository** annotasiyasının rolu nədir?
+84. **JpaRepository** ilə **CrudRepository** arasındakı fərq nədir?
+85. Spring Data-da **custom repository** (xüsusi anbar) necə yaradılır?
+86. **@Query** annotasiyası ilə JPQL sorğuları necə yazılır?
+87. **@Param** annotasiyası nə üçün istifadə olunur?
+88. Spring Data-da **native queries** (yerli sorğular) necə təyin olunur?
+89. **Spring Data Specifications** nədir və necə istifadə olunur?
+90. **@Entity** və **@Table** annotasiyaları Spring Data-da necə istifadə olunur?
+91. Spring Data-da **pagination** (səhifələmə) necə həyata keçirilir?
+92. **Pageable** və **Slice** sinifləri nədir?
+93. Spring Data-da **sorting** (sıralama) necə təyin olunur?
+94. **@Transactional** annotasiyası Spring Data-da necə işləyir?
+95. Spring Data-da **optimistic locking** (optimistik kilidləmə) necə həyata keçirilir?
+96. **@Version** annotasiyası Spring Data-da nə üçün istifadə olunur?
+97. Spring Data-da **entity relationships** (varlıq əlaqələri) necə idarə olunur?
+98. **@OneToMany**, **@ManyToOne** və **@ManyToMany** annotasiyaları necə istifadə olunur?
+99. Spring Data-da **lazy loading** (tənbəl yükləmə) necə konfiqurasiya olunur?
+100. **EntityManager** Spring Data ilə necə istifadə olunur?
+101. Spring Data-da **auditing** (audit etmə) necə həyata keçirilir?
+102. **@CreatedDate** və **@LastModifiedDate** annotasiyaları nədir?
+103. Spring Data-da **soft delete** (yumşaq silmə) necə təyin olunur?
+104. **Spring Data JDBC** ilə **Spring Data JPA** arasındakı fərq nədir?
+105. Spring Data-da **projections** (proyeksiyalar) necə istifadə olunur?
+106. **Spring Data MongoDB** nədir və necə işləyir?
+107. **@Document** annotasiyası nədir?
+108. **Spring Data Redis** necə istifadə olunur?
+109. Spring Data-da **custom queries** (xüsusi sorğular) necə yazılır?
+110. Spring Data-da **transaction management** (tranzaksiya idarəetmə) necə həyata keçirilir?
+
+### Security
+111. **Spring Security** nədir və Spring Boot ilə necə inteqrasiya olunur?
+112. **@EnableWebSecurity** annotasiyasının rolu nədir?
+113. Spring Security-də **authentication** (autentifikasiya) necə işləyir?
+114. Spring Security-də **authorization** (səlahiyyətləndirmə) necə təyin olunur?
+115. **SecurityFilterChain** nədir?
+116. **@Secured** və **@PreAuthorize** annotasiyaları arasındakı fərq nədir?
+117. Spring Security-də **role-based access control** (rol əsaslı giriş nəzarəti) necə həyata keçirilir?
+118. **@AuthenticationPrincipal** annotasiyası nədir?
+119. Spring Security-də **JWT** (JSON Web Token) necə istifadə olunur?
+120. **OAuth2** Spring Boot ilə necə konfiqurasiya olunur?
+121. **OpenID Connect** ilə **OAuth2** arasındakı fərq nədir?
+122. Spring Security-də **CSRF** (Cross-Site Request Forgery) qoruması necə aktivləşdirilir?
+123. Spring Security-də **CORS** necə idarə olunur?
+124. **PasswordEncoder** nədir və hansı alqoritmlər dəstəklənir?
+125. **BCrypt** ilə **Argon2** şifrələmə alqoritmləri arasındakı fərq nədir?
+126. Spring Security-də **remember-me** funksionallığı necə həyata keçirilir?
+127. **SecurityContext** nədir və necə istifadə olunur?
+128. Spring Security-də **method-level security** (metod səviyyəsində təhlükəsizlik) necə təyin olunur?
+129. **@PostAuthorize** annotasiyası nə üçün istifadə olunur?
+130. Spring Security-də **custom authentication provider** (xüsusi autentifikasiya təminatçısı) necə yaradılır?
+131. Spring Security-də **LDAP** inteqrasiyası necə aparılır?
+132. Spring Security-də **SAML** necə konfiqurasiya olunur?
+133. **Spring Security OAuth** ilə **Spring Authorization Server** arasındakı fərq nədir?
+134. Spring Security-də **session management** (sessiya idarəetmə) necə həyata keçirilir?
+135. Spring Security-də **stateless authentication** (vəziyyətsiz autentifikasiya) necə təyin olunur?
+
+### Testing
+136. **Spring Boot Test** nədir və necə istifadə olunur?
+137. **@SpringBootTest** annotasiyasının rolu nədir?
+138. **@WebMvcTest** ilə **@DataJpaTest** arasındakı fərq nədir?
+139. **@MockBean** və **@SpyBean** annotasiyaları nədir?
+140. **Mockito** Spring Boot ilə necə istifadə olunur?
+141. **@Test** annotasiyası nə üçün istifadə olunur?
+142. Spring Boot-da **integration testing** (inteqrasiya testləri) necə aparılır?
+143. **TestRestTemplate** nədir və necə istifadə olunur?
+144. **@AutoConfigureMockMvc** annotasiyası nədir?
+145. Spring Boot-da **unit testing** (vahid testləri) necə həyata keçirilir?
+146. **@Transactional** annotasiyası testlərdə necə istifadə olunur?
+147. Spring Boot-da **test profiles** (test profilləri) necə təyin olunur?
+148. **@DirtiesContext** annotasiyası nə üçün istifadə olunur?
+149. Spring Boot-da **embedded database** (daxili verilənlər bazası) testlərdə necə istifadə olunur?
+150. **H2 Database** Spring Boot testlərində necə konfiqurasiya olunur?
+151. **Testcontainers** Spring Boot ilə necə istifadə olunur?
+152. **@RestClientTest** annotasiyası nədir?
+153. Spring Boot-da **performance testing** (performans testləri) necə aparılır?
+154. **JMeter** ilə Spring Boot tətbiqləri necə test edilir?
+155. Spring Boot-da **security testing** (təhlükəsizlik testləri) necə həyata keçirilir?
+156. **@ActiveProfiles** annotasiyası testlərdə necə istifadə olunur?
+
+### Microservices
+157. Spring Boot ilə **microservices** (mikroservis) arxitekturası necə qurulur?
+158. **Spring Cloud** nədir və Spring Boot ilə necə inteqrasiya olunur?
+159. **Eureka** ilə **service discovery** (xidmət kəşfi) necə həyata keçirilir?
+160. **@EnableEurekaClient** annotasiyasının rolu nədir?
+161. **Spring Cloud Config** nədir və necə konfiqurasiya olunur?
+162. **Spring Cloud Gateway** nədir?
+163. **API Gateway** ilə **Load Balancer** arasındakı fərq nədir?
+164. **Spring Cloud LoadBalancer** necə istifadə olunur?
+165. **Spring Cloud OpenFeign** ilə REST müştəriləri necə yaradılır?
+166. **@FeignClient** annotasiyası nədir?
+167. **Spring Cloud Circuit Breaker** nədir?
+168. **Resilience4j** ilə **circuit breaker** necə konfiqurasiya olunur?
+169. **Spring Cloud Sleuth** nədir və necə istifadə olunur?
+170. **Distributed tracing** (paylanmış izləmə) Spring Boot-da necə həyata keçirilir?
+171. **Zipkin** ilə Spring Boot inteqrasiyası necə aparılır?
+172. **Spring Cloud Bus** nədir?
+173. **Spring Cloud Stream** nədir və necə istifadə olunur?
+174. **Kafka** ilə Spring Boot inteqrasiyası necə həyata keçirilir?
+175. **RabbitMQ** ilə Spring Boot inteqrasiyası necə aparılır?
+176. **Spring Cloud Task** nədir?
+177. **Spring Batch** ilə Spring Boot-da toplu emal necə həyata keçirilir?
+178. **Spring Cloud Data Flow** nədir?
+179. **Event-driven architecture** (hadisə yönümlü arxitektura) Spring Boot-da necə qurulur?
+180. **CQRS** (Command Query Responsibility Segregation) Spring Boot ilə necə həyata keçirilir?
+
+### Performance və Optimization
+181. Spring Boot-da **performance tuning** (performans tənzimləmə) necə aparılır?
+182. **Spring Boot Actuator** ilə performans monitorinqi necə həyata keçirilir?
+183. Spring Boot-da **connection pooling** (əlaqə hovuzu) necə optimallaşdırılır?
+184. **HikariCP** ilə Spring Boot inteqrasiyası necə aparılır?
+185. Spring Boot-da **caching** (keşləmə) necə həyata keçirilir?
+186. **@Cacheable** annotasiyası nədir?
+187. **Spring Cache** ilə **EhCache** necə istifadə olunur?
+188. **Spring Cache** ilə **Redis** necə konfiqurasiya olunur?
+189. Spring Boot-da **lazy initialization** (tənbəl ilkinləşdirmə) necə aktivləşdirilir?
+190. Spring Boot-da **thread pool** (axın hovuzu) necə konfiqurasiya olunur?
+191. **TaskExecutor** nədir və necə istifadə olunur?
+192. Spring Boot-da **async processing** (asinxron emal) necə həyata keçirilir?
+193. **@Async** annotasiyası nədir?
+194. Spring Boot-da **database query optimization** (verilənlər bazası sorğu optimallaşdırması) necə aparılır?
+195. **N+1 SELECT** problemi Spring Boot-da necə həll olunur?
+196. **Entity Graph** Spring Data ilə necə istifadə olunur?
+197. Spring Boot-da **batch processing** (toplu emal) necə optimallaşdırılır?
+198. **Spring Boot Metrics** ilə performans necə ölçülür?
+199. **Micrometer** ilə Spring Boot inteqrasiyası necə aparılır?
+200. Spring Boot-da **memory management** (yaddaş idarəetmə) necə optimallaşdırılır?
+
+### Actuator və Monitoring
+201. **Spring Boot Actuator** nədir?
+202. **Actuator endpoints** (Aktuator uç nöqtələri) hansılardır?
+203. **/health** endpoint-i necə fərdiləşdirilir?
+204. **/metrics** endpoint-i ilə hansı məlumatlar əldə olunur?
+205. **/info** endpoint-i necə konfiqurasiya olunur?
+206. **@Endpoint** annotasiyası ilə xüsusi actuator endpoint-i necə yaradılır?
+207. Spring Boot Actuator ilə **Prometheus** inteqrasiyası necə aparılır?
+208. **Grafana** ilə Spring Boot monitorinqi necə qurulur?
+209. **Spring Boot Admin** nədir və necə istifadə olunur?
+210. **Actuator** ilə **JMX** (Java Management Extensions) necə istifadə olunur?
+211. **/loggers** endpoint-i necə istifadə olunur?
+212. **/heapdump** endpoint-i nə üçün istifadə olunur?
+213. **/threaddump** endpoint-i ilə hansı məlumatlar əldə olunur?
+214. Spring Boot Actuator ilə **custom health indicators** (xüsusi sağlamlıq göstəriciləri) necə yaradılır?
+215. **Actuator** təhlükəsizliyi necə təmin olunur?
+
+### Spring Boot Digər Mövzular
+216. **Spring Boot** ilə **WebSocket** necə həyata keçirilir?
+217. **@EnableWebSocket** annotasiyasının rolu nədir?
+218. **STOMP** protokolu Spring Boot-da necə istifadə olunur?
+219. **Spring Integration** nədir və Spring Boot ilə necé inteqrasiya olunur?
+220. **Spring Session** nədir və necə konfiqurasiya olunur?
+221. **Spring Boot** ilə **Redis** sessiya idarəetməsi necə həyata keçirilir?
+222. **Spring Boot** ilə **GraphQL** necə istifadə olunur?
+223. **@GraphQLQuery** annotasiyası nədir?
+224. **Spring Boot** ilə **gRPC** necə inteqrasiya olunur?
+225. **Spring Boot** ilə **Apache Camel** necə istifadə olunur?
+226. **Spring Boot** ilə **JMS** (Java Message Service) necə konfiqurasiya olunur?
+227. **ActiveMQ** ilə Spring Boot inteqrasiyası necə aparılır?
+228. **Spring Boot** ilə **email sending** (e-poçt göndərmə) necé həyata keçirilir?
+229. **Spring Boot** ilə **scheduled tasks** (planlaşdırılmış tapşırıqlar) necə təyin olunur?
+230. **@Scheduled** annotasiyası nədir?
+231. **Spring Boot** ilə **Quartz Scheduler** necə inteqrasiya olunur?
+232. **Spring Boot** ilə **file processing** (fayl emalı) necə həyata keçirilir?
+233. **Spring Boot** ilə **PDF generation** (PDF yaradılması) necə aparılır?
+234. **Spring Boot** ilə **Excel processing** (Excel emalı) necə həyata keçirilir?
+235. **Spring Boot** ilə **Apache POI** necə istifadə olunur?
+236. **Spring Boot** ilə ** internationalization** (beynəlxalqləşdirmə) necə həyata keçirilir?
+237. **MessageSource** nədir və necə istifadə olunur?
+238. **Spring Boot** ilə **validation** (doğrulama) necə həyata keçirilir?
+239. **@Valid** və **@Validated** annotasiyaları arasındakı fərq nədir?
+240. **Spring Boot** ilə **custom validators** (xüsusi doğrulayıcılar) necə yaradılır?
+241. **Spring Boot** ilé **Swagger** necə inteqrasiya olunur?
+242. **@OpenAPIDefinition** annotasiyası nədir?
+243. **Spring Boot** ilə **OpenAPI** spesifikasiyası necə yaradılır?
+244. **Spring Boot** ilé **API documentation** (API sənədləşdirmə) necə aparılır?
+245. **Spring Boot** ilə **Flyway** necə istifadə olunur?
+246. **Liquibase** ilə Spring Boot inteqrasiyası necə aparılır?
+247. **Spring Boot** ilé **database migration** (verilənlər bazası miqrasiyası) necə həyata keçirilir?
+248. **Spring Boot** ilə **JDBC Template** necə istifadə olunur?
+249. **Spring Boot** ilə **MyBatis** necé inteqrasiya olunur?
+250. **Spring Boot** ilə **NoSQL** verilənlər bazaları necə istifadə olunur?
+251. **Spring Boot** ilə **Cassandra** inteqrasiyası necə aparılır?
+252. **Spring Boot** ilə **Neo4j** necə istifadə olunur?
+253. **Spring Boot** ilə **DynamoDB** necə konfiqurasiya olunur?
+254. **Spring Boot** ilé **search engines** (axtarış mühərrikləri) necé inteqrasiya olunur?
+255. **Elasticsearch** ilé Spring Boot inteqrasiyası necə aparılır?
+256. **Spring Boot** ilé **Solr** necé istifadə olunur?
+257. **Spring Boot** ilé **event sourcing** (hadisə mənbəyi) necé həyata keçirilir?
+258. **Spring Boot** ilé **CQRS** necé inteqrasiya olunur?
+259. **Spring Boot** ilé **Docker** necé istifadə olunur?
+260. **Spring Boot** ilé **Kubernetes** necé inteqrasiya olunur?
+261. **Spring Boot** ilé **CI/CD** (Continuous Integration/Continuous Deployment) necé qurulur?
+262. **Spring Boot** ilé **Jenkins** necé istifadə olunur?
+263. **Spring Boot** ilé **GitHub Actions** necé konfiqurasiya olunur?
+264. **Spring Boot** ilé **cloud platforms** (bulud platformaları) necé inteqrasiya olunur?
+265. **Spring Boot** ilé **AWS** (Amazon Web Services) necé istifadə olunur?
+266. **Spring Boot** ilé **S3** (Simple Storage Service) necé konfiqurasiya olunur?
+267. **Spring Boot** ilé **EC2** (Elastic Compute Cloud) necé istifadə olunur?
+268. **Spring Boot** ilé **Lambda** funksiyaları necé yaradılır?
+269. **Spring Boot** ilé **Azure** necé inteqrasiya olunur?
+270. **Spring Boot** ilé **Google Cloud Platform** necé istifadə olunur?
+271. **Spring Boot** ilé **Heroku** necé konfiqurasiya olunur?
+272. **Spring Boot** ilé **serverless architecture** (serversiz arxitektura) necé qurulur?
+273. **Spring Boot** ilé **GraalVM** necé istifadə olunur?
+274. **Spring Native** nədir və necé istifadə olunur?
+275. **Spring Boot** ilé **AOT** (Ahead-of-Time) kompilyasiyası necé həyata keçirilir?
+276. **Spring Boot** ilé **reactive microservices** (reaktiv mikroservislər) necé qurulur?
+277. **Spring Boot** ilé **gRPC** mikroservisləri necé yaradılır?
+278. **Spring Boot** ilé **event-driven microservices** (hadisə yönümlü mikroservislər) necé qurulur?
+279. **Spring Boot** ilé **health checks** (sağlamlıq yoxlamaları) necé fərdiləşdirilir?
+280. **Spring Boot** ilé **custom metrics** (xüsusi metrikalar) necé yaradılır?
+281. **Spring Boot** ilé **distributed locking** (paylanmış kilidləmə) necé həyata keçirilir?
+282. **Spring Boot** ilé **ZooKeeper** necé inteqrasiya olunur?
+283. **Spring Boot** ilé **Consul** necé istifadə olunur?
+284. **Spring Boot** ilé **service mesh** (xidmət şəbəkəsi) necé qurulur?
+285. **Spring Boot** ilé **Istio** necé inteqrasiya olunur?
+286. **Spring Boot** ilé **Chaos Engineering** (xaos mühəndisliyi) necé həyata keçirilir?
+287. **Spring Boot** ilé **resilience patterns** (dayanıqlılıq nümunələri) necé tətbiq olunur?
+288. **Spring Boot** ilé **rate limiting** (sürət məhdudlaşdırması) necé həyata keçirilir?
+289. **Spring Boot** ilé **API throttling** (API məhdudlaşdırması) necé konfiqurasiya olunur?
+290. **Spring Boot** ilé **blue-green deployment** (mavi-yaşıl yerləşdirmə) necé aparılır?
+291. **Spring Boot** ilé **canary deployment** (kanarya yerləşdirmə) necé həyata keçirilir?
+292. **Spring Boot** ilé **A/B testing** necé qurulur?
+293. **Spring Boot** ilé **feature toggles** (xüsusiyyət açarları) necé istifadə olunur?
+294. **Spring Boot** ilé **log aggregation** (qeyd toplama) necé həyata keçirilir?
+295. **Spring Boot** ilé **ELK Stack** (Elasticsearch, Logstash, Kibana) necé inteqrasiya olunur?
+296. **Spring Boot** ilé **Prometheus** və **Grafana** ilə monitorinq necé qurulur?
+297. **Spring Boot** ilé **OpenTelemetry** necé istifadə olunur?
+298. **Spring Boot** ilé **distributed logging** (paylanmış qeydiyyat) necé həyata keçirilir?
+299. **Spring Boot** ilé **observability** (müşahidə oluna bilmə) necé təmin olunur?
+300. **Spring Boot** ilé **SRE** (Site Reliability Engineering) prinsipləri necé tətbiq olunur?
