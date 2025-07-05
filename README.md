@@ -194,13 +194,163 @@ Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edi
 
 **6. Java-nın **WORA** (Write Once, Run Anywhere) prinsipi nə deməkdir?**
 
+**Cavab:**
+
+`WORA` (`Write Once, Run Anywhere` - Bir dəfə yaz, hər yerdə işlət) Java-nın əsas prinsiplərindən biridir. Bu prinsip, Java ilə yazılmış bir proqramın bir platformada (məsələn, Windows) yazıldıqdan sonra heç bir dəyişiklik etmədən digər platformalarda (məsələn, Linux, macOS) işləyə biləcəyini ifadə edir. Bu, Java-nın platformadan asılı olmama xüsusiyyəti sayəsində mümkündür.
+
+- **WORA-nın Əsas Mexanizmi:**
+  - **Java kodu javac (Java Compiler)** tərəfindən bytecode-a çevrilir. Bytecode platformadan asılı olmayan ara təlimatlar toplusudur.
+  - **JVM (Java Virtual Machine)** bytecode-u hədəf platformanın maşın dilinə çevirərək icra edir. Hər platforma üçün fərqli JVM olduğu üçün eyni bytecode fərqli platformalarda işləyə bilir.
+  - **Java-nın standart kitabxanaları (Java API)** platformadan asılı olan funksiyaları (məsələn, fayl əməliyyatları, şəbəkə əlaqələri) abstraqlaşdırır, bu da kodu portativ edir.
 
 ---
 
 
-7. Java-da **platform independence** (platformadan asılı olmama) necə təmin olunur?
-8. **ClassLoader** (Sinif Yükləyicisi) nədir və necə işləyir?
-9. Java-da **memory management** (yaddaş idarəetməsi) necə həyata keçirilir?
+**7. Java-da **platform independence** (platformadan asılı olmama) necə təmin olunur?**
+
+**Cavab:**
+Java-nın platformadan asılı olmama xüsusiyyəti, proqramın bir platformada yazıldıqdan sonra digər platformalarda dəyişiklik etmədən işləməsini təmin edir. Bu, WORA prinsipinin əsasını təşkil edir və aşağıdakı mexanizmlərlə həyata keçirilir:
+
+- **Bytecode:**
+  - Java kodu javac tərəfindən platformadan asılı olmayan bytecode-a çevrilir.
+  - Bytecode, .class fayllarında saxlanılır və JVM tərəfindən oxunur.
+  - Bytecode-un strukturu hər platformada eynidir, bu da portativliyi təmin edir.
+- **JVM (Java Virtual Machine):**
+  - JVM platformaya xas bir mühitdir və bytecode-u həmin platformanın maşın dilinə çevirir.
+  - Hər platforma üçün xüsusi JVM (Windows JVM, Linux JVM və s.) mövcuddur.
+  - JVM-in Interpreter və JIT Compiler komponentləri bytecode-u icra edir.
+- **Java API (Standart Kitabxanalar):**
+  - Java-nın standart kitabxanaları (məsələn, java.io, java.net) platformaya xas funksiyaları abstraqlaşdırır.
+  - Məsələn, fayl əməliyyatları üçün java.io.File sinfi platforma fərqlərini gizlədir.
+- **Bytecode Verifier:**
+  - JVM bytecode-u icra etməzdən əvvəl onun düzgün və təhlükəsiz olduğunu yoxlayır.
+  - Bu, platformalar arası uyğunluğu və təhlükəsizliyi təmin edir.
+- **Standartlaşdırılmış Spesifikasiyalar:**
+  - Java-nın spesifikasiyaları (JLS - Java Language Specification) bütün platformalarda eyni şəkildə tətbiq olunur.
+
+---
+
+**8. **ClassLoader** (Sinif Yükləyicisi) nədir və necə işləyir?**
+
+**Cavab:**
+
+`ClassLoader` (Sinif Yükləyicisi) Java-da sinifləri (.class faylları) və resursları (məsələn, .jar faylları) yaddaşa yükləyən JVM-in bir komponentidir. ClassLoader sinif fayllarını tapır, onların bytecode-unu oxuyur və JVM-in icra edə biləcəyi formada təqdim edir.
+
+- **Əsas Vəzifələri:**
+  - **Yükləmə (Loading):** `.class` fayllarını diskdən, şəbəkədən və ya digər mənbələrdən yaddaşa yükləyir.
+  - **Bağlama (Linking):** Sinifin düzgünlüyünü yoxlayır (Bytecode Verifier), yaddaşı ayırır və statik dəyişənləri ilkinləşdirir.
+  - **İlkinləşdirmə (Initialization):** Statik blokları və statik dəyişənləri icra edir.
+
+- **ClassLoader-ın İşləmə Mexanizmi:**
+  - **Delegation Model (Vəkalət Modeli):**
+    - `ClassLoader` sinifləri yükləməzdən əvvəl yuxarı səviyyəli (parent) ClassLoader-a sorğu göndərir.
+    - Əgər `parent ClassLoader` sinifi tapa bilməzsə, özü yükləməyə cəhd edir.
+    - Bu model sinif təkrarlanmasını (class duplication) və təhlükəsizlik problemlərini azaldır.
+  - **ClassLoader Növləri:**
+    - **Bootstrap ClassLoader:** Java-nın əsas siniflərini (rt.jar-dakı siniflər, məsələn, java.lang.*) yükləyir. C/C++ ilə yazılmışdır.
+    - **Extension ClassLoader:** JRE-nin genişləndirilmə siniflərini (ext qovluğundakı .jar faylları) yükləyir.
+    - **System/Application ClassLoader:** Tətbiqin classpath-dəki sinifləri və resursları yükləyir.
+  - **Təhlükəsizlik:**
+    - `ClassLoader` siniflərin təhlükəsizliyini yoxlayır (məsələn, zərərli kodun yüklənməsinin qarşısını alır).
+    - `Namespace` mexanizmi ilə sinif təkrarlanmasını önləyir.
+   
+**Kod Nümunəsi:**
+
+```java
+public class CustomClassLoaderExample {
+    public static void main(String[] args) {
+        // Cari ClassLoader-ı əldə etmək
+        ClassLoader classLoader = CustomClassLoaderExample.class.getClassLoader();
+        System.out.println("Cari ClassLoader: " + classLoader);
+
+        // Parent ClassLoader-ı əldə etmək
+        System.out.println("Parent ClassLoader: " + classLoader.getParent());
+    }
+}
+```
+
+**Xüsusi ClassLoader Nümunəsi:**
+
+```java
+import java.io.*;
+import java.nio.file.Files;
+
+public class CustomClassLoader extends ClassLoader {
+    @Override
+    protected Class<?> findClass(String name) throws ClassNotFoundException {
+        try {
+            // .class faylını oxumaq
+            String fileName = name.replace('.', '/') + ".class";
+            byte[] data = Files.readAllBytes(new File(fileName).toPath());
+            // Bytecode-dan sinif yaratmaq
+            return defineClass(name, data, 0, data.length);
+        } catch (IOException e) {
+            throw new ClassNotFoundException("Sinif tapılmadı: " + name, e);
+        }
+    }
+
+    public static void main(String[] args) throws Exception {
+        // Xüsusi ClassLoader ilə sinif yükləmək
+        CustomClassLoader loader = new CustomClassLoader();
+        Class<?> clazz = loader.loadClass("com.example.MyClass");
+        System.out.println("Yüklənmiş sinif: " + clazz.getName());
+    }
+}
+```
+
+**Nəzəri İzahat:** ClassLoader Java-nın dinamik sinif yükləmə qabiliyyətini təmin edir. Vəkalət modeli təhlükəsizliyi və səmərəliliyi artırır, çünki siniflər yalnız bir dəfə yüklənir. Xüsusi ClassLoader-lar isə plagin sistemləri və ya dinamik yükləmə tələb edən tətbiqlərdə istifadə olunur (məsələn, Java EE serverləri).
+
+---
+
+**9. Java-da **memory management** (yaddaş idarəetməsi) necə həyata keçirilir?**
+
+**Cavab:**
+
+Java-da yaddaş idarəetməsi avtomatik olaraq `Garbage Collector (GC)` və JVM-in yaddaş strukturları (`Heap və Stack`) vasitəsilə həyata keçirilir. Bu, geliştiricilərin əl ilə yaddaş ayırma və azad etmə yükünü azaldır, yaddaş sızması (memory leak) və digər səhvləri minimuma endirir.
+
+**Yaddaş İdarəetməsinin Əsas Komponentləri:**
+
+- **Yaddaş Bölgələri:**
+  - **`Heap`:** Obyektlər və onların instans dəyişənləri heap yaddaşında saxlanılır. Heap, Garbage Collector tərəfindən idarə olunur.
+  - **`Stack`:** Metod çağırışları, lokal dəyişənlər və istinadlar (references) stack yaddaşında saxlanılır. Stack avtomatik idarə olunur (LIFO - Last In, First Out).
+  - **`Metaspace`:** Sinif metadata (sinif strukturunun təsviri) saxlanılır (Java 8-dən sonra PermGen-in yerini almışdır).
+- **Garbage Collection:**
+  - GC istifadə olunmayan (unreachable) obyektləri heap-dən təmizləyir.
+  - Mark-and-Sweep: Obyektləri işarələyir və istifadə olunmayanları silir.
+  - Generational GC: Heap gənc (Young Generation) və köhnə (Old Generation) nəsillərə bölünür. Gənc nəsildə tez-tez təmizləmə aparılır.
+- **Yaddaş Optimallaşdırması:**
+  - JIT Compiler: Bytecode-u optimallaşdırılmış maşın koduna çevirir.
+  - Memory Pools: Eden Space, Survivor Space, Tenured Space kimi bölmələr heap-i effektiv idarə edir.
+  - GC Alqoritmləri: Serial, Parallel, G1, ZGC kimi alqoritmlər performans və gecikmə tələblərinə uyğun seçilir.
+- **Əsas Xüsusiyyətlər:**
+  - **Avtomatik Yaddaş Azad Etmə:** Geliştiricilər yaddaşı əl ilə azad etmir, GC bunu avtomatik edir.
+  - **Təhlükəsizlik:** Yanlış yaddaş idarəetməsi nəticəsində yaranan səhvlər (məsələn, dangling pointers) qarşısı alınır.
+  - **Tunable GC:** Geliştiricilər JVM parametrləri (məsələn, `-Xmx`, `-Xms`) ilə GC-ni optimallaşdıra bilər.
+
+**Kod Nümunəsi:**
+
+```java
+public class MemoryManagementExample {
+    public static void main(String[] args) {
+        // Heap-də obyektlər yaradılır
+        for (int i = 0; i < 1000; i++) {
+            String str = new String("Test" + i); // Yeni obyektlər heap-də saxlanılır
+        }
+        // Stack-də lokal dəyişən
+        int localVar = 10;
+        System.out.println("Lokal dəyişən: " + localVar);
+
+        // GC-ni təklif et (zəmanətli deyil)
+        System.gc();
+        System.out.println("Garbage Collector çağırıldı!");
+    }
+}
+```
+
+**Nəzəri İzahat:** Java-da yaddaş idarəetməsi avtomatik və təhlükəsizdir, lakin performans kritik tətbiqlərdə GC alqoritmini və heap ölçüsünü düzgün konfiqurasiya etmək vacibdir. Heap və Stack-in fərqli funksiyaları yaddaşın səmərəli istifadəsini təmin edir.
+
+---
+
 10. **Heap** və **Stack** yaddaş bölgələri arasındakı fərq nədir?
 11. Java-da **package** (paket) nədir və nə üçün istifadə olunur?
 12. **import** açar sözü nə üçün lazımdır?
