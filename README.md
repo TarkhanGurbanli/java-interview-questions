@@ -426,15 +426,317 @@ Lokal dəyişən (Stack): 42
 ---
 
 11. Java-da **package** (paket) nədir və nə üçün istifadə olunur?
+
+**Cavab:**
+
+Package Java-da sinifləri, interfeysləri və digər resursları mütəşəkkil şəkildə qruplaşdırmaq üçün istifadə olunan bir mexanizmdir. Paketlər, böyük layihələrdə kodun idarə olunmasını asanlaşdırır və ad çakışmalarının qarşısını alır.
+
+- **Nə üçün istifadə olunur?**
+  - **Təşkilatlanma:** Sinifləri məntiqi qruplara ayırır (məsələn, `java.util`, `java.io`).
+  - **Ad çakışmalarının qarşısını almaq:** Eyni adlı siniflər fərqli paketlərdə ola bilər.
+  - **Giriş nəzarəti:** Paketlər giriş tənzimləyiciləri ilə siniflərə və ya metodlara girişi məhdudlaşdıra bilər.
+  - **Yenidən istifadə:** Paketlər modullaşdırmanı təmin edir, bu da kodun təkrar istifadəsini asanlaşdırır.
+
+**Kod Nümunəsi:**
+
+```java
+// Paket yaratmaq və istifadə etmək
+package com.example.myapp; // Paket adı
+
+public class MyClass {
+    public void sayHello() {
+        System.out.println("Salam, bu MyClass sinifidir!");
+    }
+}
+```
+
+- **Şərh:**
+  - `package com.example.myapp;` - Bu sətir sinifi com.example.myapp paketində yerləşdirir.
+  - Paket adları adətən tərs domen adlandırma qaydasından istifadə edir (məsələn, `com.şirkətadı.layihəadı`).
+
+---
+
 12. **import** açar sözü nə üçün lazımdır?
+
+**Cavab:**
+
+mport açar sözü Java-da başqa paketlərdə olan sinifləri, interfeysləri və ya statik üzvləri cari faylda istifadə etmək üçün gətirməyə imkan verir. Bu, tam kvalifikasiya olunmuş adlar (fully qualified names) yazmaq əvəzinə kodun qısa və oxunaqlı olmasına kömək edir.
+
+- **Nə üçün lazımdır?**
+  - **Kodun qısaldılması:** java.util.ArrayList kimi uzun adları təkrar yazmağa ehtiyac qalmır.
+  - **Oxunaqlılıq:** Kod daha təmiz və anlaşıqlı olur.
+  - **Modulluğun dəstəklənməsi:** Fərqli paketlərdən resursları asanlıqla istifadə etməyə imkan verir.
+
+**Kod Nümunəsi**
+
+```java
+// import açar sözünün istifadəsi
+import java.util.ArrayList; // ArrayList sinifini idxal edir
+import java.util.List; // List interfeysini idxal edir
+
+public class ImportExample {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>(); // Tam ad yazmağa ehtiyac yoxdur
+        list.add("Element 1");
+        System.out.println(list);
+    }
+}
+```
+
+- **Şərh:**
+  - `import java.util.ArrayList;` - ArrayList sinifini idxal edir ki, tam ad (java.util.ArrayList) yazılmasın.
+  - Əgər `import` istifadə edilməsə, hər dəfə tam ad yazılmalı olacaq.
+
+---
+
 13. Java-da **access modifiers** (giriş tənzimləyiciləri) hansılardır?
-14. **static** açar sözü nə üçün istifadə olunur?
+
+**Access modifiers** Java-da siniflərin, metodların, dəyişənlərin və konstruktorların giriş səviyyəsini təyin etmək üçün istifadə olunur. Onlar kapsulyasiyanı təmin edir və məlumatların təhlükəsizliyini artırır.
+
+- **Giriş tənzimləyiciləri:**
+  - **`public`:** Üzv hər yerdən əlçatan olur.
+  - **`protected`:** Üzv eyni paketdə və ya miras alan siniflərdə əlçatandır.
+  - **`default`:** (paket-səviyyəli, heç bir tənzimləyici göstərilməzsə): Üzv yalnız eyni paketdə əlçatandır.
+  - **`private`:** Üzv yalnız eyni sinif daxilində əlçatandır.
+
+**Kod Nümunəsi**
+
+```java
+package com.example;
+
+public class AccessModifiers {
+    public int publicVar = 1; // Hər yerdən əlçatan
+    protected int protectedVar = 2; // Eyni paket və ya miras alan siniflərdə əlçatan
+    int defaultVar = 3; // Yalnız eyni paketdə əlçatan
+    private int privateVar = 4; // Yalnız bu sinifdə əlçatan
+
+    public void display() {
+        System.out.println("Public: " + publicVar);
+        System.out.println("Protected: " + protectedVar);
+        System.out.println("Default: " + defaultVar);
+        System.out.println("Private: " + privateVar);
+    }
+}
+
+class Test {
+    public static void main(String[] args) {
+        AccessModifiers obj = new AccessModifiers();
+        obj.display();
+        // obj.privateVar = 5; // Xəta: privateVar-a xaricdən giriş yoxdur
+    }
+}
+```
+
+- **Şərh:**
+  - `publicVar` hər yerdən əlçatandır.
+  - `protectedVar` eyni paketdə və ya miras alan siniflərdə istifadə oluna bilər.
+  - `defaultVar` yalnız eyni paketdə əlçatandır.
+  - `privateVar` yalnız AccessModifiers sinifində əlçatandır.
+
+---
+
+**14. **static** açar sözü nə üçün istifadə olunur?**
+
+**`static`** açar sözü sinifə aid olan üzvləri (dəyişənlər, metodlar, bloklar və ya daxili siniflər) təyin etmək üçün istifadə olunur. Statik üzvlər sinifin nümunəsi (obyekti) yaradılmadan istifadə edilə bilər.
+
+- **Nə üçün istifadə olunur?**
+  - **Sinif səviyyəsində resurslar:** Statik üzvlər bütün obyektlər tərəfindən paylaşılır.
+  - **Yaddaşın səmərəli istifadəsi:** Statik dəyişənlər yalnız bir dəfə yaddaşda saxlanılır.
+  - **Utility metodlar:** Sinifə aid ümumi funksiyalar üçün istifadə olunur (məsələn, Math.sqrt()).
+
+Kod Nümunəsi
+
+```java
+public class StaticExample {
+    static int count = 0; // Statik dəyişən, bütün obyektlər tərəfindən paylaşılır
+
+    StaticExample() {
+        count++; // Hər yeni obyekt yaradıldığında count artır
+    }
+
+    static void displayCount() { // Statik metod
+        System.out.println("Obyektlərin sayı: " + count);
+    }
+
+    public static void main(String[] args) {
+        StaticExample obj1 = new StaticExample();
+        StaticExample obj2 = new StaticExample();
+        StaticExample.displayCount(); // Statik metod sinif adı ilə çağırılır
+    }
+}
+```
+
+- **Şərh:**
+  - `static` int count bütün obyektlər üçün ortaqdır.
+  - `static void displayCount()` sinif adı ilə çağırılır, obyekt yaratmağa ehtiyac yoxdur.
+  - Statik metodlar yalnız statik dəyişənlərə və ya metodlara daxil ola bilər.
+
+---
+
 15. **this** açar sözünün məqsədi nədir?
-16. **super** açar sözü nə üçün istifadə olunur?
-17. Java-da **singleton pattern** (tək nümunə şablonu) nədir?
-18. **main** metodunun fərqli imzalara malik ola bilərmi?
-19. Java-da **boxing** və **unboxing** nədir?
-20. **autoboxing** və **auto-unboxing** necə işləyir?
+
+**`this`** açar sözü cari obyektə istinad etmək üçün istifadə olunur. O, sinifin dəyişənlərini və metodlarını eyni adlı parametr və ya yerli dəyişənlərdən fərqləndirmək üçün faydalıdır.
+
+- **Məqsədləri:**
+  - Dəyişən çakışmalarını həll etmək: Sinif dəyişəni ilə parametr arasında fərq qoymaq.
+  - Konstruktor çağırışı: Bir konstruktor daxilində digər konstruktoru çağırmaq.
+  - Cari obyektə istinad: Metodlara və ya obyektlərə cari obyekti ötürmək.
+
+Kod Nümunəsi
+
+```java
+public class ThisExample {
+    int number;
+
+    ThisExample(int number) {
+        this.number = number; // Sinif dəyişəni ilə parametri fərqləndirir
+    }
+
+    void display() {
+        System.out.println("Number: " + this.number); // Cari obyektin number dəyişəni
+    }
+
+    public static void main(String[] args) {
+        ThisExample obj = new ThisExample(42);
+        obj.display();
+    }
+}
+```
+
+- **Şərh:**
+  - `this.number = number;` - this sinifin number dəyişəninə istinad edir, parametrə deyil.
+  - `this` istifadə edilməsə, parametr sinif dəyişənini əvəz edər və yanlış nəticə alınar.
+
+---
+
+**16. **super** açar sözü nə üçün istifadə olunur?**
+
+**`super`** açar sözü miras alınan sinifin (superclass) üzvlərinə (dəyişənlər, metodlar və konstruktorlar) daxil olmaq üçün istifadə olunur.
+
+- **Məqsədləri:**
+  - **Superclass konstruktorunu çağırmaq:** Alt sinifdən ana sinifin konstruktoruna müraciət.
+  - **Superclass metodlarına daxil olmaq:** Superclass-da müəyyən edilmiş metodları çağırmaq.
+  - **Superclass dəyişənlərinə daxil olmaq:** Eyni adlı dəyişənləri fərqləndirmək.
+
+Kod Nümunəsi
+
+```java
+class Animal {
+    String name = "Animal";
+
+    Animal() {
+        System.out.println("Animal konstruktoru");
+    }
+
+    void sound() {
+        System.out.println("Animal səsi");
+    }
+}
+
+class Dog extends Animal {
+    String name = "Dog";
+
+    Dog() {
+        super(); // Animal sinifinin konstruktorunu çağırır
+        System.out.println("Dog konstruktoru");
+    }
+
+    void display() {
+        System.out.println("Dog name: " + name); // Cari sinifin name dəyişəni
+        System.out.println("Animal name: " + super.name); // Superclass-ın name dəyişəni
+        super.sound(); // Superclass-ın sound metodu
+    }
+}
+
+public class SuperExample {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.display();
+    }
+}
+```
+
+- **Şərh:**
+  - `super()` - Ana sinifin konstruktorunu çağırır.
+  - `super.name` - Ana sinifin name dəyişəninə istinad edir.
+  - `super.sound()` - Ana sinifin sound metodunu çağırır.
+
+---
+
+**19. Java-da **boxing** və **unboxing** nədir?**
+
+**Boxing** primitiv verilənlər tipini (məsələn, `int`, `double`) onların müvafiq `wrapper` sinifinə (`Integer`, `Double`) çevirmə prosesidir. Unboxing isə əksinə, wrapper sinifindən primitiv tipə çevirmədir.
+
+- **Boxing:**
+  - Primitiv tip wrapper sinifinə "qablaşdırılır".
+  - Məsələn, `int` → `Integer`.
+
+- **Unboxing:**
+  - Wrapper sinifi primitiv tipə "açılır".
+  - Məsələn, `Integer` → `int`.
+
+Kod Nümunəsi
+
+```java
+public class BoxingUnboxing {
+    public static void main(String[] args) {
+        // Boxing: int → Integer
+        int primitiveInt = 42;
+        Integer wrapperInt = primitiveInt; // Avtomatik boxing
+        System.out.println("Boxing: " + wrapperInt);
+
+        // Unboxing: Integer → int
+        Integer wrapperInt2 = 100;
+        int primitiveInt2 = wrapperInt2; // Avtomatik unboxing
+        System.out.println("Unboxing: " + primitiveInt2);
+    }
+}
+```
+
+- **Şərh:**
+  - `Integer wrapperInt = primitiveInt;` - int dəyəri Integer obyektinə çevrilir (boxing).
+  - `int primitiveInt2 = wrapperInt2;` - Integer obyektindən int dəyəri alınır (unboxing).
+
+---
+
+**20. **autoboxing** və **auto-unboxing** necə işləyir?**
+
+`Autoboxing` və `auto-unboxing` Java-da primitiv tiplər və onların wrapper sinifləri arasında avtomatik çevrilmə prosesləridir. Bu mexanizmlər Java 5-də təqdim edilib və kod yazımını asanlaşdırır.
+
+- **Autoboxing:**
+  - Primitiv tipin avtomatik olaraq wrapper sinifinə çevrilməsi.
+  - Məsələn, `int` dəyəri Integer obyektinə çevrilir.
+
+- **Auto-unboxing:**
+  - Wrapper sinifinin avtomatik olaraq primitiv tipə çevrilməsi.
+  - Məsələn, `Integer` obyektindən int dəyəri alınır.
+
+**Kod Nümunəsi**
+
+```java
+import java.util.ArrayList;
+
+public class AutoBoxingExample {
+    public static void main(String[] args) {
+        // Autoboxing
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(42); // int → Integer (autoboxing)
+        System.out.println("List: " + list);
+
+        // Auto-unboxing
+        Integer wrapperInt = 100;
+        int sum = wrapperInt + 50; // Integer → int (auto-unboxing)
+        System.out.println("Sum: " + sum);
+    }
+}
+```
+
+- **Şərh:**
+  - `list.add(42); - 42 (int)` avtomatik olaraq Integer obyektinə çevrilir (autoboxing).
+  - `int sum = wrapperInt + 50;` - wrapperInt (Integer) avtomatik olaraq int tipinə çevrilir (auto-unboxing).
+  - Bu proseslər Java kompilyatoru tərəfindən avtomatik idarə olunur.
+
+---
 
 ## OOP Prinsipləri
 21. **Inheritance** (Mirasalma) nədir?
