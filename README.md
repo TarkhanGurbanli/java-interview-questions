@@ -3,7 +3,18 @@
 Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Java-nın əsas mövzularını başdan sona əhatə edir.
 
 ## Mövzular
+- [Core Java](#core-java)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+- [Kafka və Kafka Streams](#kafka-və-kafka-streams)
+- [Liquibase](#liquibase)
+- [GitHub](#github)
 - [Docker](#docker)
+- [Redis](#redis)
 
 ## Mündəricat
 - [Ümumi Suallar](#ümumi-suallar)
@@ -17,6 +28,8 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 - [Generics](#generics)
 - [Lambda İfadələri və Stream API](#lambda-ifadələri-və-stream-api)
 - [Digər Mövzular](#digər-mövzular)
+
+## Core Java
 
 ## Ümumi Suallar
 1. Java nədir və onun əsas xüsusiyyətləri hansılardır?
@@ -3273,3 +3286,249 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 
 ---
 
+# Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms, RabbitMQ, Kafka/Kafka Streams, Liquibase, GitHub, Docker və Redis Müsahibə Sualları
+
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms, RabbitMQ, Kafka/Kafka Streams, Liquibase, GitHub, Docker və Redis ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+- [Kafka və Kafka Streams](#kafka-və-kafka-streams)
+- [Liquibase](#liquibase)
+- [GitHub](#github)
+- [Docker](#docker)
+- [Redis](#redis)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Data Structures](#data-structures)
+  - [Persistence](#persistence)
+  - [Pub/Sub](#pub-sub)
+  - [Clustering](#clustering)
+  - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
+  - [Təhlükəsizlik](#təhlükəsizlik)
+  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+  - [Digər Mövzular](#digər-mövzular)
+
+## Redis
+
+### Ümumi Suallar
+1. **Redis** nədir və nə üçün istifadə olunur?
+2. **In-memory Database** (Yaddaşda Verilənlər Bazası) nədir və Redis-in rolu nədir?
+3. **Redis**-in digər verilənlər bazaları ilə (məsələn, Memcached) fərqləri nələrdir?
+4. **Redis**-in açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
+5. **Redis**-in **NoSQL** verilənlər bazası kimi xüsusiyyətləri nələrdir?
+6. **Redis**-in mikroservis arxitekturasında istifadəsi necədir?
+7. **Redis**-in əsas xüsusiyyətləri hansılardır?
+8. **Redis**-in **key-value store** (açar-dəyər anbarı) kimi rolu nədir?
+9. **Redis**-in **caching** (keşləmə) üçün istifadəsi necədir?
+10. **Redis**-in **real-time applications** (real vaxt tətbiqləri) üçün faydaları nələrdir?
+11. **Redis**-in **single-threaded** (tək axınlı) arxitekturası nədir?
+12. **Redis**-in **event-driven** (hadisə yönümlü) modeldən istifadəsi necədir?
+13. **Redis**-in **data persistence** (məlumat davamlılığı) xüsusiyyətləri nələrdir?
+14. **Redis**-in **high availability** (yüksək əlçatanlıq) təminatı necədir?
+15. **Redis**-in **scalability** (miqyaslılıq) imkanları nələrdir?
+
+### Data Structures
+16. **Redis**-də **String** data strukturu nədir və necə istifadə olunur?
+17. **Redis**-də **List** data strukturu nədir?
+18. **Redis**-də **Set** data strukturu nədir və necə işləyir?
+19. **Redis**-də **Sorted Set** (Sıralanmış Dəst) nədir?
+20. **Redis**-də **Hash** data strukturu nədir?
+21. **Redis**-də **Bitmap** nədir və necə istifadə olunur?
+22. **Redis**-də **HyperLogLog** nədir?
+23. **Redis**-də **Geo** data strukturu nədir və necə işləyir?
+24. **Redis**-də **Stream** data strukturu nədir?
+25. **Redis**-də **String** ilə **Hash** data strukturları arasındakı fərq nədir?
+26. **Redis**-də **Set** ilə **Sorted Set** arasındakı fərq nədir?
+27. **Redis**-də **List** ilə **Stream** arasındakı fərq nədir?
+28. **Redis**-də **HyperLogLog** ilə **Set** arasındakı fərq nədir?
+29. **Redis**-də **Bitmap** ilə **Set** arasındakı fərq nədir?
+30. **Redis**-də **Geo** data strukturu ilə geolokasiya əməliyyatları necə aparılır?
+
+### Persistence
+31. **Redis Persistence** (Redis Davamlılığı) nədir?
+32. **Redis**-də **RDB** (Redis Database Backup) nədir və necə işləyir?
+33. **Redis**-də **AOF** (Append-Only File) nədir?
+34. **Redis**-də **RDB** ilə **AOF** arasındakı fərq nədir?
+35. **Redis**-də **hybrid persistence** (hibrid davamlılıq) nədir?
+36. **Redis**-də **RDB snapshot** (RDB anlıq görüntüsü) necə yaradılır?
+37. **Redis**-də **AOF rewrite** (AOF yenidən yazma) nədir?
+38. **Redis**-də **persistence configuration** (davamlılıq konfiqurasiyası) necə təyin olunur?
+39. **Redis**-də **fsync** parametri nədir və necə təsir edir?
+40. **Redis**-də **persistence performance** (davamlılıq performansı) necə optimallaşdırılır?
+41. **Redis**-də **data loss** (məlumat itirilməsi) riski necə azaldılır?
+42. **Redis**-də **backup** (ehtiyat nüsxə) necə aparılır?
+43. **Redis**-də **restore** (bərpa) necə həyata keçirilir?
+44. **Redis**-də **RDB compression** (RDB sıxışdırması) necə işləyir?
+45. **Redis**-də **AOF compaction** (AOF sıxışdırması) necə tətbiq olunur?
+
+### Pub/Sub
+46. **Redis Pub/Sub** (Nəşr/Abunə) nədir və necə işləyir?
+47. **Redis**-də **publish** (nəşr) komandası nədir?
+48. **Redis**-də **subscribe** (abunə) komandası nədir?
+49. **Redis**-də **Pub/Sub channels** (nəşr/abunə kanalları) necə təyin olunur?
+50. **Redis**-də **pattern-based subscription** (nümunə əsaslı abunə) nədir?
+51. **Redis Pub/Sub** ilə **Redis Streams** arasındakı fərq nədir?
+52. **Redis Pub/Sub**-də **message delivery guarantees** (mesaj çatdırılma zəmanətləri) nədir?
+53. **Redis Pub/Sub**-də **scalability** (miqyaslılıq) necə təmin olunur?
+54. **Redis Pub/Sub**-də **message persistence** (mesaj davamlılığı) mümkünmü?
+55. **Redis Pub/Sub**-də **channel management** (kanal idarəetməsi) necə aparılır?
+56. **Redis Pub/Sub**-də **message filtering** (mesaj süzgəcləmə) necə həyata keçirilir?
+57. **Redis Pub/Sub**-də **high throughput** (yüksək ötürmə qabiliyyəti) necə təmin olunur?
+58. **Redis Pub/Sub**-də **low latency** (aşağı gecikmə) necə əldə olunur?
+59. **Redis Pub/Sub**-də **message ordering** (mesaj sıralaması) necə təmin olunur?
+60. **Redis Pub/Sub**-də **message retry** (mesaj təkrar sınağı) necə idarə olunur?
+
+### Clustering
+61. **Redis Cluster** (Redis Klasteri) nədir və necə konfiqurasiya olunur?
+62. **Redis**-də **sharding** (bölüşdürmə) necə işləyir?
+63. **Redis Cluster**-də **hash slots** (xəş yuvaları) nədir?
+64. **Redis Cluster**-də **replication** (təkrarlanma) necə təmin olunur?
+65. **Redis Cluster**-də **master-slave** (usta-qul) arxitekturası nədir?
+66. **Redis Cluster**-də **failover** (əks funksionallıq) necə işləyir?
+67. **Redis Sentinel** nədir və necə konfiqurasiya olunur?
+68. **Redis Sentinel** ilə **Redis Cluster** arasındakı fərq nədir?
+69. **Redis Cluster**-də **node addition** (düyün əlavə etmə) necə aparılır?
+70. **Redis Cluster**-də **node removal** (düyün silinmə) necə həyata keçirilir?
+71. **Redis Cluster**-də **resharding** (yenidən bölüşdürmə) necə tətbiq olunur?
+72. **Redis Cluster**-də **slot migration** (yuva miqrasiyası) nədir?
+73. **Redis Cluster**-də **high availability** (yüksək əlçatanlıq) necə təmin olunur?
+74. **Redis Cluster**-də **consistency** (tutarlılıq) necə idarə olunur?
+75. **Redis Cluster**-də **network partitioning** (şəbəkə bölünməsi) necə idarə olunur?
+
+### Performans və Optimallaşdırma
+76. **Redis**-də **performance tuning** (performans tənzimləmə) necə aparılır?
+77. **Redis**-də **latency** (gecikmə) necə azaldılır?
+78. **Redis**-də **throughput** (ötürmə qabiliyyəti) necə artır?
+79. **Redis**-də **memory optimization** (yaddaş optimallaşdırması) necə həyata keçirilir?
+80. **Redis**-də **maxmemory** parametri nədir?
+81. **Redis**-də **eviction policies** (çıxarılma siyasətləri) hansılardır?
+82. **Redis**-də **LRU eviction** (Son İstifadə Olunan Çıxarılma) necə işləyir?
+83. **Redis**-də **TTL** (Time To Live - Yaşama Müddəti) necə təyin olunur?
+84. **Redis**-də **memory fragmentation** (yaddaş fraqmentasiyası) necə idarə olunur?
+85. **Redis**-də **pipelining** (boru xətti) nədir və performansa necə təsir edir?
+86. **Redis**-də **batch operations** (toplu əməliyyatlar) necə tətbiq olunur?
+87. **Redis**-də **multi/exec** komandaları nədir?
+88. **Redis**-də **lua scripting** (lua skriptləri) performansı necə artır?
+89. **Redis**-də **connection pooling** (əlaqə hovuzu) necə optimallaşdırılır?
+90. **Redis**-də **command latency** (komanda gecikməsi) necə ölçülür?
+
+### Təhlükəsizlik
+91. **Redis**-də **authentication** (autentifikasiya) necə konfiqurasiya olunur?
+92. **Redis**-də **password protection** (şifrə qoruması) necə təyin olunur?
+93. **Redis**-də **SSL/TLS** şifrələməsi necə aktivləşdirilir?
+94. **Redis**-də **access control lists (ACLs)** (giriş nəzarət siyahıları) nədir?
+95. **Redis**-də **user management** (istifadəçi idarəetmə) necə aparılır?
+96. **Redis**-də **network security** (şəbəkə təhlükəsizliyi) necə təmin olunur?
+97. **Redis**-də **encryption at rest** (sabit vəziyyətdə şifrələmə) necə tətbiq olunur?
+98. **Redis**-də **data encryption** (məlumat şifrələməsi) necə həyata keçirilir?
+99. **Redis**-də **audit logging** (audit qeydiyyatı) necə aktivləşdirilir?
+100. **Redis**-də **firewall** konfiqurasiyası necə aparılır?
+101. **Redis**-də **command restrictions** (komanda məhdudiyyətləri) necə təyin olunur?
+102. **Redis**-də **secure communication** (təhlükəsiz rabitə) necə təmin olunur?
+103. **Redis**-də **role-based access control** (rol əsaslı giriş nəzarəti) necə tətbiq olunur?
+104. **Redis**-də **data exposure** (məlumat ifşası) riski necə azaldılır?
+105. **Redis**-də **vulnerability scanning** (zəiflik skan etmə) necə aparılır?
+
+### Spring ilə İnteqrasiya
+106. **Spring Data Redis** nədir və necə istifadə olunur?
+107. **Spring Boot** ilə Redis inteqrasiyası necə həyata keçirilir?
+108. **Spring Data Redis**-də **RedisTemplate** sinfi nədir?
+109. **Spring Boot**-da **Redis caching** (Redis keşləmə) necə konfiqurasiya olunur?
+110. **Spring Boot**-da **@Cacheable** annotasiyası Redis ilə necə istifadə olunur?
+111. **Spring Data Redis**-də **RedisRepository** nədir?
+112. **Spring Boot**-da **Redis Pub/Sub** necə tətbiq olunur?
+113. **Spring Data Redis**-də **message listener** (mesaj dinləyicisi) necə konfiqurasiya olunur?
+114. **Spring Boot**-da **Redis connection pooling** (əlaqə hovuzu) necə təyin olunur?
+115. **Spring Data Redis**-də **Redis serialization** (Redis seriyalaşdırması) necə idarə olunur?
+116. **Spring Boot**-da **Redis Sentinel** ilə inteqrasiya necə aparılır?
+117. **Spring Boot**-da **Redis Cluster** ilə inteqrasiya necə həyata keçirilir?
+118. **Spring Data Redis**-də **Redis transactions** (Redis tranzaksiyaları) necə tətbiq olunur?
+119. **Spring Boot**-da **Redis Lua scripting** necə istifadə olunur?
+120. **Spring Boot**-da **Redis monitoring** (Redis monitorinqi) necə qurulur?
+
+### Digər Mövzular
+121. **Redis CLI** (Redis Komanda Xətti İnterfeysi) nədir və necə istifadə olunur?
+122. **Redis**-də **SET** ilə **SETNX** komandaları arasındakı fərq nədir?
+123. **Redis**-də **EXPIRE** ilə **SETEX** komandaları arasındakı fərq nədir?
+124. **Redis**-də **INCR** və **DECR** komandaları nə üçün istifadə olunur?
+125. **Redis**-də **MULTI/EXEC** ilə tranzaksiyalar necə idarə olunur?
+126. **Redis**-də **Lua scripting** nədir və necə tətbiq olunur?
+127. **Redis**-də **EVAL** komandası nədir?
+128. **Redis**-də **pipeline** ilə **batch operations** arasındakı fərq nədir?
+129. **Redis**-də **SCAN** komandası nədir və necə istifadə olunur?
+130. **Redis**-də **KEYS** ilə **SCAN** arasındakı fərq nədir?
+131. **Redis**-də **TTL** ilə **PERSIST** komandaları nədir?
+132. **Redis**-də **ZSET** ilə **SET** arasındakı fərq nədir?
+133. **Redis**-də **GEOADD** ilə geolokasiya əməliyyatları necə aparılır?
+134. **Redis**-də **XADD** ilə Stream əməliyyatları necə tətbiq olunur?
+135. **Redis**-də **XREAD** ilə **XREADGROUP** arasındakı fərq nədir?
+136. **Redis**-də **Streams consumer groups** (axın istehlakçı qrupları) nədir?
+137. **Redis**-də **Bloom Filter** necə tətbiq olunur?
+138. **Redis**-də **Cuckoo Filter** nədir?
+139. **Redis**-də **Time Series** modulu nədir?
+140. **Redis**-də **JSON** modulu necə istifadə olunur?
+141. **Redis**-də **Search** modulu nədir?
+142. **Redis**-də **Graph** modulu necə işləyir?
+143. **Redis**-də **Redis Modules** (Redis Modulları) necə əlavə olunur?
+144. **Redis**-də **monitoring** (monitorinq) necə həyata keçirilir?
+145. **Redis**-də **INFO** komandası hansı məlumatları göstərir?
+146. **Redis**-də **SLOWLOG** komandası nədir?
+147. **Redis**-də **MONITOR** komandası nə üçün istifadə olunur?
+148. **Redis**-də **Prometheus** ilə monitorinq necə qurulur?
+149. **Redis**-də **Grafana** ilə vizualizasiya necə təmin olunur?
+150. **Redis**-də **log aggregation** (qeyd toplama) necə aparılır?
+151. **Redis**-də **ELK Stack** (Elasticsearch, Logstash, Kibana) ilə inteqrasiya necə həyata keçirilir?
+152. **Redis**-də **backup and restore** (ehtiyat nüsxə və bərpa) necə aparılır?
+153. **Redis**-də **data migration** (məlumat miqrasiyası) necə həyata keçirilir?
+154. **Redis**-də **replication lag** (təkrarlanma gecikməsi) necə idarə olunur?
+155. **Redis**-də **eviction policies** ilə **TTL** arasındakı fərq nədir?
+156. **Redis**-də **memory usage** (yaddaş istifadəsi) necə ölçülür?
+157. **Redis**-də **memory fragmentation** ilə **memory optimization** arasındakı fərq nədir?
+158. **Redis**-də **pipelining** ilə **multi/exec** arasındakı fərq nədir?
+159. **Redis**-də **Lua scripting** ilə **batch operations** arasındakı fərq nədir?
+160. **Redis**-də **Pub/Sub** ilə **Streams** arasındakı fərq nədir?
+161. **Redis**-də **Bloom Filter** ilə **HyperLogLog** arasındakı fərq nədir?
+162. **Redis**-də **Geo** ilə **ZSET** arasındakı fərq nədir?
+163. **Redis**-də **Time Series** modulu ilə **Streams** arasındakı fərq nədir?
+164. **Redis**-də **JSON** modulu ilə **Hash** arasındakı fərq nədir?
+165. **Redis**-də **Search** modulu ilə **ZSET** arasındakı fərq nədir?
+166. **Redis**-də **Graph** modulu ilə **Set** arasındakı fərq nədir?
+167. **Redis**-də **persistence** ilə **replication** arasındakı fərq nədir?
+168. **Redis**-də **Sentinel** ilə **Cluster** arasındakı fərq nədir?
+169. **Redis**-də **eviction** ilə **expiration** arasındakı fərq nədir?
+170. **Redis**-də **Pub/Sub** ilə **message queuing** (mesaj növbələmə) arasındakı fərq nədir?
+171. **Redis**-də **Lua scripting** ilə **transactions** arasındakı fərq nədir?
+172. **Redis**-də **monitoring** ilə **logging** arasındakı fərq nədir?
+173. **Redis**-də **backup** ilə **persistence** arasındakı fərq nədir?
+174. **Redis**-də **data migration** ilə **replication** arasındakı fərq nədir?
+175. **Redis**-də **memory optimization** ilə **eviction policies** arasındakı fərq nədir?
+176. **Redis**-də **pipelining** ilə **connection pooling** arasındakı fərq nədir?
+177. **Redis**-də **Pub/Sub** ilə **Kafka Pub/Sub** arasındakı fərq nədir?
+178. **Redis**-də **Streams** ilə **Kafka Streams** arasındakı fərq nədir?
+179. **Redis**-də **Bloom Filter** ilə **Cuckoo Filter** arasındakı fərq nədir?
+180. **Redis**-də **Time Series** ilə **ZSET** arasındakı fərq nədir?
+181. **Redis**-də **JSON** ilə **String** arasındakı fərq nədir?
+182. **Redis**-də **Search** ilə **Geo** arasındakı fərq nədir?
+183. **Redis**-də **Graph** ilə **Hash** arasındakı fərq nədir?
+184. **Redis**-də **persistence** ilə **backup** arasındakı fərq nədir?
+185. **Redis**-də **replication** ilə **clustering** arasındakı fərq nədir?
+186. **Redis**-də **eviction** ilə **TTL** arasındakı fərq nədir?
+187. **Redis**-də **Pub/Sub** ilə **Streams** arasındakı fərq nədir?
+188. **Redis**-də **Lua scripting** ilə **multi/exec** arasındakı fərq nədir?
+189. **Redis**-də **monitoring** ilə **performance tuning** arasındakı fərq nədir?
+190. **Redis**-də **data migration** ilə **data backup** arasındakı fərq nədir?
+191. **Redis**-də **memory optimization** ilə **data compression** arasındakı fərq nədir?
+192. **Redis**-də **pipelining** ilə **batch processing** arasındakı fərq nədir?
+193. **Redis**-də **Pub/Sub** ilə **message queuing** arasındakı fərq nədir?
+194. **Redis**-də **Streams** ilə **List** arasındakı fərq nədir?
+195. **Redis**-də **Bloom Filter** ilə **Set** arasındakı fərq nədir?
+196. **Redis**-də **Cuckoo Filter** ilə **HyperLogLog** arasındakı fərq nədir?
+197. **Redis**-də **Time Series** ilə **Hash** arasındakı fərq nədir?
+198. **Redis**-də **JSON** ilə **ZSET** arasındakı fərq nədir?
+199. **Redis**-də **Search** ilə **Sorted Set** arasındakı fərq nədir?
+200. **Redis**-də **Graph** ilə **List** arasındakı fərq nədir?
