@@ -1262,7 +1262,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 
 --- 
 
-# Java, Hibernate, Spring Boot, Data Structures/Collections və Design Patterns Müsahibə Sualları
+# Design Patterns Müsahibə Sualları
 
 Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design Patterns ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
 
