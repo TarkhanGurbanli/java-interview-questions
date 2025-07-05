@@ -583,7 +583,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java, Hibernate və Spring Boot-un əsas və qabaqcıl mövzularını başdan sona əhatə edir.
 
 ## Mündəricat
-- [Core Java](##ümumi-suallar)
+- [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
   - [Ümumi Suallar](#spring-boot-ümumi-suallar)
@@ -918,3 +918,344 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 298. **Spring Boot** ilé **distributed logging** (paylanmış qeydiyyat) necé həyata keçirilir?
 299. **Spring Boot** ilé **observability** (müşahidə oluna bilmə) necé təmin olunur?
 300. **Spring Boot** ilé **SRE** (Site Reliability Engineering) prinsipləri necé tətbiq olunur?
+
+---
+
+# Java, Hibernate, Spring Boot və Data Structures/Collections Müsahibə Sualları
+
+Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java, Hibernate, Spring Boot və Data Structures/Collections-un əsas və qabaqcıl mövzularını başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Array və String](#array-və-string)
+  - [List və Set](#list-və-set)
+  - [Map](#map)
+  - [Queue və Stack](#queue-və-stack)
+  - [Tree və Graph](#tree-və-graph)
+  - [Hashing və Performance](#hashing-və-performance)
+  - [Algorithms və Collections](#algorithms-və-collections)
+  - [Digər Mövzular](#digər-mövzular)
+
+## Data Structures və Collections
+
+### Ümumi Suallar
+1. **Data Structure** (Məlumat Strukturu) nədir və niyə vacibdir?
+2. **Collections Framework** (Kolleksiyalar Çərçivəsi) Java-da nədir?
+3. **Collection** interfeysi ilə **Collections** sinfi arasındakı fərq nədir?
+4. Java-da **List**, **Set** və **Map** interfeyslərinin əsas xüsusiyyətləri nələrdir?
+5. **Data Structure** növləri hansılardır?
+6. **Linear Data Structure** (Xətti Məlumat Strukturu) ilə **Non-linear Data Structure** (Qeyri-xətti Məlumat Strukturu) arasındakı fərq nədir?
+7. Java-da **dynamic data structures** (dinamik məlumat strukturları) hansılardır?
+8. **Time Complexity** (Vaxt Mürəkkəbliyi) və **Space Complexity** (Yer Mürəkkəbliyi) nədir?
+9. Java-da **boxing** və **unboxing** Collections ilə necə əlaqəlidir?
+10. **Comparable** və **Comparator** interfeysləri nədir?
+11. Java-da **Iterator** nədir və necə istifadə olunur?
+12. **ListIterator** ilə **Iterator** arasındakı fərq nədir?
+13. **Fail-fast** və **fail-safe** iteratorlar nədir?
+14. Java-da **generics** (ümumiləşdirmə) Collections ilə necə istifadə olunur?
+15. **Type safety** (tip təhlükəsizliyi) Collections-da necə təmin olunur?
+
+### Array və String
+16. **Array** (Massiv) nədir və Java-da necə təyin olunur?
+17. **Static Array** (Statik Massiv) ilə **Dynamic Array** (Dinamik Massiv) arasındakı fərq nədir?
+18. Java-da **multidimensional array** (çoxölçülü massiv) necə işləyir?
+19. **ArrayList** ilə **Array** arasındakı fərq nədir?
+20. Java-da **array** ölçüsünün dəyişdirilməsi mümkündürmü?
+21. **System.arraycopy()** metodu nə üçün istifadə olunur?
+22. Java-da **jagged array** (qeyri-bərabər massiv) nədir?
+23. **Arrays** sinfinin əsas metodları hansılardır?
+24. **Arrays.sort()** metodu necə işləyir?
+25. **Arrays.binarySearch()** metodu nə üçün istifadə olunur?
+26. Java-da **String** sinfi məlumat strukturu kimi necə istifadə olunur?
+27. **String Pool** (Sətir Hovuzu) nədir və necə işləyir?
+28. **String** ilə **char array** (simvol massivi) arasındakı fərq nədir?
+29. **StringBuilder** ilə **StringBuffer** performans baxımından necə fərqlənir?
+30. Java-da **immutable** (dəyişilməz) String-in üstünlükləri nələrdir?
+
+### List və Set
+31. **List** (Siyahı) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
+32. **ArrayList** nədir və necə işləyir?
+33. **LinkedList** nədir və necə işləyir?
+34. **ArrayList** ilə **LinkedList** arasındakı fərq nədir?
+35. **Vector** nədir və **ArrayList** ilə fərqi nədir?
+36. **CopyOnWriteArrayList** nədir və nə üçün istifadə olunur?
+37. Java-da **List** üzərində **synchronized** əməliyyatlar necə aparılır?
+38. **Collections.synchronizedList()** metodu nə edir?
+39. **List** üzərində **iteration** (təkrarlama) zamanı **ConcurrentModificationException** niyə baş verir?
+40. **Set** (Dəst) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
+41. **HashSet** nədir və necə işləyir?
+42. **LinkedHashSet** ilə **HashSet** arasındakı fərq nədir?
+43. **TreeSet** nədir və necə işləyir?
+44. **HashSet** ilə **TreeSet** arasındakı fərq nədir?
+45. **EnumSet** nədir və nə üçün istifadə olunur?
+46. Java-da **Set** üzərində **duplicate** (təkrar) elementlərin qarşısını necə almaq olar?
+47. **Set** ilə **List** arasındakı əsas fərqlər nələrdir?
+48. **ConcurrentSkipListSet** nədir və nə üçün istifadə olunur?
+49. **List.of()** və **Set.of()** metodları nədir?
+50. **Collections.unmodifiableList()** və **Collections.unmodifiableSet()** nə edir?
+
+### Map
+51. **Map** (Xəritə) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
+52. **HashMap** nədir və necə işləyir?
+53. **LinkedHashMap** ilə **HashMap** arasındakı fərq nədir?
+54. **TreeMap** nədir və necə işləyir?
+55. **HashMap** ilə **TreeMap** arasındakı fərq nədir?
+56. **ConcurrentHashMap** nədir və nə üçün istifadə olunur?
+57. **Hashtable** ilə **HashMap** arasındakı fərq nədir?
+58. **WeakHashMap** nədir və necə istifadə olunur?
+59. **IdentityHashMap** nədir və nə üçün istifadə olunur?
+60. **EnumMap** nədir və necə işləyir?
+61. **Map.of()** metodu nədir?
+62. **Collections.synchronizedMap()** metodu nə edir?
+63. **HashMap**-in daxili strukturu necədir?
+64. **HashMap**-də **load factor** (yükləmə faktoru) nədir?
+65. **HashMap**-də **rehashing** (yenidən xəşləmə) necə baş verir?
+66. **ConcurrentHashMap**-in **segmentation** (seqmentləşdirmə) mexanizmi necə işləyir?
+67. **Map**-də **null** açar və dəyərlərə icazə verən siniflər hansılardır?
+68. **Map.Entry** interfeysi nədir və necə istifadə olunur?
+69. **HashMap**-də **collision** (toqquşma) necə idarə olunur?
+70. **TreeMap**-də **Red-Black Tree** (Qırmızı-Qara Ağac) necə işləyir?
+
+### Queue və Stack
+71. **Queue** (Növbə) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
+72. **PriorityQueue** nədir və necə işləyir?
+73. **Deque** (İkiucalı Növbə) nədir və necə istifadə olunur?
+74. **ArrayDeque** ilə **LinkedList** arasındakı fərq nədir?
+75. **BlockingQueue** nədir və nə üçün istifadə olunur?
+76. **ArrayBlockingQueue** ilə **LinkedBlockingQueue** arasındakı fərq nədir?
+77. **PriorityBlockingQueue** nədir?
+78. **SynchronousQueue** nədir və necə işləyir?
+79. **DelayQueue** nədir və nə üçün istifadə olunur?
+80. **ConcurrentLinkedQueue** nədir?
+81. **Stack** (Yığın) nədir və Java-da necə istifadə olunur?
+82. **Stack** sinfi ilə **Deque** arasındakı fərq nədir?
+83. Java-da **LIFO** (Last In, First Out - Son Girən, İlk Çıxan) prinsipi necə həyata keçirilir?
+84. Java-da **FIFO** (First In, First Out - İlk Girən, İlk Çıxan) prinsipi necə tətbiq olunur?
+85. **Queue**-də **offer()** və **add()** metodları arasındakı fərq nədir?
+86. **Queue**-də **poll()** və **remove()** metodları arasındakı fərq nədir?
+87. **PriorityQueue**-də elementlərin sıralanması necə təmin olunur?
+88. **Deque**-də **push()** və **pop()** metodları nə üçün istifadə olunur?
+89. **BlockingQueue**-də **put()** və **take()** metodları necə işləyir?
+90. **Queue** ilə **List** arasındakı fərqlər nələrdir?
+
+### Tree və Graph
+91. **Tree** (Ağac) məlumat strukturu nədir?
+92. **Binary Tree** (İkili Ağac) nədir?
+93. **Binary Search Tree** (İkili Axtarış Ağacı) nədir və necə işləyir?
+94. **AVL Tree** (AVL Ağacı) nədir?
+95. **Red-Black Tree** (Qırmızı-Qara Ağac) nədir?
+96. **B-Tree** (B-Ağacı) nədir və nə üçün istifadə olunur?
+97. **Trie** (Prefiks Ağacı) nədir və necə işləyir?
+98. **Heap** (Yığın) nədir və Java-da necə tətbiq olunur?
+99. **Min-Heap** və **Max-Heap** arasındakı fərq nədir?
+100. **PriorityQueue** ilə **Heap** arasındakı əlaqə nədir?
+101. **Graph** (Qrafik) məlumat strukturu nədir?
+102. **Directed Graph** (İstiqamətləndirilmiş Qrafik) ilə **Undirected Graph** (İstiqamətsiz Qrafik) arasındakı fərq nədir?
+103. **Weighted Graph** (Çəkili Qrafik) nədir?
+104. **Adjacency Matrix** (Qoşulma Matrisi) nədir?
+105. **Adjacency List** (Qoşulma Siyahısı) nədir?
+106. **Tree** ilə **Graph** arasındakı fərqlər nələrdir?
+107. Java-da **TreeSet** və **TreeMap** ağac strukturları ilə necə əlaqəlidir?
+108. **Depth-First Search** (Dərinlik Axtarışı) necə işləyir?
+109. **Breadth-First Search** (Eninə Axtarış) necə işləyir?
+110. **Dijkstra’s Algorithm** (Dijkstra Alqoritmi) qrafiklərdə necə istifadə olunur?
+
+### Hashing və Performance
+111. **Hashing** (Xəşləmə) nədir və Java-da necə işləyir?
+112. **Hash Function** (Xəş Funksiyası) nədir?
+113. **Hash Table** (Xəş Cədvəli) nədir və necə işləyir?
+114. **HashMap**-də **hashCode()** metodu necə istifadə olunur?
+115. **HashMap**-də **equals()** metodu ilə **hashCode()** arasındakı əlaqə nədir?
+116. **Collision Resolution** (Toqquşma Həlli) üsulları hansılardır?
+117. **Separate Chaining** (Ayrı Zəncirləmə) necə işləyir?
+118. **Open Addressing** (Açıq Ünvanlama) nədir?
+119. **Linear Probing** (Xətti Yoxlama) ilə **Quadratic Probing** (Kvadratik Yoxlama) arasındakı fərq nədir?
+120. **Double Hashing** (İkiqat Xəşləmə) nədir?
+121. **HashMap**-də **bucket** (səbət) strukturu necə işləyir?
+122. **HashSet**-də daxili olaraq **HashMap** necə istifadə olunur?
+123. **Load Factor** (Yükləmə Faktoru) ilə **Capacity** (Tutum) arasındakı əlaqə nədir?
+124. **HashMap**-də **performance** (performans) necə optimallaşdırılır?
+125. **ConcurrentHashMap**-də **lock-free** əməliyyatlar necə təmin olunur?
+126. **WeakHashMap**-də **weak references** (zəif istinadlar) necə işləyir?
+127. **HashMap**-də **null** açarların idarə olunması necə aparılır?
+128. **Hashing**-də **collision** sayını azaltmaq üçün hansı üsullar istifadə olunur?
+129. **HashMap**-də **treeification** (ağaclaşdırma) nə vaxt baş verir?
+130. **ConcurrentHashMap**-də **read** və **write** əməliyyatlarının performansı necədir?
+
+### Algorithms və Collections
+131. **Sorting** (Sıralama) alqoritmləri Java-da Collections ilə necə istifadə olunur?
+132. **Collections.sort()** metodu hansı alqoritmdən istifadə edir?
+133. **TimSort** alqoritmi nədir və necə işləyir?
+134. **Merge Sort** (Birləşmə Sıralaması) ilə **Quick Sort** (Sürətli Sıralama) arasındakı fərq nədir?
+135. **Binary Search** (İkili Axtarış) Java-da necə tətbiq olunur?
+136. **Arrays.binarySearch()** ilə **Collections.binarySearch()** arasındakı fərq nədir?
+137. **Linear Search** (Xətti Axtarış) ilə **Binary Search** arasındakı fərq nədir?
+138. **Collections.shuffle()** metodu necə işləyir?
+139. **Collections.reverse()** metodu nə edir?
+140. **Collections.fill()** metodu nə üçün istifadə olunur?
+141. **Collections.copy()** metodu necə istifadə olunur?
+142. **Collections.min()** və **Collections.max()** metodları necə işləyir?
+143. **Collections.disjoint()** metodu nədir?
+144. **Collections.frequency()** metodu nə üçün istifadə olunur?
+145. **Stream API** ilə Collections üzərində axtarış necə aparılır?
+146. **Stream API**-da **filter()** və **map()** ilə Data Structures necə işləyir?
+147. **Parallel Stream** ilə Collections üzərində performans necə optimallaşdırılır?
+148. **Spliterator** nədir və Collections ilə necə istifadə olunur?
+149. **forEach()** ilə **enhanced for loop** (gücləndirilmiş for dövrü) arasındakı fərq nədir?
+150. **Collections.nCopies()** metodu nə edir?
+
+### Digər Mövzular
+151. **Linked List** (Bağlı Siyahı) daxili strukturu necədir?
+152. **Singly Linked List** (Tək Bağlı Siyahı) ilə **Doubly Linked List** (İkiqat Bağlı Siyahı) arasındakı fərq nədir?
+153. **Circular Linked List** (Dairəvi Bağlı Siyahı) nədir?
+154. **Skip List** (Atlama Siyahısı) nədir və necə işləyir?
+155. **LinkedList**-də **tail** (quyruq) əlavə etmə performansı necədir?
+156. **BitSet** nədir və nə üçün istifadə olunur?
+157. **Bloom Filter** nədir və Java-da necə tətbiq olunur?
+158. **Disjoint Set** (Ayrılmış Dəst) nədir və necə işləyir?
+159. **Union-Find** alqoritmi nədir?
+160. **Graph**-də **Topological Sort** (Topoloji Sıralama) necə həyata keçirilir?
+161. **Kruskal’s Algorithm** (Kruskal Alqoritmi) nədir?
+162. **Prim’s Algorithm** (Prim Alqoritmi) nədir?
+163. **Bellman-Ford Algorithm** (Bellman-Ford Alqoritmi) necə işləyir?
+164. **Floyd-Warshall Algorithm** (Floyd-Warshall Alqoritmi) nədir?
+165. **Minimum Spanning Tree** (Minimum Örtük Ağacı) nədir?
+166. **Shortest Path** (Ən Qısa Yol) problemi Java-da necə həll olunur?
+167. **Trie**-də **prefix search** (prefiks axtarışı) necə aparılır?
+168. **Heap**-də **heapify** (yığınlaşdırma) prosesi necə işləyir?
+169. **Binary Heap** (İkili Yığın) ilə **Fibonacci Heap** (Fibonacci Yığını) arasındakı fərq nədir?
+170. **B+-Tree** nədir və nə üçün istifadə olunur?
+171. **Segment Tree** (Seqment Ağacı) nədir?
+172. **Fenwick Tree** (Fenwick Ağacı) nədir?
+173. **Interval Tree** (Interval Ağacı) nədir?
+174. **Quad Tree** (Dördlük Ağac) nədir?
+175. **KD-Tree** (K-Ölçülü Ağac) nədir?
+176. **Graph**-də **cycle detection** (dövr aşkarlanması) necə aparılır?
+177. **Union-Find** ilə **cycle detection** necə həyata keçirilir?
+178. **Graph**-də **connected components** (bağlı komponentlər) necə tapılır?
+179. **Strongly Connected Components** (Güclü Bağlı Komponentlər) necə aşkarlanır?
+180. **Kosaraju’s Algorithm** (Kosaraju Alqoritmi) nədir?
+181. **Tarjan’s Algorithm** (Tarjan Alqoritmi) nədir?
+182. **Graph**-də **bipartite graph** (ikiqisimli qrafik) necə yoxlanılır?
+183. **Graph Coloring** (Qrafik Boyama) problemi nədir?
+184. **Maximum Flow** (Maksimum Axın) problemi necə həll olunur?
+185. **Ford-Fulkerson Algorithm** (Ford-Fulkerson Alqoritmi) nədir?
+186. **Edmonds-Karp Algorithm** (Edmonds-Karp Alqoritmi) nədir?
+187. **HashMap**-də **consistent hashing** (sabit xəşləmə) necə tətbiq olunur?
+188. **LRU Cache** (Son İstifadə Olunan Keş) Java-da necə tətbiq olunur?
+189. **LFU Cache** (Ən Az İstifadə Olunan Keş) nədir?
+190. **ConcurrentLinkedDeque** nədir və nə üçün istifadə olunur?
+191. **Collections.emptyList()** və **Collections.singletonList()** nədir?
+192. **List**-də **sublist** (alt siyahı) necə yaradılır?
+193. **Map**-də **computeIfAbsent()** metodu nə edir?
+194. **Map**-də **computeIfPresent()** metodu nə üçün istifadə olunur?
+195. **Map**-də **merge()** metodu necə işləyir?
+196. **TreeSet**-də **ceiling()** və **floor()** metodları nədir?
+197. **TreeSet**-də **higher()** və **lower()** metodları nə üçün istifadə olunur?
+198. **NavigableSet** və **SortedSet** arasındakı fərq nədir?
+199. **NavigableMap** və **SortedMap** arasındakı fərq nədir?
+200. **ConcurrentSkipListMap** nədir və necə işləyir?
+201. **BitSet**-də **bit manipulation** (bit manipulyasiyası) necə aparılır?
+202. **Bloom Filter**-də **false positive** (yanlış müsbət) nədir?
+203. **HyperLogLog** nədir və necə istifadə olunur?
+204. **Count-Min Sketch** nədir?
+205. **Skip List**-də **search** (axtarış) performansı necədir?
+206. **HashMap**-də **multi-threading** (çoxlu axın) mühitində istifadə zamanı hansı problemlər ola bilər?
+207. **ConcurrentHashMap**-də **size()** metodunun dəqiqliyi necə təmin olunur?
+208. **TreeMap**-də **balanced tree** (balanslaşdırılmış ağac) necə saxlanılır?
+209. **PriorityQueue**-də **custom comparator** (xüsusi müqayisəçi) necə təyin olunur?
+210. **Deque**-də **offerFirst()** və **offerLast()** metodları nə edir?
+211. **Queue**-də **peek()** və **poll()** metodları arasındakı fərq nədir?
+212. **LinkedList**-də **reverse** (tərsinə çevirmə) necə həyata keçirilir?
+213. **ArrayList**-də **trimToSize()** metodu nə edir?
+214. **HashSet**-də **add()** metodunun vaxt mürəkkəbliyi nədir?
+215. **TreeSet**-də **add()** metodunun vaxt mürəkkəbliyi nədir?
+216. **HashMap**-də **get()** metodunun vaxt mürəkkəbliyi nədir?
+217. **ConcurrentHashMap**-də **putIfAbsent()** metodu nə edir?
+218. **WeakHashMap**-də **garbage collection** (zibil toplama) necə təsir edir?
+219. **IdentityHashMap**-də **reference equality** (istinad bərabərliyi) necə işləyir?
+220. **EnumSet**-də **bit vector** (bit vektoru) necə istifadə olunur?
+221. **Graph**-də **weighted shortest path** (çəkili ən qısa yol) necə tapılır?
+222. **Tree**-də **in-order traversal** (sıralı keçid) necə həyata keçirilir?
+223. **Tree**-də **pre-order traversal** (əvvəlcədən keçid) necə işləyir?
+224. **Tree**-də **post-order traversal** (sondan keçid) necə tətbiq olunur?
+225. **Binary Search Tree**-də **insert** (əlavə etmə) necə aparılır?
+226. **Binary Search Tree**-də **delete** (silmə) necə həyata keçirilir?
+227. **AVL Tree**-də **rotation** (fırlanma) mexanizmi necə işləyir?
+228. **Red-Black Tree**-də **color flip** (rəng dəyişmə) necə aparılır?
+229. **Heap**-də **insert** (əlavə etmə) və **delete** (silmə) vaxt mürəkkəbliyi nədir?
+230. **Trie**-də **autocomplete** (avtomatik tamamlama) necə həyata keçirilir?
+231. **Graph**-də **BFS** ilə **DFS** arasındakı fərq nədir?
+232. **Graph**-də **minimum cut** (minimum kəsik) necə tapılır?
+233. **HashMap**-də **hash collision** (xəş toqquşması) performansına necə təsir edir?
+234. **ConcurrentHashMap**-də **striped locking** (zolaqlı kilidləmə) necə işləyir?
+235. **PriorityQueue**-də **heap sort** (yığın sıralaması) necə tətbiq olunur?
+236. **LinkedList**-də **cycle detection** (dövr aşkarlanması) necə aparılır?
+237. **Floyd’s Cycle Detection Algorithm** (Floyd’un Dövr Aşkarlama Alqoritmi) nədir?
+238. **ArrayList**-də **capacity** (tutum) artımı necə baş verir?
+239. **HashMap**-də **threshold** (hədd) nədir?
+240. **TreeMap**-də **self-balancing** (öz-özünə balanslaşdırma) necə təmin olunur?
+241. **BitSet**-də **space efficiency** (yer səmərəliliyi) necə əldə olunur?
+242. **Bloom Filter**-də **hash functions** (xəş funksiyaları) sayı necə seçilir?
+243. **Skip List**-də **randomized levels** (təsadüfi səviyyələr) necə işləyir?
+244. **Graph**-də **articulation points** (artikulyasiya nöqtələri) necə tapılır?
+245. **Graph**-də **bridges** (körpülər) necə aşkarlanır?
+246. **Binary Search Tree**-də **height** (hündürlük) necə hesablanır?
+247. **AVL Tree**-də **balance factor** (balans faktoru) nədir?
+248. **Heap**-də **sift up** və **sift down** prosesləri nədir?
+249. **Trie**-də **space optimization** (yer optimallaşdırması) necə aparılır?
+250. **Graph**-də **all-pairs shortest path** (bütün cütlərin ən qısa yolu) necə tapılır?
+251. **Disjoint Set**-də **path compression** (yol sıxışdırması) necə işləyir?
+252. **Union-Find**-də **rank** (səviyyə) necə istifadə olunur?
+253. **Segment Tree**-də **range queries** (aralıq sorğuları) necə aparılır?
+254. **Fenwick Tree**-də **prefix sum** (prefiks cəmi) necə hesablanır?
+255. **Interval Tree**-də **overlap detection** (örtüşmə aşkarlanması) necə həyata keçirilir?
+256. **Quad Tree**-də **spatial partitioning** (məkan bölüşdürülməsi) necə işləyir?
+257. **KD-Tree**-də **nearest neighbor search** (ən yaxın qonşu axtarışı) necə aparılır?
+258. **HashMap**-də **hash distribution** (xəş paylanması) necə optimallaşdırılır?
+259. **ConcurrentHashMap**-də **CAS** (Compare-And-Swap) mexanizmi necə işləyir?
+260. **PriorityQueue**-də **remove()** metodunun vaxt mürəkkəbliyi nədir?
+261. **LinkedList**-də **merge** (birləşdirmə) necə həyata keçirilir?
+262. **ArrayList**-də **ensureCapacity()** metodu nə edir?
+263. **HashSet**-də **contains()** metodunun performansı necədir?
+264. **TreeSet**-də **subSet()** metodu nə üçün istifadə olunur?
+265. **Map**-də **forEach()** metodu necə işləyir?
+266. **ConcurrentSkipListSet**-də **skip list** strukturu necə təmin olunur?
+267. **BitSet**-də **logical operations** (məntiqi əməliyyatlar) necə aparılır?
+268. **Bloom Filter**-də **space-time tradeoff** (yer-vaxt mübadiləsi) necə idarə olunur?
+269. **HyperLogLog**-də **cardinality estimation** (əsaslılıq təxmini) necə aparılır?
+270. **Count-Min Sketch**-də **frequency estimation** (tezlik təxmini) necə işləyir?
+271. **Graph**-də **Eulerian Path** (Eyler Yolu) necə tapılır?
+272. **Graph**-də **Hamiltonian Cycle** (Hamilton Dövrü) necə aşkarlanır?
+273. **Tree**-də **lowest common ancestor** (ən aşağı ümumi ata) necə tapılır?
+274. **Binary Search Tree**-də **successor** (növbəti) və **predecessor** (əvvəlki) necə tapılır?
+275. **AVL Tree**-də **double rotation** (ikiqat fırlanma) nə vaxt baş verir?
+276. **Red-Black Tree**-də **recoloring** (yenidən rəngləmə) necə aparılır?
+277. **Heap**-də **merge** (birləşdirmə) necə həyata keçirilir?
+278. **Trie**-də **suffix search** (sufiks axtarışı) necə aparılır?
+279. **Graph**-də **max-flow min-cut theorem** (maksimum axın minimum kəsik teoremi) nədir?
+280. **Disjoint Set**-də **connected components** (bağlı komponentlər) necə tapılır?
+281. **Segment Tree**-də **lazy propagation** (tənbəl yayılma) necə işləyir?
+282. **Fenwick Tree**-də **range update** (aralıq yeniləmə) necə həyata keçirilir?
+283. **Interval Tree**-də **interval insertion** (interval əlavə etmə) necə aparılır?
+284. **Quad Tree**-də **range queries** (aralıq sorğuları) necə işləyir?
+285. **KD-Tree**-də **range search** (aralıq axtarışı) necə həyata keçirilir?
+286. **HashMap**-də **hash table resizing** (xəş cədvəli ölçüsünün dəyişdirilməsi) nə vaxt baş verir?
+287. **ConcurrentHashMap**-də **transfer** (köçürmə) prosesi necə işləyir?
+288. **PriorityQueue**-də **custom objects** (xüsusi obyektlər) necə sıralanır?
+289. **LinkedList**-də **partition** (bölüşdürmə) necə həyata keçirilir?
+290. **ArrayList**-də **removeIf()** metodu necə işləyir?
+291. **HashSet**-də **iterator** performansı necədir?
+292. **TreeSet**-də **descendingSet()** metodu nə edir?
+293. **Map**-də **replace()** metodu necə işləyir?
+294. **ConcurrentSkipListMap**-də **navigable methods** (naviqasiya metodları) nədir?
+295. **BitSet**-də **cardinality** (əsaslılıq) necə hesablanır?
+296. **Bloom Filter**-də **optimal hash functions** (optimal xəş funksiyaları) necə seçilir?
+297. **HyperLogLog**-də **merge** (birləşdirmə) necə aparılır?
+298. **Count-Min Sketch**-də **error rate** (səhv dərəcəsi) necə idarə olunur?
+299. **Graph**-də **clique** (tam qrafik) necə tapılır?
+300. **Tree**-də **diameter** (diametr) necə hesablanır?
