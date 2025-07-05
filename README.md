@@ -739,16 +739,531 @@ public class AutoBoxingExample {
 ---
 
 ## OOP Prinsipləri
-21. **Inheritance** (Mirasalma) nədir?
-22. Java-da **multiple inheritance** (çoxlu mirasalma) niyə dəstəklənmir?
-23. **Polymorphism** (Çoxformalıq) nədir və növləri hansılardır?
-24. **Method Overloading** (Metodun yenidən yüklənməsi) nədir?
-25. **Method Overriding** (Metodun yenidən təyin olunması) nədir?
-26. **Encapsulation** (Kapsulyasiya) nədir?
-27. **Abstraction** (Abstraksiya) nədir?
-28. **Abstract Class** (Abstrakt Sinif) ilə **Interface** (İnterfeys) arasındakı fərq nədir?
-29. Java-da **interface** nə üçün istifadə olunur?
-30. **default** metodlar interfeysdə nə üçün təqdim olunub?
+
+**21. **Inheritance** (Mirasalma) nədir?**
+
+**Cavab:**
+
+`Inheritance` (Mirasalma) Java-da bir sinifin (alt sinif və ya subclass) başqa bir sinifin (superclass) xüsusiyyətlərini (dəyişənlər, metodlar) və davranışlarını miras alması mexanizmidir. Bu, kodun təkrar istifadəsini (`reusability`) təmin edir və siniflər arasında "`is-a`" (bir növdür) əlaqəsi yaradır.
+
+**Real Dünya Nümunəsi:**
+
+Bir avtomobil şirkətində ümumi Vehicle (Nəqliyyat vasitəsi) sinifi ola bilər. Car (Avtomobil) və Truck (Yük maşını) sinifləri bu sinifdən miras alaraq ümumi xüsusiyyətləri (məsələn, təkər sayı, mühərrik) paylaşır, lakin özünəməxsus xüsusiyyətləri (məsələn, yük daşıma qabiliyyəti) əlavə edir.
+
+**Kod Nümunəsi:**
+
+```java
+// Superclass
+class Vehicle {
+    int wheels;
+    String brand;
+
+    Vehicle(int wheels, String brand) {
+        this.wheels = wheels;
+        this.brand = brand;
+    }
+
+    void drive() {
+        System.out.println(brand + " sürülür.");
+    }
+}
+
+// Subclass
+class Car extends Vehicle {
+    int doors;
+
+    Car(int wheels, String brand, int doors) {
+        super(wheels, brand); // Superclass konstruktorunu çağırır
+        this.doors = doors;
+    }
+
+    void displayInfo() {
+        System.out.println(brand + " avtomobilində " + wheels + " təkər və " + doors + " qapı var.");
+    }
+}
+
+public class InheritanceExample {
+    public static void main(String[] args) {
+        Car car = new Car(4, "Toyota", 4);
+        car.drive(); // Superclass metodunu çağırır
+        car.displayInfo(); // Subclass metodunu çağırır
+    }
+}
+```
+
+- **Şərh:**
+  - `extends` açar sözü ilə Car sinifi Vehicle sinifindən miras alır.
+  - `super(wheels, brand)`; superclass-ın konstruktorunu çağırır.
+  - Car sinifi özünəməxsus doors dəyişəni və `displayInfo()` metodunu əlavə edir, lakin `drive()` metodunu miras alır.
+  
+---
+
+**22. Java-da **multiple inheritance** (çoxlu mirasalma) niyə dəstəklənmir?**
+
+**Multiple inheritance (Çoxlu mirasalma)** bir sinifin birdən çox sinifdən miras almasıdır. Java-da bu mexanizm siniflər üçün dəstəklənmir, çünki diamond problem (almas problemi) kimi tanınan qarışıqlıq yarana bilər. Bunun əvəzinə Java interface (interfeys) vasitəsilə çoxlu mirasalmaya bənzər funksionallıq təmin edir.
+
+- **Diamond Problem Nümunəsi:**
+  - Əgər Class C həm Class A, həm də Class B-dən miras alırsa və hər iki sinifdə eyni adlı metod varsa, Class C hansı metodu miras alacağını bilməyəcək. Bu, kodda qarışıqlığa səbəb olur.
+
+- **Niyə dəstəklənmir?**
+  - **Qarışıqlığın qarşısını almaq:** Eyni adlı metodların hansının istifadə olunacağı bəlli olmayacaq.
+  - **Sadəlik:** Java dizaynı sadə və başa düşülən saxlamaq üçün çoxlu mirasalmadan imtina edib.
+  - **Alternativ həll:** Interface və default methods ilə çoxlu mirasalmanın üstünlükləri təmin edilir.
+
+- **Real Dünya Nümunəsi:**
+  - Bir şirkətdə bir işçi həm Manager, həm də Developer siniflərindən miras almaq istəsə, hər iki sinifdə calculateSalary() metodu varsa, hansı metodun istifadə olunacağı bəlli olmaz. Java bu problemi interfeyslərlə həll edir.
+ 
+**Kod Nümunəsi (Interfeys ilə)**
+
+```java
+interface Manager {
+    default void work() {
+        System.out.println("İdarəetmə işləri görürəm.");
+    }
+}
+
+interface Developer {
+    default void work() {
+        System.out.println("Kod yaziram.");
+    }
+}
+
+class Employee implements Manager, Developer {
+    @Override
+    public void work() {
+        Manager.super.work(); // Hansı metodun çağırılacağını açıq şəkildə seçirik
+        Developer.super.work();
+    }
+}
+
+public class MultipleInheritanceExample {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        emp.work();
+    }
+}
+```
+
+- **Şərh:**
+  - Java siniflər üçün multiple inheritance dəstəkləmir, lakin `interface` ilə bu problemi həll edir.
+  - Manager.`super.work()` və `Developer.super.work()` ilə hansı metodun çağırılacağı dəqiqləşdirilir.
+
+---
+
+**23. **Polymorphism** (Çoxformalıq) nədir və növləri hansılardır?**
+
+**`Polymorphism`** (Çoxformalıq) bir obyektin fərqli formalarda davranması qabiliyyətidir. Java-da bu, bir sinifin metodlarının fərqli siniflərdə fərqli şəkildə reallaşdırılması ilə təmin olunur. Polimorfizm "bir interfeys, çoxlu reallaşdırma" prinsipinə əsaslanır.
+
+- **Növləri:**
+  - **`Compile-time Polymorphism` (Kompilyasiya zamanı çoxformalıq):** `Method overloading` (metodun yenidən yüklənməsi) və ya `operator overloading` (operator yenidən yüklənməsi, Java-da məhduddur) ilə əldə edilir.
+  - **`Run-time Polymorphism` (İcra zamanı çoxformalıq):** `Method overriding` (metodun yenidən təyin olunması) və inheritance (mirasalma) vasitəsilə reallaşır.
+
+- **Real Dünya Nümunəsi:**
+  - Bir bank sistemində Account sinifi ümumi calculateInterest() metoduna malikdir. SavingsAccount və CurrentAccount sinifləri bu metodu özünəməxsus şəkildə reallaşdırır.
+
+**Kod Nümunəsi**
+
+```java
+class Account {
+    void calculateInterest() {
+        System.out.println("Ümumi faiz hesablanır.");
+    }
+}
+
+class SavingsAccount extends Account {
+    @Override
+    void calculateInterest() {
+        System.out.println("Yığımlı hesab üçün faiz: 5%");
+    }
+}
+
+class CurrentAccount extends Account {
+    @Override
+    void calculateInterest() {
+        System.out.println("Cari hesab üçün faiz: 2%");
+    }
+}
+
+public class PolymorphismExample {
+    public static void main(String[] args) {
+        Account acc1 = new SavingsAccount(); // Run-time polymorphism
+        Account acc2 = new CurrentAccount();
+        acc1.calculateInterest(); // SavingsAccount metodu çağırılır
+        acc2.calculateInterest(); // CurrentAccount metodu çağırılır
+    }
+}
+```
+
+- **Şərh:**
+  - `Account acc1 = new SavingsAccount();` - Run-time polymorphism sayəsində obyektin tipi icra zamanı müəyyənləşir.
+  - `@Override` ilə metodlar superclass-da müəyyən edilmiş metodu yenidən təyin edir.
+
+---
+
+**24. **Method Overloading** (Metodun yenidən yüklənməsi) nədir?**
+
+**`Method Overloading`** (Metodun yenidən yüklənməsi) eyni sinifdə eyni adlı, lakin fərqli parametrlərə (sayı, tip və ya sırası) malik metodların müəyyən edilməsidir. Bu, `compile-time polymorphism` nümunəsidir.
+
+- **Real Dünya Nümunəsi:**
+  - Bir kalkulyator tətbiqində add metodu fərqli sayda və ya tipdə rəqəmləri toplamaq üçün müxtəlif formalarda yazıla bilər (məsələn, iki tam ədəd, üç tam ədəd və ya iki onluq ədəd).
+
+**Kod Nümunəsi**
+
+```java
+public class MethodOverloadingExample {
+    // Eyni adlı metod, fərqli parametrlər
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    double add(double a, double b) {
+        return a + b;
+    }
+
+    public static void main(String[] args) {
+        MethodOverloadingExample calc = new MethodOverloadingExample();
+        System.out.println("İki tam ədəd: " + calc.add(5, 10));
+        System.out.println("Üç tam ədəd: " + calc.add(5, 10, 15));
+        System.out.println("İki onluq ədəd: " + calc.add(5.5, 10.5));
+    }
+}
+```
+
+- **Şərh:**
+  - `add` metodu üç fərqli formada müəyyən edilib: iki int, üç int və iki double.
+  - Kompilyator metod çağırışında parametrlərin tipinə və sayına əsasən hansı metodun çağırılacağına qərar verir.
+
+---
+
+**25. **Method Overriding** (Metodun yenidən təyin olunması) nədir?**
+
+**`Method Overriding`** (Metodun yenidən təyin olunması) alt sinifdə (subclass) superclass-da müəyyən edilmiş metodu eyni imza (ad, parametr tipləri, qaytarma tipi) ilə yenidən təyin etməkdir. Bu, `run-time polymorphism` nümunəsidir.
+
+- **Real Dünya Nümunəsi:**
+  - Bir restoran sistemində Menu sinifi ümumi `prepareDish()` metoduna malikdir. `ItalianMenu` və `MexicanMenu` sinifləri bu metodu özünəməxsus şəkildə (məsələn, pizza və ya takos hazırlamaq) reallaşdırır.
+
+**Kod Nümunəsi**
+
+```java
+class Menu {
+    void prepareDish() {
+        System.out.println("Ümumi yemək hazırlanır.");
+    }
+}
+
+class ItalianMenu extends Menu {
+    @Override
+    void prepareDish() {
+        System.out.println("Pizza hazırlanır.");
+    }
+}
+
+class MexicanMenu extends Menu {
+    @Override
+    void prepareDish() {
+        System.out.println("Takos hazırlanır.");
+    }
+}
+
+public class MethodOverridingExample {
+    public static void main(String[] args) {
+        Menu menu1 = new ItalianMenu();
+        Menu menu2 = new MexicanMenu();
+        menu1.prepareDish(); // ItalianMenu metodu çağırılır
+        menu2.prepareDish(); // MexicanMenu metodu çağırılır
+    }
+}
+```
+
+- **Şərh:**
+  - `@Override` annotasiyası metodu yenidən təyin etdiyini göstərir və səhvlərin qarşısını alır.
+  - Metodun icrası obyektin real tipinə əsasən müəyyənləşir (`run-time polymorphism`).
+
+---
+
+**26. **Encapsulation** (Kapsulyasiya) nədir?**
+
+**`Encapsulation`** (Kapsulyasiya) sinifin daxili məlumatlarını (dəyişənlər) xarici müdaxilədən qorumaq və onlara yalnız müəyyən metodlar (getters və setters) vasitəsilə girişi təmin etmək prinsipidir. Bu, məlumatların təhlükəsizliyini və kodun modullaşdırılmasını artırır.
+
+- **Real Dünya Nümunəsi:**
+  - Bir bank hesabında balans yalnız deposit (əmanət) və withdraw (çıxarış) metodları vasitəsilə dəyişdirilə bilər. Balans dəyişəninə birbaşa giriş qadağandır.
+
+**Kod Nümunəsi**
+
+```java
+public class BankAccount {
+    private double balance; // Private dəyişən, birbaşa giriş yoxdur
+
+    // Getter
+    public double getBalance() {
+        return balance;
+    }
+
+    // Setter
+    public void setBalance(double balance) {
+        if (balance >= 0) { // Şərt yoxlaması
+            this.balance = balance;
+        } else {
+            System.out.println("Balans mənfi ola bilməz!");
+        }
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Kifayət qədər balans yoxdur!");
+        }
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+        account.setBalance(1000);
+        account.deposit(500);
+        account.withdraw(200);
+        System.out.println("Cari balans: " + account.getBalance());
+    }
+}
+```
+
+- **Şərh:**
+  - `private double balance;` dəyişənə birbaşa giriş qadağandır.
+  - `getBalance()` və `setBalance()` metodları məlumatlara nəzarətli giriş təmin edir.
+  - `deposit()` və `withdraw()` metodları məlumatların dəyişdirilməsini təhlükəsiz idarə edir.
+
+---
+
+**27. **Abstraction** (Abstraksiya) nədir?**
+
+**`Abstraction`** (Abstraksiya) mürəkkəb sistemlərin detallarını gizlədərək yalnız zəruri xüsusiyyətləri istifadəçiyə təqdim etmək prinsipidir. Java-da bu, `abstract` classes (abstrakt siniflər) və interfaces (interfeyslər) vasitəsilə reallaşır.
+
+- **Real Dünya Nümunəsi:**
+  - Bir avtomobilin sürücüsü yalnız pedalları və sükanı idarə edir. Mühərrikin daxili işləmə mexanizmi (məsələn, yanacaq vurulması) ondan gizlədilir.
+
+**Kod Nümunəsi**
+
+```java
+abstract class Animal {
+    abstract void makeSound(); // Abstrakt metod, reallaşdırma tələb olunur
+
+    void sleep() { // Konkret metod
+        System.out.println("Heyvan yatır.");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Hav-hav!");
+    }
+}
+
+public class AbstractionExample {
+    public static void main(String[] args) {
+        Animal dog = new Dog();
+        dog.makeSound(); // Abstrakt metodun reallaşdırılması
+        dog.sleep(); // Konkret metod
+    }
+}
+```
+
+- **Şərh:**
+  - `abstract void makeSound();` konkret reallaşdırma tələb edir.
+  - `Dog` sinifi abstrakt metodu reallaşdırır.
+  - `Abstraction` sayəsində istifadəçi yalnız `makeSound()` metodunun nə etdiyini bilməlidir, daxili detallar gizlədilir.
+
+---
+
+**28. **Abstract Class** (Abstrakt Sinif) ilə **Interface** (İnterfeys) arasındakı fərq nədir?**
+
+**`Abstract Class`** (Abstrakt Sinif) və **`Interface`** (İnterfeys) hər ikisi abstraksiyanı təmin etsə də, onların istifadə məqsədləri və xüsusiyyətləri fərqlidir.
+
+### Fərqlər:
+| **Xüsusiyyət**       | **Abstract Class**                                           | **Interface**                                                                                       |
+|----------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
+| **Mirasalma**        | Yalnız bir abstrakt sinifdən miras almaq olar (**extends**). | Birdən çox interfeysdən miras almaq olar (**implements**).                                          |
+| **Metodlar**         | Həm abstrakt, həm də konkret metodlara malik ola bilər.      | Java 8-dən sonra **default** və **static** metodlar ola bilər, lakin əsasən abstrakt metodlar olur. |
+| **Dəyişənlər**       | Adi dəyişənlər (private, protected və s.) ola bilər.         | Yalnız **public static final** (sabit) dəyişənlər ola bilər.                                        |
+| **Konstruktor**      | Konstruktoru ola bilər.                                      | Konstruktoru yoxdur.                                                                                |
+| **İstifadə məqsədi** | Ümumi xüsusiyyətləri paylaşan siniflər üçün.                 | Müxtəlif siniflərə ümumi davranış təmin etmək üçün.                                                 |
+
+- **Real Dünya Nümunəsi:**
+  - Abstract Class: Vehicle sinifi müxtəlif nəqliyyat vasitələri üçün ümumi xüsusiyyətləri (məsələn, təkər sayı) təmin edir.
+  - Interface: Drivable interfeysi avtomobil, motosiklet və ya velosiped kimi fərqli nəqliyyat vasitələrinin sürülmə davranışını təmin edir.
+
+Kod Nümunəsi
+
+```java
+abstract class Vehicle {
+    int wheels;
+
+    abstract void start(); // Abstrakt metod
+
+    void stop() { // Konkret metod
+        System.out.println("Nəqliyyat dayandırıldı.");
+    }
+}
+
+interface Drivable {
+    void drive(); // Abstrakt metod
+
+    default void honk() { // Default metod
+        System.out.println("Bip-bip!");
+    }
+}
+
+class Car extends Vehicle implements Drivable {
+    @Override
+    void start() {
+        System.out.println("Avtomobil işə salındı.");
+    }
+
+    @Override
+    public void drive() {
+        System.out.println("Avtomobil sürülür.");
+    }
+}
+
+public class AbstractVsInterface {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.start();
+        car.drive();
+        car.honk();
+        car.stop();
+    }
+}
+```
+
+- **Şərh:**
+  - `Vehicle `abstrakt sinifi ümumi xüsusiyyətləri (məsələn, `stop()`) təmin edir.
+  - `Drivable` interfeysi davranış (məsələn, `drive()`) təmin edir.
+  - `Car` sinifi həm abstrakt sinifdən, həm də interfeysdən miras alır.
+
+---
+
+**29. Java-da **interface** nə üçün istifadə olunur?**
+
+**`Interface`** (İnterfeys) Java-da siniflərə müəyyən davranışları təmin etmək üçün istifadə olunan tamamilə abstrakt bir strukturdur. O, siniflərə "nə etməli" olduğunu göstərir, amma "necə etməli" olduğunu təyin etmir.
+
+- **Nə üçün istifadə olunur?**
+  - **Çoxlu mirasalma simulyasiyası:** Java-da siniflər birdən çox sinifdən miras ala bilməz, lakin birdən çox interfeysi reallaşdıra bilər.
+  - **Abstraksiya:** Daxili detalları gizlədərək yalnız zəruri metodları təqdim edir.
+  - **Loose coupling:** Siniflər arasında asılılığı azaldır.
+  - **Standartlaşdırma:** Fərqli siniflərə eyni metodları reallaşdırmağa məcbur edir.
+
+- **Real Dünya Nümunəsi:**
+  - Bir ödəniş sistemində Payable interfeysi CreditCard, PayPal və BankTransfer siniflərinə pay() metodunu reallaşdırmağı tələb edir.
+
+**Kod Nümunəsi**
+
+```java
+interface Payable {
+    void pay(double amount);
+}
+
+class CreditCard implements Payable {
+    @Override
+    public void pay(double amount) {
+        System.out.println("Kredit kartı ilə " + amount + " AZN ödənildi.");
+    }
+}
+
+class PayPal implements Payable {
+    @Override
+    public void pay(double amount) {
+        System.out.println("PayPal ilə " + amount + " AZN ödənildi.");
+    }
+}
+
+public class InterfaceExample {
+    public static void main(String[] args) {
+        Payable payment1 = new CreditCard();
+        Payable payment2 = new PayPal();
+        payment1.pay(100.0);
+        payment2.pay(200.0);
+    }
+}
+```
+
+- **Şərh:**
+  - `Payable` interfeysi `pay()` metodunu tələb edir.
+  - `CreditCard` və `PayPal` sinifləri bu metodu özünəməxsus şəkildə reallaşdırır.
+  - `İnterfeys` sayəsində fərqli ödəniş növləri eyni şəkildə idarə oluna bilər.
+
+---
+
+**30. **default** metodlar interfeysdə nə üçün təqdim olunub?**
+
+**`Default methods`** (Varsayılan metodlar) Java 8-də interfeyslərə əlavə edildi. Bu metodlar interfeysdə konkret reallaşdırmaya malik olur və reallaşdırıcı siniflər tərəfindən yenidən təyin edilmədən istifadə oluna bilər.
+
+- **Nə üçün təqdim olunub?**
+  - **Geriyə uyğunluq:** Mövcud interfeyslərə yeni metodlar əlavə edərkən köhnə siniflərin səhv verməsinin qarşısını alır.
+  - **Funksionallığın genişləndirilməsi:** İnterfeyslərə konkret davranış əlavə etməyə imkan verir.
+  - **Təkrar kodun azaldılması:** Ümumi metodlar interfeysdə təyin oluna bilər.
+
+- **Real Dünya Nümunəsi:**
+  - Bir oyun sistemində Playable interfeysi bütün oyun personajlarına move() metodunu tələb edir. Yeni bir attack() funksiyası əlavə edilərsə, default metod kimi təyin oluna bilər ki, köhnə personaj sinifləri dəyişdirilməsin.
+
+**Kod Nümunəsi**
+
+```java
+interface Playable {
+    void move(); // Abstrakt metod
+
+    default void attack() { // Default metod
+        System.out.println("Ümumi hücum edilir.");
+    }
+}
+
+class Soldier implements Playable {
+    @Override
+    public void move() {
+        System.out.println("Əsgər irəliləyir.");
+    }
+}
+
+class Knight implements Playable {
+    @Override
+    public void move() {
+        System.out.println("Cəngavər irəliləyir.");
+    }
+
+    @Override
+    public void attack() { // Default metod yenidən təyin edilir
+        System.out.println("Cəngavər qılıncla hücum edir.");
+    }
+}
+
+public class DefaultMethodExample {
+    public static void main(String[] args) {
+        Playable soldier = new Soldier();
+        Playable knight = new Knight();
+        soldier.move();
+        soldier.attack(); // Default metod çağırılır
+        knight.move();
+        knight.attack(); // Yenidən təyin edilmiş metod çağırılır
+    }
+}
+```
+
+- **Şərh:**
+  - default void attack() interfeysdə ümumi reallaşdırma təmin edir.
+  - Soldier sinifi default metodu istifadə edir, Knight isə onu yenidən təyin edir.
+  - Default metodlar geriyə uyğunluğu qoruyur və interfeysləri daha çevik edir.
+
+---
+
 31. **static** metodlar interfeysdə necə istifadə olunur?
 32. **final** açar sözü siniflərdə nə üçün istifadə olunur?
 33. **super()** və **this()** konstruktor çağırışlarının fərqi nədir?
