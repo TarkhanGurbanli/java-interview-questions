@@ -2825,3 +2825,195 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 
 ---
 
+# GitHub Müsahibə Sualları
+
+Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+- [Kafka və Kafka Streams](#kafka-və-kafka-streams)
+- [Liquibase](#liquibase)
+- [GitHub](#github)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Repository İdarəetmə](#repository-idarəetmə)
+  - [Branching və Merging](#branching-və-merging)
+  - [Pull Requests və Code Review](#pull-requests-və-code-review)
+  - [GitHub Actions](#github-actions)
+  - [Təhlükəsizlik](#təhlükəsizlik)
+  - [İnteqrasiyalar və API](#inteqrasiyalar-və-api)
+  - [Digər Mövzular](#digər-mövzular)
+
+## GitHub
+
+### Ümumi Suallar
+1. **GitHub** nədir və nə üçün istifadə olunur?
+2. **Git** ilə **GitHub** arasındakı fərq nədir?
+3. **GitHub**-un **version control** (versiya nəzarəti) üçün rolu nədir?
+4. **GitHub**-un digər platformalarla (Bitbucket, GitLab) fərqləri nələrdir?
+5. **GitHub**-un açıq mənbəli (open-source) layihələrdəki üstünlükləri nələrdir?
+6. **GitHub Repository** (Anbar) nədir və necə yaradılır?
+7. **GitHub**-un **collaboration** (əməkdaşlıq) xüsusiyyətləri hansılardır?
+8. **GitHub**-un **cloud-based** (bulud əsaslı) olması nə kimi faydalar təmin edir?
+9. **GitHub**-un **enterprise** tətbiqlərdə istifadəsi necədir?
+10. **GitHub**-un **open-source community** (açıq mənbəli icma) ilə əlaqəsi nədir?
+11. **GitHub**-da **forking** (çəngəlləmə) nədir və nə üçün istifadə olunur?
+12. **GitHub**-da **clone** ilə **fork** arasındakı fərq nədir?
+13. **GitHub**-un **social coding** (sosial kodlaşdırma) konsepsiyası nədir?
+14. **GitHub**-un **continuous integration** (davamlı inteqrasiya) ilə əlaqəsi nədir?
+15. **GitHub**-un **DevOps** təcrübələrində rolu nədir?
+
+### Repository İdarəetmə
+16. **GitHub Repository** necə yaradılır?
+17. **Public Repository** (İctimai Anbar) ilə **Private Repository** (Şəxsi Anbar) arasındakı fərq nədir?
+18. **GitHub**-da **repository permissions** (anbar icazələri) necə idarə olunur?
+19. **GitHub**-da **collaborators** (əməkdaşlar) necə əlavə olunur?
+20. **GitHub**-da **repository settings** (anbar parametrləri) hansılardır?
+21. **GitHub**-da **repository deletion** (anbar silinməsi) necə aparılır?
+22. **GitHub**-da **repository archiving** (anbar arxivləşdirmə) nədir?
+23. **GitHub**-da **repository visibility** (anbar görünürlüyü) necə dəyişdirilir?
+24. **GitHub**-da **repository templates** (anbar şablonları) nədir?
+25. **GitHub**-da **repository description** (anbar təsviri) necə əlavə olunur?
+26. **GitHub**-da **README.md** faylının rolu nədir?
+27. **GitHub**-da **LICENSE** faylı nə üçün istifadə olunur?
+28. **GitHub**-da **.gitignore** faylı nədir və necə konfiqurasiya olunur?
+29. **GitHub**-da **repository stars** (anbar ulduzları) nə üçün istifadə olunur?
+30. **GitHub**-da **repository watching** (anbar izləmə) nədir?
+
+### Branching və Merging
+31. **Git Branch** (Git Şaxəsi) nədir və necə yaradılır?
+32. **GitHub**-da **branching strategy** (şaxələnmə strategiyası) hansılardır?
+33. **GitHub Flow** nədir?
+34. **Git Flow** ilə **GitHub Flow** arasındakı fərq nədir?
+35. **GitHub**-da **protected branches** (qorunan şaxələr) nədir?
+36. **GitHub**-da **branch restrictions** (şaxə məhdudiyyətləri) necə təyin olunur?
+37. **Git Merge** (Git Birləşdirmə) necə işləyir?
+38. **GitHub**-da **merge conflicts** (birləşdirmə ziddiyyətləri) necə həll olunur?
+39. **GitHub**-da **rebase** ilə **merge** arasındakı fərq nədir?
+40. **GitHub**-da **squash merge** (sıxışdırılmış birləşdirmə) nədir?
+41. **GitHub**-da **fast-forward merge** (sürətli irəli birləşdirmə) nədir?
+42. **GitHub**-da **merge commit** (birləşdirmə komiti) nədir?
+43. **GitHub**-da **branch deletion** (şaxə silinməsi) necə aparılır?
+44. **GitHub**-da **default branch** (standart şaxə) necə dəyişdirilir?
+45. **GitHub**-da **branch naming conventions** (şaxə adlandırma qaydaları) nələrdir?
+
+### Pull Requests və Code Review
+46. **Pull Request** (Çəkmə Sorğusu) nədir və necə yaradılır?
+47. **GitHub**-da **Pull Request** ilə **Merge Request** arasındakı fərq nədir?
+48. **GitHub**-da **code review** (kod baxışı) necə həyata keçirilir?
+49. **GitHub**-da **Pull Request comments** (çəkmə sorğusu şərhləri) necə əlavə olunur?
+50. **GitHub**-da **Pull Request approvals** (çəkmə sorğusu təsdiqləri) necə idarə olunur?
+51. **GitHub**-da **required reviews** (tələb olunan baxışlar) necə təyin olunur?
+52. **GitHub**-da **Pull Request templates** (çəkmə sorğusu şablonları) nədir?
+53. **GitHub**-da **draft Pull Request** (qaralama çəkmə sorğusu) nədir?
+54. **GitHub**-da **Pull Request conflicts** (çəkmə sorğusu ziddiyyətləri) necə həll olunur?
+55. **GitHub**-da **Pull Request labels** (çəkmə sorğusu etiketləri) nə üçün istifadə olunur?
+56. **GitHub**-da **Pull Request milestones** (çəkmə sorğusu mərhələləri) nədir?
+57. **GitHub**-da **Pull Request assignees** (çəkmə sorğusu təyinatçıları) necə təyin olunur?
+58. **GitHub**-da **Pull Request reviewers** (çəkmə sorğusu baxışçıları) necə seçilir?
+59. **GitHub**-da **auto-merge** (avtomatik birləşdirmə) nədir?
+60. **GitHub**-da **Pull Request status checks** (çəkmə sorğusu status yoxlamaları) nədir?
+
+### GitHub Actions
+61. **GitHub Actions** nədir və nə üçün istifadə olunur?
+62. **GitHub Actions Workflow** (GitHub Actions İş Axını) nədir?
+63. **GitHub Actions**-da **workflow file** (iş axını faylı) necə təyin olunur?
+64. **GitHub Actions**-da **jobs** (tapşırıqlar) nədir?
+65. **GitHub Actions**-da **steps** (addımlar) necə işləyir?
+66. **GitHub Actions**-da **actions** (hərəkətlər) nədir?
+67. **GitHub Actions**-da **triggers** (tetikleyicilər) hansılardır?
+68. **GitHub Actions**-da **on.push** tətikleyicisi nədir?
+69. **GitHub Actions**-da **on.pull_request** tətikleyicisi nədir?
+70. **GitHub Actions**-da **matrix builds** (matris qurulmaları) nədir?
+71. **GitHub Actions**-da **secrets** (sirlər) necə idarə olunur?
+72. **GitHub Actions**-da **environment variables** (mühit dəyişənləri) necə təyin olunur?
+73. **GitHub Actions**-da **self-hosted runners** (özüyerləşdirilən icraçıları) nədir?
+74. **GitHub Actions**-da **Docker containers** (Docker konteynerləri) necə istifadə olunur?
+75. **GitHub Actions**-da **caching dependencies** (asılılıqların keşlənməsi) necə aparılır?
+76. **GitHub Actions**-da **workflow_dispatch** tətikleyicisi nədir?
+77. **GitHub Actions**-da **schedule** tətikleyicisi nədir?
+78. **GitHub Actions**-da **artifacts** (artefaktlar) necə idarə olunur?
+79. **GitHub Actions**-da **status badges** (status nişanları) nədir?
+80. **GitHub Actions**-da **CI/CD** (Continuous Integration/Continuous Deployment) necə qurulur?
+
+### Təhlükəsizlik
+81. **GitHub**-da **repository permissions** (anbar icazələri) necə təhlükəsiz idarə olunur?
+82. **GitHub**-da **two-factor authentication** (iki faktorlu autentifikasiya) necə aktivləşdirilir?
+83. **GitHub**-da **dependabot** nədir və necə işləyir?
+84. **GitHub**-da **code scanning** (kod skan etmə) nədir?
+85. **GitHub**-da **secret scanning** (sirlərin skan edilməsi) nədir?
+86. **GitHub**-da **security advisories** (təhlükəsizlik xəbərdarlıqları) nədir?
+87. **GitHub**-da **vulnerability alerts** (zəiflik xəbərdarlıqları) necə idarə olunur?
+88. **GitHub**-da **branch protection rules** (şaxə qoruma qaydaları) necə təyin olunur?
+89. **GitHub**-da **commit signing** (komit imzalama) necə həyata keçirilir?
+90. **GitHub**-da **GPG keys** (GPG açarları) necə istifadə olunur?
+91. **GitHub**-da **SSH keys** (SSH açarları) necə konfiqurasiya olunur?
+92. **GitHub**-da **access tokens** (giriş tokenləri) nədir?
+93. **GitHub**-da **personal access tokens** (şəxsi giriş tokenləri) necə yaradılır?
+94. **GitHub**-da **security policies** (təhlükəsizlik siyasətləri) necə təyin olunur?
+95. **GitHub**-da **dependabot security updates** (dependabot təhlükəsizlik yeniləmələri) nədir?
+
+### İnteqrasiyalar və API
+96. **GitHub API** nədir və necə istifadə olunur?
+97. **GitHub REST API** ilə **GitHub GraphQL API** arasındakı fərq nədir?
+98. **GitHub**-da **webhooks** (veb çəngəlləri) nədir və necə konfiqurasiya olunur?
+99. **GitHub**-da **GitHub Apps** nədir?
+100. **GitHub**-da **OAuth Apps** ilə **GitHub Apps** arasındakı fərq nədir?
+101. **GitHub**-da **API rate limiting** (API sürət məhdudlaşdırması) necə idarə olunur?
+102. **GitHub**-da **third-party integrations** (üçüncü tərəf inteqrasiyaları) hansılardır?
+103. **GitHub**-da **Jenkins** ilə inteqrasiya necə aparılır?
+104. **GitHub**-da **Travis CI** ilə inteqrasiya necə həyata keçirilir?
+105. **GitHub**-da **CircleCI** ilə inteqrasiya necə qurulur?
+106. **GitHub**-da **Slack** ilə inteqrasiya necə aparılır?
+107. **GitHub**-da **JIRA** ilə inteqrasiya necə həyata keçirilir?
+108. **GitHub**-da **Docker Hub** ilə inteqrasiya necə qurulur?
+109. **GitHub**-da **AWS CodePipeline** ilə inteqrasiya necə aparılır?
+110. **GitHub**-da **GitHub Marketplace** nədir?
+
+### Digər Mövzular
+111. **GitHub Issues** nədir və necə istifadə olunur?
+112. **GitHub Projects** nədir və necə idarə olunur?
+113. **GitHub Wiki** nədir və nə üçün istifadə olunur?
+114. **GitHub Pages** nədir və necə qurulur?
+115. **GitHub**-da **markdown** faylları necə istifadə olunur?
+116. **GitHub**-da **commit history** (komit tarixçəsi) necə idarə olunur?
+117. **GitHub**-da **commit message conventions** (komit mesaj qaydaları) nələrdir?
+118. **GitHub**-da **git blame** necə istifadə olunur?
+119. **GitHub**-da **git stash** ilə dəyişikliklər necə saxlanılır?
+120. **GitHub**-da **git cherry-pick** nədir?
+121. **GitHub**-da **git rebase interactive** (interaktiv yenidən bazalaşdırma) nədir?
+122. **GitHub**-da **git bisect** ilə səhvlər necə tapılır?
+123. **GitHub**-da **git reflog** nədir və necə istifadə olunur?
+124. **GitHub**-da **submodules** (alt modullar) nədir və necé istifadə olunur?
+125. **GitHub**-da **git hooks** (git çəngəlləri) nədir?
+126. **GitHub**-da **pre-commit hooks** (ön komit çəngəlləri) necə konfiqurasiya olunur?
+127. **GitHub**-da **code owners** (kod sahibləri) nədir və necə təyin olunur?
+128. **GitHub**-da **repository rulesets** (anbar qaydaları dəsti) nədir?
+129. **GitHub**-da **issue templates** (məsələ şablonları) nədir?
+130. **GitHub**-da **discussion** (müzakirə) xüsusiyyəti nədir?
+131. **GitHub**-da **team management** (komanda idarəetməsi) necə aparılır?
+132. **GitHub**-da **organization** (təşkilat) necə yaradılır?
+133. **GitHub**-da **organization roles** (təşkilat rolları) nədir?
+134. **GitHub**-da **team permissions** (komanda icazələri) necə idarə olunur?
+135. **GitHub**-da **repository insights** (anbar anlayışları) nədir?
+136. **GitHub**-da **traffic analytics** (trafik analitikası) necə istifadə olunur?
+137. **GitHub**-da **dependency graph** (asılılıq qrafiki) nədir?
+138. **GitHub**-da **code frequency** (kod tezliyi) necə analiz edilir?
+139. **GitHub**-da **contributor statistics** (iştirakçı statistikası) necə əldə olunur?
+140. **GitHub**-da **GitHub Sponsors** nədir?
+141. **GitHub**-da **GitHub Packages** nədir və necə istifadə olunur?
+142. **GitHub**-da **Docker images** (Docker şəkilləri) necə yayımlanır?
+143. **GitHub**-da **Maven packages** (Maven paketləri) necə idarə olunur?
+144. **GitHub**-da **npm packages** (npm paketləri) necə yayımlanır?
+145. **GitHub**-da **GitHub Desktop** nədir və necə istifadə olunur?
+146. **GitHub**-da **GitHub CLI** nədir və necə konfiqurasiya olunur?
+147. **GitHub**-da **GitHub Codespaces** nədir?
+148. **GitHub**-da **dependabot version updates** (dependabot versiya yeniləmələri) nədir?
+149. **GitHub**-da **repository insights** ilə **traffic analytics** arasındakı fərq nədir?
+150. **GitHub**-da **code review** ilə **Pull Request review** arasındakı fərq nədir?
+
