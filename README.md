@@ -351,7 +351,84 @@ public class MemoryManagementExample {
 
 ---
 
-10. **Heap** və **Stack** yaddaş bölgələri arasındakı fərq nədir?
+**10. **Heap** və **Stack** yaddaş bölgələri arasındakı fərq nədir?**
+
+**Cavab:**
+
+Java-da yaddaş iki əsas bölgəyə bölünür: `Heap` və `Stack`. Bu bölgələr fərqli məqsədlər üçün istifadə olunur və fərqli idarəetmə mexanizmlərinə malikdir.
+
+- **Heap Yaddaş:**
+  - **Təyinat:** Obyektlər, instans dəyişənləri və sinif üzvləri heap-də saxlanılır.
+  - **İdarəetmə:** Garbage Collector tərəfindən avtomatik idarə olunur.
+  - **Ömür:** Obyektlər istinad edildiyi müddətcə yaşayır, istinadlar itəndə GC tərəfindən təmizlənir.
+  - **Struktur:** Heap, Young Generation (Eden, Survivor) və Old Generation kimi bölmələrə ayrılır.
+  - **Xüsusiyyətlər:**
+    - Böyük həcmdə yaddaş saxlaya bilər.
+    - Dinamik olaraq böyüyür (-Xmx parametri ilə məhdudlaşdırılır).
+    - Çox axınlı mühitlərdə paylaşılan yaddaştır.
+
+- **Stack Yaddaş:**
+  - **Təyinat:** Metod çağırışları, lokal dəyişənlər və istinadlar (references) stack-də saxlanılır.
+  - **İdarəetmə:** LIFO (Last In, First Out) prinsipi ilə avtomatik idarə olunur.
+  - **Ömür:** Metod başa çatdıqda stack-dəki müvafiq çərçivə (stack frame) avtomatik silinir.
+  - **Struktur:** Hər axın (thread) öz stack-ınə malikdir, bu da izolyasiyanı təmin edir.
+  - **Xüsusiyyətlər:**
+    - Daha kiçik ölçüdədir və sabitdir.
+    - Çox sürətli işləyir, çünki sadə LIFO strukturuna malikdir.
+    - Hər axın üçün ayrı stack yaddaşı ayrılır.
+
+**Əsas Fərqlər:**
+
+**Əsas Fərqlər:**  
+
+---------------------------------------------------------------------------------------------------
+| Xüsusiyyət            | Heap                              | Stack                               |
+|-----------------------|-----------------------------------|-------------------------------------|
+| **Saxlanılan Məlumat** | Obyektlər, instans dəyişənləri   | Lokal dəyişənlər, metod çağırışları |
+| **İdarəetmə**         | Garbage Collector                | Avtomatik (LIFO)                     |
+| **Ömür**              | İstinad olunduğu müddətcə        | Metodun ömrü ilə məhdudlaşır         |
+| **Paylaşım**          | Bütün axınlar tərəfindən paylaşılır | Axına xasdır                      |
+| **Performans**        | Daha yavaş (GC səbəbindən)       | Daha sürətli                         |
+---------------------------------------------------------------------------------------------------
+
+**Kod Nümunəsi:**
+
+```java
+public class HeapAndStackExample {
+    // Heap-də saxlanılan instans dəyişəni
+    private String instanceVar = "Heap-də saxlanılır";
+
+    public static void main(String[] args) {
+        // Stack-də saxlanılan lokal dəyişən
+        int localVar = 42;
+
+        // Heap-də yeni obyekt yaradılır, istinad stack-də saxlanılır
+        HeapAndStackExample obj = new HeapAndStackExample();
+
+        // Metod çağırışı stack-də yeni çərçivə yaradır
+        obj.printValues(localVar);
+    }
+
+    public void printValues(int param) {
+        // param stack-də saxlanılır
+        System.out.println("Lokal dəyişən (Stack): " + param);
+        // instanceVar heap-də saxlanılır
+        System.out.println("İnstans dəyişəni (Heap): " + instanceVar);
+    }
+}
+```
+
+**Çıxış (Output):**
+
+```text
+Lokal dəyişən (Stack): 42
+İnstans dəyişəni (Heap): Heap-də saxlanılır
+```
+
+**Nəzəri İzahat:** `Heap` və `Stack` fərqli məqsədlər üçün optimallaşdırılmışdır. Heap böyük və dinamik obyektlər üçün, Stack isə sürətli və qısa ömürlü metod çağırışları üçün istifadə olunur. Garbage Collection heap-i idarə edərkən, Stack avtomatik təmizlənir, bu da Java-nın yaddaş idarəetməsini səmərəli edir.
+
+---
+
 11. Java-da **package** (paket) nədir və nə üçün istifadə olunur?
 12. **import** açar sözü nə üçün lazımdır?
 13. Java-da **access modifiers** (giriş tənzimləyiciləri) hansılardır?
