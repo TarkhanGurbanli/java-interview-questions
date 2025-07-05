@@ -344,7 +344,7 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java və Hibernate-ın əsas mövzularını başdan sona əhatə edir.
 
 ## Mündəricat
-- [Core Java](#core-java)
+- [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
   - [Ümumi Suallar](#hibernate-ümumi-suallar)
   - [Konfiqurasiya və Arxitektura](#konfiqurasiya-və-arxitektura)
@@ -355,9 +355,6 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
   - [Performance Optimization](#performance-optimization)
   - [JPA ilə Əlaqə](#jpa-ilə-əlaqə)
   - [Digər Mövzular](#hibernate-digər-mövzular)
-
-## Core Java
-[Əvvəlki suallar burada yer alır, 300 sual, təkrarlamıram]
 
 ## Hibernate
 
