@@ -75,7 +75,7 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 53. **null** dəyəri nə deməkdir?
 54. Java-da **array** (massiv) necə təyin olunur?
 55. **multidimensional array** (çoxölçülü massiv) nədir?
-56. Java-da **variable shadowing** (dəyişən kölgələnməsi) nədir?
+56. **variable shadowing** (dəyişən kölgələnməsi) nədir?
 57. **static variable** (statik dəyişən) ilə **instance variable** (nümunə dəyişəni) arasındakı fərq nədir?
 58. Java-da **constant** (sabit) necə təyin olunur?
 59. **Unicode** Java-da necə dəstəklənir?
@@ -206,3 +206,133 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 168. **sealed** siniflər nədir?
 169. **pattern matching** Java-da necə işləyir?
 170. **text blocks** nədir?
+171. **@Deprecated** annotasiyası nə üçün istifadə olunur?
+172. **@SuppressWarnings** annotasiyasının məqsədi nədir?
+173. **Java-da **varargs** (dəyişkən sayda arqumentlər) nədir?
+174. **strictfp** açar sözü nə üçün istifadə olunur?
+175. **assert** açar sözü nədir və necə istifadə olunur?
+176. **Java-da **clone()** metodu necə işləyir?
+177. **Cloneable** interfeysi nədir?
+178. **Object** sinfinin əsas metodları hansılardır?
+179. **hashCode()** və **equals()** metodları arasındakı əlaqə nədir?
+180. **toString()** metodunun məqsədi nədir?
+181. **finalize()** metodu nədir və niyə istifadə edilməməlidir?
+182. **Java-da **immutable** sinif necə yaradılır?
+183. **marker interface** (işarələyici interfeys) nədir?
+184. **System.out.println()** necə işləyir?
+185. **Java-da **bitwise** operatorlar nədir?
+186. **instance initializer block** (nümunə ilkinləşdirmə bloku) nədir?
+187. **static initializer block** (statik ilkinləşdirmə bloku) nədir?
+188. **Java-da **nested classes** (iç-içə siniflər) hansı növlərə bölünür?
+189. **local inner class** (lokal daxili sinif) nədir?
+190. **static nested class** (statik iç-içə sinif) nədir?
+191. **Java-da **functional programming** (funksional proqramlaşdırma) necə dəstəklənir?
+192. **method reference** (metod istinadı) nədir?
+193. **constructor reference** (konstruktor istinadı) nədir?
+194. **Java-da **try-catch** bloku olmadan istisnalar necə idarə oluna bilər?
+195. **Java-da **stack trace** (yığın izi) nədir?
+196. **System.gc()** metodunun rolu nədir?
+197. **Runtime** sinfi nə üçün istifadə olunur?
+198. **Java-da **memory leak** (yaddaş sızması) nədir və necə qarşısı alınır?
+199. **WeakReference** və **SoftReference** nədir?
+200. **PhantomReference** nədir?
+201. **Java-da **atomic** əməliyyatlar nədir?
+202. **AtomicInteger** və **AtomicLong** sinifləri nə üçün istifadə olunur?
+203. **synchronized** blok ilə **synchronized** metod arasındakı fərq nədir?
+204. **Lock** interfeysi nədir?
+205. **ReadWriteLock** nədir?
+206. **StampedLock** nədir və necə istifadə olunur?
+207. **Java-da **thread priority** (axın prioriteti) nədir?
+208. **ThreadGroup** nədir?
+209. **ForkJoinPool** nədir?
+210. **CompletableFuture** nədir və necə istifadə olunur?
+211. **Java-da **parallel processing** (paralel emal) necə həyata keçirilir?
+212. **Stream API**-da **flatMap()** metodu nədir?
+213. **Stream API**-da **peek()** metodu nə üçün istifadə olunur?
+214. **Optional** sinfində **orElse()** və **orElseGet()** arasındakı fərq nədir?
+215. **Java-da **default methods** ilə **multiple inheritance** necə simulyasiya olunur?
+216. **Java-da **record** sinfi ilə **POJO** sinfi arasındakı fərq nədir?
+217. **sealed** siniflər ilə **final** siniflər arasındakı fərq nədir?
+218. **Java-da **switch expressions** (keçid ifadələri) nədir?
+219. **instanceof** ilə **pattern matching** necə işləyir?
+220. **Java-da **text blocks** ilə adi **String** literalı arasındakı fərq nədir?
+221. **Java-da **record** sinfi ilə **enum** sinfi arasındakı fərq nədir?
+222. **Java-da **var** ilə **dynamic typing** (dinamik tipləşdirmə) eynidirmi?
+223. **Java-da **deep copy** və **shallow copy** arasındakı fərq nədir?
+224. **Object** sinfinin **wait()** metodunun istifadə şərtləri nələrdir?
+225. **Java-da **thread interruption** (axın kəsilməsi) necə işləyir?
+226. **InterruptedException** nədir və nə üçün baş verir?
+227. **Java-da **daemon thread** (demon axın) nədir?
+228. **Thread.UncaughtExceptionHandler** nədir?
+229. **Java-da **thread dump** (axın yığını) nədir və necə alınır?
+230. **Java-da **heap dump** (yığın yığını) nədir?
+231. **Java-da **JIT Compiler** (Just-In-Time Kompilyator) nədir?
+232. **Java-da **metaspace** nədir və **PermGen** ilə fərqi nədir?
+233. **Java-da **class file** (sinif faylı) strukturu necədir?
+234. **Java-da **constant pool** (sabit hovuz) nədir?
+235. **Java-da **reflection** ilə **introspection** arasındakı fərq nədir?
+236. **Field** və **Method** sinifləri **Reflection API**-da nə üçün istifadə olunur?
+237. **Java-da **dynamic proxy** (dinamik proksi) nədir?
+238. **Java-da **annotation processing** (annotasiya emalı) necə işləyir?
+239. **Java-da **custom annotation** (xüsusi annotasiya) necə yaradılır?
+240. **RetentionPolicy** nədir və annotasiyalarda necə istifadə olunur?
+241. **Java-da **stack** və **heap** yaddaşının ölçüsü necə təyin olunur?
+242. **Java-da **OutOfMemoryError** növləri hansılardır?
+243. **Java-da **String** sinfinin **hashCode()** metodu necə işləyir?
+244. **Java-da **immutable** obyektlərin yaddaş idarəetməsində rolu nədir?
+245. **Java-da **String** ilə **StringBuilder** performans baxımından necə fərqlənir?
+246. **Java-da **intern()** metodunun performansa təsiri nədir?
+247. **Java-da **String** sinfinin **split()** metodu necə işləyir?
+248. **Java-da **regex** (requlyar ifadələr) necə istifadə olunur?
+249. **Pattern** və **Matcher** sinifləri nə üçün istifadə olunur?
+250. **Java-da **Files** sinfinin **walk()** metodu nədir?
+251. **Java-da **NIO.2** ilə **Path** manipulyasiyası necə aparılır?
+252. **Java-da **WatchService** nədir və necə istifadə olunur?
+253. **Java-da **ByteBuffer** nədir?
+254. **Java-da **Selector** və **SelectionKey** nədir?
+255. **Java-da **AsynchronousFileChannel** nədir?
+256. **Java-da **serialVersionUID** nədir və niyə vacibdir?
+257. **Java-da **Externalizable** interfeysi nədir?
+258. **Java-da **serialization** ilə **deserialization** arasındakı fərq nədir?
+259. **Java-da **transient** ilə **volatile** arasındakı fərq nədir?
+260. **Java-da **Collections.emptyList()** və **Collections.singletonList()** nədir?
+261. **Java-da **Collections.unmodifiableList()** nə üçün istifadə olunur?
+262. **Java-da **List.of()** və **Arrays.asList()** arasındakı fərq nədir?
+263. **Java-da **Map.of()** metodu nədir?
+264. **Java-da **Set.of()** metodu nədir?
+265. **Java-da **ConcurrentSkipListMap** nədir?
+266. **Java-da **ConcurrentSkipListSet** nədir?
+267. **Java-da **BlockingQueue** nədir?
+268. **ArrayBlockingQueue** və **LinkedBlockingQueue** arasındakı fərq nədir?
+269. **Java-da **DelayQueue** nədir?
+270. **Java-da **SynchronousQueue** nədir?
+271. **Java-da **Executor** və **ExecutorService** arasındakı fərq nədir?
+272. **Java-da **ScheduledExecutorService** nədir?
+273. **Java-da **ThreadFactory** nədir?
+274. **Java-da **RejectedExecutionHandler** nədir?
+275. **Java-da **ThreadPoolExecutor** necə konfiqurasiya olunur?
+276. **Java-da **work-stealing** alqoritmi nədir?
+277. **Java-da **parallel stream** ilə **ForkJoinPool** arasındakı əlaqə nədir?
+278. **Java-da **Spliterator** nədir?
+279. **Java-da **Stream** ilə **parallel processing** performansı necə optimallaşdırılır?
+280. **Java-da **Optional** sinfinin **ifPresent()** metodu nədir?
+281. **Java-da **Optional** sinfinin **orElseThrow()** metodu nədir?
+282. **Java-da **Stream API**-da **short-circuiting** nədir?
+283. **Java-da **Collectors.groupingBy()** metodu necə işləyir?
+284. **Java-da **Collectors.partitioningBy()** metodu nədir?
+285. **Java-da **Stream API**-da **sorted()** metodu necə istifadə olunur?
+286. **Java-da **Stream API**-da **distinct()** metodu necə işləyir?
+287. **Java-da **Stream API**-da **limit()** və **skip()** metodları nədir?
+288. **Java-da **Predicate** funksional interfeysi nədir?
+289. **Java-da **Consumer** funksional interfeysi nədir?
+290. **Java-da **Supplier** funksional interfeysi nədir?
+291. **Java-da **Function** funksional interfeysi nədir?
+292. **Java-da **BiFunction** nədir?
+293. **Java-da **UnaryOperator** və **BinaryOperator** nədir?
+294. **Java-da **andThen()** və **compose()** metodları nədir?
+295. **Java-da **lambda** ifadələri ilə **closure** necə işləyir?
+296. **Java-da **effectively final** dəyişənlər nədir?
+297. **Java-da **local variable type inference** (lokal dəyişən tip çıxarımı) necə işləyir?
+298. **Java-da **var** açar sözünün məhdudiyyətləri nələrdir?
+299. **Java-da **switch** ifadəsində **arrow syntax** (ox sintaksisi) nədir?
+300. **Java-da **instanceof** ilə **pattern variable** (nümunə dəyişəni) necə istifadə olunur?
