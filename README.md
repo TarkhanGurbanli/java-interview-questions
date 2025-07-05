@@ -50,7 +50,7 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 - **Zəngin API:** Java geniş kitabxana dəsti ilə (Java API) şəbəkə, fayl əməliyyatları, GUI və s. üçün dəstək təmin edir.
 - **Yüksək Performans:** Just-In-Time (JIT) kompilyatoru ilə Java kodu yerli maşın koduna çevrilərək yüksək performans təmin edir.
 - **Çoxsaylı Platformalar:** Java desktop, veb, mobil və server tətbiqləri üçün uyğundur.
-
+--
 2. JVM, JRE və JDK arasındakı fərq nədir?
 3. **public static void main(String[] args)** metodunun rolu nədir?
 4. **Garbage Collection** (Zibil Toplama) nədir?
