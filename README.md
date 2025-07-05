@@ -1938,3 +1938,352 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 298. **Kadane’s Algorithm**-də **maximum product subarray** (maksimum hasilli altmassiv) necə tapılır?
 299. **Manacher’s Algorithm**-də **odd-length palindromes** (tək uzunluqlu palindromlar) necə tapılır?
 300. **Z-Algorithm**-də **substring matching** (altsətir uyğunluğu) necə həyata keçirilir?
+
+---
+
+# RabbitMQ Müsahibə Sualları
+
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms və RabbitMQ ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Arxitektura və Komponentlər](#arxitektura-və-komponentlər)
+  - [Exchange Növləri](#exchange-növləri)
+  - [Queue İdarəetmə](#queue-idarəetmə)
+  - [Mesajlaşma Nümunələri](#mesajlaşma-nümunələri)
+  - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
+  - [Təhlükəsizlik](#təhlükəsizlik)
+  - [Clustering və Yüksək Əlçatanlıq](#clustering-və-yüksək-əlçatanlıq)
+  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+  - [Digər Mövzular](#digər-mövzular)
+
+## RabbitMQ
+
+### Ümumi Suallar
+1. **RabbitMQ** nədir və nə üçün istifadə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+2. **AMQP** (Advanced Message Queuing Protocol - Qabaqcıl Mesaj Növbələmə Protokolu) nədir?
+3. **RabbitMQ**-nun digər mesaj brokerləri ilə müqayisədə üstünlükləri nələrdir?[](https://mindmajix.com/rabbitmq-interview-questions)
+4. **RabbitMQ**-nun **Kafka** ilə fərqləri nələrdir?[](https://www.interviewbit.com/kafka-interview-questions/)
+5. **RabbitMQ**-nun **ActiveMQ** ilə müqayisədə fərqləri nələrdir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+6. **RabbitMQ**-nun açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+7. **RabbitMQ**-nun hansı proqramlaşdırma dillərini dəstəklədiyi nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+8. **RabbitMQ**-nun mikroservis arxitekturasında rolu nədir?[](https://mindmajix.com/rabbitmq-interview-questions)
+9. **RabbitMQ**-nun əsas xüsusiyyətləri hansılardır?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+10. **RabbitMQ**-nun istifadəsi zamanı qarşılaşılacaq çətinliklər nələrdir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+11. **RabbitMQ**-nun **Erlang** dilində yazılmasının üstünlükləri nələrdir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+12. **RabbitMQ**-nun hansı protokolları dəstəklədiyi nədir (AMQP, MQTT, STOMP)?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+13. **RabbitMQ**-nun **message-oriented middleware** (mesaj yönümlü ara proqram) kimi rolu nədir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+14. **RabbitMQ**-nun **asynchronous messaging** (asinxron mesajlaşma) üçün faydaları nələrdir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+15. **RabbitMQ**-nun **enterprise** tətbiqlərdə istifadəsi necədir?
+
+### Arxitektura və Komponentlər
+16. **Producer** (Mesaj İstehsalçısı) nədir və RabbitMQ-da rolu nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+17. **Consumer** (Mesaj İstehlakçısı) nədir və necə işləyir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+18. **Queue** (Növbə) nədir və RabbitMQ-da hansı funksiyanı yerinə yetirir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+19. **Exchange** (Mübadilə) nədir və mesaj yönləndirməsində rolu nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+20. **Binding** (Bağlama) nədir və necə təyin olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+21. **Routing Key** (Yönləndirmə Açarı) nədir və necə istifadə olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+22. **Virtual Host** (Virtual Host - Virtual Ev Sahibi) nədir və nə üçün istifadə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+23. **Channel** (Kanal) nədir və RabbitMQ-da necə işləyir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+24. **Connection** (Əlaqə) ilə **Channel** arasındakı fərq nədir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+25. **Message Acknowledgment** (Mesaj Təsdiqləmə) nədir və niyə vacibdir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+26. **Publisher Confirms** (Nəşriyyat Təsdiqləri) nədir?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+27. **Dead Letter Queue** (Ölü Məktub Növbəsi) nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+28. **Dead Letter Exchange** (Ölü Məktub Mübadiləsi) nədir və necə işləyir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+29. **Message Durability** (Mesaj Davamlılığı) nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+30. **Persistent Messages** (Davamlı Mesajlar) ilə **Transient Messages** (Müvəqqəti Mesajlar) arasındakı fərq nədir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+31. **RabbitMQ**-nun **message flow** (mesaj axını) prosesi necədir?[](https://www.techgeeknext.com/java/rabbitmq-interview-questions)
+32. **RabbitMQ**-nun **broker** (broker) kimi rolu nədir?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+33. **RabbitMQ**-da **message format** (mesaj formatı) necə təyin olunur?
+34. **RabbitMQ**-da **message priority** (mesaj prioriteti) necə idarə olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+35. **RabbitMQ**-nun **AMQP 0-9-1** protokolu ilə bağlı xüsusiyyətləri nələrdir?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+
+### Exchange Növləri
+36. **Direct Exchange** (Birbaşa Mübadilə) nədir və nə vaxt istifadə olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+37. **Fanout Exchange** (Fanout Mübadiləsi) nədir və necə işləyir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+38. **Topic Exchange** (Mövzu Mübadiləsi) nədir və nə üçün istifadə olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+39. **Headers Exchange** (Başlıq Mübadiləsi) nədir və necə tətbiq olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+40. **Direct Exchange** ilə **Topic Exchange** arasındakı fərq nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+41. **Fanout Exchange** ilə **Topic Exchange** arasındakı fərq nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+42. **Headers Exchange** ilə **Topic Exchange** arasındakı performans fərqi nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+43. **Exchange Type** (Mübadilə Növü) seçimi hansı amillərdən asılıdır?
+44. **Default Exchange** (Standart Mübadilə) nədir və necə işləyir?
+45. **Exchange**-də **routing key** ilə **binding key** arasındakı fərq nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+46. **Topic Exchange**-də **wildcard matching** (joker simvol uyğunluğu) necə işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+47. **Fanout Exchange**-də mesajların bütün növbələrə paylanması necə təmin olunur?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+48. **Headers Exchange**-də **header attributes** (başlıq atributları) necə istifadə olunur?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+49. **Exchange**-də **alternate exchange** (alternativ mübadilə) nədir?
+50. **Exchange**-də **auto-delete** (avtomatik silinmə) xüsusiyyəti nədir?
+
+### Queue İdarəetmə
+51. **Queue** (Növbə) necə yaradılır və konfiqurasiya olunur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+52. **Durable Queue** (Davamlı Növbə) ilə **Non-Durable Queue** (Qeyri-Davamlı Növbə) arasındakı fərq nədir?[](https://mindmajix.com/rabbitmq-interview-questions)
+53. **Exclusive Queue** (Eksklüziv Növbə) nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+54. **Auto-Delete Queue** (Avtomatik Silinən Növbə) nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+55. **Queue Length Limit** (Növbə Uzunluğu Limiti) necə təyin olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+56. **Message TTL** (Mesaj Yaşama Müddəti) nədir və necə konfiqurasiya olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+57. **Queue Mirroring** (Növbə Güzgülənməsi) nədir və necə işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+58. **Dead Letter Queue** (Ölü Məktub Növbəsi) hansı hallarda istifadə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+59. **x-dead-letter-exchange** parametri nədir?[](https://interviewprep.org/rabbitmq-interview-questions/)
+60. **x-dead-letter-routing-key** parametri nədir?[](https://interviewprep.org/rabbitmq-interview-questions/)
+61. **Queue**-də **message expiration** (mesajın müddəti bitməsi) necə idarə olunur?
+62. **Queue**-də **priority queues** (prioritet növbələri) necə təyin olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+63. **Queue**-də **consumer tag** (istehlakçı etiketi) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+64. **Queue**-də **message prefetch count** (mesaj öncədən yükləmə sayı) necə təyin olunur?
+65. **Queue**-də **requeue** (yenidən növbəyə qaytarma) necə işləyir?
+66. **Queue**-də **message rejection** (mesaj rədd etmə) necə həyata keçirilir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+67. **Queue**-də **basic.qos** metodu nə üçün istifadə olunur?
+68. **Queue**-də **purge** (təmizləmə) əməliyyatı nədir?
+69. **Queue**-də **overflow behavior** (daşma davranışı) necə idarə olunur?
+70. **Queue**-də **lazy queues** (tənbəl növbələr) nədir və nə üçün istifadə olunur?
+
+### Mesajlaşma Nümunələri
+71. **Point-to-Point** (Nöqtədən-Nöqtəyə) mesajlaşma nümunəsi nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+72. **Publish/Subscribe** (Nəşr/Abunə) mesajlaşma nümunəsi nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+73. **Request/Reply** (Sorğu/Cavab) mesajlaşma nümunəsi nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+74. **Work Queue** (İş Növbəsi) nümunəsi nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+75. **Publish/Subscribe** ilə **Point-to-Point** arasındakı fərq nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+76. **Request/Reply** nümunəsində **correlation ID** (korrelyasiya ID) nədir?
+77. **Work Queue** ilə **load balancing** (yük balanslaşdırması) necə təmin olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+78. **Publish/Subscribe** nümunəsində **Fanout Exchange** necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+79. **Request/Reply** nümunəsində **temporary queues** (müvəqqəti növbələr) necə yaradılır?
+80. **Work Queue**-də **fair dispatch** (ədalətli göndəriş) necə təmin olunur?[](https://www.slideshare.net/slideshow/rabbitmq-interview-questions-and-answers/254165925)
+81. **Publish/Subscribe** ilə **Topic Exchange** necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+82. **Point-to-Point** ilə **Direct Exchange** necə əlaqəlidir?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+83. **Request/Reply** nümunəsində **reply-to queue** (cavab növbəsi) nədir?
+84. **Work Queue**-də **multiple consumers** (çoxsaylı istehlakçılar) necə idarə olunur?
+85. **Publish/Subscribe** nümunəsində **message filtering** (mesaj süzgəcləmə) necə aparılır?
+
+### Performans və Optimallaşdırma
+86. **RabbitMQ**-da **performance monitoring** (performans monitorinqi) necə həyata keçirilir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+87. **RabbitMQ Management Plugin** ilə performans necə monitorinq edilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+88. **RabbitMQ**-da **message rate** (mesaj sürəti) necə ölçülür?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+89. **RabbitMQ**-da **queue depth** (növbə dərinliyi) necə izlənilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+90. **RabbitMQ**-da **connection count** (əlaqə sayı) necə optimallaşdırılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+91. **RabbitMQ**-da **channel multiplexing** (kanal çoxsaylılığı) nədir?
+92. **RabbitMQ**-da **message batching** (mesaj toplulaşdırması) necə tətbiq olunur?
+93. **RabbitMQ**-da **prefetch count** (öncədən yükləmə sayı) performansına necə təsir edir?
+94. **RabbitMQ**-da **lazy queues** performans baxımından necə üstünlük təmin edir?
+95. **RabbitMQ**-da **message compression** (mesaj sıxışdırması) necə həyata keçirilir?
+96. **RabbitMQ**-da **message size** (mesaj ölçüsü) performansına necə təsir edir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+97. **RabbitMQ**-da **queue mirroring** performansına necə təsir edir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+98. **RabbitMQ**-da **high throughput** (yüksək ötürmə qabiliyyəti) necə təmin olunur?
+99. **RabbitMQ**-da **low latency** (aşağı gecikmə) necə əldə olunur?
+100. **RabbitMQ**-da **bottleneck** (darboğaz) problemləri necə aşkarlanır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+101. **RabbitMQ**-da **message persistence** (mesaj davamlılığı) performansına necə təsir edir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+102. **RabbitMQ**-da **disk I/O** (disk giriş/çıxış) optimallaşdırması necə aparılır?
+103. **RabbitMQ**-da **memory usage** (yaddaş istifadəsi) necə optimallaşdırılır?
+104. **RabbitMQ**-da **CPU usage** (prosessor istifadəsi) necə idarə olunur?
+105. **RabbitMQ**-da **Prometheus** və **Grafana** ilə monitorinq necə qurulur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+
+### Təhlükəsizlik
+106. **RabbitMQ**-da **authentication** (autentifikasiya) necə konfiqurasiya olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+107. **RabbitMQ**-da **authorization** (səlahiyyətləndirmə) necə təmin olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+108. **RabbitMQ**-da **SSL/TLS** şifrələməsi necə aktivləşdirilir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+109. **RabbitMQ**-da **Access Control Lists (ACLs)** (Giriş Nəzarət Siyahıları) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+110. **RabbitMQ**-da **message spoofing** (mesaj saxtalaşdırması) necə qarşısı alınır?[](https://www.projectpractical.com/rabbitmq-interview-questions-and-answers/)
+111. **RabbitMQ**-da **message replay** (mesaj təkrar oynatma) hücumlarına qarşı necə qorunulur?[](https://www.projectpractical.com/rabbitmq-interview-questions-and-answers/)
+112. **RabbitMQ**-da **user management** (istifadəçi idarəetmə) necə aparılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+113. **RabbitMQ**-da **password policies** (şifrə siyasətləri) necə təyin olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+114. **RabbitMQ**-da **network security** (şəbəkə təhlükəsizliyi) necə təmin olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+115. **RabbitMQ**-da **firewall** konfiqurasiyası necə aparılır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+116. **RabbitMQ**-da **secure communication** (təhlükəsiz rabitə) üçün hansı protokollar istifadə olunur?
+117. **RabbitMQ**-da **role-based access control** (rol əsaslı giriş nəzarəti) necə tətbiq olunur?
+118. **RabbitMQ**-da **encryption at rest** (sabit vəziyyətdə şifrələmə) necə təmin olunur?
+119. **RabbitMQ**-da **audit logging** (audit qeydiyyatı) necə aktivləşdirilir?
+120. **RabbitMQ**-da **LDAP** inteqrasiyası necə həyata keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+
+### Clustering və Yüksək Əlçatanlıq
+121. **RabbitMQ Cluster** (RabbitMQ Klasteri) nədir və necə konfiqurasiya olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+122. **RabbitMQ**-da **mirrored queues** (güzgülənmiş növbələr) necə işləyir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+123. **RabbitMQ**-da **high availability** (yüksək əlçatanlıq) necə təmin olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+124. **RabbitMQ**-da **load balancing** (yük balanslaşdırması) necə həyata keçirilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+125. **RabbitMQ**-da **failover** (əks funksionallıq) necə idarə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+126. **RabbitMQ**-da **node failure** (düyün sıradan çıxması) zamanı mesajlar necə qorunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+127. **RabbitMQ**-da **clustering** performansına necə təsir edir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+128. **RabbitMQ**-da **federation** nədir və necə konfiqurasiya olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+129. **RabbitMQ Federation Plugin** ilə mesaj mübadiləsi necə həyata keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+130. **RabbitMQ Shovel Plugin** nədir və nə üçün istifadə olunur?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+131. **RabbitMQ**-da **network partitioning** (şəbəkə bölünməsi) necə idarə olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+132. **RabbitMQ**-da **net_ticktime** parametri nədir?[](https://interviewprep.org/rabbitmq-interview-questions/)
+133. **RabbitMQ**-da **mirrored queues** ilə **federation** arasındakı fərq nədir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+134. **RabbitMQ**-da **cluster scalability** (klaster miqyaslılığı) necə təmin olunur?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+135. **RabbitMQ**-da **dynamic cluster expansion** (dinamik klaster genişlənməsi) necə aparılır?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+136. **RabbitMQ**-da **HAProxy** ilə yük balanslaşdırması necə qurulur?
+137. **RabbitMQ**-da **quorum queues** (kvorum növbələri) nədir?
+138. **RabbitMQ**-da **classic queues** (klassik növbələr) ilə **quorum queues** arasındakı fərq nədir?
+139. **RabbitMQ**-da **queue master location** (növbə ustası yeri) necə təyin olunur?
+140. **RabbitMQ**-da **replication** (təkrarlanma) necə işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+
+### Spring ilə İnteqrasiya
+141. **Spring AMQP** ilə RabbitMQ inteqrasiyası necə həyata keçirilir?[](https://www.slideshare.net/slideshow/rabbitmq-interview-questions-and-answers/254165925)
+142. **Spring Boot** ilə RabbitMQ necə konfiqurasiya olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+143. **Spring Cloud Stream** ilə RabbitMQ inteqrasiyası nədir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+144. **@RabbitListener** annotasiyası nədir və necə istifadə olunur?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+145. **RabbitTemplate** sinfi nədir və necə işləyir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+146. **Spring AMQP**-də **message converter** (mesaj çeviricisi) necə təyin olunur?
+147. **Spring Boot**-da **RabbitMQ listener** (RabbitMQ dinləyicisi) necə yaradılır?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+148. **Spring AMQP**-də **retry mechanism** (təkrar sınaq mexanizmi) necə konfiqurasiya olunur?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+149. **Spring Cloud Stream**-də **binding** (bağlama) necə təyin olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+150. **Spring Boot**-da **RabbitMQ exchange types** (mübadilə növləri) necə tətbiq olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+151. **Spring AMQP**-də **message acknowledgment** (mesaj təsdiqləmə) necə idarə olunur?
+152. **Spring Boot**-da **Dead Letter Queue** necə konfiqurasiya olunur?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+153. **Spring AMQP**-də **error handling** (səhv idarəetmə) necə həyata keçirilir?
+154. **Spring Cloud Stream**-də **consumer groups** (istehlakçı qrupları) necə istifadə olunur?
+155. **Spring Boot**-da **RabbitMQ connection pooling** (əlaqə hovuzu) necə təmin olunur?
+156. **Spring AMQP**-də **publisher confirms** necə konfiqurasiya olunur?
+157. **Spring Boot**-da **RabbitMQ retry policies** (təkrar sınaq siyasətləri) necə təyin olunur?
+158. **Spring Cloud Stream**-də **partitioning** (bölüşdürmə) necə həyata keçirilir?
+159. **Spring AMQP**-də **message serialization** (mesaj seriyalaşdırması) necə aparılır?
+160. **Spring Boot**-da **RabbitMQ monitoring** (RabbitMQ monitorinqi) necə qurulur?
+
+### Digər Mövzular
+161. **RabbitMQ Management Plugin** nədir və necə aktivləşdirilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+162. **rabbitmqctl** komanda xətti aləti nədir və necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+163. **RabbitMQ**-da **policies** (siyasətlər) nədir və necə təyin olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+164. **RabbitMQ**-da **message tracing** (mesaj izləmə) necə həyata keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+165. **RabbitMQ**-da **federation plugin** ilə klasterlər arası mesajlaşma necə təmin olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+166. **RabbitMQ Shovel Plugin** ilə mesaj ötürülməsi necə aparılır?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+167. **RabbitMQ**-da **STOMP** protokolu nədir və necə istifadə olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+168. **RabbitMQ**-da **MQTT** protokolu nədir və necə dəstəklənir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+169. **RabbitMQ**-da **HTTP API** necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+170. **RabbitMQ**-da **plugins** (plaginlər) necə aktivləşdirilir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+171. **RabbitMQ**-da **message retry** (mesaj təkrar sınağı) necə konfiqurasiya olunur?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+172. **RabbitMQ**-da **message expiration policies** (mesaj müddəti siyasətləri) necə təyin olunur?
+173. **RabbitMQ**-da **consumer priorities** (istehlakçı prioritetləri) necə idarə olunur?
+174. **RabbitMQ**-da **message headers** (mesaj başlıqları) necə istifadə olunur?
+175. **RabbitMQ**-da **message properties** (mesaj xassələri) hansılardır?
+176. **RabbitMQ**-da **alternate exchange** necə təyin olunur?
+177. **RabbitMQ**-da **queue policies** (növbə siyasətləri) necə tətbiq olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+178. **RabbitMQ**-da **exchange policies** (mübadilə siyasətləri) nədir?
+179. **RabbitMQ**-da **message routing** (mesaj yönləndirmə) optimallaşdırması necə aparılır?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+180. **RabbitMQ**-da **message deduplication** (mesaj təkrarlanmasının qarşısını alma) necə həyata keçirilir?
+181. **RabbitMQ**-da **message ordering** (mesaj sıralaması) necə təmin olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+182. **RabbitMQ**-da **message batch processing** (mesaj toplu emalı) necə aparılır?
+183. **RabbitMQ**-da **consumer cancellation** (istehlakçı ləğvi) necə idarə olunur?
+184. **RabbitMQ**-da **message redelivery** (mesaj yenidən göndərilməsi) necə işləyir?
+185. **RabbitMQ**-da **message timeout** (mesaj vaxtaşımı) necə təyin olunur?
+186. **RabbitMQ**-da **priority queues** ilə **message prioritization** (mesaj prioritetləşdirmə) necə həyata keçirilir?
+187. **RabbitMQ**-da **message compression** (mesaj sıxışdırması) hansı hallarda istifadə olunur?
+188. **RabbitMQ**-da **message encryption** (mesaj şifrələməsi) necə tətbiq olunur?
+189. **RabbitMQ**-da **message validation** (mesaj doğrulaması) necə aparılır?
+190. **RabbitMQ**-da **message logging** (mesaj qeydiyyatı) necə konfiqurasiya olunur?
+191. **RabbitMQ**-da **queue monitoring** (növbə monitorinqi) necə həyata keçirilir?
+192. **RabbitMQ**-da **exchange monitoring** (mübadilə monitorinqi) necə aparılır?
+193. **RabbitMQ**-da **connection monitoring** (əlaqə monitorinqi) necə təmin olunur?
+194. **RabbitMQ**-da **health checks** (sağlamlıq yoxlamaları) necə qurulur?
+195. **RabbitMQ**-da **metrics** (metrikalar) hansılardır və necə toplanır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+196. **RabbitMQ**-da **Prometheus** ilə inteqrasiya necə aparılır?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+197. **RabbitMQ**-da **Grafana** ilə vizualizasiya necə qurulur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+198. **RabbitMQ**-da **message tracing** ilə **debugging** (sazlama) necə aparılır?
+199. **RabbitMQ**-da **log aggregation** (qeyd toplama) necə həyata keçirilir?
+200. **RabbitMQ**-da **distributed tracing** (paylanmış izləmə) necə tətbiq olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+201. **RabbitMQ**-da **message serialization** (mesaj seriyalaşdırması) necə idarə olunur?
+202. **RabbitMQ**-da **message deserialization** (mesaj deserializasiyası) necə aparılır?
+203. **RabbitMQ**-da **message validation** (mesaj doğrulaması) üçün hansı alətlər istifadə olunur?
+204. **RabbitMQ**-da **message transformation** (mesaj transformasiyası) necə həyata keçirilir?
+205. **RabbitMQ**-da **message routing patterns** (mesaj yönləndirmə nümunələri) hansılardır?
+206. **RabbitMQ**-da **message retry policies** (mesaj təkrar sınaq siyasətləri) necə təyin olunur?
+207. **RabbitMQ**-da **message expiration** ilə **TTL** arasındakı fərq nədir?
+208. **RabbitMQ**-da **message delivery guarantees** (mesaj çatdırılma zəmanətləri) nədir?
+209. **RabbitMQ**-da **at-least-once delivery** (ən azı bir dəfə çatdırılma) necə təmin olunur?
+210. **RabbitMQ**-da **at-most-once delivery** (ən çox bir dəfə çatdırılma) necə işləyir?
+211. **RabbitMQ**-da **exactly-once delivery** (dəqiq bir dəfə çatdırılma) mümkünmü?
+212. **RabbitMQ**-da **message idempotency** (mesaj idempotentliyi) necə təmin olunur?
+213. **RabbitMQ**-da **message versioning** (mesaj versiyalaşdırma) necə idarə olunur?
+214. **RabbitMQ**-da **message filtering** (mesaj süzgəcləmə) necə həyata keçirilir?
+215. **RabbitMQ**-da **message routing** ilə **message filtering** arasındakı fərq nədir?
+
+### Əlavə Mövzular
+216. **RabbitMQ**-da **management console** (idarəetmə konsolu) necə istifadə olunur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+217. **RabbitMQ**-da **CLI tools** (komanda xətti alətləri) hansılardır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+218. **RabbitMQ**-da **rabbitmqadmin** aləti nədir?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+219. **RabbitMQ**-da **plugins** (plaginlər) hansı funksiyaları təmin edir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+220. **RabbitMQ**-da **federation** ilə **shovel** arasındakı fərq nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+221. **RabbitMQ**-da **consistent hashing exchange** (sabit xəşləmə mübadiləsi) nədir?
+222. **RabbitMQ**-da **message priority** ilə **queue priority** arasındakı fərq nədir?
+223. **RabbitMQ**-da **message batching** ilə **message compression** arasındakı fərq nədir?
+224. **RabbitMQ**-da **consumer prefetch** ilə **basic.qos** arasındakı əlaqə nədir?
+225. **RabbitMQ**-da **message requeue** ilə **message redelivery** arasındakı fərq nədir?
+226. **RabbitMQ**-da **exchange-to-exchange binding** (mübadilədən-mübadiləyə bağlama) nədir?
+227. **RabbitMQ**-da **message tracing plugin** (mesaj izləmə plagini) necə istifadə olunur?
+228. **RabbitMQ**-da **management API** ilə **HTTP API** arasındakı fərq nədir?
+229. **RabbitMQ**-da **message encryption** ilə **SSL/TLS** arasındakı fərq nədir?
+230. **RabbitMQ**-da **queue policies** ilə **exchange policies** arasındakı fərq nədir?
+231. **RabbitMQ**-da **message retry** ilə **dead letter queue** arasındakı əlaqə nədir?
+232. **RabbitMQ**-da **message acknowledgment modes** (mesaj təsdiqləmə rejimləri) hansılardır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+233. **RabbitMQ**-da **automatic acknowledgment** (avtomatik təsdiqləmə) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+234. **RabbitMQ**-da **manual acknowledgment** (əl ilə təsdiqləmə) necə işləyir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+235. **RabbitMQ**-da **negative acknowledgment (NACK)** (mənfi təsdiqləmə) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+236. **RabbitMQ**-da **message durability** ilə **queue durability** arasındakı fərq nədir?
+237. **RabbitMQ**-da **message store** (mesaj anbarı) necə işləyir?[](https://mindmajix.com/rabbitmq-interview-questions)
+238. **RabbitMQ**-da **Mnesia** verilənlər bazası nədir və necə istifadə olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+239. **RabbitMQ**-da **external database** (xarici verilənlər bazası) inteqrasiyası necə aparılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+240. **RabbitMQ**-da **message delivery semantics** (mesaj çatdırılma semantikası) nədir?
+241. **RabbitMQ**-da **message routing** ilə **message delivery** arasındakı fərq nədir?
+242. **RabbitMQ**-da **message headers** ilə **message properties** arasındakı fərq nədir?
+243. **RabbitMQ**-da **message deduplication** ilə **idempotency** arasındakı fərq nədir?
+244. **RabbitMQ**-da **message versioning** ilə **message transformation** arasındakı fərq nədir?
+245. **RabbitMQ**-da **message filtering** ilə **message validation** arasındakı fərq nədir?
+246. **RabbitMQ**-da **message logging** ilə **message tracing** arasındakı fərq nədir?
+247. **RabbitMQ**-da **queue monitoring** ilə **exchange monitoring** arasındakı fərq nədir?
+248. **RabbitMQ**-da **connection pooling** (əlaqə hovuzu) necə optimallaşdırılır?
+249. **RabbitMQ**-da **message batching** ilə **bulk operations** (toplu əməliyyatlar) arasındakı fərq nədir?
+250. **RabbitMQ**-da **message prefetch** ilə **message batching** arasındakı fərq nədir?
+251. **RabbitMQ**-da **message retry** ilə **message redelivery** arasındakı fərq nədir?
+252. **RabbitMQ**-da **message expiration** ilə **queue TTL** arasındakı fərq nədir?
+253. **RabbitMQ**-da **consumer cancellation** ilə **message rejection** arasındakı fərq nədir?
+254. **RabbitMQ**-da **message priority** ilə **consumer priority** arasındakı fərq nədir?
+255. **RabbitMQ**-da **federation** ilə **sharding** (bölüşdürmə) arasındakı fərq nədir?
+256. **RabbitMQ**-da **message compression** ilə **message encryption** arasındakı fərq nədir?
+257. **RabbitMQ**-da **message validation** ilə **message transformation** arasındakı fərq nədir?
+258. **RabbitMQ**-da **message logging** ilə **audit logging** arasındakı fərq nədir?
+259. **RabbitMQ**-da **queue policies** ilə **message policies** arasındakı fərq nədir?
+260. **RabbitMQ**-da **exchange policies** ilə **binding policies** arasındakı fərq nədir?
+261. **RabbitMQ**-da **message tracing** ilə **distributed tracing** arasındakı fərq nədir?
+262. **RabbitMQ**-da **message delivery guarantees** ilə **message acknowledgment** arasındakı fərq nədir?
+263. **RabbitMQ**-da **message idempotency** ilə **message deduplication** arasındakı fərq nədir?
+264. **RabbitMQ**-da **message versioning** ilə **message routing** arasındakı fərq nədir?
+265. **RabbitMQ**-da **message filtering** ilə **message routing** arasındakı fərq nədir?
+266. **RabbitMQ**-da **message batching** ilə **message prefetch** arasındakı fərq nədir?
+267. **RabbitMQ**-da **message retry** ilə **message redelivery** arasındakı fərq nədir?
+268. **RabbitMQ**-da **message expiration** ilə **message TTL** arasındakı fərq nədir?
+269. **RabbitMQ**-da **consumer cancellation** ilə **message rejection** arasındakı fərq nədir?
+270. **RabbitMQ**-da **message priority** ilə **queue priority** arasındakı fərq nədir?
+271. **RabbitMQ**-da **federation** ilə **clustering** arasındakı fərq nədir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+272. **RabbitMQ**-da **message compression** ilə **message batching** arasındakı fərq nədir?
+273. **RabbitMQ**-da **message encryption** ilə **SSL/TLS** arasındakı fərq nədir?
+274. **RabbitMQ**-da **message validation** ilə **message filtering** arasındakı fərq nədir?
+275. **RabbitMQ**-da **message logging** ilə **message tracing** arasındakı fərq nədir?
+276. **RabbitMQ**-da **queue monitoring** ilə **connection monitoring** arasındakı fərq nədir?
+277. **RabbitMQ**-da **exchange monitoring** ilə **message monitoring** arasındakı fərq nədir?
+278. **RabbitMQ**-da **message delivery semantics** ilə **message routing semantics** arasındakı fərq nədir?
+279. **RabbitMQ**-da **message idempotency** ilə **message versioning** arasındakı fərq nədir?
+280. **RabbitMQ**-da **message deduplication** ilə **message filtering** arasındakı fərq nədir?
+281. **RabbitMQ**-da **message routing** ilə **message transformation** arasındakı fərq nədir?
+282. **RabbitMQ**-da **message batching** ilə **message serialization** arasındakı fərq nədir?
+283. **RabbitMQ**-da **message prefetch** ilə **message acknowledgment** arasındakı fərq nədir?
+284. **RabbitMQ**-da **message retry** ilə **message expiration** arasındakı fərq nədir?
+285. **RabbitMQ**-da **consumer priorities** ilə **queue priorities** arasındakı fərq nədir?
+286. **RabbitMQ**-da **federation plugin** ilə **shovel plugin** arasındakı fərq nədir?
+287. **RabbitMQ**-da **message compression** ilə **message deduplication** arasındakı fərq nədir?
+288. **RabbitMQ**-da **message encryption** ilə **message validation** arasındakı fərq nədir?
+289. **RabbitMQ**-da **message logging** ilə **message validation** arasındakı fərq nədir?
+290. **RabbitMQ**-da **queue policies** ilə **consumer policies** arasındakı fərq nədir?
+291. **RabbitMQ**-da **exchange policies** ilə **message policies** arasındakı fərq nədir?
+292. **RabbitMQ**-da **message tracing** ilə **message logging** arasındakı fərq nədir?
+293. **RabbitMQ**-da **message delivery guarantees** ilə **message persistence** arasındakı fərq nədir?
+294. **RabbitMQ**-da **message idempotency** ilə **message deduplication** arasındakı fərq nədir?
+295. **RabbitMQ**-da **message versioning** ilə **message filtering** arasındakı fərq nədir?
+296. **RabbitMQ**-da **message routing** ilə **message delivery** arasındakı fərq nədir?
+297. **RabbitMQ**-da **message batching** ilə **message compression** arasındakı fərq nədir?
+298. **RabbitMQ**-da **message prefetch** ilə **message redelivery** arasındakı fərq nədir?
+299. **RabbitMQ**-da **message retry** ilə **message acknowledgment** arasındakı fərq nədir?
+300. **RabbitMQ**-da **message expiration** ilə **message validation** arasındakı fərq nədir?
