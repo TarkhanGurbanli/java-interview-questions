@@ -1592,3 +1592,349 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 298. **Specification Pattern** ilə **Spring Security** necə inteqrasiya olunur?
 299. **Circuit Breaker Pattern** ilə **Spring Boot Actuator** necə tətbiq olunur?
 300. **Retry Pattern** ilə **Spring Batch** necə inteqrasiya olunur?
+
+---
+
+# Algorithms Müsahibə Sualları
+
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns və Algorithms ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Sorting Algorithms](#sorting-algorithms)
+  - [Searching Algorithms](#searching-algorithms)
+  - [Tree Algorithms](#tree-algorithms)
+  - [Graph Algorithms](#graph-algorithms)
+  - [Dynamic Programming](#dynamic-programming)
+  - [Greedy Algorithms](#greedy-algorithms)
+  - [Divide and Conquer](#divide-and-conquer)
+  - [Hashing Algorithms](#hashing-algorithms)
+  - [Other Algorithms](#other-algorithms)
+
+## Algorithms
+
+### Ümumi Suallar
+1. **Algorithm** (Alqoritm) nədir və niyə vacibdir?
+2. **Time Complexity** (Vaxt Mürəkkəbliyi) nədir və necə hesablanır?
+3. **Space Complexity** (Yer Mürəkkəbliyi) nədir və necə ölçülür?
+4. **Big-O Notation** (Böyük-O İşarəsi) nədir?
+5. **Big-Theta** və **Big-Omega** notasyonları nədir?
+6. **Asymptotic Analysis** (Asimptotik Təhlil) nədir?
+7. Alqoritmlərdə **worst-case** (ən pis hal) ilə **average-case** (orta hal) arasındakı fərq nədir?
+8. **Iterative** (Təkrarlayan) və **Recursive** (Rekursiv) alqoritmlər arasındakı fərq nədir?
+9. **Divide and Conquer** (Böl və Hökm Et) strategiyası nədir?
+10. **Greedy Algorithm** (Acgöz Alqoritm) nədir?
+11. **Dynamic Programming** (Dinamik Proqramlaşdırma) nədir?
+12. Alqoritmlərdə **backtracking** (geri dönüş) nədir?
+13. **Brute Force** (Kobud Qüvvə) alqoritmləri nədir?
+14. Alqoritmlərdə **optimization** (optimallaşdırma) necə aparılır?
+15. Java-da alqoritmlərin performansını ölçmək üçün hansı alətlər istifadə olunur?
+
+### Sorting Algorithms
+16. **Bubble Sort** (Köpüklü Sıralama) nədir?
+17. **Selection Sort** (Seçim Sıralaması) nədir?
+18. **Insertion Sort** (Daxil Etmə Sıralaması) nədir?
+19. **Merge Sort** (Birləşmə Sıralaması) nədir?
+20. **Quick Sort** (Sürətli Sıralama) nədir?
+21. **Heap Sort** (Yığın Sıralaması) nədir?
+22. **TimSort** nədir və Java-da necə istifadə olunur?
+23. **Radix Sort** (Radiks Sıralaması) nədir?
+24. **Bucket Sort** (Səbət Sıralaması) nədir?
+25. **Counting Sort** (Sayma Sıralaması) nədir?
+26. **Bubble Sort** ilə **Selection Sort** arasındakı fərq nədir?
+27. **Merge Sort** ilə **Quick Sort** arasındakı fərq nədir?
+28. **Quick Sort**-da **pivot** (dayaq nöqtəsi) seçimi necə təsir edir?
+29. **Heap Sort** ilə **Merge Sort** arasındakı performans fərqi nədir?
+30. **TimSort**-un **Merge Sort** və **Insertion Sort** ilə əlaqəsi nədir?
+31. **Radix Sort** hansı hallarda effektivdir?
+32. **Bucket Sort** ilə **Counting Sort** arasındakı fərq nədir?
+33. **Stable Sorting** (Sabit Sıralama) ilə **Unstable Sorting** (Qeyri-sabit Sıralama) nədir?
+34. Java-da **Collections.sort()** hansı alqoritmdən istifadə edir?
+35. **Arrays.sort()** ilə **Collections.sort()** arasındakı fərq nədir?
+36. **In-place Sorting** (Yerində Sıralama) nədir?
+37. **External Sorting** (Xarici Sıralama) nədir?
+38. **Quick Sort**-da **randomized pivot** (təsadüfi dayaq) necə istifadə olunur?
+39. **Merge Sort**-da **divide** (bölmə) və **merge** (birləşdirmə) necə işləyir?
+40. **Heap Sort**-da **heapify** (yığınlaşdırma) prosesi nədir?
+
+### Searching Algorithms
+41. **Linear Search** (Xətti Axtarış) nədir?
+42. **Binary Search** (İkili Axtarış) nədir?
+43. **Jump Search** (Sıçrayış Axtarışı) nədir?
+44. **Interpolation Search** (İnterpolyasiya Axtarışı) nədir?
+45. **Exponential Search** (Eksponensial Axtarış) nədir?
+46. **Linear Search** ilə **Binary Search** arasındakı fərq nədir?
+47. **Binary Search** hansı hallarda effektivdir?
+48. **Jump Search** ilə **Binary Search** arasındakı fərq nədir?
+49. **Interpolation Search** necə işləyir və hansı hallarda üstünlük təşkil edir?
+50. **Exponential Search** ilə **Binary Search** arasındakı fərq nədir?
+51. Java-da **Arrays.binarySearch()** necə istifadə olunur?
+52. **Collections.binarySearch()** necə işləyir?
+53. **Binary Search**-da **iterative** və **recursive** yanaşmalar arasındakı fərq nədir?
+54. **Ternary Search** (Üçlü Axtarış) nədir?
+55. **Search Algorithm**-larda **time complexity** (vaxt mürəkkəbliyi) necə hesablanır?
+56. **Binary Search Tree** ilə **Binary Search** arasındakı fərq nədir?
+57. **Hash-based Search** (Xəş əsaslı axtarış) necə işləyir?
+58. **Bloom Filter** axtarışda necə istifadə olunur?
+59. **Trie**-də **prefix search** (prefiks axtarışı) necə həyata keçirilir?
+60. **Graph**-də **search** alqoritmləri hansılardır?
+
+### Tree Algorithms
+61. **Binary Tree Traversal** (İkili Ağac Keçidi) növləri hansılardır?
+62. **In-order Traversal** (Sıralı Keçid) nədir?
+63. **Pre-order Traversal** (Əvvəlcədən Keçid) nədir?
+64. **Post-order Traversal** (Sondan Keçid) nədir?
+65. **Level-order Traversal** (Səviyyəli Keçid) nədir?
+66. **Binary Search Tree** (İkili Axtarış Ağacı) əməliyyatları hansılardır?
+67. **BST Insert** (İkili Axtarış Ağacına Əlavə Etmə) necə işləyir?
+68. **BST Delete** (İkili Axtarış Ağacından Silmə) necə həyata keçirilir?
+69. **BST Search** (İkili Axtarış Ağacında Axtarış) necə aparılır?
+70. **AVL Tree** balanslaşdırma necə işləyir?
+71. **Red-Black Tree** əməliyyatları hansılardır?
+72. **AVL Tree** ilə **Red-Black Tree** arasındakı fərq nədir?
+73. **B-Tree** nədir və nə üçün istifadə olunur?
+74. **B+-Tree** nədir və verilənlər bazalarında necə tətbiq olunur?
+75. **Trie** (Prefiks Ağacı) nədir və necə işləyir?
+76. **Heap**-də **insert** (əlavə etmə) və **delete** (silmə) necə aparılır?
+77. **Min-Heap** ilə **Max-Heap** arasındakı fərq nədir?
+78. **Binary Tree**-də **height** (hündürlük) necə hesablanır?
+79. **Binary Tree**-də **diameter** (diametr) necə tapılır?
+80. **Lowest Common Ancestor** (Ən Aşağı Ümumi Ata) necə hesablanır?
+81. **Binary Tree**-də **balanced tree** (balanslaşdırılmış ağac) necə yoxlanılır?
+82. **AVL Tree**-də **rotation** (fırlanma) növləri hansılardır?
+83. **Red-Black Tree**-də **color flip** (rəng dəyişmə) necə işləyir?
+84. **Trie**-də **autocomplete** (avtomatik tamamlama) necə həyata keçirilir?
+85. **Segment Tree** (Seqment Ağacı) nədir?
+86. **Fenwick Tree** (Fenwick Ağacı) nədir?
+87. **Interval Tree** (Interval Ağacı) nədir?
+88. **Quad Tree** (Dördlük Ağac) nədir?
+89. **KD-Tree** (K-Ölçülü Ağac) nədir?
+90. **Segment Tree**-də **range queries** (aralıq sorğuları) necə aparılır?
+
+### Graph Algorithms
+91. **Depth-First Search** (Dərinlik Axtarışı) nədir?
+92. **Breadth-First Search** (Eninə Axtarış) nədir?
+93. **Dijkstra’s Algorithm** (Dijkstra Alqoritmi) nədir?
+94. **Bellman-Ford Algorithm** (Bellman-Ford Alqoritmi) nədir?
+95. **Floyd-Warshall Algorithm** (Floyd-Warshall Alqoritmi) nədir?
+96. **Kruskal’s Algorithm** (Kruskal Alqoritmi) nədir?
+97. **Prim’s Algorithm** (Prim Alqoritmi) nədir?
+98. **Topological Sort** (Topoloji Sıralama) nədir?
+99. **Kosaraju’s Algorithm** (Kosaraju Alqoritmi) nədir?
+100. **Tarjan’s Algorithm** (Tarjan Alqoritmi) nədir?
+101. **DFS** ilə **BFS** arasındakı fərq nədir?
+102. **Dijkstra’s Algorithm** ilə **A* Algorithm** (A Ulduz Alqoritmi) arasındakı fərq nədir?
+103. **Minimum Spanning Tree** (Minimum Örtük Ağacı) nədir?
+104. **Ford-Fulkerson Algorithm** (Ford-Fulkerson Alqoritmi) nədir?
+105. **Edmonds-Karp Algorithm** (Edmonds-Karp Alqoritmi) nədir?
+106. **Graph**-də **cycle detection** (dövr aşkarlanması) necə aparılır?
+107. **Floyd’s Cycle Detection Algorithm** (Floyd’un Dövr Aşkarlama Alqoritmi) nədir?
+108. **Union-Find** alqoritmi nədir?
+109. **Graph**-də **connected components** (bağlı komponentlər) necə tapılır?
+110. **Strongly Connected Components** (Güclü Bağlı Komponentlər) necə aşkarlanır?
+111. **Graph**-də **bipartite graph** (ikiqisimli qrafik) necə yoxlanılır?
+112. **Graph Coloring** (Qrafik Boyama) nədir?
+113. **Maximum Flow** (Maksimum Axın) problemi necə həll olunur?
+114. **Max-Flow Min-Cut Theorem** (Maksimum Axın Minimum Kəsik Teoremi) nədir?
+115. **Articulation Points** (Artikulyasiya Nöqtələri) necə tapılır?
+116. **Bridges** (Körpülər) qrafikdə necə aşkarlanır?
+117. **Eulerian Path** (Eyler Yolu) necə tapılır?
+118. **Hamiltonian Cycle** (Hamilton Dövrü) necə aşkarlanır?
+119. **Weighted Shortest Path** (Çəkili Ən Qısa Yol) necə tapılır?
+120. **All-Pairs Shortest Path** (Bütün Cütlərin Ən Qısa Yolu) necə hesablanır?
+
+### Dynamic Programming
+121. **Dynamic Programming** (Dinamik Proqramlaşdırma) nədir?
+122. **Memoization** (Yadda Saxlama) ilə **Tabulation** (Cədvəlləşdirmə) arasındakı fərq nədir?
+123. **Fibonacci Sequence** (Fibonacci Sırası) dinamik proqramlaşdırma ilə necə hesablanır?
+124. **Knapsack Problem** (Çanta Problemi) nədir?
+125. **0/1 Knapsack** ilə **Fractional Knapsack** arasındakı fərq nədir?
+126. **Longest Common Subsequence** (Ən Uzun Ümumi Altsıra) nədir?
+127. **Longest Increasing Subsequence** (Ən Uzun Artan Altsıra) necə tapılır?
+128. **Edit Distance** (Redaktə Məsafəsi) nədir?
+129. **Matrix Chain Multiplication** (Matris Zəncir Çoxalması) nədir?
+130. **Subset Sum Problem** (Alt Cəm Problemi) nədir?
+131. **Coin Change Problem** (Sikkə Dəyişmə Problemi) necə həll olunur?
+132. **Longest Palindromic Substring** (Ən Uzun Palindromik Altsətir) necə tapılır?
+133. **Dynamic Programming** ilə **Greedy Algorithm** arasındakı fərq nədir?
+134. **Optimal Substructure** (Optimal Altstruktur) nədir?
+135. **Overlapping Subproblems** (Örtüşən Altproblemlər) nədir?
+136. **Rod Cutting Problem** (Çubuq Kəsmə Problemi) nədir?
+137. **Word Break Problem** (Söz Ayırma Problemi) necə həll olunur?
+138. **Partition Problem** (Bölüşdürmə Problemi) nədir?
+139. **Longest Path in Matrix** (Matrisdə Ən Uzun Yol) necə tapılır?
+140. **Dynamic Programming**-də **state transition** (vəziyyət keçidi) necə təyin olunur?
+
+### Greedy Algorithms
+141. **Greedy Algorithm** (Acgöz Alqoritm) nədir?
+142. **Huffman Coding** (Huffman Kodlaşdırması) nədir?
+143. **Kruskal’s Algorithm** ilə **Greedy** yanaşma necə tətbiq olunur?
+144. **Prim’s Algorithm** ilə **Greedy** yanaşma necə istifadə olunur?
+145. **Fractional Knapsack Problem** (Kəsir Çanta Problemi) necə həll olunur?
+146. **Activity Selection Problem** (Fəaliyyət Seçimi Problemi) nədir?
+147. **Job Scheduling Problem** (İş Planlaşdırma Problemi) nədir?
+148. **Greedy Algorithm**-də **optimal choice** (optimal seçim) necə təmin olunur?
+149. **Dijkstra’s Algorithm** ilə **Greedy** yanaşma necə əlaqəlidir?
+150. **Greedy Algorithm** hansı hallarda uğursuz olur?
+151. **Huffman Coding**-də **prefix codes** (prefiks kodları) necə yaradılır?
+152. **Activity Selection Problem**-də **greedy choice property** (acgöz seçim xüsusiyyəti) nədir?
+153. **Minimum Coin Change** (Minimum Sikkə Dəyişmə) problemi Greedy ilə necə həll olunur?
+154. **Greedy Algorithm**-də **local optimum** (lokal optimal) ilə **global optimum** (qlobal optimal) arasındakı fərq nədir?
+155. **Interval Scheduling** (Interval Planlaşdırma) problemi necə həll olunur?
+156. **Greedy Algorithm**-də **proof of correctness** (doğruluğun sübutu) necə aparılır?
+157. **Kruskal’s Algorithm**-də **disjoint set** (ayrılmış dəst) necə istifadə olunur?
+158. **Prim’s Algorithm**-də **priority queue** (prioritet növbəsi) necə tətbiq olunur?
+159. **Greedy Algorithm**-də **time complexity** (vaxt mürəkkəbliyi) necə hesablanır?
+160. **Huffman Coding**-də **binary tree** (ikili ağac) necə qurulur?
+
+### Divide and Conquer
+161. **Divide and Conquer** (Böl və Hökm Et) strategiyası nədir?
+162. **Merge Sort** ilə **Divide and Conquer** necə tətbiq olunur?
+163. **Quick Sort** ilə **Divide and Conquer** necə istifadə olunur?
+164. **Binary Search** ilə **Divide and Conquer** necə əlaqəlidir?
+165. **Strassen’s Matrix Multiplication** (Strassen Matris Çoxalması) nədir?
+166. **Closest Pair of Points** (Ən Yaxın Nöqtə Cütü) problemi necə həll olunur?
+167. **Karatsuba Algorithm** (Karatsuba Alqoritmi) nədir?
+168. **Divide and Conquer**-də **recursion depth** (rekursiya dərinliyi) necə təsir edir?
+169. **Fast Fourier Transform** (Sürətli Furye Çevrilməsi) nədir?
+170. **Divide and Conquer** ilə **Dynamic Programming** arasındakı fərq nədir?
+171. **Quick Sort**-da **partitioning** (bölüşdürmə) necə işləyir?
+172. **Merge Sort**-da **merge** (birləşdirmə) prosesi necə optimallaşdırılır?
+173. **Binary Search**-də **divide** (bölmə) strategiyası necə tətbiq olunur?
+174. **Strassen’s Algorithm**-də **matrix partitioning** (matris bölüşdürməsi) necə işləyir?
+175. **Closest Pair of Points**-də **divide and conquer** necə tətbiq olunur?
+176. **Karatsuba Algorithm**-də **multiplication** (çoxalma) necə optimallaşdırılır?
+177. **Fast Fourier Transform**-də **divide and conquer** necə istifadə olunur?
+178. **Divide and Conquer**-də **base case** (əsas hal) necə təyin olunur?
+179. **Divide and Conquer**-də **time complexity** (vaxt mürəkkəbliyi) necə hesablanır?
+180. **Quick Sort**-da **tail recursion** (quyruq rekursiyası) necə optimallaşdırılır?
+
+### Hashing Algorithms
+181. **Hashing** (Xəşləmə) nədir və alqoritmlərdə necə istifadə olunur?
+182. **Hash Function** (Xəş Funksiyası) nədir və necə işləyir?
+183. **Collision Resolution** (Toqquşma Həlli) üsulları hansılardır?
+184. **Separate Chaining** (Ayrı Zəncirləmə) necə işləyir?
+185. **Open Addressing** (Açıq Ünvanlama) nədir?
+186. **Linear Probing** (Xətti Yoxlama) ilə **Quadratic Probing** (Kvadratik Yoxlama) arasındakı fərq nədir?
+187. **Double Hashing** (İkiqat Xəşləmə) nədir?
+188. **Consistent Hashing** (Sabit Xəşləmə) nədir və nə üçün istifadə olunur?
+189. **Hash Table** (Xəş Cədvəli) performansını necə optimallaşdırmaq olar?
+190. **Bloom Filter** nədir və necə işləyir?
+191. **HyperLogLog** nədir və necə istifadə olunur?
+192. **Count-Min Sketch** nədir?
+193. **HashMap**-də **hashCode()** metodu necə işləyir?
+194. **Hashing**-də **load factor** (yükləmə faktoru) nədir?
+195. **Hashing**-də **collision** (toqquşma) sayını azaltmaq üçün hansı üsullar istifadə olunur?
+196. **Bloom Filter**-də **false positive** (yanlış müsbət) nədir?
+197. **HyperLogLog**-də **cardinality estimation** (əsaslılıq təxmini) necə aparılır?
+198. **Count-Min Sketch**-də **frequency estimation** (tezlik təxmini) necə işləyir?
+199. **Hashing**-də **uniform distribution** (vahid paylanma) necə təmin olunur?
+200. **Consistent Hashing**-də **virtual nodes** (virtual düyünlər) necə istifadə olunur?
+
+### Other Algorithms
+201. **Backtracking** (Geri Dönüş) alqoritmləri nədir?
+202. **N-Queens Problem** (N Vəzir Problemi) necə həll olunur?
+203. **Sudoku Solver** (Sudoku Həlledicisi) necə işləyir?
+204. **Permutations** (Permutasiyalar) necə yaradılır?
+205. **Combinations** (Kombinasiyalar) necə hesablanır?
+206. **Knapsack Problem** ilə **Backtracking** necə tətbiq olunur?
+207. **Graph Coloring** ilə **Backtracking** necə istifadə olunur?
+208. **Randomized Algorithms** (Təsadüfi Alqoritmlər) nədir?
+209. **Monte Carlo Algorithm** (Monte Karlo Alqoritmi) nədir?
+210. **Las Vegas Algorithm** (Las Veqas Alqoritmi) nədir?
+211. **Randomized Quick Sort** (Təsadüfi Sürətli Sıralama) necə işləyir?
+212. **Karger’s Algorithm** (Karger Alqoritmi) nədir?
+213. **Reservoir Sampling** (Rezervuar Nümunələmə) nədir?
+214. **Approximation Algorithms** (Təxmini Alqoritmlər) nədir?
+215. **Travelling Salesman Problem** (Səyyah Satıcı Problemi) təxmini alqoritmlərlə necə həll olunur?
+216. **Vertex Cover Problem** (Təpə Örtüyü Problemi) nədir?
+217. **Set Cover Problem** (Dəst Örtüyü Problemi) nədir?
+218. **String Matching Algorithms** (Sətir Uyğunluğu Alqoritmləri) hansılardır?
+219. **Knuth-Morris-Pratt Algorithm** (KMP Alqoritmi) nədir?
+220. **Rabin-Karp Algorithm** (Rabin-Karp Alqoritmi) nədir?
+221. **Boyer-Moore Algorithm** (Boyer-Moore Alqoritmi) nədir?
+222. **KMP Algorithm** ilə **Rabin-Karp Algorithm** arasındakı fərq nədir?
+223. **Aho-Corasick Algorithm** (Aho-Corasick Alqoritmi) nədir?
+224. **String Matching**-də **pattern preprocessing** (nümunə ön emalı) necə işləyir?
+225. **Regular Expression Matching** (Requlyar İfadə Uyğunluğu) necə həyata keçirilir?
+226. **Bit Manipulation Algorithms** (Bit Manipulyasiya Alqoritmləri) nədir?
+227. **Bitwise XOR** ilə **single number** problemi necə həll olunur?
+228. **Bitwise AND** ilə **range queries** (aralıq sorğuları) necə aparılır?
+229. **Two’s Complement** (İkili Komplement) necə işləyir?
+230. **Bit Manipulation**-də **masking** (maskeleme) necə istifadə olunur?
+231. **Union-Find** ilə **disjoint set** (ayrılmış dəst) necə idarə olunur?
+232. **Path Compression** (Yol Sıxışdırması) Union-Find-də necə işləyir?
+233. **Rank-based Union** (Səviyyə əsaslı Birləşmə) necə tətbiq olunur?
+234. **Sliding Window Algorithm** (Sürüşən Pəncərə Alqoritmi) nədir?
+235. **Two-Pointer Technique** (İki Göstərici Texnikası) nədir?
+236. **Kadane’s Algorithm** (Kadane Alqoritmi) nədir?
+237. **Manacher’s Algorithm** (Manacher Alqoritmi) nədir?
+238. **Z-Algorithm** (Z Alqoritmi) nədir?
+239. **Sliding Window**-də **maximum sum subarray** (maksimum cəmli altmassiv) necə tapılır?
+240. **Two-Pointer Technique**-də **sorted array** (sıralanmış massiv) ilə necə işləyir?
+241. **Kadane’s Algorithm**-də **maximum subarray sum** (maksimum altmassiv cəmi) necə hesablanır?
+242. **Manacher’s Algorithm**-də **longest palindromic substring** (ən uzun palindromik altsətir) necə tapılır?
+243. **Z-Algorithm**-də **pattern matching** (nümunə uyğunluğu) necə aparılır?
+244. **Reservoir Sampling**-də **random selection** (təsadüfi seçim) necə təmin olunur?
+245. **Monte Carlo Algorithm**-də **probability** (ehtimal) necə istifadə olunur?
+246. **Las Vegas Algorithm**-də **correctness** (doğruluq) necə təmin olunur?
+247. **Karger’s Algorithm**-də **minimum cut** (minimum kəsik) necə tapılır?
+248. **Approximation Algorithms**-də **trade-off** (mübadilə) necə idarə olunur?
+249. **Vertex Cover Problem**-də **greedy approximation** (acgöz təxmini) necə tətbiq olunur?
+250. **Set Cover Problem**-də **approximation ratio** (təxmini nisbət) nədir?
+251. **String Matching**-də **hashing** (xəşləmə) necə istifadə olunur?
+252. **KMP Algorithm**-də **prefix function** (prefiks funksiyası) necə hesablanır?
+253. **Rabin-Karp Algorithm**-də **rolling hash** (sürüşən xəş) necə işləyir?
+254. **Boyer-Moore Algorithm**-də **bad character heuristic** (pis simvol evristikası) nədir?
+255. **Aho-Corasick Algorithm**-də **trie** (prefiks ağacı) necə istifadə olunur?
+256. **Bit Manipulation**-də **power of two** (ikinin qüvvəti) necə yoxlanılır?
+257. **Union-Find**-də **connected components** (bağlı komponentlər) necə tapılır?
+258. **Sliding Window**-də **minimum window substring** (minimum pəncərə altsətiri) necə tapılır?
+259. **Two-Pointer Technique**-də **array merging** (massiv birləşdirmə) necə aparılır?
+260. **Kadane’s Algorithm**-də **circular array** (dairəvi massiv) ilə necə işləyir?
+261. **Manacher’s Algorithm**-də **even-length palindromes** (cüt uzunluqlu palindromlar) necə tapılır?
+262. **Z-Algorithm**-də **Z-array** (Z-massivi) necə hesablanır?
+263. **Reservoir Sampling**-də **stream processing** (axın emalı) necə həyata keçirilir?
+264. **Monte Carlo Algorithm**-də **random sampling** (təsadüfi nümunələmə) necə işləyir?
+265. **Las Vegas Algorithm**-də **randomized correctness** (təsadüfi doğruluğ) necə təmin olunur?
+266. **Karger’s Algorithm**-də **randomized contraction** (təsadüfi sıxılma) necə işləyir?
+267. **Approximation Algorithms**-də **polynomial time** (polinomial vaxt) necə təmin olunur?
+268. **Vertex Cover Problem**-də **2-approximation** (2-təxmini) alqoritmi nədir?
+269. **Set Cover Problem**-də **greedy approach** (acgöz yanaşma) necə işləyir?
+270. **String Matching**-də **multiple patterns** (çoxlu nümunələr) necə tapılır?
+271. **KMP Algorithm**-də **failure function** (uğursuzluq funksiyası) necə işləyir?
+272. **Rabin-Karp Algorithm**-də **hash collision** (xəş toqquşması) necə idarə olunur?
+273. **Boyer-Moore Algorithm**-də **good suffix heuristic** (yaxşı sufiks evristikası) nədir?
+274. **Aho-Corasick Algorithm**-də **failure links** (uğursuzluq bağlantıları) necə qurulur?
+275. **Bit Manipulation**-də **count set bits** (qurulmuş bitlərin sayılması) necə aparılır?
+276. **Union-Find**-də **path compression** (yol sıxışdırması) ilə **rank** arasındakı əlaqə nədir?
+277. **Sliding Window**-də **fixed-size window** (sabit ölçülü pəncərə) necə işləyir?
+278. **Two-Pointer Technique**-də **reverse pointers** (tərs göstəricilər) necə istifadə olunur?
+279. **Kadane’s Algorithm**-də **negative numbers** (mənfi ədədlər) ilə necə işləyir?
+280. **Manacher’s Algorithm**-də **center expansion** (mərkəz genişlənməsi) necə işləyir?
+281. **Z-Algorithm**-də **pattern preprocessing** (nümunə ön emalı) necə aparılır?
+282. **Reservoir Sampling**-də **weighted sampling** (çəkili nümunələmə) necə həyata keçirilir?
+283. **Monte Carlo Algorithm**-də **error probability** (səhv ehtimalı) necə idarə olunur?
+284. **Las Vegas Algorithm**-də **expected runtime** (gözlənilən işləmə müddəti) necə hesablanır?
+285. **Karger’s Algorithm**-də **success probability** (uğur ehtimalı) necə artır?
+286. **Approximation Algorithms**-də **NP-hard problems** (NP-çətin problemlər) necə həll olunur?
+287. **Vertex Cover Problem**-də **matching-based approach** (uyğunlaşma əsaslı yanaşma) nədir?
+288. **Set Cover Problem**-də **logarithmic approximation** (loqarifmik təxmini) necə işləyir?
+289. **String Matching**-də **suffix tree** (sufiks ağacı) necə istifadə olunur?
+290. **KMP Algorithm**-də **partial match table** (qismən uyğunluq cədvəli) necə yaradılır?
+291. **Rabin-Karp Algorithm**-də **modular arithmetic** (modul arifmetikası) necə tətbiq olunur?
+292. **Boyer-Moore Algorithm**-də **skip table** (atlama cədvəli) necə qurulur?
+293. **Aho-Corasick Algorithm**-də **state machine** (vəziyyət maşını) necə işləyir?
+294. **Bit Manipulation**-də **bitwise operations** (bit əməliyyatları) performansı necə artır?
+295. **Union-Find**-də **amortized complexity** (amortizasiya edilmiş mürəkkəblik) nədir?
+296. **Sliding Window**-də **variable-size window** (dəyişkən ölçülü pəncərə) necə işləyir?
+297. **Two-Pointer Technique**-də **linked list** (bağlı siyahı) ilə necə istifadə olunur?
+298. **Kadane’s Algorithm**-də **maximum product subarray** (maksimum hasilli altmassiv) necə tapılır?
+299. **Manacher’s Algorithm**-də **odd-length palindromes** (tək uzunluqlu palindromlar) necə tapılır?
+300. **Z-Algorithm**-də **substring matching** (altsətir uyğunluğu) necə həyata keçirilir?
