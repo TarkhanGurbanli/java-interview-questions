@@ -86,8 +86,47 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 
 **3. **public static void main(String[] args)** metodunun rolu nədir?**
 
+**Cavab:**
 
-4. **Garbage Collection** (Zibil Toplama) nədir?
+`public static void main(String[] args)` Java proqramının giriş nöqtəsi (entry point) olan xüsusi metoddur. JVM Java proqramını işə salarkən ilk olaraq bu metodu axtarır və icrasına buradan başlayır. Bu metod olmadan Java proqramı icra oluna bilməz (standalone tətbiqlər üçün).
+
+- **Metodun Komponentləri:**
+  - public: Metod JVM tərəfindən xaricdən çağırıldığı üçün ictimai (public) olmalıdır.
+  - static: Metod sinifə aid olduğu üçün obyekt yaratmadan çağırıla bilər.
+  - void: Metod heç bir dəyər qaytarmır.
+  - main: JVM-in axtardığı metodun adı dəqiq olaraq "main" olmalıdır.
+  - String[] args: Komanda xəttindən arqumentləri qəbul etmək üçün istifadə olunur.
+ 
+- **Rolu:**
+- Java proqramının icrasına başlama nöqtəsidir.
+- Komanda xəttindən ötürülən arqumentləri (args) qəbul edərək proqramın davranışını fərdiləşdirməyə imkan verir.
+- Proqramın əsas məntiqi buradan başlayır və ya digər metodlara yönləndirilir.
+
+**Kod Nümunəsi:**
+
+```java
+public class MainExample {
+    // JVM-in proqramı başlatdığı giriş nöqtəsi
+    public static void main(String[] args) {
+        // Arqumentləri konsola yazdırır
+        System.out.println("Proqrama ötürülən arqumentlər:");
+        for (String arg : args) {
+            System.out.println(arg);
+        }
+        // Əsas proqram məntiqi burada yerləşə bilər
+        System.out.println("Proqram başladı!");
+    }
+}
+```
+
+- **Nəzəri İzahat:**
+  - `main` metodunun düzgün təyin olunması (imza, yəni signature) JVM-in proqramı tapa bilməsi üçün vacibdir. Yanlış imza (məsələn, `public void main()` və ya `static int main()`) istifadə edilərsə, JVM main metodunu tapmaz və `NoSuchMethodError` xətası atar. Arqumentlər `(args)` isə proqramın dinamik konfiqurasiyası üçün faydalıdır, məsələn, fayl yollarını və ya parametrləri ötürmək üçün.
+
+---
+
+**4. **Garbage Collection** (Zibil Toplama) nədir?**
+
+
 5. Java-da **bytecode** nədir və necə işləyir?
 6. Java-nın **WORA** (Write Once, Run Anywhere) prinsipi nə deməkdir?
 7. Java-da **platform independence** (platformadan asılı olmama) necə təmin olunur?
