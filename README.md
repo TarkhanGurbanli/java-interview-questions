@@ -2287,3 +2287,351 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 298. **RabbitMQ**-da **message prefetch** ilə **message redelivery** arasındakı fərq nədir?
 299. **RabbitMQ**-da **message retry** ilə **message acknowledgment** arasındakı fərq nədir?
 300. **RabbitMQ**-da **message expiration** ilə **message validation** arasındakı fərq nədir?
+
+---
+
+# Kafka/Kafka Streams Müsahibə Sualları
+
+Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+- [Kafka və Kafka Streams](#kafka-və-kafka-streams)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Kafka Arxitekturası](#kafka-arxitekturası)
+  - [Topic və Partition](#topic-və-partition)
+  - [Producer və Consumer](#producer-və-consumer)
+  - [Kafka Streams](#kafka-streams)
+  - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
+  - [Təhlükəsizlik](#təhlükəsizlik)
+  - [Clustering və Yüksək Əlçatanlıq](#clustering-və-yüksək-əlçatanlıq)
+  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+  - [Digər Mövzular](#digər-mövzular)
+
+## Kafka və Kafka Streams
+
+### Ümumi Suallar
+1. **Apache Kafka** nədir və nə üçün istifadə olunur?
+2. **Kafka Streams** nədir və necə işləyir?
+3. **Kafka**-nın **RabbitMQ** ilə müqayisədə fərqləri nələrdir?
+4. **Kafka**-nın digər mesaj brokerləri ilə üstünlükləri nələrdir?
+5. **Kafka**-nın **publish-subscribe** (nəşr-abunə) modeli necə işləyir?
+6. **Kafka**-nın **event streaming** (hadisə axını) platforması kimi rolu nədir?
+7. **Kafka**-nın **log-based** (jurnal əsaslı) arxitekturası nədir?
+8. **Kafka**-nın açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
+9. **Kafka**-nın hansı proqramlaşdırma dillərini dəstəklədiyi nədir?
+10. **Kafka**-nın mikroservis arxitekturasında istifadəsi necədir?
+11. **Kafka Streams** ilə **Kafka** arasındakı fərq nədir?
+12. **Kafka**-nın **real-time processing** (real vaxt emalı) üçün faydaları nələrdir?
+13. **Kafka**-nın **big data** tətbiqlərində rolu nədir?
+14. **Kafka**-nın **data retention** (məlumat saxlama) siyasəti nədir?
+15. **Kafka**-nın **distributed system** (paylanmış sistem) kimi xüsusiyyətləri nələrdir?
+
+### Kafka Arxitekturası
+16. **Kafka Broker** (Kafka Brokeri) nədir və rolu nədir?
+17. **Kafka Cluster** (Kafka Klasteri) necə işləyir?
+18. **Topic** (Mövzu) nədir və Kafka-da necə təyin olunur?
+19. **Partition** (Bölmə) nədir və Kafka-da necə istifadə olunur?
+20. **Replication** (Təkrarlanma) Kafka-da necə təmin olunur?
+21. **Leader** və **Follower** replikalar arasındakı fərq nədir?
+22. **In-Sync Replicas (ISR)** (Sinxron Replikalar) nədir?
+23. **Zookeeper** Kafka-da nə üçün istifadə olunur?
+24. **Kafka Controller** nədir və hansı funksiyaları yerinə yetirir?
+25. **Log Segment** (Jurnal Seqmenti) nədir və necə işləyir?
+26. **Offset** (Ofset) nədir və Kafka-da necə idarə olunur?
+27. **Consumer Group** (İstehlakçı Qrupu) nədir və necə işləyir?
+28. **Producer** (İstehsalçı) ilə **Consumer** (İstehlakçı) arasındakı əlaqə nədir?
+29. **Kafka Log** (Kafka Jurnalı) necə strukturlaşdırılır?
+30. **Kafka**-nın **message format** (mesaj formatı) necədir?
+31. **Kafka**-da **message key** (mesaj açarı) nə üçün istifadə olunur?
+32. **Kafka**-da **message compression** (mesaj sıxışdırması) necə tətbiq olunur?
+33. **Kafka**-da **message retention** (mesaj saxlama) müddəti necə təyin olunur?
+34. **Kafka**-da **log compaction** (jurnal sıxışdırması) nədir?
+35. **Kafka**-da **broker configuration** (broker konfiqurasiyası) hansı parametrləri əhatə edir?
+
+### Topic və Partition
+36. **Kafka Topic** (Kafka Mövzusu) necə yaradılır?
+37. **Partition** sayının seçimi Kafka-da hansı amillərdən asılıdır?
+38. **Kafka**-da **partition key** (bölmə açarı) nədir və necə istifadə olunur?
+39. **Kafka**-da **replication factor** (təkrarlanma faktoru) necə təyin olunur?
+40. **Kafka**-da **partition reassignment** (bölmə yenidən təyinatı) necə aparılır?
+41. **Kafka**-da **preferred leader** (üstünlük verilən lider) nədir?
+42. **Kafka**-da **partition balancing** (bölmə balanslaşdırması) necə təmin olunur?
+43. **Kafka**-da **topic deletion** (mövzu silinməsi) necə həyata keçirilir?
+44. **Kafka**-da **topic configuration** (mövzu konfiqurasiyası) hansı parametrləri əhatə edir?
+45. **Kafka**-da **log retention** (jurnal saxlama) ilə **message retention** arasındakı fərq nədir?
+46. **Kafka**-da **compacted topics** (sıxışdırılmış mövzular) necə işləyir?
+47. **Kafka**-da **partition scaling** (bölmə miqyaslandırması) necə aparılır?
+48. **Kafka**-da **partition skew** (bölmə əyriliyi) necə qarşısı alınır?
+49. **Kafka**-da **topic naming conventions** (mövzu adlandırma qaydaları) nələrdir?
+50. **Kafka**-da **multi-partition topics** (çoxbölməli mövzular) necə idarə olunur?
+
+### Producer və Consumer
+51. **Kafka Producer** (Kafka İstehsalçısı) nədir və necə işləyir?
+52. **Kafka Consumer** (Kafka İstehlakçısı) nədir və necə işləyir?
+53. **Producer**-də **message batching** (mesaj toplulaşdırması) nədir?
+54. **Producer**-də **acks** (təsdiqləmə) parametrləri hansılardır?
+55. **Consumer Group**-da **partition assignment** (bölmə təyinatı) necə aparılır?
+56. **Consumer**-də **offset management** (ofset idarəetmə) necə təmin olunur?
+57. **Kafka**-da **manual offset commit** (əl ilə ofset təsdiqləmə) necə işləyir?
+58. **Kafka**-da **auto offset commit** (avtomatik ofset təsdiqləmə) nədir?
+59. **Producer**-də **idempotent delivery** (idempotent çatdırılma) nədir?
+60. **Producer**-də **transactional producer** (tranzaksiyalı istehsalçı) nədir?
+61. **Consumer**-də **seek()** metodu nə üçün istifadə olunur?
+62. **Kafka**-da **message key** ilə **message ordering** (mesaj sıralaması) necə təmin olunur?
+63. **Consumer Group**-da **rebalancing** (yenidən balanslaşdırma) necə işləyir?
+64. **Kafka**-da **at-least-once delivery** (ən azı bir dəfə çatdırılma) necə təmin olunur?
+65. **Kafka**-da **at-most-once delivery** (ən çox bir dəfə çatdırılma) necə işləyir?
+66. **Kafka**-da **exactly-once delivery** (dəqiq bir dəfə çatdırılma) necə təmin olunur?
+67. **Producer**-də **compression.type** parametri nədir?
+68. **Consumer**-də **fetch size** (yükləmə ölçüsü) necə təyin olunur?
+69. **Kafka**-da **message retry** (mesaj təkrar sınağı) necə konfiqurasiya olunur?
+70. **Kafka**-da **dead letter topic** (ölü məktub mövzusu) nədir?
+
+### Kafka Streams
+71. **Kafka Streams** nədir və hansı problemləri həll edir?
+72. **Kafka Streams** ilə **Kafka Consumer** arasındakı fərq nədir?
+73. **KStream** nədir və necə istifadə olunur?
+74. **KTable** nədir və necə işləyir?
+75. **KStream** ilə **KTable** arasındakı fərq nədir?
+76. **GlobalKTable** nədir və nə üçün istifadə olunur?
+77. **Kafka Streams DSL** (Domain Specific Language) nədir?
+78. **Kafka Streams Processor API** nədir?
+79. **Kafka Streams**-də **state store** (vəziyyət anbarı) nədir?
+80. **Kafka Streams**-də **windowing** (pəncərələmə) necə işləyir?
+81. **Kafka Streams**-də **time windows** (vaxt pəncərələri) hansılardır?
+82. **Kafka Streams**-də **session windows** (sessiya pəncərələri) nədir?
+83. **Kafka Streams**-də **join** əməliyyatları hansılardır?
+84. **Kafka Streams**-də **inner join** necə tətbiq olunur?
+85. **Kafka Streams**-də **left join** ilə **outer join** arasındakı fərq nədir?
+86. **Kafka Streams**-də **aggregation** (toplama) necə həyata keçirilir?
+87. **Kafka Streams**-də **groupBy** ilə **groupByKey** arasındakı fərq nədir?
+88. **Kafka Streams**-də **stateful transformations** (vəziyyətli transformasiyalar) nədir?
+89. **Kafka Streams**-də **stateless transformations** (vəziyyətsiz transformasiyalar) nədir?
+90. **Kafka Streams**-də **exactly-once processing** (dəqiq bir dəfə emal) necə təmin olunur?
+91. **Kafka Streams**-də **fault tolerance** (səhvə dözümlülük) necə təmin olunur?
+92. **Kafka Streams**-də **state store** ilə **changelog topic** (dəyişiklik jurnalı mövzusu) arasındakı əlaqə nədir?
+93. **Kafka Streams**-də **timestamp extractor** (vaxt damğası çıxarıcı) nədir?
+94. **Kafka Streams**-də **interactive queries** (interaktiv sorğular) necə həyata keçirilir?
+95. **Kafka Streams**-də **stream-table join** (axın-cədvəl birləşməsi) necə işləyir?
+96. **Kafka Streams**-də **windowed aggregation** (pəncərəli toplama) necə tətbiq olunur?
+97. **Kafka Streams**-də **suppress** operatoru nədir?
+98. **Kafka Streams**-də **grace period** (imtiyaz müddəti) nədir?
+99. **Kafka Streams**-də **stream processing topology** (axın emal topologiyası) nədir?
+100. **Kafka Streams**-də **repartitioning** (yenidən bölüşdürmə) necə işləyir?
+
+### Performans və Optimallaşdırma
+101. **Kafka**-da **performance tuning** (performans tənzimləmə) necə aparılır?
+102. **Kafka**-da **broker performance** (broker performansı) necə optimallaşdırılır?
+103. **Kafka**-da **producer performance** (istehsalçı performansı) necə artır?
+104. **Kafka**-da **consumer performance** (istehlakçı performansı) necə optimallaşdırılır?
+105. **Kafka**-da **partition count** (bölmə sayı) performansına necə təsir edir?
+106. **Kafka**-da **replication factor** performansına necə təsir edir?
+107. **Kafka**-da **message compression** performansına necə təsir edir?
+108. **Kafka**-da **batch size** (toplu ölçüsü) necə təyin olunur?
+109. **Kafka**-da **linger.ms** parametri nədir?
+110. **Kafka**-da **buffer.memory** parametri nə üçün istifadə olunur?
+111. **Kafka**-da **fetch.max.bytes** parametri necə təsir edir?
+112. **Kafka**-da **max.poll.records** parametri nədir?
+113. **Kafka**-da **log segment size** (jurnal seqment ölçüsü) necə optimallaşdırılır?
+114. **Kafka**-da **log retention** performansına necə təsir edir?
+115. **Kafka**-da **log compaction** performansına necə təsir edir?
+116. **Kafka Streams**-də **state store** optimallaşdırması necə aparılır?
+117. **Kafka Streams**-də **parallel processing** (paralel emal) necə təmin olunur?
+118. **Kafka**-da **network I/O** (şəbəkə giriş/çıxış) necə optimallaşdırılır?
+119. **Kafka**-da **disk I/O** (disk giriş/çıxış) necə idarə olunur?
+120. **Kafka**-da **CPU usage** (prosessor istifadəsi) necə optimallaşdırılır?
+
+### Təhlükəsizlik
+121. **Kafka**-da **authentication** (autentifikasiya) necə konfiqurasiya olunur?
+122. **Kafka**-da **authorization** (səlahiyyətləndirmə) necə təmin olunur?
+123. **Kafka**-da **SSL/TLS** şifrələməsi necə aktivləşdirilir?
+124. **Kafka**-da **SASL** (Simple Authentication and Security Layer) nədir?
+125. **Kafka**-da **Kerberos** ilə autentifikasiya necə tətbiq olunur?
+126. **Kafka**-da **ACLs** (Access Control Lists - Giriş Nəzarət Siyahıları) nədir?
+127. **Kafka**-da **encryption at rest** (sabit vəziyyətdə şifrələmə) necə təmin olunur?
+128. **Kafka**-da **message encryption** (mesaj şifrələməsi) necə həyata keçirilir?
+129. **Kafka**-da **network security** (şəbəkə təhlükəsizliyi) necə təmin olunur?
+130. **Kafka**-da **audit logging** (audit qeydiyyatı) necə aktivləşdirilir?
+131. **Kafka**-da **message spoofing** (mesaj saxtalaşdırması) necə qarşısı alınır?
+132. **Kafka**-da **message replay** (mesaj təkrar oynatma) hücumlarına qarşı necə qorunulur?
+133. **Kafka**-da **role-based access control** (rol əsaslı giriş nəzarəti) necə tətbiq olunur?
+134. **Kafka**-da **firewall** konfiqurasiyası necə aparılır?
+135. **Kafka**-da **secure communication** (təhlükəsiz rabitə) üçün hansı protokollar istifadə olunur?
+
+### Clustering və Yüksək Əlçatanlıq
+136. **Kafka Cluster** (Kafka Klasteri) necə konfiqurasiya olunur?
+137. **Kafka**-da **replication** (təkrarlanma) necə təmin olunur?
+138. **Kafka**-da **high availability** (yüksək əlçatanlıq) necə təmin olunur?
+139. **Kafka**-da **failover** (əks funksionallıq) necə idarə olunur?
+140. **Kafka**-da **partition leader election** (bölmə lideri seçimi) necə işləyir?
+141. **Kafka**-da **Zookeeper** ilə klaster idarəetməsi necə aparılır?
+142. **Kafka**-da **broker failure** (broker sıradan çıxması) zamanı mesajlar necə qorunur?
+143. **Kafka**-da **replica lag** (replika gecikməsi) necə idarə olunur?
+144. **Kafka**-da **ISR** (In-Sync Replicas) ilə **replication** arasındakı fərq nədir?
+145. **Kafka**-da **dynamic cluster expansion** (dinamik klaster genişlənməsi) necə aparılır?
+146. **Kafka**-da **partition reassignment** ilə klaster balanslaşdırması necə təmin olunur?
+147. **Kafka**-da **network partitioning** (şəbəkə bölünməsi) necə idarə olunur?
+148. **Kafka**-da **controller failover** (kontroller əks funksionallığı) necə işləyir?
+149. **Kafka**-da **quorum-based replication** (kvorum əsaslı təkrarlanma) nədir?
+150. **Kafka**-da **Zookeeper ensemble** (Zookeeper ansamblı) necə konfiqurasiya olunur?
+
+### Spring ilə İnteqrasiya
+151. **Spring Kafka** ilə Kafka inteqrasiyası necə həyata keçirilir?
+152. **Spring Boot** ilə Kafka necə konfiqurasiya olunur?
+153. **Spring Cloud Stream** ilə Kafka inteqrasiyası nədir?
+154. **@KafkaListener** annotasiyası nədir və necə istifadə olunur?
+155. **KafkaTemplate** sinfi nədir və necə işləyir?
+156. **Spring Kafka**-da **message converter** (mesaj çeviricisi) necə təyin olunur?
+157. **Spring Boot**-da **Kafka consumer** (Kafka istehlakçısı) necə yaradılır?
+158. **Spring Kafka**-da **retry mechanism** (təkrar sınaq mexanizmi) necə konfiqurasiya olunur?
+159. **Spring Cloud Stream**-də **Kafka binder** (Kafka bağlayıcısı) nədir?
+160. **Spring Kafka**-da **message acknowledgment** (mesaj təsdiqləmə) necə idarə olunur?
+161. **Spring Boot**-da **Kafka dead letter topic** (ölü məktub mövzusu) necə konfiqurasiya olunur?
+162. **Spring Kafka**-da **error handling** (səhv idarəetmə) necə həyata keçirilir?
+163. **Spring Cloud Stream**-də **consumer groups** (istehlakçı qrupları) necə istifadə olunur?
+164. **Spring Boot**-da **Kafka topic creation** (mövzu yaratma) necə aparılır?
+165. **Spring Kafka**-da **message serialization** (mesaj seriyalaşdırması) necə aparılır?
+166. **Spring Kafka**-da **message deserialization** (mesaj deserializasiyası) necə təmin olunur?
+167. **Spring Cloud Stream**-də **partitioning** (bölüşdürmə) necə həyata keçirilir?
+168. **Spring Kafka**-da **transactional producer** necə konfiqurasiya olunur?
+169. **Spring Boot**-da **Kafka Streams** ilə inteqrasiya necə aparılır?
+170. **Spring Kafka**-da **interactive queries** necə tətbiq olunur?
+
+### Digər Mövzular
+171. **Kafka Connect** nədir və necə istifadə olunur?
+172. **Kafka Connect Source Connector** (Mənbə Konnektoru) nədir?
+173. **Kafka Connect Sink Connector** (Çıxış Konnektoru) nədir?
+174. **Kafka MirrorMaker** nədir və necə işləyir?
+175. **Kafka**-da **schema registry** (sxem reyestri) nədir?
+176. **Kafka**-da **Avro serialization** (Avro seriyalaşdırması) necə tətbiq olunur?
+177. **Kafka**-da **message versioning** (mesaj versiyalaşdırma) necə idarə olunur?
+178. **Kafka**-da **message deduplication** (mesaj təkrarlanmasının qarşısını alma) necə təmin olunur?
+179. **Kafka**-da **message ordering** (mesaj sıralaması) necə təmin olunur?
+180. **Kafka**-da **message filtering** (mesaj süzgəcləmə) necə həyata keçirilir?
+181. **Kafka**-da **message transformation** (mesaj transformasiyası) necə aparılır?
+182. **Kafka**-da **message validation** (mesaj doğrulaması) necə tətbiq olunur?
+183. **Kafka**-da **message logging** (mesaj qeydiyyatı) necə konfiqurasiya olunur?
+184. **Kafka**-da **message tracing** (mesaj izləmə) necə həyata keçirilir?
+185. **Kafka**-da **distributed tracing** (paylanmış izləmə) necə tətbiq olunur?
+186. **Kafka**-da **OpenTelemetry** ilə inteqrasiya necə aparılır?
+187. **Kafka**-da **Prometheus** ilə monitorinq necə qurulur?
+188. **Kafka**-da **Grafana** ilə vizualizasiya necə təmin olunur?
+189. **Kafka**-da **health checks** (sağlamlıq yoxlamaları) necə konfiqurasiya olunur?
+190. **Kafka**-da **metrics** (metrikalar) hansılardır və necə toplanır?
+191. **Kafka**-da **JMX** (Java Management Extensions) ilə monitorinq necə aparılır?
+192. **Kafka**-da **log aggregation** (qeyd toplama) necə həyata keçirilir?
+193. **Kafka**-da **ELK Stack** (Elasticsearch, Logstash, Kibana) ilə inteqrasiya necə aparılır?
+194. **Kafka**-da **message retry policies** (mesaj təkrar sınaq siyasətləri) necə təyin olunur?
+195. **Kafka**-da **message expiration** (mesaj müddəti bitməsi) necə idarə olunur?
+196. **Kafka**-da **message priority** (mesaj prioriteti) necə təyin olunur?
+197. **Kafka**-da **message batch processing** (mesaj toplu emalı) necə aparılır?
+198. **Kafka**-da **message compression types** (mesaj sıxışdırma növləri) hansılardır?
+199. **Kafka**-da **message delivery semantics** (mesaj çatdırılma semantikası) nədir?
+200. **Kafka**-da **message idempotency** (mesaj idempotentliyi) necə təmin olunur?
+201. **Kafka**-da **message headers** (mesaj başlıqları) nədir və necə istifadə olunur?
+202. **Kafka**-da **message properties** (mesaj xassələri) hansılardır?
+203. **Kafka**-da **message validation** ilə **message filtering** arasındakı fərq nədir?
+204. **Kafka**-da **message transformation** ilə **message filtering** arasındakı fərq nədir?
+205. **Kafka**-da **message logging** ilə **message tracing** arasındakı fərq nədir?
+206. **Kafka**-da **message deduplication** ilə **message idempotency** arasındakı fərq nədir?
+207. **Kafka**-da **message versioning** ilə **message transformation** arasındakı fərq nədir?
+208. **Kafka**-da **message ordering** ilə **message delivery** arasındakı fərq nədir?
+209. **Kafka**-da **message compression** ilə **message batching** arasındakı fərq nədir?
+210. **Kafka**-da **message retry** ilə **message redelivery** arasındakı fərq nədir?
+211. **Kafka**-da **message expiration** ilə **log retention** arasındakı fərq nədir?
+212. **Kafka**-da **message priority** ilə **partition priority** arasındakı fərq nədir?
+213. **Kafka**-da **consumer group rebalancing** ilə **partition reassignment** arasındakı fərq nədir?
+214. **Kafka**-da **log compaction** ilə **log retention** arasındakı fərq nədir?
+215. **Kafka**-da **broker configuration** ilə **topic configuration** arasındakı fərq nədir?
+216. **Kafka**-da **Zookeeper** ilə **Kafka Controller** arasındakı fərq nədir?
+217. **Kafka**-da **producer acks** ilə **consumer acknowledgment** arasındakı fərq nədir?
+218. **Kafka**-da **message key** ilə **partition key** arasındakı fərq nədir?
+219. **Kafka**-da **message compression** ilə **log compaction** arasındakı fərq nədir?
+220. **Kafka**-da **message serialization** ilə **message transformation** arasındakı fərq nədir?
+221. **Kafka**-da **message validation** ilə **message deduplication** arasındakı fərq nədir?
+222. **Kafka**-da **message logging** ilə **audit logging** arasındakı fərq nədir?
+223. **Kafka**-da **message tracing** ilə **distributed tracing** arasındakı fərq nədir?
+224. **Kafka**-da **message delivery guarantees** ilə **message persistence** arasındakı fərq nədir?
+225. **Kafka**-da **message idempotency** ilə **message versioning** arasındakı fərq nədir?
+226. **Kafka**-da **message filtering** ilə **message routing** arasındakı fərq nədir?
+227. **Kafka**-da **message batching** ilə **message serialization** arasındakı fərq nədir?
+228. **Kafka**-da **message prefetch** ilə **message acknowledgment** arasındakı fərq nədir?
+229. **Kafka**-da **message retry** ilə **message expiration** arasındakı fərq nədir?
+230. **Kafka**-da **consumer priorities** ilə **partition priorities** arasındakı fərq nədir?
+231. **Kafka**-da **Kafka Connect** ilə **Kafka Streams** arasındakı fərq nədir?
+232. **Kafka**-da **schema registry** ilə **message serialization** arasındakı fərq nədir?
+233. **Kafka**-da **Avro** ilə **JSON** seriyalaşdırması arasındakı fərq nədir?
+234. **Kafka**-da **message deduplication** ilə **log compaction** arasındakı fərq nədir?
+235. **Kafka**-da **message ordering** ilə **partition ordering** arasındakı fərq nədir?
+236. **Kafka**-da **message filtering** ilə **message validation** arasındakı fərq nədir?
+237. **Kafka**-da **message transformation** ilə **message serialization** arasındakı fərq nədir?
+238. **Kafka**-da **message logging** ilə **message validation** arasındakı fərq nədir?
+239. **Kafka**-da **message tracing** ilə **message logging** arasındakı fərq nədir?
+240. **Kafka**-da **message delivery guarantees** ilə **message acknowledgment** arasındakı fərq nədir?
+241. **Kafka**-da **message idempotency** ilə **message deduplication** arasındakı fərq nədir?
+242. **Kafka**-da **message versioning** ilə **message filtering** arasındakı fərq nədir?
+243. **Kafka**-da **message routing** ilə **message delivery** arasındakı fərq nədir?
+244. **Kafka**-da **message batching** ilə **message compression** arasındakı fərq nədir?
+245. **Kafka**-da **message prefetch** ilə **message redelivery** arasındakı fərq nədir?
+246. **Kafka**-da **message retry** ilə **message acknowledgment** arasındakı fərq nədir?
+247. **Kafka**-da **message expiration** ilə **message validation** arasındakı fərq nədir?
+248. **Kafka**-da **consumer group rebalancing** ilə **partition balancing** arasındakı fərq nədir?
+249. **Kafka**-da **log compaction** ilə **message retention** arasındakı fərq nədir?
+250. **Kafka**-da **broker configuration** ilə **consumer configuration** arasındakı fərq nədir?
+251. **Kafka**-da **Zookeeper** ilə **Kafka Streams** arasındakı fərq nədir?
+252. **Kafka**-da **producer acks** ilə **message delivery guarantees** arasındakı fərq nədir?
+253. **Kafka**-da **message key** ilə **message headers** arasındakı fərq nədir?
+254. **Kafka**-da **message compression** ilə **message serialization** arasındakı fərq nədir?
+255. **Kafka**-da **message validation** ilə **message transformation** arasındakı fərq nədir?
+256. **Kafka**-da **message logging** ilə **message tracing** arasındakı fərq nədir?
+257. **Kafka**-da **message deduplication** ilə **message filtering** arasındakı fərq nədir?
+258. **Kafka**-da **message versioning** ilə **message routing** arasındakı fərq nədir?
+259. **Kafka**-da **message batching** ilə **message prefetch** arasındakı fərq nədir?
+260. **Kafka**-da **message retry** ilə **message redelivery** arasındakı fərq nədir?
+261. **Kafka**-da **message expiration** ilə **log retention** arasındakı fərq nədir?
+262. **Kafka**-da **consumer priorities** ilə **message priorities** arasındakı fərq nədir?
+263. **Kafka**-da **Kafka Connect** ilə **Kafka MirrorMaker** arasındakı fərq nədir?
+264. **Kafka**-da **schema registry** ilə **Avro serialization** arasındakı fərq nədir?
+265. **Kafka**-da **message deduplication** ilə **message idempotency** arasındakı fərq nədir?
+266. **Kafka**-da **message ordering** ilə **message filtering** arasındakı fərq nədir?
+267. **Kafka**-da **message transformation** ilə **message validation** arasındakı fərq nədir?
+268. **Kafka**-da **message logging** ilə **audit logging** arasındakı fərq nədir?
+269. **Kafka**-da **message tracing** ilə **distributed tracing** arasındakı fərq nədir?
+270. **Kafka**-da **message delivery guarantees** ilə **message persistence** arasındakı fərq nədir?
+271. **Kafka**-da **message idempotency** ilə **message versioning** arasındakı fərq nədir?
+272. **Kafka**-da **message filtering** ilə **message routing** arasındakı fərq nədir?
+273. **Kafka**-da **message batching** ilə **message serialization** arasındakı fərq nədir?
+274. **Kafka**-da **message prefetch** ilə **message acknowledgment** arasındakı fərq nədir?
+275. **Kafka**-da **message retry** ilə **message expiration** arasındakı fərq nədir?
+276. **Kafka**-da **consumer priorities** ilə **partition priorities** arasındakı fərq nədir?
+277. **Kafka**-da **Kafka Connect** ilə **Spring Cloud Stream** arasındakı fərq nədir?
+278. **Kafka**-da **schema registry** ilə **message validation** arasındakı fərq nədir?
+279. **Kafka**-da **Avro** ilə **Protobuf** seriyalaşdırması arasındakı fərq nədir?
+280. **Kafka**-da **message deduplication** ilə **log compaction** arasındakı fərq nədir?
+281. **Kafka**-da **message ordering** ilə **partition ordering** arasındakı fərq nədir?
+282. **Kafka**-da **message filtering** ilə **message transformation** arasındakı fərq nədir?
+283. **Kafka**-da **message logging** ilə **message validation** arasındakı fərq nədir?
+284. **Kafka**-da **message tracing** ilə **message logging** arasındakı fərq nədir?
+285. **Kafka**-da **message delivery guarantees** ilə **message acknowledgment** arasındakı fərq nədir?
+286. **Kafka**-da **message idempotency** ilə **message deduplication** arasındakı fərq nədir?
+287. **Kafka**-da **message versioning** ilə **message filtering** arasındakı fərq nədir?
+288. **Kafka**-da **message routing** ilə **message delivery** arasındakı fərq nədir?
+289. **Kafka**-da **message batching** ilə **message compression** arasındakı fərq nədir?
+290. **Kafka**-da **message prefetch** ilə **message redelivery** arasındakı fərq nədir?
+291. **Kafka**-da **message retry** ilə **message acknowledgment** arasındakı fərq nədir?
+292. **Kafka**-da **message expiration** ilə **message validation** arasındakı fərq nədir?
+293. **Kafka**-da **consumer group rebalancing** ilə **partition balancing** arasındakı fərq nədir?
+294. **Kafka**-da **log compaction** ilə **message retention** arasındakı fərq nədir?
+295. **Kafka**-da **broker configuration** ilə **consumer configuration** arasındakı fərq nədir?
+296. **Kafka**-da **Zookeeper** ilə **Kafka Controller** arasındakı fərq nədir?
+297. **Kafka**-da **producer acks** ilə **message delivery guarantees** arasındakı fərq nədir?
+298. **Kafka**-da **message key** ilə **message headers** arasındakı fərq nədir?
+299. **Kafka**-da **message compression** ilə **message serialization** arasındakı fərq nədir?
+300. **Kafka**-da **message validation** ilə **message transformation** arasındakı fərq nədir?
