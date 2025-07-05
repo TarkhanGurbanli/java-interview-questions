@@ -190,7 +190,14 @@ Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edi
 - **Nəzəri İzahat:**
   - Bytecode JVM-in platformadan asılı olmamasını təmin edən əsas elementdir. `javac` kodu `bytecode`-a çevirir, `JVM` isə bu `bytecode`-u hədəf platformaya uyğun maşın koduna çevirir. `JIT Compiler` bytecode-u optimallaşdıraraq performansı artırır. Bytecode-un təhlükəsizliyi isə `Bytecode Verifier` ilə yoxlanılır ki, bu da Java-nın təhlükəsizliyini gücləndirir.
 
-6. Java-nın **WORA** (Write Once, Run Anywhere) prinsipi nə deməkdir?
+---
+
+**6. Java-nın **WORA** (Write Once, Run Anywhere) prinsipi nə deməkdir?**
+
+
+---
+
+
 7. Java-da **platform independence** (platformadan asılı olmama) necə təmin olunur?
 8. **ClassLoader** (Sinif Yükləyicisi) nədir və necə işləyir?
 9. Java-da **memory management** (yaddaş idarəetməsi) necə həyata keçirilir?
