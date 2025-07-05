@@ -2635,3 +2635,193 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 298. **Kafka**-da **message key** ilə **message headers** arasındakı fərq nədir?
 299. **Kafka**-da **message compression** ilə **message serialization** arasındakı fərq nədir?
 300. **Kafka**-da **message validation** ilə **message transformation** arasındakı fərq nədir?
+
+---
+
+# Liquibase Müsahibə Sualları
+
+Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+- [Kafka və Kafka Streams](#kafka-və-kafka-streams)
+- [Liquibase](#liquibase)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Changelog və Changeset](#changelog-və-changeset)
+  - [Konfiqurasiya və İdarəetmə](#konfiqurasiya-və-idarəetmə)
+  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+  - [Performans və Best Practices](#performans-və-best-practices)
+  - [Digər Mövzular](#digər-mövzular)
+
+## Liquibase
+
+### Ümumi Suallar
+1. **Liquibase** nədir və nə üçün istifadə olunur?
+2. **Database Migration** (Verilənlər Bazası Miqrasiyası) nədir və Liquibase ilə necə həyata keçirilir?
+3. **Liquibase**-in digər migration alətləri ilə (məsələn, Flyway) fərqləri nələrdir?
+4. **Liquibase**-in açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
+5. **Liquibase**-in hansı verilənlər bazalarını dəstəklədiyi nədir?
+6. **Liquibase**-in əsas xüsusiyyətləri hansılardır?
+7. **Liquibase**-in **version control** (versiya nəzarəti) ilə əlaqəsi nədir?
+8. **Liquibase**-də **database schema** (verilənlər bazası sxemi) necə idarə olunur?
+9. **Liquibase**-in mikroservis arxitekturasında istifadəsi necədir?
+10. **Liquibase**-in **continuous integration** (davamlı inteqrasiya) ilə inteqrasiyası necədir?
+11. **Liquibase**-in istifadəsində qarşılaşılacaq çətinliklər nələrdir?
+12. **Liquibase**-də **database refactoring** (verilənlər bazası yenidənqurma) nədir?
+13. **Liquibase**-in **JDBC** ilə əlaqəsi nədir?
+14. **Liquibase**-in **SQL-based** və **XML-based** miqrasiyaları arasındakı fərq nədir?
+15. **Liquibase**-in **platform independence** (platformadan asılı olmama) xüsusiyyəti nədir?
+
+### Changelog və Changeset
+16. **Changelog** (Dəyişiklik Jurnalı) nədir və Liquibase-da rolu nədir?
+17. **Changeset** (Dəyişiklik Dəsti) nədir və necə təyin olunur?
+18. **Changelog File** (Dəyişiklik Jurnalı Faylı) hansı formatlarda ola bilər (XML, YAML, JSON, SQL)?
+19. **Changeset**-də **id**, **author** və **file** atributlarının rolu nədir?
+20. **Liquibase**-də **preconditions** (ön şərtlər) nədir və necə istifadə olunur?
+21. **Changeset**-də **rollback** (geri qaytarma) necə təyin olunur?
+22. **Liquibase**-də **context** (kontekst) nədir və nə üçün istifadə olunur?
+23. **Liquibase**-də **labels** (etiketlər) necə istifadə olunur?
+24. **Changeset**-də **runAlways** parametri nədir?
+25. **Changeset**-də **runOnChange** parametri nədir?
+26. **Liquibase**-də **logicalFilePath** atributu nə üçün istifadə olunur?
+27. **Changelog**-da **include** və **includeAll** direktivləri nədir?
+28. **Liquibase**-də **master changelog** (əsas dəyişiklik jurnalı) necə təyin olunur?
+29. **Changeset**-də **failOnError** parametri nədir?
+30. **Liquibase**-də **onDuplicate** parametri nə üçün istifadə olunur?
+31. **Changeset**-də **runOrder** atributu nədir?
+32. **Liquibase**-də **precondition** ilə **context** arasındakı fərq nədir?
+33. **Liquibase**-də **changeset checksum** (dəyişiklik dəsti yoxlama cəmi) nədir?
+34. **Liquibase**-də **databaseChangeLog** cədvəli nədir?
+35. **Liquibase**-də **databaseChangeLogLock** cədvəli nə üçün istifadə olunur?
+
+### Konfiqurasiya və İdarəetmə
+36. **Liquibase**-də **database connection** (verilənlər bazası əlaqəsi) necə konfiqurasiya olunur?
+37. **Liquibase**-də **properties file** (xassələr faylı) necə istifadə olunur?
+38. **Liquibase**-də **JDBC URL** necə təyin olunur?
+39. **Liquibase**-də **changeLogSync** əmri nədir?
+40. **Liquibase**-də **update** əmri necə işləyir?
+41. **Liquibase**-də **rollback** əmri necə istifadə olunur?
+42. **Liquibase**-də **rollbackCount** ilə **rollbackToDate** arasındakı fərq nədir?
+43. **Liquibase**-də **tagDatabase** əmri nədir?
+44. **Liquibase**-də **diff** əmri nə üçün istifadə olunur?
+45. **Liquibase**-də **generateChangeLog** əmri nədir?
+46. **Liquibase**-də **status** əmri nə edir?
+47. **Liquibase**-də **history** əmri necə işləyir?
+48. **Liquibase**-də **futureRollbackSQL** əmri nədir?
+49. **Liquibase**-də **dropAll** əmri nə üçün istifadə olunur?
+50. **Liquibase**-də **validate** əmri nədir?
+51. **Liquibase**-də **database schema** ilə **changelog** sinxronizasiyası necə aparılır?
+52. **Liquibase**-də **database snapshot** (verilənlər bazası anlıq görüntüsü) necə yaradılır?
+53. **Liquibase**-də **custom change** (xüsusi dəyişiklik) necə təyin olunur?
+54. **Liquibase**-də **SQL preconditions** (SQL ön şərtləri) necə istifadə olunur?
+55. **Liquibase**-də **stored procedures** (saxlanılan prosedurlar) necə miqrasiya edilir?
+
+### Spring ilə İnteqrasiya
+56. **Spring Boot** ilə Liquibase inteqrasiyası necə həyata keçirilir?
+57. **Spring Boot**-da **liquibase.enabled** xassəsi nədir?
+58. **Spring Boot**-da **liquibase.change-log** xassəsi necə təyin olunur?
+59. **Spring Boot**-da **Liquibase bean** necə konfiqurasiya olunur?
+60. **Spring Boot**-da **Liquibase profiles** (profillər) necə istifadə olunur?
+61. **Spring Boot**-da **Liquibase context** (kontekst) necə təyin olunur?
+62. **Spring Boot**-da **Liquibase rollback** necə həyata keçirilir?
+63. **Spring Boot**-da **Liquibase diff** necə istifadə olunur?
+64. **Spring Boot**-da **Liquibase update** əmri necə işləyir?
+65. **Spring Boot**-da **Liquibase databaseChangeLog** cədvəli necə idarə olunur?
+66. **Spring Boot**-da **Liquibase logging** (qeydiyyat) necə konfiqurasiya olunur?
+67. **Spring Boot**-da **Liquibase Maven Plugin** ilə inteqrasiya necə aparılır?
+68. **Spring Boot**-da **Liquibase Gradle Plugin** ilə inteqrasiya necə həyata keçirilir?
+69. **Spring Boot**-da **Liquibase testing** (testlər) necə aparılır?
+70. **Spring Boot**-da **Liquibase H2 database** ilə necə istifadə olunur?
+71. **Spring Boot**-da **Liquibase və Hibernate** inteqrasiyası necə təmin olunur?
+72. **Spring Boot**-da **Liquibase və JPA** necə birləşdirilir?
+73. **Spring Boot**-da **Liquibase preconditions** ilə **Spring profiles** arasındakı əlaqə nədir?
+74. **Spring Boot**-da **Liquibase custom change** necə tətbiq olunur?
+75. **Spring Boot**-da **Liquibase rollback** ilə **Spring transaction** arasındakı fərq nədir?
+
+### Performans və Best Practices
+76. **Liquibase**-də **performance optimization** (performans optimallaşdırması) necə aparılır?
+77. **Liquibase**-də **large migrations** (böyük miqrasiyalar) necə idarə olunur?
+78. **Liquibase**-də **database locking** (verilənlər bazası kilidlənməsi) necə işləyir?
+79. **Liquibase**-də **changeset** sayını azaltmaq üçün hansı strategiyalar istifadə olunur?
+80. **Liquibase**-də **rollback performance** (geri qaytarma performansı) necə optimallaşdırılır?
+81. **Liquibase**-də **diff performance** (fərq performansı) necə artır?
+82. **Liquibase**-də **database schema comparison** (verilənlər bazası sxemi müqayisəsi) necə optimallaşdırılır?
+83. **Liquibase**-də **best practices** (ən yaxşı təcrübələr) hansılardır?
+84. **Liquibase**-də **changelog versioning** (dəyişiklik jurnalı versiyalaşdırması) necə aparılır?
+85. **Liquibase**-də **team collaboration** (komanda əməkdaşlığı) necə təmin olunur?
+86. **Liquibase**-də **conflict resolution** (ziddiyyət həlli) necə aparılır?
+87. **Liquibase**-də **large datasets** (böyük məlumat dəstləri) ilə miqrasiya necə idarə olunur?
+88. **Liquibase**-də **database backup** (verilənlər bazası ehtiyat nüsxəsi) necə aparılır?
+89. **Liquibase**-də **performance monitoring** (performans monitorinqi) necə həyata keçirilir?
+90. **Liquibase**-də **logging** (qeydiyyat) necə konfiqurasiya olunur?
+91. **Liquibase**-də **error handling** (səhv idarəetmə) necə təmin olunur?
+92. **Liquibase**-də **schema validation** (sxem doğrulaması) necə aparılır?
+93. **Liquibase**-də **migration rollback strategies** (miqrasiya geri qaytarma strategiyaları) hansılardır?
+94. **Liquibase**-də **database compatibility** (verilənlər bazası uyğunluğu) necə təmin olunur?
+95. **Liquibase**-də **incremental migrations** (addım-addım miqrasiyalar) necə həyata keçirilir?
+
+### Digər Mövzular
+96. **Liquibase Maven Plugin** nədir və necə istifadə olunur?
+97. **Liquibase Gradle Plugin** nədir və necə konfiqurasiya olunur?
+98. **Liquibase**-də **SQL-based changesets** (SQL əsaslı dəyişiklik dəstləri) necə təyin olunur?
+99. **Liquibase**-də **XML-based changesets** (XML əsaslı dəyişiklik dəstləri) necə istifadə olunur?
+100. **Liquibase**-də **YAML-based changesets** (YAML əsaslı dəyişiklik dəstləri) necə təyin olunur?
+101. **Liquibase**-də **JSON-based changesets** (JSON əsaslı dəyişiklik dəstləri) necə işləyir?
+102. **Liquibase**-də **custom SQL** (xüsusi SQL) necə tətbiq olunur?
+103. **Liquibase**-də **stored procedures migration** (saxlanılan prosedurlar miqrasiyası) necə aparılır?
+104. **Liquibase**-də **triggers migration** (tetikleyici miqrasiyası) necə həyata keçirilir?
+105. **Liquibase**-də **views migration** (görünüşlər miqrasiyası) necə təmin olunur?
+106. **Liquibase**-də **indexes migration** (indekslər miqrasiyası) necə aparılır?
+107. **Liquibase**-də **foreign keys migration** (xarici açarlar miqrasiyası) necə idarə olunur?
+108. **Liquibase**-də **constraints migration** (məhdudiyyətlər miqrasiyası) necə tətbiq olunur?
+109. **Liquibase**-də **database functions migration** (verilənlər bazası funksiyaları miqrasiyası) necə aparılır?
+110. **Liquibase**-də **database schema synchronization** (verilənlər bazası sxemi sinxronizasiyası) necə həyata keçirilir?
+111. **Liquibase**-də **database diff** ilə **database snapshot** arasındakı fərq nədir?
+112. **Liquibase**-də **changelog locking** (dəyişiklik jurnalı kilidlənməsi) necə işləyir?
+113. **Liquibase**-də **multi-tenant databases** (çoxkirayəçi verilənlər bazaları) necə idarə olunur?
+114. **Liquibase**-də **NoSQL databases** (NoSQL verilənlər bazaları) ilə inteqrasiya necə aparılır?
+115. **Liquibase**-də **MongoDB** ilə miqrasiya necə həyata keçirilir?
+116. **Liquibase**-də **Cassandra** ilə miqrasiya necə tətbiq olunur?
+117. **Liquibase**-də **database versioning** (verilənlər bazası versiyalaşdırması) necə idarə olunur?
+118. **Liquibase**-də **changelog merge** (dəyişiklik jurnalı birləşdirmə) necə aparılır?
+119. **Liquibase**-də **conditional migrations** (şərtli miqrasiyalar) necə təyin olunur?
+120. **Liquibase**-də **database rollback** ilə **database backup** arasındakı fərq nədir?
+121. **Liquibase**-də **database testing** (verilənlər bazası testləri) necə aparılır?
+122. **Liquibase**-də **Testcontainers** ilə inteqrasiya necə həyata keçirilir?
+123. **Liquibase**-də **H2 database** ilə test miqrasiyaları necə aparılır?
+124. **Liquibase**-də **database schema validation** (verilənlər bazası sxemi doğrulaması) necə təmin olunur?
+125. **Liquibase**-də **database schema documentation** (verilənlər bazası sxemi sənədləşdirmə) necə aparılır?
+126. **Liquibase**-də **changelog history** (dəyişiklik jurnalı tarixçəsi) necə idarə olunur?
+127. **Liquibase**-də **changelog validation** (dəyişiklik jurnalı doğrulaması) necə həyata keçirilir?
+128. **Liquibase**-də **database migration strategies** (verilənlər bazası miqrasiya strategiyaları) hansılardır?
+129. **Liquibase**-də **schema drift** (sxem sürüşməsi) necə aşkarlanır?
+130. **Liquibase**-də **database schema drift** ilə **changelog** sinxronizasiyası necə aparılır?
+131. **Liquibase**-də **custom preconditions** (xüsusi ön şərtlər) necə təyin olunur?
+132. **Liquibase**-də **custom change types** (xüsusi dəyişiklik növləri) necə yaradılır?
+133. **Liquibase**-də **database-specific changes** (verilənlər bazasına xas dəyişikliklər) necə idarə olunur?
+134. **Liquibase**-də **database schema comparison tools** (verilənlər bazası sxemi müqayisə alətləri) nələrdir?
+135. **Liquibase**-də **changelog refactoring** (dəyişiklik jurnalı yenidənqurma) necə aparılır?
+136. **Liquibase**-də **database schema rollback** (verilənlər bazası sxemi geri qaytarma) necə təmin olunur?
+137. **Liquibase**-də **database schema backup** (verilənlər bazası sxemi ehtiyat nüsxəsi) necə aparılır?
+138. **Liquibase**-də **database schema testing** (verilənlər bazası sxemi testləri) necə həyata keçirilir?
+139. **Liquibase**-də **database schema migration** ilə **data migration** arasındakı fərq nədir?
+140. **Liquibase**-də **database schema versioning** (verilənlər bazası sxemi versiyalaşdırması) necə idarə olunur?
+141. **Liquibase**-də **changelog conflict resolution** (dəyişiklik jurnalı ziddiyyət həlli) necə aparılır?
+142. **Liquibase**-də **database schema synchronization** (verilənlər bazası sxemi sinxronizasiyası) necə təmin olunur?
+143. **Liquibase**-də **database schema deployment** (verilənlər bazası sxemi yerləşdirmə) necə aparılır?
+144. **Liquibase**-də **database schema monitoring** (verilənlər bazası sxemi monitorinqi) necə həyata keçirilir?
+145. **Liquibase**-də **database schema auditing** (verilənlər bazası sxemi audit etmə) necə aparılır?
+146. **Liquibase**-də **database schema documentation** ilə **changelog documentation** arasındakı fərq nədir?
+147. **Liquibase**-də **database schema validation** ilə **changelog validation** arasındakı fərq nədir?
+148. **Liquibase**-də **database schema testing** ilə **database integration testing** arasındakı fərq nədir?
+149. **Liquibase**-də **database schema migration** ilə **database schema refactoring** arasındakı fərq nədir?
+150. **Liquibase**-də **database schema versioning** ilə **changelog versioning** arasındakı fərq nədir?
+
+---
+
