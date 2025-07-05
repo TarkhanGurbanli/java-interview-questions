@@ -336,3 +336,245 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 298. **Java-da **var** açar sözünün məhdudiyyətləri nələrdir?
 299. **Java-da **switch** ifadəsində **arrow syntax** (ox sintaksisi) nədir?
 300. **Java-da **instanceof** ilə **pattern variable** (nümunə dəyişəni) necə istifadə olunur?
+
+---
+
+# Java və Hibernate Müsahibə Sualları
+
+Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java və Hibernate-ın əsas mövzularını başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#core-java)
+- [Hibernate](#hibernate)
+  - [Ümumi Suallar](#hibernate-ümumi-suallar)
+  - [Konfiqurasiya və Arxitektura](#konfiqurasiya-və-arxitektura)
+  - [Mapping və Əlaqələr](#mapping-və-əlaqələr)
+  - [HQL və Criteria API](#hql-və-criteria-api)
+  - [Caching](#caching)
+  - [Transaction Management](#transaction-management)
+  - [Performance Optimization](#performance-optimization)
+  - [JPA ilə Əlaqə](#jpa-ilə-əlaqə)
+  - [Digər Mövzular](#hibernate-digər-mövzular)
+
+## Core Java
+[Əvvəlki suallar burada yer alır, 300 sual, təkrarlamıram]
+
+## Hibernate
+
+### Hibernate Ümumi Suallar
+1. **Hibernate** nədir və nə üçün istifadə olunur?
+2. **ORM** (Object-Relational Mapping - Obyekt-Relyasiya Xəritələşdirmə) nədir?
+3. Hibernate-ın **JDBC** ilə müqayisədə üstünlükləri nələrdir?
+4. Hibernate-ın əsas komponentləri hansılardır?
+5. Hibernate-ın digər **ORM** alətləri ilə fərqi nədir?
+6. Hibernate-ın tarixi və inkişafı haqqında nə bilirsiniz?
+7. Hibernate-ın əsas xüsusiyyətləri hansılardır?
+8. Hibernate-ın hansı verilənlər bazalarını dəstəkləyir?
+9. Hibernate-ın açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
+10. Hibernate-ın istifadəsində hansı çətinliklər ola bilər?
+
+### Konfiqurasiya və Arxitektura
+11. **SessionFactory** (Sessiya Fabriki) nədir və necə istifadə olunur?
+12. **Session** (Sessiya) nədir və onun rolu nədir?
+13. **Configuration** (Konfiqurasiya) obyekti nə üçün istifadə olunur?
+14. Hibernate-da **hibernate.cfg.xml** faylının məqsədi nədir?
+15. Hibernate-da **hibernate.properties** faylı necə istifadə olunur?
+16. **SessionFactory** ilə **Session** arasındakı fərq nədir?
+17. Hibernate-da **dialect** (dialekt) nədir və niyə vacibdir?
+18. Hibernate-da **connection pool** (əlaqə hovuzu) necə konfiqurasiya olunur?
+19. Hibernate-da **thread safety** (axın təhlükəsizliyi) necə təmin olunur?
+20. **SessionFactory** thread-safe-dirmi?
+21. **Session** obyekti thread-safe-dirmi?
+22. Hibernate-da **mapping** (xəritələşdirmə) necə təyin olunur?
+23. **Annotation-based** (annotasiya əsaslı) və **XML-based** (XML əsaslı) konfiqurasiya arasındakı fərq nədir?
+24. Hibernate-da **JNDI** (Java Naming and Directory Interface) ilə inteqrasiya necə aparılır?
+25. Hibernate-da **SchemaUpdate** (Sxem Yeniləməsi) aləti nədir?
+26. Hibernate-da **auto schema generation** (avtomatik sxem yaradılması) necə işləyir?
+27. Hibernate-da **Transaction** (Tranzaksiya) obyekti nədir?
+28. Hibernate-da **Query** (Sorğu) obyekti nədir?
+29. Hibernate-da **Criteria** (Kriteriya) obyekti nədir?
+30. Hibernate-da **bootstrap** (başlanğıc yükləmə) prosesi necə işləyir?
+
+### Mapping və Əlaqələr
+31. Hibernate-da **entity** (varlıq) nədir?
+32. **@Entity** annotasiyasının rolu nədir?
+33. **@Table** annotasiyası nə üçün istifadə olunur?
+34. **@Id** annotasiyası nədir və necə istifadə olunur?
+35. **@GeneratedValue** annotasiyası ilə hansı strategiyalar dəstəklənir?
+36. **@Column** annotasiyasının məqsədi nədir?
+37. Hibernate-da **one-to-one** (bir-bir) əlaqə necə xəritələşdirilir?
+38. Hibernate-da **one-to-many** (bir-çox) əlaqə necə təyin olunur?
+39. Hibernate-da **many-to-one** (çox-bir) əlaqə necə konfiqurasiya olunur?
+40. Hibernate-da **many-to-many** (çox-çox) əlaqə necə yaradılır?
+41. **@JoinColumn** annotasiyası nədir?
+42. **@JoinTable** annotasiyası nə üçün istifadə olunur?
+43. **Unidirectional** (biristiqamətli) və **bidirectional** (ikistiqamətli) əlaqələr arasındakı fərq nədir?
+44. Hibernate-da **inheritance mapping** (mirasalma xəritələşdirmə) strategiyaları hansılardır?
+45. **Single Table** (Tək Cədvəl) strategiyası nədir?
+46. **Table per Class** (Hər Sinif üçün Cədvəl) strategiyası nədir?
+47. **Joined** strategiyası nədir?
+48. **@DiscriminatorColumn** və **@DiscriminatorValue** annotasiyaları nə üçün istifadə olunur?
+49. Hibernate-da **composite key** (mürəkkəb açar) necə təyin olunur?
+50. **@Embedded** və **@Embeddable** annotasiyaları nədir?
+51. Hibernate-da **lazy loading** (tənbəl yükləmə) nədir?
+52. **Eager loading** (həvəsli yükləmə) ilə **lazy loading** arasındakı fərq nədir?
+53. **@Fetch** annotasiyası nə üçün istifadə olunur?
+54. **FetchType.LAZY** və **FetchType.EAGER** arasındakı fərq nədir?
+55. Hibernate-da **cascade** (kaskad) nədir və hansı növləri var?
+56. **@Cascade** annotasiyası nədir?
+57. Hibernate-da **orphanRemoval** (sahibsiz silinmə) nədir?
+58. **@OneToMany** ilə **mappedBy** atributunun rolu nədir?
+59. Hibernate-da **polymorphic queries** (çoxformalı sorğular) necə işləyir?
+60. Hibernate-da **association** (əlaqə) idarəetməsi necə aparılır?
+
+### HQL və Criteria API
+61. **HQL** (Hibernate Query Language - Hibernate Sorğu Dili) nədir?
+62. HQL ilə SQL arasındakı fərq nədir?
+63. HQL-də **named queries** (adlandırılmış sorğular) nədir?
+64. **@NamedQuery** annotasiyası necə istifadə olunur?
+65. **@NamedNativeQuery** nədir?
+66. HQL-də **parameter binding** (parametr bağlama) necə aparılır?
+67. HQL-də **aggregate functions** (toplama funksiyaları) hansılardır?
+68. HQL-də **join** əməliyyatları necə həyata keçirilir?
+69. **Criteria API** nədir və nə üçün istifadə olunur?
+70. **CriteriaQuery** ilə **HQL** arasındakı fərq nədir?
+71. **Restrictions** sinfi Criteria API-da nə üçün istifadə olunur?
+72. **Projections** Criteria API-da nədir?
+73. Criteria API-da **dynamic queries** (dinamik sorğular) necə yaradılır?
+74. **QueryDSL** ilə Hibernate-ın Criteria API-sı arasındakı fərq nədir?
+75. Hibernate-da **pagination** (səhifələmə) necə həyata keçirilir?
+76. HQL-də **subquery** (alt sorğu) necə yazılır?
+77. Hibernate-da **stored procedure** (saxlanılan prosedur) necə çağırılır?
+78. HQL-də **bulk update** (toplu yeniləmə) necə aparılır?
+79. HQL-də **bulk delete** (toplu silmə) necə həyata keçirilir?
+80. Hibernate-da **SQL injection** (SQL inyeksiyası) necə qarşısı alınır?
+
+### Caching
+81. Hibernate-da **first-level cache** (birinci səviyyəli keş) nədir?
+82. **Second-level cache** (ikinci səviyyəli keş) nədir?
+83. **First-level cache** ilə **second-level cache** arasındakı fərq nədir?
+84. Hibernate-da **query cache** (sorğu keşi) nədir?
+85. **EHCache** Hibernate-da necə konfiqurasiya olunur?
+86. **Second-level cache** necə aktivləşdirilir?
+87. Hibernate-da **cache provider** (keş təminatçısı) nədir?
+88. **CacheMode** növləri hansılardır?
+89. **@Cache** annotasiyası nə üçün istifadə olunur?
+90. Hibernate-da **cache eviction** (keş boşaldılması) necə işləyir?
+91. **Dirty checking** (dəyişiklik yoxlaması) caching ilə necə əlaqəlidir?
+92. Hibernate-da **cache concurrency strategies** (keş paralelliyi strategiyaları) hansılardır?
+93. **Transactional** keş strategiyası nədir?
+94. **Read-write** keş strategiyası nədir?
+95. **Nonstrict-read-write** keş strategiyası nədir?
+96. **Read-only** keş strategiyası nədir?
+97. Hibernate-da **cache invalidation** (keş etibarsızlaşdırma) necə aparılır?
+98. **Second-level cache** performansına təsir edən amillər nələrdir?
+99. Hibernate-da **stateless session** (vəziyyətsiz sessiya) caching-ə necə təsir edir?
+100. Hibernate-da **cache** istifadəsinin riskləri nələrdir?
+
+### Transaction Management
+101. Hibernate-da **transaction** (tranzaksiya) nədir?
+102. **Transaction management** (tranzaksiya idarəetməsi) Hibernate-da necə həyata keçirilir?
+103. **@Transactional** annotasiyasının rolu nədir?
+104. **JTA** (Java Transaction API) ilə Hibernate inteqrasiyası necə aparılır?
+105. **ACID** xüsusiyyətləri Hibernate-da necə təmin olunur?
+106. Hibernate-da **rollback** (geri qaytarma) necə işləyir?
+107. **Transaction isolation levels** (tranzaksiya izolyasiya səviyyələri) hansılardır?
+108. Hibernate-da **optimistic locking** (optimistik kilidləmə) nədir?
+109. **Pessimistic locking** (pessimistik kilidləmə) nədir?
+110. **@Version** annotasiyası necə istifadə olunur?
+111. Hibernate-da **dirty checking** (dəyişiklik yoxlaması) necə işləyir?
+112. **Transaction propagation** (tranzaksiya yayılması) növləri nələrdir?
+113. Hibernate-da **savepoint** (saxlama nöqtəsi) necə istifadə olunur?
+114. **Transaction timeout** (tranzaksiya vaxtaşımı) necə təyin olunur?
+115. Hibernate-da **nested transactions** (iç-içə tranzaksiyalar) dəstəklənirmi?
+116. **Session.flush()** metodu tranzaksiyalara necə təsir edir?
+117. **Session.clear()** metodu caching və tranzaksiyalara necə təsir edir?
+118. Hibernate-da **read-only transaction** (yalnız oxuma tranzaksiyası) necə təyin olunur?
+119. **TransactionFactory** nədir?
+120. Hibernate-da **distributed transactions** (paylanmış tranzaksiyalar) necə idarə olunur?
+
+### Performance Optimization
+121. Hibernate-da **N+1 SELECT** problemi nədir?
+122. **N+1 SELECT** probleminin qarşısını necə almaq olar?
+123. **Batch processing** (toplu emal) Hibernate-da necə həyata keçirilir?
+124. **@BatchSize** annotasiyası nə üçün istifadə olunur?
+125. Hibernate-da **fetching strategies** (yükləmə strategiyaları) hansılardır?
+126. **Entity Graph** (Varlıq Qrafiki) nədir və necə istifadə olunur?
+127. **@NamedEntityGraph** annotasiyası nədir?
+128. Hibernate-da **lazy initialization exception** (tənbəl ilkinləşdirmə istisnası) nədir?
+129. Hibernate-da **query optimization** (sorğu optimallaşdırması) necə aparılır?
+130. **StatelessSession** nədir və performans baxımından necə istifadə olunur?
+131. Hibernate-da **bulk operations** (toplu əməliyyatlar) performansına təsir edən amillər nələrdir?
+132. **Second-level cache** performans optimallaşdırmasında necə istifadə olunur?
+133. Hibernate-da **SQL logging** (SQL qeydləri) necə aktivləşdirilir?
+134. **Show SQL** parametri nə üçün istifadə olunur?
+135. Hibernate-da **indexing** (indeksləmə) performans baxımından necə təsir edir?
+136. **Query hints** (sorğu ipucları) Hibernate-da necə istifadə olunur?
+137. Hibernate-da **read-only entities** (yalnız oxuma varlıqları) necə təyin olunur?
+138. **Projection queries** (proyeksiya sorğuları) performans baxımından nə üçün faydalıdır?
+139. Hibernate-da **database connection optimization** (verilənlər bazası əlaqəsi optimallaşdırması) necə aparılır?
+140. Hibernate-da **large datasets** (böyük məlumat dəstləri) ilə işləyərkən hansı strategiyalar istifadə olunur?
+
+### JPA ilə Əlaqə
+141. **JPA** (Java Persistence API) nədir?
+142. Hibernate ilə **JPA** arasındakı fərq nədir?
+143. Hibernate-ın **JPA provider** (JPA təminatçısı) kimi rolu nədir?
+144. **EntityManager** nədir və necə istifadə olunur?
+145. **Persistence Context** (Davamlılıq Konteksti) nədir?
+146. **EntityManagerFactory** ilə **SessionFactory** arasındakı fərq nədir?
+147. **@PersistenceContext** annotasiyası nə üçün istifadə olunur?
+148. JPA-da **merge()** və **persist()** metodları arasındakı fərq nədir?
+149. JPA-da **detach()** metodu nə edir?
+150. JPA-da **flush()** metodu necə işləyir?
+151. Hibernate-da **JPQL** (Java Persistence Query Language) nədir?
+152. **JPQL** ilə **HQL** arasındakı fərq nədir?
+153. JPA-da **entity lifecycle** (varlıq həyat dövrü) hansı mərhələlərdən ibarətdir?
+154. **@EntityListeners** annotasiyası nədir?
+155. JPA-da **locking** (kilidləmə) mexanizmləri hansılardır?
+156. JPA-da **named queries** (adlandırılmış sorğular) necə təyin olunur?
+157. Hibernate-da **JPA annotations** ilə **Hibernate-specific annotations** arasındakı fərq nədir?
+158. JPA-da **entity relationships** (varlıq əlaqələri) necə idarə olunur?
+159. JPA-da **criteria queries** (kriteriya sorğuları) necə yaradılır?
+160. Hibernate-da **JPA** ilə **Spring Data JPA** inteqrasiyası necə aparılır?
+
+### Hibernate Digər Mövzular
+161. Hibernate-da **interceptor** (araya daxil olan) nədir?
+162. **Hibernate Event Listeners** (Hibernate Hadisə Dinləyiciləri) nədir?
+163. Hibernate-da **filters** (süzgəclər) necə istifadə olunur?
+164. **@Filter** və **@FilterDef** annotasiyaları nədir?
+165. Hibernate-da **auditing** (audit etmə) necə həyata keçirilir?
+166. **Hibernate Envers** nədir?
+167. Hibernate-da **dynamic mapping** (dinamik xəritələşdirmə) necə aparılır?
+168. **@TypeDef** annotasiyası nə üçün istifadə olunur?
+169. Hibernate-da **custom types** (xüsusi tiplər) necə təyin olunur?
+170. **UserType** interfeysi nədir?
+171. Hibernate-da **bytecode enhancement** (baytkod təkmilləşdirmə) nədir?
+172. Hibernate-da **validation** (doğrulama) necə həyata keçirilir?
+173. **Bean Validation** Hibernate ilə necə inteqrasiya olunur?
+174. **@Valid** annotasiyası nədir?
+175. Hibernate-da **statistics** (statistika) necə əldə olunur?
+176. **SessionFactory.getStatistics()** metodu nə üçün istifadə olunur?
+177. Hibernate-da **logging** (qeydiyyat) necə konfiqurasiya olunur?
+178. Hibernate-da **multi-tenancy** (çoxkirayəçilik) necə dəstəklənir?
+179. **Schema-based multi-tenancy** (sxem əsaslı çoxkirayəçilik) nədir?
+180. **Discriminator-based multi-tenancy** (ayırıcı əsaslı çoxkirayəçilik) nədir?
+181. Hibernate-da **connection provider** (əlaqə təminatçısı) nədir?
+182. Hibernate-da **dialect resolver** (dialekt həlledicisi) nədir?
+183. Hibernate-da **schema validation** (sxem doğrulaması) necə aparılır?
+184. **Hibernate Tools** nədir?
+185. Hibernate-da **reverse engineering** (əks mühəndislik) necə həyata keçirilir?
+186. Hibernate-da **integration testing** (inteqrasiya testləri) necə aparılır?
+187. **Hibernate Search** nədir?
+188. **Hibernate OGM** (Object Grid Mapping) nədir?
+189. Hibernate-da **NoSQL** verilənlər bazaları ilə inteqrasiya necə aparılır?
+190. Hibernate-da **sharding** (bölüşdürmə) necə dəstəklənir?
+191. **Hibernate Validator** nədir?
+192. Hibernate-da **batch fetching** (toplu yükləmə) necə konfiqurasiya olunur?
+193. Hibernate-da **connection release modes** (əlaqə buraxma rejimləri) hansılardır?
+194. **Session.lock()** və **Session.merge()** metodları arasındakı fərq nədir?
+195. Hibernate-da **load()** və **get()** metodları arasındakı fərq nədir?
+196. **Transient**, **Persistent** və **Detached** vəziyyətləri nədir?
+197. Hibernate-da **immutable entity** (dəyişilməz varlıq) necə təyin olunur?
+198. Hibernate-da **soft delete** (yumşaq silmə) necə həyata keçirilir?
+199. Hibernate-da **event system** (hadisə sistemi) necə işləyir?
+200. Hibernate-da **Spring Framework** ilə inteqrasiya necə aparılır?
