@@ -33,6 +33,24 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 
 ## Ümumi Suallar
 1. Java nədir və onun əsas xüsusiyyətləri hansılardır?
+
+**Cavab:**
+
+`Java`, `James Gosling` və Sun Microsystems tərəfindən 1995-ci ildə yaradılmış yüksək səviyyəli, obyekt yönümlü (object-oriented), platformadan asılı olmayan (platform-independent) proqramlaşdırma dilidir. Java, "Write Once, Run Anywhere" (WORA) prinsipi ilə tanınır, yəni bir dəfə yazılan kod müxtəlif platformalarda (Windows, Linux, macOS və s.) dəyişiklik etmədən işləyə bilər. Bu, Java-nın bytecode və Java `Virtual Machine (JVM)` vasitəsilə mümkün olur. Java həmçinin server tətbiqləri, mobil tətbiqlər (Android), veb tətbiqləri və böyük miqyaslı sistemlər kimi müxtəlif sahələrdə geniş istifadə olunur.
+
+**Əsas Xüsusiyyətlər:**
+
+- **Platformadan Asılı Olmama (Platform Independence):** Java kodu JVM-də işləyən bytecode-a çevrilir, bu da onu istənilən platformada icra edilə bilər.
+- **Obyekt Yönümlü Proqramlaşdırma (OOP):** Java, encapsulation, inheritance, polymorphism kimi OOP prinsiplərini dəstəkləyir.
+- **Sadəlik (Simplicity):** Java sintaksisi C++-a bənzəyir, lakin daha sadədir, çünki pointerlər və ya çoxlu mirasalma kimi mürəkkəb xüsusiyyətlər yoxdur.
+- **Təhlükəsizlik (Security):** Java-nın daxili təhlükəsizlik mexanizmləri (məsələn, sandbox mühiti) zərərli kodların icrasını məhdudlaşdırır.
+- **Yaddaş İdarəetməsi (Memory Management):** Java-da Garbage Collection avtomatik olaraq istifadə olunmayan obyektləri təmizləyir.
+- **Multithreading (Çoxaxınlılıq):** Java, eyni anda birdən çox tapşırığın icrasını dəstəkləyir.
+- **Robustluq (Robustness):** Java-nın tip təhlükəsizliyi (type safety), istisna idarəetməsi (exception handling) və avtomatik yaddaş idarəetməsi səhvləri minimuma endirir.
+- **Zəngin API:** Java geniş kitabxana dəsti ilə (Java API) şəbəkə, fayl əməliyyatları, GUI və s. üçün dəstək təmin edir.
+- **Yüksək Performans:** Just-In-Time (JIT) kompilyatoru ilə Java kodu yerli maşın koduna çevrilərək yüksək performans təmin edir.
+- **Çoxsaylı Platformalar:** Java desktop, veb, mobil və server tətbiqləri üçün uyğundur.
+
 2. JVM, JRE və JDK arasındakı fərq nədir?
 3. **public static void main(String[] args)** metodunun rolu nədir?
 4. **Garbage Collection** (Zibil Toplama) nədir?
