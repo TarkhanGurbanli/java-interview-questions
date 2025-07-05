@@ -379,9 +379,6 @@ Java-da yaddaş iki əsas bölgəyə bölünür: `Heap` və `Stack`. Bu bölgəl
 
 **Əsas Fərqlər:**
 
-**Əsas Fərqlər:**  
-
----------------------------------------------------------------------------------------------------
 | Xüsusiyyət            | Heap                              | Stack                               |
 |-----------------------|-----------------------------------|-------------------------------------|
 | **Saxlanılan Məlumat** | Obyektlər, instans dəyişənləri   | Lokal dəyişənlər, metod çağırışları |
@@ -389,7 +386,6 @@ Java-da yaddaş iki əsas bölgəyə bölünür: `Heap` və `Stack`. Bu bölgəl
 | **Ömür**              | İstinad olunduğu müddətcə        | Metodun ömrü ilə məhdudlaşır         |
 | **Paylaşım**          | Bütün axınlar tərəfindən paylaşılır | Axına xasdır                      |
 | **Performans**        | Daha yavaş (GC səbəbindən)       | Daha sürətli                         |
----------------------------------------------------------------------------------------------------
 
 **Kod Nümunəsi:**
 
