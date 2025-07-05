@@ -51,6 +51,8 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 - **Yüksək Performans:** Just-In-Time (JIT) kompilyatoru ilə Java kodu yerli maşın koduna çevrilərək yüksək performans təmin edir.
 - **Çoxsaylı Platformalar:** Java desktop, veb, mobil və server tətbiqləri üçün uyğundur.
 
+---
+
 **2. JVM, JRE və JDK arasındakı fərq nədir?**
 
 **Cavab:**
@@ -79,6 +81,8 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
   - JVM yalnız icra mühərrikidir, JRE isə JVM-i və icra üçün lazım olan kitabxanaları ehtiva edir.
   - JDK JRE-ni və inkişaf alətlərini ehtiva edir, yəni daha genişdir.
   - Son istifadəçi yalnız JRE-yə ehtiyac duyur, geliştirici isə JDK-ya.
+
+---
 
 **3. **public static void main(String[] args)** metodunun rolu nədir?**
 
