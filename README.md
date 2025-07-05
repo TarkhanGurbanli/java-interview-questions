@@ -2,6 +2,9 @@
 
 Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Java-nın əsas mövzularını başdan sona əhatə edir.
 
+## Mövzular
+- [Docker](#docker)
+
 ## Mündəricat
 - [Ümumi Suallar](#ümumi-suallar)
 - [OOP Prinsipləri](#oop-prinsipləri)
@@ -3016,4 +3019,257 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 148. **GitHub**-da **dependabot version updates** (dependabot versiya yeniləmələri) nədir?
 149. **GitHub**-da **repository insights** ilə **traffic analytics** arasındakı fərq nədir?
 150. **GitHub**-da **code review** ilə **Pull Request review** arasındakı fərq nədir?
+
+---
+
+# Docker Müsahibə Sualları
+
+Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+
+## Mündəricat
+- [Core Java](#ümumi-suallar)
+- [Hibernate](#hibernate)
+- [Spring Boot](#spring-boot)
+- [Data Structures və Collections](#data-structures-və-collections)
+- [Design Patterns](#design-patterns)
+- [Algorithms](#algorithms)
+- [RabbitMQ](#rabbitmq)
+- [Kafka və Kafka Streams](#kafka-və-kafka-streams)
+- [Liquibase](#liquibase)
+- [GitHub](#github)
+- [Docker](#docker)
+  - [Ümumi Suallar](#ümumi-suallar)
+  - [Images və Containers](#images-və-containers)
+  - [Dockerfile](#dockerfile)
+  - [Networking](#networking)
+  - [Storage](#storage)
+  - [Docker Compose](#docker-compose)
+  - [Security](#security)
+  - [Orchestration](#orchestration)
+  - [CI/CD İnteqrasiyası](#ci-cd-inteqrasiyası)
+  - [Digər Mövzular](#digər-mövzular)
+
+## Docker
+
+### Ümumi Suallar
+1. **Docker** nədir və nə üçün istifadə olunur?
+2. **Containerization** (Konteynerləşdirmə) nədir və virtual maşınlardan fərqi nədir?
+3. **Docker**-ın **Kubernetes** ilə fərqi nədir?
+4. **Docker**-ın açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
+5. **Docker**-ın **DevOps** təcrübələrində rolu nədir?
+6. **Docker**-ın mikroservis arxitekturasında istifadəsi necədir?
+7. **Docker**-ın əsas xüsusiyyətləri hansılardır?
+8. **Docker Engine** nədir və necə işləyir?
+9. **Docker Hub** nədir və nə üçün istifadə olunur?
+10. **Docker**-ın **container orchestration** (konteyner orkestrasiyası) ilə əlaqəsi nədir?
+11. **Docker**-ın **lightweight** (yüngül) olmasının faydaları nələrdir?
+12. **Docker**-ın **portability** (daşıma qabiliyyəti) necə təmin olunur?
+13. **Docker**-ın digər konteyner texnologiyaları ilə fərqləri nələrdir?
+14. **Docker**-ın **cloud integration** (bulud inteqrasiyası) imkanları nələrdir?
+15. **Docker**-ın **continuous deployment** (davamlı yerləşdirmə) ilə əlaqəsi nədir?
+
+### Images və Containers
+16. **Docker Image** (Docker Şəkli) nədir və necə yaradılır?
+17. **Docker Container** (Docker Konteyneri) nədir və necə işləyir?
+18. **Docker Image** ilə **Docker Container** arasındakı fərq nədir?
+19. **Docker Image Layers** (Docker Şəkil Qatları) nədir?
+20. **Docker**-da **image tagging** (şəkil etiketləmə) necə aparılır?
+21. **Docker**-da **image versioning** (şəkil versiyalaşdırma) necə idarə olunur?
+22. **Docker**-da **base image** (əsas şəkil) nədir?
+23. **Docker**-da **multi-stage builds** (çoxmərhələli qurmalar) nədir?
+24. **Docker**-da **image pruning** (şəkil təmizləmə) necə aparılır?
+25. **Docker**-da **container lifecycle** (konteyner həyat dövrü) hansı mərhələlərdən ibarətdir?
+26. **Docker**-da **docker run** komandası nə edir?
+27. **Docker**-da **docker build** komandası necə işləyir?
+28. **Docker**-da **docker pull** komandası nədir?
+29. **Docker**-da **docker push** komandası nə üçün istifadə olunur?
+30. **Docker**-da **docker commit** ilə şəkil necə yaradılır?
+
+### Dockerfile
+31. **Dockerfile** nədir və necə yazılır?
+32. **Dockerfile**-da **FROM** direktivi nə üçün istifadə olunur?
+33. **Dockerfile**-da **RUN** ilə **CMD** arasındakı fərq nədir?
+34. **Dockerfile**-da **ENTRYPOINT** nədir və necə istifadə olunur?
+35. **Dockerfile**-da **COPY** ilə **ADD** arasındakı fərq nədir?
+36. **Dockerfile**-da **WORKDIR** direktivi nə edir?
+37. **Dockerfile**-da **EXPOSE** direktivi nə üçün istifadə olunur?
+38. **Dockerfile**-da **ENV** direktivi necə istifadə olunur?
+39. **Dockerfile**-da **ARG** ilə **ENV** arasındakı fərq nədir?
+40. **Dockerfile**-da **VOLUME** direktivi nədir?
+41. **Dockerfile**-da **USER** direktivi nə üçün istifadə olunur?
+42. **Dockerfile**-da **LABEL** direktivi nədir?
+43. **Dockerfile**-da **HEALTHCHECK** direktivi necə işləyir?
+44. **Dockerfile**-da **ONBUILD** direktivi nədir?
+45. **Dockerfile**-da **multi-stage builds** necə tətbiq olunur?
+46. **Dockerfile**-da **best practices** (ən yaxşı təcrübələr) hansılardır?
+47. **Dockerfile**-da **image size optimization** (şəkil ölçüsü optimallaşdırması) necə aparılır?
+48. **Dockerfile**-da **caching** (keşləmə) necə işləyir?
+49. **Dockerfile**-da **build context** (qurma konteksti) nədir?
+50. **Dockerfile**-da **ignore files** (.dockerignore) nə üçün istifadə olunur?
+
+### Networking
+51. **Docker Networking** (Docker Şəbəkəsi) nədir?
+52. **Docker**-da **bridge network** (körpü şəbəkəsi) necə işləyir?
+53. **Docker**-da **host network** (ev sahibi şəbəkəsi) nədir?
+54. **Docker**-da **overlay network** (örtük şəbəkəsi) nədir?
+55. **Docker**-da **none network** (heç bir şəbəkə) nədir?
+56. **Docker**-da **user-defined networks** (istifadəçi tərəfindən təyin edilmiş şəbəkələr) necə yaradılır?
+57. **Docker**-da **port mapping** (port xəritələşdirmə) necə tətbiq olunur?
+58. **Docker**-da **container-to-container communication** (konteynerdən-konteynerə rabitə) necə təmin olunur?
+59. **Docker**-da **DNS resolution** (DNS həlli) necə işləyir?
+60. **Docker**-da **network driver** (şəbəkə sürücüsü) nədir?
+61. **Docker**-da **bridge network** ilə **overlay network** arasındakı fərq nədir?
+62. **Docker**-da **network alias** (şəbəkə ləqəbi) nədir?
+63. **Docker**-da **external network access** (xarici şəbəkə girişi) necə təmin olunur?
+64. **Docker**-da **network performance** (şəbəkə performansı) necə optimallaşdırılır?
+65. **Docker**-da **network isolation** (şəbəkə izolyasiyası) necə tətbiq olunur?
+
+### Storage
+66. **Docker**-da **volume** (həcm) nədir və necə istifadə olunur?
+67. **Docker**-da **bind mount** (bağlama nöqtəsi) nədir?
+68. **Docker**-da **tmpfs mount** (müvəqqəti fayl sistemi bağlaması) nədir?
+69. **Docker Volume** ilə **Bind Mount** arasındakı fərq nədir?
+70. **Docker**-da **volume driver** (həcm sürücüsü) nədir?
+71. **Docker**-da **persistent storage** (davamlı saxlama) necə təmin olunur?
+72. **Docker**-da **volume backup** (həcm ehtiyat nüsxəsi) necə aparılır?
+73. **Docker**-da **volume sharing** (həcm paylaşımı) necə həyata keçirilir?
+74. **Docker**-da **storage performance** (saxlama performansı) necə optimallaşdırılır?
+75. **Docker**-da **volume pruning** (həcm təmizləmə) necə aparılır?
+76. **Docker**-da **named volumes** (adlandırılmış həcmlər) nədir?
+77. **Docker**-da **anonymous volumes** (anonim həcmlər) nədir?
+78. **Docker**-da **volume plugins** (həcm plaginləri) necə istifadə olunur?
+79. **Docker**-da **data persistence** (məlumat davamlılığı) necə təmin olunur?
+80. **Docker**-da **volume lifecycle** (həcm həyat dövrü) necə idarə olunur?
+
+### Docker Compose
+81. **Docker Compose** nədir və nə üçün istifadə olunur?
+82. **docker-compose.yml** faylı necə yazılır?
+83. **Docker Compose**-da **services** (xidmətlər) nədir?
+84. **Docker Compose**-da **networks** (şəbəkələr) necə təyin olunur?
+85. **Docker Compose**-da **volumes** (həcmlər) necə konfiqurasiya olunur?
+86. **Docker Compose**-da **depends_on** direktivi nədir?
+87. **Docker Compose**-da **environment variables** (mühit dəyişənləri) necə təyin olunur?
+88. **Docker Compose**-da **ports** (portlar) necə xəritələşdirilir?
+89. **Docker Compose**-da **build** direktivi nədir?
+90. **Docker Compose**-da **profiles** (profillər) nədir?
+91. **Docker Compose**-da **docker-compose up** komandası nə edir?
+92. **Docker Compose**-da **docker-compose down** komandası nədir?
+93. **Docker Compose**-da **scaling** (miqyaslandırma) necə həyata keçirilir?
+94. **Docker Compose**-da **healthcheck** necə təyin olunur?
+95. **Docker Compose**-da **extends** direktivi nədir?
+
+### Security
+96. **Docker**-da **container security** (konteyner təhlükəsizliyi) necə təmin olunur?
+97. **Docker**-da **user namespaces** (istifadəçi ad məkanları) nədir?
+98. **Docker**-da **rootless containers** (kök olmayan konteynerlər) nədir?
+99. **Docker**-da **image scanning** (şəkil skan etmə) necə aparılır?
+100. **Docker**-da **vulnerability scanning** (zəiflik skan etmə) necə həyata keçirilir?
+101. **Docker**-da **Docker Content Trust** (Docker Məzmun Etibarı) nədir?
+102. **Docker**-da **image signing** (şəkil imzalama) necë tətbiq olunur?
+103. **Docker**-da **security best practices** (təhlükəsizlik ən yaxşı təcrübələri) hansılardır?
+104. **Docker**-da **privileged containers** (imtiyazlı konteynerlər) nədir?
+105. **Docker**-da **AppArmor** ilə təhlükəsizlik necə təmin olunur?
+106. **Docker**-da **SELinux** ilə təhlükəsizlik necə tətbiq olunur?
+107. **Docker**-da **resource limits** (resurs məhdudiyyətləri) necə təyin olunur?
+108. **Docker**-da **network security** (şəbəkə təhlükəsizliyi) necə təmin olunur?
+109. **Docker**-da **secrets management** (sirlər idarəetməsi) necə həyata keçirilir?
+110. **Docker**-da **container isolation** (konteyner izolyasiyası) necə təmin olunur?
+
+### Orchestration
+111. **Docker Swarm** nədir və necə işləyir?
+112. **Docker Swarm** ilə **Kubernetes** arasındakı fərq nədir?
+113. **Docker Swarm**-da **services** (xidmətlər) necə təyin olunur?
+114. **Docker Swarm**-da **overlay network** necə istifadə olunur?
+115. **Docker Swarm**-da **service scaling** (xidmət miqyaslandırması) necə aparılır?
+116. **Docker Swarm**-da **node management** (düyün idarəetməsi) necə həyata keçirilir?
+117. **Docker Swarm**-da **leader election** (lider seçimi) necə işləyir?
+118. **Docker Swarm**-da **service discovery** (xidmət kəşfi) necə təmin olunur?
+119. **Docker Swarm**-da **load balancing** (yük balanslaşdırması) necə aparılır?
+120. **Docker Swarm**-da **rolling updates** (sürüşən yeniləmələr) necə həyata keçirilir?
+121. **Docker**-da **Kubernetes integration** (Kubernetes inteqrasiyası) necə aparılır?
+122. **Docker**-da **container orchestration** (konteyner orkestrasiyası) nə üçün vacibdir?
+123. **Docker**-da **service health checks** (xidmət sağlamlıq yoxlamaları) necə təyin olunur?
+124. **Docker Swarm**-da **secrets** (sirlər) necə idarə olunur?
+125. **Docker Swarm**-da **stack deployment** (yığın yerləşdirmə) necə aparılır?
+
+### CI/CD İnteqrasiyası
+126. **Docker**-da **CI/CD** (Continuous Integration/Continuous Deployment) necə qurulur?
+127. **Docker**-da **GitHub Actions** ilə inteqrasiya necə həyata keçirilir?
+128. **Docker**-da **Jenkins** ilə CI/CD necə qurulur?
+129. **Docker**-da **GitLab CI** ilə inteqrasiya necə aparılır?
+130. **Docker**-da **CircleCI** ilə inteqrasiya necə tətbiq olunur?
+131. **Docker**-da **Docker Hub** ilə avtomatlaşdırılmış qurmalar necə konfiqurasiya olunur?
+132. **Docker**-da **image scanning** CI/CD-də necə istifadə olunur?
+133. **Docker**-da **multi-stage builds** CI/CD-də necə tətbiq olunur?
+134. **Docker**-da **container registry** (konteyner reyestri) necə inteqrasiya olunur?
+135. **Docker**-da **AWS ECR** (Elastic Container Registry) ilə inteqrasiya necə aparılır?
+136. **Docker**-da **Azure Container Registry** ilə inteqrasiya necə həyata keçirilir?
+137. **Docker**-da **Google Container Registry** ilə inteqrasiya necə tətbiq olunur?
+138. **Docker**-da **blue-green deployment** (mavi-yaşıl yerləşdirmə) necə aparılır?
+139. **Docker**-da **canary deployment** (kanarya yerləşdirmə) necə həyata keçirilir?
+140. **Docker**-da **rolling deployment** (sürüşən yerləşdirmə) necə təmin olunur?
+
+### Digər Mövzular
+141. **Docker CLI** (Docker Komanda Xətti İnterfeysi) nədir və necə istifadə olunur?
+142. **Docker**-da **docker ps** komandası nə edir?
+143. **Docker**-da **docker logs** komandası nə üçün istifadə olunur?
+144. **Docker**-da **docker inspect** komandası nədir?
+145. **Docker**-da **docker exec** komandası necə işləyir?
+146. **Docker**-da **docker stop** ilə **docker kill** arasındakı fərq nədir?
+147. **Docker**-da **docker rm** ilə **docker rmi** arasındakı fərq nədir?
+148. **Docker**-da **docker system prune** komandası nə edir?
+149. **Docker**-da **docker info** komandası hansı məlumatları göstərir?
+150. **Docker**-da **docker stats** komandası nə üçün istifadə olunur?
+151. **Docker**-da **container monitoring** (konteyner monitorinqi) necə həyata keçirilir?
+152. **Docker**-da **Prometheus** ilə monitorinq necə qurulur?
+153. **Docker**-da **Grafana** ilə vizualizasiya necə təmin olunur?
+154. **Docker**-da **log aggregation** (qeyd toplama) necə aparılır?
+155. **Docker**-da **ELK Stack** (Elasticsearch, Logstash, Kibana) ilə inteqrasiya necə həyata keçirilir?
+156. **Docker**-da **health monitoring** (sağlamlıq monitorinqi) necə təmin olunur?
+157. **Docker**-da **resource monitoring** (resurs monitorinqi) necə aparılır?
+158. **Docker**-da **container logging** (konteyner qeydiyyatı) necə konfiqurasiya olunur?
+159. **Docker**-da **log drivers** (qeyd sürücüləri) hansılardır?
+160. **Docker**-da **JSON logging** (JSON qeydiyyatı) necə tətbiq olunur?
+161. **Docker**-da **multi-container applications** (çoxkonteynerli tətbiqlər) necə idarə olunur?
+162. **Docker**-da **container restart policies** (konteyner yenidən başlatma siyasətləri) nələrdir?
+163. **Docker**-da **container healthcheck** ilə **application healthcheck** arasındakı fərq nədir?
+164. **Docker**-da **container debugging** (konteyner sazlama) necə aparılır?
+165. **Docker**-da **container resource limits** (konteyner resurs məhdudiyyətləri) necə təyin olunur?
+166. **Docker**-da **CPU limits** (prosessor məhdudiyyətləri) necə konfiqurasiya olunur?
+167. **Docker**-da **memory limits** (yaddaş məhdudiyyətləri) necə təyin olunur?
+168. **Docker**-da **container orchestration** ilə **container management** arasındakı fərq nədir?
+169. **Docker**-da **container lifecycle management** (konteyner həyat dövrü idarəetməsi) necə aparılır?
+170. **Docker**-da **container snapshot** (konteyner anlıq görüntüsü) necə yaradılır?
+171. **Docker**-da **image optimization** (şəkil optimallaşdırması) necə həyata keçirilir?
+172. **Docker**-da **container isolation** ilə **container security** arasındakı fərq nədir?
+173. **Docker**-da **container networking** ilə **host networking** arasındakı fərq nədir?
+174. **Docker**-da **volume management** ilə **bind mounts** arasındakı fərq nədir?
+175. **Docker**-da **Docker Compose** ilə **Docker Swarm** arasındakı fərq nədir?
+176. **Docker**-da **container logging** ilə **application logging** arasındakı fərq nədir?
+177. **Docker**-da **container monitoring** ilə **application monitoring** arasındakı fərq nədir?
+178. **Docker**-da **container healthcheck** ilə **Docker Swarm healthcheck** arasındakı fərq nədir?
+179. **Docker**-da **container debugging** ilə **application debugging** arasındakı fərq nədir?
+180. **Docker**-da **container resource limits** ilə **container orchestration** arasındakı fərq nədir?
+181. **Docker**-da **image versioning** ilə **container versioning** arasındakı fərq nədir?
+182. **Docker**-da **image scanning** ilə **container scanning** arasındakı fərq nədir?
+183. **Docker**-da **image optimization** ilə **container optimization** arasındakı fərq nədir?
+184. **Docker**-da **Docker Hub** ilə **private container registry** arasındakı fərq nədir?
+185. **Docker**-da **Docker CLI** ilə **Docker API** arasındakı fərq nədir?
+186. **Docker**-da **container orchestration** ilə **container scheduling** (konteyner planlaşdırma) arasındakı fərq nədir?
+187. **Docker**-da **container logging** ilə **log aggregation** arasındakı fərq nədir?
+188. **Docker**-da **container monitoring** ilə **resource monitoring** arasındakı fərq nədir?
+189. **Docker**-da **container healthcheck** ilə **application healthcheck** arasındakı fərq nədir?
+190. **Docker**-da **container debugging** ilə **container logging** arasındakı fərq nədir?
+191. **Docker**-da **container resource limits** ilə **container performance optimization** arasındakı fərq nədir?
+192. **Docker**-da **image versioning** ilə **image tagging** arasındakı fərq nədir?
+193. **Docker**-da **image scanning** ilə **vulnerability scanning** arasındakı fərq nədir?
+194. **Docker**-da **image optimization** ilə **multi-stage builds** arasındakı fərq nədir?
+195. **Docker**-da **Docker Compose** ilə **Kubernetes YAML** arasındakı fərq nədir?
+196. **Docker**-da **container networking** ilə **overlay networking** arasındakı fərq nədir?
+197. **Docker**-da **volume management** ilə **container storage** arasındakı fərq nədir?
+198. **Docker**-da **container orchestration** ilə **Docker Swarm** arasındakı fərq nədir?
+199. **Docker**-da **container logging** ilə **Docker Compose logging** arasındakı fərq nədir?
+200. **Docker**-da **container monitoring** ilə **Docker Swarm monitoring** arasındakı fərq nədir?
+
+---
 
