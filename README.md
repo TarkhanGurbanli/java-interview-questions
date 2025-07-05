@@ -98,9 +98,9 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
   - String[] args: Komanda xəttindən arqumentləri qəbul etmək üçün istifadə olunur.
  
 - **Rolu:**
-- Java proqramının icrasına başlama nöqtəsidir.
-- Komanda xəttindən ötürülən arqumentləri (args) qəbul edərək proqramın davranışını fərdiləşdirməyə imkan verir.
-- Proqramın əsas məntiqi buradan başlayır və ya digər metodlara yönləndirilir.
+  - Java proqramının icrasına başlama nöqtəsidir.
+  - Komanda xəttindən ötürülən arqumentləri (args) qəbul edərək proqramın davranışını fərdiləşdirməyə imkan verir.
+  - Proqramın əsas məntiqi buradan başlayır və ya digər metodlara yönləndirilir.
 
 **Kod Nümunəsi:**
 
@@ -126,8 +126,70 @@ public class MainExample {
 
 **4. **Garbage Collection** (Zibil Toplama) nədir?**
 
+**Cavab:**
 
-5. Java-da **bytecode** nədir və necə işləyir?
+`Garbage Collection` (Zibil Toplama) Java-da avtomatik yaddaş idarəetmə mexanizmidir. Bu mexanizm, proqram tərəfindən artıq istifadə olunmayan obyektləri (heap yaddaşında yer tutan) aşkar edir və onların tutduğu yaddaşı azad edir. Bu, geliştiricilərin əl ilə yaddaş idarəetməsi (məsələn, C++-da `free()` funksiyası ilə) yükünü azaldır və yaddaş sızması (memory leak) kimi problemləri minimuma endirir.
+
+- **Necə İşləyir:**
+  - **Marking (İşarələmə):** Garbage Collector heap-dəki bütün obyektləri skan edir və hələ də istinad edilən (reachable) obyektləri işarələyir.
+  - **Sweeping (Təmizləmə):** İşarələnməmiş (unreachable) obyektlər yaddaşdan silinir.
+  - **Compacting (Sıxışdırma):** Boş qalan yaddaş sahələri birləşdirilərək fraqmentasiya azalır (bəzi GC alqoritmlərində).
+
+- **Əsas Xüsusiyyətlər:**
+  - **Avtomatikdir:** Geliştiricinin əl ilə yaddaş azad etməsinə ehtiyac yoxdur.
+  - **Heap Yaddaşında İşləyir:** Yalnız heap-dəki obyektlərə tətbiq olunur, stack yaddaşı GC tərəfindən idarə olunmur.
+  - **Fərqli Alqoritmlər:** Java-da müxtəlif GC alqoritmləri var (məsələn, Serial GC, Parallel GC, G1 GC, ZGC).
+  - **Performans Təsiri:** GC proqramın performansına təsir edə bilər, buna görə optimallaşdırma vacibdir.
+
+- **Əsas GC Alqoritmləri:**
+  - **Serial GC:** Tək axınlı, kiçik tətbiqlər üçün uyğundur.
+  - **Parallel GC:** Çox axınlı, yüksək ötürmə qabiliyyəti (throughput) üçün optimallaşdırılıb.
+  - **G1 GC:** Böyük heap-lər üçün, aşağı gecikmə (low latency) təmin edir.
+  - **ZGC:** Ultra aşağı gecikməli, müasir tətbiqlər üçün nəzərdə tutulub.
+ 
+```java
+public class GarbageCollectionExample {
+    public static void main(String[] args) {
+        // Yeni obyektlər yaradılır, heap yaddaşında yer tutur
+        String str1 = new String("Test1");
+        String str2 = new String("Test2");
+
+        // str1-ə istinad silinir, obyekt unreachable olur
+        str1 = null;
+
+        // Garbage Collector-u əl ilə çağırmaq (təklifdir, zəmanətli deyil)
+        System.gc();
+
+        // Proqramın davam etdiyini göstərmək üçün
+        System.out.println("Proqram işləyir: " + str2);
+    }
+}
+```
+
+- **Nəzəri İzahat:** `System.gc()` GC-ni çağırmaq üçün təklifdir, lakin JVM onun nə vaxt işə düşəcəyinə özü qərar verir. Garbage Collection Java-nın robustluğunu artırır, lakin performans kritik tətbiqlərdə GC alqoritmini (məsələn, G1 və ya ZGC) seçmək və konfiqurasiya etmək vacibdir. Həmçinin, zəif istinadlar (WeakReference) kimi mexanizmlər GC ilə işləyərkən faydalıdır.
+
+---
+
+**5. Java-da **bytecode** nədir və necə işləyir?**
+
+**Cavab:**
+
+Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edildikdən sonra yaranan ara nəticədir. Bu, platformadan asılı olmayan, aşağı səviyyəli, maşın oxuna bilən təlimatlar toplusudur. Bytecode `.class` fayllarında saxlanılır və JVM tərəfindən icra edilir.
+
+- **Necə İşləyir:**
+  - **Kompilyasiya:** Java mənbə kodu (`.java` faylı) `javac` tərəfindən bytecode-a (`.class` faylı) çevrilir.
+    **İcra:** JVM bytecode-u oxuyur və onu hədəf platformanın maşın dilinə çevirir (Interpreter və ya JIT Compiler vasitəsilə).
+  - **Platformadan Asılı Olmama:** Bytecode platformaya xas deyil, bu da Java-nın "Write Once, Run Anywhere" prinsipini təmin edir.
+  - **Bytecode Verifier:** JVM `bytecode`-u icra etməzdən əvvəl onun təhlükəsizliyini və düzgünlüyünü yoxlayır (məsələn, tip təhlükəsizliyi).
+
+- **Bytecode-un Strukturu:**
+  - **Magic Number:** `.class` faylının başlanğıcını göstərir (0xCAFEBABE).
+  - **Constant Pool:** Sabitlər və istinadlar (metodlar, siniflər və s.).
+  - **Method Area:** Metodların təlimatları və digər metadata.
+
+- **Nəzəri İzahat:**
+  - Bytecode JVM-in platformadan asılı olmamasını təmin edən əsas elementdir. `javac` kodu `bytecode`-a çevirir, `JVM` isə bu `bytecode`-u hədəf platformaya uyğun maşın koduna çevirir. `JIT Compiler` bytecode-u optimallaşdıraraq performansı artırır. Bytecode-un təhlükəsizliyi isə `Bytecode Verifier` ilə yoxlanılır ki, bu da Java-nın təhlükəsizliyini gücləndirir.
+
 6. Java-nın **WORA** (Write Once, Run Anywhere) prinsipi nə deməkdir?
 7. Java-da **platform independence** (platformadan asılı olmama) necə təmin olunur?
 8. **ClassLoader** (Sinif Yükləyicisi) nədir və necə işləyir?
