@@ -1,8 +1,10 @@
 # Core Java Müsahibə Sualları
 
-Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Java-nın əsas mövzularını başdan sona əhatə edir.
+Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Java-nın əsas mövzularını başdan
+sona əhatə edir.
 
 ## Mövzular
+
 - [Core Java](#core-java)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -17,6 +19,7 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 - [Redis](#redis)
 
 ## Mündəricat
+
 - [Ümumi Suallar](#ümumi-suallar)
 - [OOP Prinsipləri](#oop-prinsipləri)
 - [Data Tipləri və Dəyişənlər](#data-tipləri-və-dəyişənlər)
@@ -32,23 +35,37 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 ## Core Java
 
 ## Ümumi Suallar
+
 **1. Java nədir və onun əsas xüsusiyyətləri hansılardır?**
 
 **Cavab:**
 
-`Java`, `James Gosling` və Sun Microsystems tərəfindən 1995-ci ildə yaradılmış yüksək səviyyəli, obyekt yönümlü (object-oriented), platformadan asılı olmayan (platform-independent) proqramlaşdırma dilidir. Java, "Write Once, Run Anywhere" (WORA) prinsipi ilə tanınır, yəni bir dəfə yazılan kod müxtəlif platformalarda (Windows, Linux, macOS və s.) dəyişiklik etmədən işləyə bilər. Bu, Java-nın bytecode və Java `Virtual Machine (JVM)` vasitəsilə mümkün olur. Java həmçinin server tətbiqləri, mobil tətbiqlər (Android), veb tətbiqləri və böyük miqyaslı sistemlər kimi müxtəlif sahələrdə geniş istifadə olunur.
+`Java`, `James Gosling` və Sun Microsystems tərəfindən 1995-ci ildə yaradılmış yüksək səviyyəli, obyekt yönümlü (
+object-oriented), platformadan asılı olmayan (platform-independent) proqramlaşdırma dilidir. Java, "Write Once, Run
+Anywhere" (WORA) prinsipi ilə tanınır, yəni bir dəfə yazılan kod müxtəlif platformalarda (Windows, Linux, macOS və s.)
+dəyişiklik etmədən işləyə bilər. Bu, Java-nın bytecode və Java `Virtual Machine (JVM)` vasitəsilə mümkün olur. Java
+həmçinin server tətbiqləri, mobil tətbiqlər (Android), veb tətbiqləri və böyük miqyaslı sistemlər kimi müxtəlif
+sahələrdə geniş istifadə olunur.
 
 **Əsas Xüsusiyyətlər:**
 
-- **Platformadan Asılı Olmama (Platform Independence):** Java kodu JVM-də işləyən bytecode-a çevrilir, bu da onu istənilən platformada icra edilə bilər.
-- **Obyekt Yönümlü Proqramlaşdırma (OOP):** Java, encapsulation, inheritance, polymorphism kimi OOP prinsiplərini dəstəkləyir.
-- **Sadəlik (Simplicity):** Java sintaksisi C++-a bənzəyir, lakin daha sadədir, çünki pointerlər və ya çoxlu mirasalma kimi mürəkkəb xüsusiyyətlər yoxdur.
-- **Təhlükəsizlik (Security):** Java-nın daxili təhlükəsizlik mexanizmləri (məsələn, sandbox mühiti) zərərli kodların icrasını məhdudlaşdırır.
-- **Yaddaş İdarəetməsi (Memory Management):** Java-da Garbage Collection avtomatik olaraq istifadə olunmayan obyektləri təmizləyir.
+- **Platformadan Asılı Olmama (Platform Independence):** Java kodu JVM-də işləyən bytecode-a çevrilir, bu da onu
+  istənilən platformada icra edilə bilər.
+- **Obyekt Yönümlü Proqramlaşdırma (OOP):** Java, encapsulation, inheritance, polymorphism kimi OOP prinsiplərini
+  dəstəkləyir.
+- **Sadəlik (Simplicity):** Java sintaksisi C++-a bənzəyir, lakin daha sadədir, çünki pointerlər və ya çoxlu mirasalma
+  kimi mürəkkəb xüsusiyyətlər yoxdur.
+- **Təhlükəsizlik (Security):** Java-nın daxili təhlükəsizlik mexanizmləri (məsələn, sandbox mühiti) zərərli kodların
+  icrasını məhdudlaşdırır.
+- **Yaddaş İdarəetməsi (Memory Management):** Java-da Garbage Collection avtomatik olaraq istifadə olunmayan obyektləri
+  təmizləyir.
 - **Multithreading (Çoxaxınlılıq):** Java, eyni anda birdən çox tapşırığın icrasını dəstəkləyir.
-- **Robustluq (Robustness):** Java-nın tip təhlükəsizliyi (type safety), istisna idarəetməsi (exception handling) və avtomatik yaddaş idarəetməsi səhvləri minimuma endirir.
-- **Zəngin API:** Java geniş kitabxana dəsti ilə (Java API) şəbəkə, fayl əməliyyatları, GUI və s. üçün dəstək təmin edir.
-- **Yüksək Performans:** Just-In-Time (JIT) kompilyatoru ilə Java kodu yerli maşın koduna çevrilərək yüksək performans təmin edir.
+- **Robustluq (Robustness):** Java-nın tip təhlükəsizliyi (type safety), istisna idarəetməsi (exception handling) və
+  avtomatik yaddaş idarəetməsi səhvləri minimuma endirir.
+- **Zəngin API:** Java geniş kitabxana dəsti ilə (Java API) şəbəkə, fayl əməliyyatları, GUI və s. üçün dəstək təmin
+  edir.
+- **Yüksək Performans:** Just-In-Time (JIT) kompilyatoru ilə Java kodu yerli maşın koduna çevrilərək yüksək performans
+  təmin edir.
 - **Çoxsaylı Platformalar:** Java desktop, veb, mobil və server tətbiqləri üçün uyğundur.
 
 ---
@@ -57,30 +74,31 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 
 **Cavab:**
 
-****JVM, JRE və JDK Java-nın işləməsi üçün zəruri olan üç əsas komponentdir, lakin onların funksiyaları və istifadə sahələri fərqlidir:****
+****JVM, JRE və JDK Java-nın işləməsi üçün zəruri olan üç əsas komponentdir, lakin onların funksiyaları və istifadə
+sahələri fərqlidir:****
 
 - JVM (Java Virtual Machine - Java Virtual Maşını):
-  - JVM Java proqramlarını icra etmək üçün virtual mühit təmin edən icra mühərrikidir.
-  - Java kodunun bytecode-unu maşın dilinə çevirir və həmin platformada icra edir.
-  - Əsas komponentləri: `Class Loader`, `Bytecode Verifier`, `Interpreter`, `JIT Compiler` və `Garbage Collector`.
-  - JVM platformaya xasdır (Windows, Linux və s. üçün fərqli JVM-lər var).
-  - Məqsədi: Platformadan asılı olmayaraq Java kodunun icrasını təmin etmək.
- 
+    - JVM Java proqramlarını icra etmək üçün virtual mühit təmin edən icra mühərrikidir.
+    - Java kodunun bytecode-unu maşın dilinə çevirir və həmin platformada icra edir.
+    - Əsas komponentləri: `Class Loader`, `Bytecode Verifier`, `Interpreter`, `JIT Compiler` və `Garbage Collector`.
+    - JVM platformaya xasdır (Windows, Linux və s. üçün fərqli JVM-lər var).
+    - Məqsədi: Platformadan asılı olmayaraq Java kodunun icrasını təmin etmək.
+
 - JRE (Java Runtime Environment - Java İcra Mühiti):
-  - JRE, Java proqramlarını işə salmaq üçün lazım olan mühitdir.
-  - JVM-i və Java-nın əsas kitabxanalarını (Java Class Library) ehtiva edir.
-  - JRE yalnız icra üçün lazımdır, yəni Java proqramlarını inkişaf etdirmək üçün kifayət deyil.
-  - Məqsədi: Java tətbiqlərinin icrasını təmin etmək (son istifadəçilər üçün).
+    - JRE, Java proqramlarını işə salmaq üçün lazım olan mühitdir.
+    - JVM-i və Java-nın əsas kitabxanalarını (Java Class Library) ehtiva edir.
+    - JRE yalnız icra üçün lazımdır, yəni Java proqramlarını inkişaf etdirmək üçün kifayət deyil.
+    - Məqsədi: Java tətbiqlərinin icrasını təmin etmək (son istifadəçilər üçün).
 
 - JDK (Java Development Kit - Java İnkişaf Dəsti):
-  - JDK, Java tətbiqləri inkişaf etdirmək və icra etmək üçün tam alətlər dəstidir.
-  - JRE-ni (yəni JVM və kitabxanaları) və əlavə inkişaf alətlərini (javac, javadoc, jar və s.) ehtiva edir.
-  - Məqsədi: Java proqramlarının yazılması, kompilyasiyası və icrası üçün bütün zəruri alətləri təmin etmək.
+    - JDK, Java tətbiqləri inkişaf etdirmək və icra etmək üçün tam alətlər dəstidir.
+    - JRE-ni (yəni JVM və kitabxanaları) və əlavə inkişaf alətlərini (javac, javadoc, jar və s.) ehtiva edir.
+    - Məqsədi: Java proqramlarının yazılması, kompilyasiyası və icrası üçün bütün zəruri alətləri təmin etmək.
 
 - Fərqlər:
-  - JVM yalnız icra mühərrikidir, JRE isə JVM-i və icra üçün lazım olan kitabxanaları ehtiva edir.
-  - JDK JRE-ni və inkişaf alətlərini ehtiva edir, yəni daha genişdir.
-  - Son istifadəçi yalnız JRE-yə ehtiyac duyur, geliştirici isə JDK-ya.
+    - JVM yalnız icra mühərrikidir, JRE isə JVM-i və icra üçün lazım olan kitabxanaları ehtiva edir.
+    - JDK JRE-ni və inkişaf alətlərini ehtiva edir, yəni daha genişdir.
+    - Son istifadəçi yalnız JRE-yə ehtiyac duyur, geliştirici isə JDK-ya.
 
 ---
 
@@ -88,19 +106,21 @@ Bu sənəd **Core Java** ilə bağlı müsahibə suallarının başlıqlarını 
 
 **Cavab:**
 
-`public static void main(String[] args)` Java proqramının giriş nöqtəsi (entry point) olan xüsusi metoddur. JVM Java proqramını işə salarkən ilk olaraq bu metodu axtarır və icrasına buradan başlayır. Bu metod olmadan Java proqramı icra oluna bilməz (standalone tətbiqlər üçün).
+`public static void main(String[] args)` Java proqramının giriş nöqtəsi (entry point) olan xüsusi metoddur. JVM Java
+proqramını işə salarkən ilk olaraq bu metodu axtarır və icrasına buradan başlayır. Bu metod olmadan Java proqramı icra
+oluna bilməz (standalone tətbiqlər üçün).
 
 - **Metodun Komponentləri:**
-  - public: Metod JVM tərəfindən xaricdən çağırıldığı üçün ictimai (public) olmalıdır.
-  - static: Metod sinifə aid olduğu üçün obyekt yaratmadan çağırıla bilər.
-  - void: Metod heç bir dəyər qaytarmır.
-  - main: JVM-in axtardığı metodun adı dəqiq olaraq "main" olmalıdır.
-  - String[] args: Komanda xəttindən arqumentləri qəbul etmək üçün istifadə olunur.
- 
+    - public: Metod JVM tərəfindən xaricdən çağırıldığı üçün ictimai (public) olmalıdır.
+    - static: Metod sinifə aid olduğu üçün obyekt yaratmadan çağırıla bilər.
+    - void: Metod heç bir dəyər qaytarmır.
+    - main: JVM-in axtardığı metodun adı dəqiq olaraq "main" olmalıdır.
+    - String[] args: Komanda xəttindən arqumentləri qəbul etmək üçün istifadə olunur.
+
 - **Rolu:**
-  - Java proqramının icrasına başlama nöqtəsidir.
-  - Komanda xəttindən ötürülən arqumentləri (args) qəbul edərək proqramın davranışını fərdiləşdirməyə imkan verir.
-  - Proqramın əsas məntiqi buradan başlayır və ya digər metodlara yönləndirilir.
+    - Java proqramının icrasına başlama nöqtəsidir.
+    - Komanda xəttindən ötürülən arqumentləri (args) qəbul edərək proqramın davranışını fərdiləşdirməyə imkan verir.
+    - Proqramın əsas məntiqi buradan başlayır və ya digər metodlara yönləndirilir.
 
 **Kod Nümunəsi:**
 
@@ -120,7 +140,10 @@ public class MainExample {
 ```
 
 - **Nəzəri İzahat:**
-  - `main` metodunun düzgün təyin olunması (imza, yəni signature) JVM-in proqramı tapa bilməsi üçün vacibdir. Yanlış imza (məsələn, `public void main()` və ya `static int main()`) istifadə edilərsə, JVM main metodunu tapmaz və `NoSuchMethodError` xətası atar. Arqumentlər `(args)` isə proqramın dinamik konfiqurasiyası üçün faydalıdır, məsələn, fayl yollarını və ya parametrləri ötürmək üçün.
+    - `main` metodunun düzgün təyin olunması (imza, yəni signature) JVM-in proqramı tapa bilməsi üçün vacibdir. Yanlış
+      imza (məsələn, `public void main()` və ya `static int main()`) istifadə edilərsə, JVM main metodunu tapmaz və
+      `NoSuchMethodError` xətası atar. Arqumentlər `(args)` isə proqramın dinamik konfiqurasiyası üçün faydalıdır,
+      məsələn, fayl yollarını və ya parametrləri ötürmək üçün.
 
 ---
 
@@ -128,25 +151,30 @@ public class MainExample {
 
 **Cavab:**
 
-`Garbage Collection` (Zibil Toplama) Java-da avtomatik yaddaş idarəetmə mexanizmidir. Bu mexanizm, proqram tərəfindən artıq istifadə olunmayan obyektləri (heap yaddaşında yer tutan) aşkar edir və onların tutduğu yaddaşı azad edir. Bu, geliştiricilərin əl ilə yaddaş idarəetməsi (məsələn, C++-da `free()` funksiyası ilə) yükünü azaldır və yaddaş sızması (memory leak) kimi problemləri minimuma endirir.
+`Garbage Collection` (Zibil Toplama) Java-da avtomatik yaddaş idarəetmə mexanizmidir. Bu mexanizm, proqram tərəfindən
+artıq istifadə olunmayan obyektləri (heap yaddaşında yer tutan) aşkar edir və onların tutduğu yaddaşı azad edir. Bu,
+geliştiricilərin əl ilə yaddaş idarəetməsi (məsələn, C++-da `free()` funksiyası ilə) yükünü azaldır və yaddaş sızması (
+memory leak) kimi problemləri minimuma endirir.
 
 - **Necə İşləyir:**
-  - **Marking (İşarələmə):** Garbage Collector heap-dəki bütün obyektləri skan edir və hələ də istinad edilən (reachable) obyektləri işarələyir.
-  - **Sweeping (Təmizləmə):** İşarələnməmiş (unreachable) obyektlər yaddaşdan silinir.
-  - **Compacting (Sıxışdırma):** Boş qalan yaddaş sahələri birləşdirilərək fraqmentasiya azalır (bəzi GC alqoritmlərində).
+    - **Marking (İşarələmə):** Garbage Collector heap-dəki bütün obyektləri skan edir və hələ də istinad edilən (
+      reachable) obyektləri işarələyir.
+    - **Sweeping (Təmizləmə):** İşarələnməmiş (unreachable) obyektlər yaddaşdan silinir.
+    - **Compacting (Sıxışdırma):** Boş qalan yaddaş sahələri birləşdirilərək fraqmentasiya azalır (bəzi GC
+      alqoritmlərində).
 
 - **Əsas Xüsusiyyətlər:**
-  - **Avtomatikdir:** Geliştiricinin əl ilə yaddaş azad etməsinə ehtiyac yoxdur.
-  - **Heap Yaddaşında İşləyir:** Yalnız heap-dəki obyektlərə tətbiq olunur, stack yaddaşı GC tərəfindən idarə olunmur.
-  - **Fərqli Alqoritmlər:** Java-da müxtəlif GC alqoritmləri var (məsələn, Serial GC, Parallel GC, G1 GC, ZGC).
-  - **Performans Təsiri:** GC proqramın performansına təsir edə bilər, buna görə optimallaşdırma vacibdir.
+    - **Avtomatikdir:** Geliştiricinin əl ilə yaddaş azad etməsinə ehtiyac yoxdur.
+    - **Heap Yaddaşında İşləyir:** Yalnız heap-dəki obyektlərə tətbiq olunur, stack yaddaşı GC tərəfindən idarə olunmur.
+    - **Fərqli Alqoritmlər:** Java-da müxtəlif GC alqoritmləri var (məsələn, Serial GC, Parallel GC, G1 GC, ZGC).
+    - **Performans Təsiri:** GC proqramın performansına təsir edə bilər, buna görə optimallaşdırma vacibdir.
 
 - **Əsas GC Alqoritmləri:**
-  - **Serial GC:** Tək axınlı, kiçik tətbiqlər üçün uyğundur.
-  - **Parallel GC:** Çox axınlı, yüksək ötürmə qabiliyyəti (throughput) üçün optimallaşdırılıb.
-  - **G1 GC:** Böyük heap-lər üçün, aşağı gecikmə (low latency) təmin edir.
-  - **ZGC:** Ultra aşağı gecikməli, müasir tətbiqlər üçün nəzərdə tutulub.
- 
+    - **Serial GC:** Tək axınlı, kiçik tətbiqlər üçün uyğundur.
+    - **Parallel GC:** Çox axınlı, yüksək ötürmə qabiliyyəti (throughput) üçün optimallaşdırılıb.
+    - **G1 GC:** Böyük heap-lər üçün, aşağı gecikmə (low latency) təmin edir.
+    - **ZGC:** Ultra aşağı gecikməli, müasir tətbiqlər üçün nəzərdə tutulub.
+
 ```java
 public class GarbageCollectionExample {
     public static void main(String[] args) {
@@ -166,7 +194,10 @@ public class GarbageCollectionExample {
 }
 ```
 
-- **Nəzəri İzahat:** `System.gc()` GC-ni çağırmaq üçün təklifdir, lakin JVM onun nə vaxt işə düşəcəyinə özü qərar verir. Garbage Collection Java-nın robustluğunu artırır, lakin performans kritik tətbiqlərdə GC alqoritmini (məsələn, G1 və ya ZGC) seçmək və konfiqurasiya etmək vacibdir. Həmçinin, zəif istinadlar (WeakReference) kimi mexanizmlər GC ilə işləyərkən faydalıdır.
+- **Nəzəri İzahat:** `System.gc()` GC-ni çağırmaq üçün təklifdir, lakin JVM onun nə vaxt işə düşəcəyinə özü qərar verir.
+  Garbage Collection Java-nın robustluğunu artırır, lakin performans kritik tətbiqlərdə GC alqoritmini (məsələn, G1 və
+  ya ZGC) seçmək və konfiqurasiya etmək vacibdir. Həmçinin, zəif istinadlar (WeakReference) kimi mexanizmlər GC ilə
+  işləyərkən faydalıdır.
 
 ---
 
@@ -174,21 +205,29 @@ public class GarbageCollectionExample {
 
 **Cavab:**
 
-Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edildikdən sonra yaranan ara nəticədir. Bu, platformadan asılı olmayan, aşağı səviyyəli, maşın oxuna bilən təlimatlar toplusudur. Bytecode `.class` fayllarında saxlanılır və JVM tərəfindən icra edilir.
+Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edildikdən sonra yaranan ara nəticədir. Bu,
+platformadan asılı olmayan, aşağı səviyyəli, maşın oxuna bilən təlimatlar toplusudur. Bytecode `.class` fayllarında
+saxlanılır və JVM tərəfindən icra edilir.
 
 - **Necə İşləyir:**
-  - **Kompilyasiya:** Java mənbə kodu (`.java` faylı) `javac` tərəfindən bytecode-a (`.class` faylı) çevrilir.
-    **İcra:** JVM bytecode-u oxuyur və onu hədəf platformanın maşın dilinə çevirir (Interpreter və ya JIT Compiler vasitəsilə).
-  - **Platformadan Asılı Olmama:** Bytecode platformaya xas deyil, bu da Java-nın "Write Once, Run Anywhere" prinsipini təmin edir.
-  - **Bytecode Verifier:** JVM `bytecode`-u icra etməzdən əvvəl onun təhlükəsizliyini və düzgünlüyünü yoxlayır (məsələn, tip təhlükəsizliyi).
+    - **Kompilyasiya:** Java mənbə kodu (`.java` faylı) `javac` tərəfindən bytecode-a (`.class` faylı) çevrilir.
+      **İcra:** JVM bytecode-u oxuyur və onu hədəf platformanın maşın dilinə çevirir (Interpreter və ya JIT Compiler
+      vasitəsilə).
+    - **Platformadan Asılı Olmama:** Bytecode platformaya xas deyil, bu da Java-nın "Write Once, Run Anywhere"
+      prinsipini təmin edir.
+    - **Bytecode Verifier:** JVM `bytecode`-u icra etməzdən əvvəl onun təhlükəsizliyini və düzgünlüyünü yoxlayır (
+      məsələn, tip təhlükəsizliyi).
 
 - **Bytecode-un Strukturu:**
-  - **Magic Number:** `.class` faylının başlanğıcını göstərir (0xCAFEBABE).
-  - **Constant Pool:** Sabitlər və istinadlar (metodlar, siniflər və s.).
-  - **Method Area:** Metodların təlimatları və digər metadata.
+    - **Magic Number:** `.class` faylının başlanğıcını göstərir (0xCAFEBABE).
+    - **Constant Pool:** Sabitlər və istinadlar (metodlar, siniflər və s.).
+    - **Method Area:** Metodların təlimatları və digər metadata.
 
 - **Nəzəri İzahat:**
-  - Bytecode JVM-in platformadan asılı olmamasını təmin edən əsas elementdir. `javac` kodu `bytecode`-a çevirir, `JVM` isə bu `bytecode`-u hədəf platformaya uyğun maşın koduna çevirir. `JIT Compiler` bytecode-u optimallaşdıraraq performansı artırır. Bytecode-un təhlükəsizliyi isə `Bytecode Verifier` ilə yoxlanılır ki, bu da Java-nın təhlükəsizliyini gücləndirir.
+    - Bytecode JVM-in platformadan asılı olmamasını təmin edən əsas elementdir. `javac` kodu `bytecode`-a çevirir, `JVM`
+      isə bu `bytecode`-u hədəf platformaya uyğun maşın koduna çevirir. `JIT Compiler` bytecode-u optimallaşdıraraq
+      performansı artırır. Bytecode-un təhlükəsizliyi isə `Bytecode Verifier` ilə yoxlanılır ki, bu da Java-nın
+      təhlükəsizliyini gücləndirir.
 
 ---
 
@@ -196,12 +235,18 @@ Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edi
 
 **Cavab:**
 
-`WORA` (`Write Once, Run Anywhere` - Bir dəfə yaz, hər yerdə işlət) Java-nın əsas prinsiplərindən biridir. Bu prinsip, Java ilə yazılmış bir proqramın bir platformada (məsələn, Windows) yazıldıqdan sonra heç bir dəyişiklik etmədən digər platformalarda (məsələn, Linux, macOS) işləyə biləcəyini ifadə edir. Bu, Java-nın platformadan asılı olmama xüsusiyyəti sayəsində mümkündür.
+`WORA` (`Write Once, Run Anywhere` - Bir dəfə yaz, hər yerdə işlət) Java-nın əsas prinsiplərindən biridir. Bu prinsip,
+Java ilə yazılmış bir proqramın bir platformada (məsələn, Windows) yazıldıqdan sonra heç bir dəyişiklik etmədən digər
+platformalarda (məsələn, Linux, macOS) işləyə biləcəyini ifadə edir. Bu, Java-nın platformadan asılı olmama xüsusiyyəti
+sayəsində mümkündür.
 
 - **WORA-nın Əsas Mexanizmi:**
-  - **Java kodu javac (Java Compiler)** tərəfindən bytecode-a çevrilir. Bytecode platformadan asılı olmayan ara təlimatlar toplusudur.
-  - **JVM (Java Virtual Machine)** bytecode-u hədəf platformanın maşın dilinə çevirərək icra edir. Hər platforma üçün fərqli JVM olduğu üçün eyni bytecode fərqli platformalarda işləyə bilir.
-  - **Java-nın standart kitabxanaları (Java API)** platformadan asılı olan funksiyaları (məsələn, fayl əməliyyatları, şəbəkə əlaqələri) abstraqlaşdırır, bu da kodu portativ edir.
+    - **Java kodu javac (Java Compiler)** tərəfindən bytecode-a çevrilir. Bytecode platformadan asılı olmayan ara
+      təlimatlar toplusudur.
+    - **JVM (Java Virtual Machine)** bytecode-u hədəf platformanın maşın dilinə çevirərək icra edir. Hər platforma üçün
+      fərqli JVM olduğu üçün eyni bytecode fərqli platformalarda işləyə bilir.
+    - **Java-nın standart kitabxanaları (Java API)** platformadan asılı olan funksiyaları (məsələn, fayl əməliyyatları,
+      şəbəkə əlaqələri) abstraqlaşdırır, bu da kodu portativ edir.
 
 ---
 
@@ -209,24 +254,26 @@ Bytecode Java proqramının javac (Java Compiler) tərəfindən kompilyasiya edi
 **7. Java-da **platform independence** (platformadan asılı olmama) necə təmin olunur?**
 
 **Cavab:**
-Java-nın platformadan asılı olmama xüsusiyyəti, proqramın bir platformada yazıldıqdan sonra digər platformalarda dəyişiklik etmədən işləməsini təmin edir. Bu, WORA prinsipinin əsasını təşkil edir və aşağıdakı mexanizmlərlə həyata keçirilir:
+Java-nın platformadan asılı olmama xüsusiyyəti, proqramın bir platformada yazıldıqdan sonra digər platformalarda
+dəyişiklik etmədən işləməsini təmin edir. Bu, WORA prinsipinin əsasını təşkil edir və aşağıdakı mexanizmlərlə həyata
+keçirilir:
 
 - **Bytecode:**
-  - Java kodu javac tərəfindən platformadan asılı olmayan bytecode-a çevrilir.
-  - Bytecode, .class fayllarında saxlanılır və JVM tərəfindən oxunur.
-  - Bytecode-un strukturu hər platformada eynidir, bu da portativliyi təmin edir.
+    - Java kodu javac tərəfindən platformadan asılı olmayan bytecode-a çevrilir.
+    - Bytecode, .class fayllarında saxlanılır və JVM tərəfindən oxunur.
+    - Bytecode-un strukturu hər platformada eynidir, bu da portativliyi təmin edir.
 - **JVM (Java Virtual Machine):**
-  - JVM platformaya xas bir mühitdir və bytecode-u həmin platformanın maşın dilinə çevirir.
-  - Hər platforma üçün xüsusi JVM (Windows JVM, Linux JVM və s.) mövcuddur.
-  - JVM-in Interpreter və JIT Compiler komponentləri bytecode-u icra edir.
+    - JVM platformaya xas bir mühitdir və bytecode-u həmin platformanın maşın dilinə çevirir.
+    - Hər platforma üçün xüsusi JVM (Windows JVM, Linux JVM və s.) mövcuddur.
+    - JVM-in Interpreter və JIT Compiler komponentləri bytecode-u icra edir.
 - **Java API (Standart Kitabxanalar):**
-  - Java-nın standart kitabxanaları (məsələn, java.io, java.net) platformaya xas funksiyaları abstraqlaşdırır.
-  - Məsələn, fayl əməliyyatları üçün java.io.File sinfi platforma fərqlərini gizlədir.
+    - Java-nın standart kitabxanaları (məsələn, java.io, java.net) platformaya xas funksiyaları abstraqlaşdırır.
+    - Məsələn, fayl əməliyyatları üçün java.io.File sinfi platforma fərqlərini gizlədir.
 - **Bytecode Verifier:**
-  - JVM bytecode-u icra etməzdən əvvəl onun düzgün və təhlükəsiz olduğunu yoxlayır.
-  - Bu, platformalar arası uyğunluğu və təhlükəsizliyi təmin edir.
+    - JVM bytecode-u icra etməzdən əvvəl onun düzgün və təhlükəsiz olduğunu yoxlayır.
+    - Bu, platformalar arası uyğunluğu və təhlükəsizliyi təmin edir.
 - **Standartlaşdırılmış Spesifikasiyalar:**
-  - Java-nın spesifikasiyaları (JLS - Java Language Specification) bütün platformalarda eyni şəkildə tətbiq olunur.
+    - Java-nın spesifikasiyaları (JLS - Java Language Specification) bütün platformalarda eyni şəkildə tətbiq olunur.
 
 ---
 
@@ -234,26 +281,30 @@ Java-nın platformadan asılı olmama xüsusiyyəti, proqramın bir platformada 
 
 **Cavab:**
 
-`ClassLoader` (Sinif Yükləyicisi) Java-da sinifləri (.class faylları) və resursları (məsələn, .jar faylları) yaddaşa yükləyən JVM-in bir komponentidir. ClassLoader sinif fayllarını tapır, onların bytecode-unu oxuyur və JVM-in icra edə biləcəyi formada təqdim edir.
+`ClassLoader` (Sinif Yükləyicisi) Java-da sinifləri (.class faylları) və resursları (məsələn, .jar faylları) yaddaşa
+yükləyən JVM-in bir komponentidir. ClassLoader sinif fayllarını tapır, onların bytecode-unu oxuyur və JVM-in icra edə
+biləcəyi formada təqdim edir.
 
 - **Əsas Vəzifələri:**
-  - **Yükləmə (Loading):** `.class` fayllarını diskdən, şəbəkədən və ya digər mənbələrdən yaddaşa yükləyir.
-  - **Bağlama (Linking):** Sinifin düzgünlüyünü yoxlayır (Bytecode Verifier), yaddaşı ayırır və statik dəyişənləri ilkinləşdirir.
-  - **İlkinləşdirmə (Initialization):** Statik blokları və statik dəyişənləri icra edir.
+    - **Yükləmə (Loading):** `.class` fayllarını diskdən, şəbəkədən və ya digər mənbələrdən yaddaşa yükləyir.
+    - **Bağlama (Linking):** Sinifin düzgünlüyünü yoxlayır (Bytecode Verifier), yaddaşı ayırır və statik dəyişənləri
+      ilkinləşdirir.
+    - **İlkinləşdirmə (Initialization):** Statik blokları və statik dəyişənləri icra edir.
 
 - **ClassLoader-ın İşləmə Mexanizmi:**
-  - **Delegation Model (Vəkalət Modeli):**
-    - `ClassLoader` sinifləri yükləməzdən əvvəl yuxarı səviyyəli (parent) ClassLoader-a sorğu göndərir.
-    - Əgər `parent ClassLoader` sinifi tapa bilməzsə, özü yükləməyə cəhd edir.
-    - Bu model sinif təkrarlanmasını (class duplication) və təhlükəsizlik problemlərini azaldır.
-  - **ClassLoader Növləri:**
-    - **Bootstrap ClassLoader:** Java-nın əsas siniflərini (rt.jar-dakı siniflər, məsələn, java.lang.*) yükləyir. C/C++ ilə yazılmışdır.
-    - **Extension ClassLoader:** JRE-nin genişləndirilmə siniflərini (ext qovluğundakı .jar faylları) yükləyir.
-    - **System/Application ClassLoader:** Tətbiqin classpath-dəki sinifləri və resursları yükləyir.
-  - **Təhlükəsizlik:**
-    - `ClassLoader` siniflərin təhlükəsizliyini yoxlayır (məsələn, zərərli kodun yüklənməsinin qarşısını alır).
-    - `Namespace` mexanizmi ilə sinif təkrarlanmasını önləyir.
-   
+    - **Delegation Model (Vəkalət Modeli):**
+        - `ClassLoader` sinifləri yükləməzdən əvvəl yuxarı səviyyəli (parent) ClassLoader-a sorğu göndərir.
+        - Əgər `parent ClassLoader` sinifi tapa bilməzsə, özü yükləməyə cəhd edir.
+        - Bu model sinif təkrarlanmasını (class duplication) və təhlükəsizlik problemlərini azaldır.
+    - **ClassLoader Növləri:**
+        - **Bootstrap ClassLoader:** Java-nın əsas siniflərini (rt.jar-dakı siniflər, məsələn, java.lang.*) yükləyir.
+          C/C++ ilə yazılmışdır.
+        - **Extension ClassLoader:** JRE-nin genişləndirilmə siniflərini (ext qovluğundakı .jar faylları) yükləyir.
+        - **System/Application ClassLoader:** Tətbiqin classpath-dəki sinifləri və resursları yükləyir.
+    - **Təhlükəsizlik:**
+        - `ClassLoader` siniflərin təhlükəsizliyini yoxlayır (məsələn, zərərli kodun yüklənməsinin qarşısını alır).
+        - `Namespace` mexanizmi ilə sinif təkrarlanmasını önləyir.
+
 **Kod Nümunəsi:**
 
 ```java
@@ -298,7 +349,9 @@ public class CustomClassLoader extends ClassLoader {
 }
 ```
 
-**Nəzəri İzahat:** ClassLoader Java-nın dinamik sinif yükləmə qabiliyyətini təmin edir. Vəkalət modeli təhlükəsizliyi və səmərəliliyi artırır, çünki siniflər yalnız bir dəfə yüklənir. Xüsusi ClassLoader-lar isə plagin sistemləri və ya dinamik yükləmə tələb edən tətbiqlərdə istifadə olunur (məsələn, Java EE serverləri).
+**Nəzəri İzahat:** ClassLoader Java-nın dinamik sinif yükləmə qabiliyyətini təmin edir. Vəkalət modeli təhlükəsizliyi və
+səmərəliliyi artırır, çünki siniflər yalnız bir dəfə yüklənir. Xüsusi ClassLoader-lar isə plagin sistemləri və ya
+dinamik yükləmə tələb edən tətbiqlərdə istifadə olunur (məsələn, Java EE serverləri).
 
 ---
 
@@ -306,26 +359,33 @@ public class CustomClassLoader extends ClassLoader {
 
 **Cavab:**
 
-Java-da yaddaş idarəetməsi avtomatik olaraq `Garbage Collector (GC)` və JVM-in yaddaş strukturları (`Heap və Stack`) vasitəsilə həyata keçirilir. Bu, geliştiricilərin əl ilə yaddaş ayırma və azad etmə yükünü azaldır, yaddaş sızması (memory leak) və digər səhvləri minimuma endirir.
+Java-da yaddaş idarəetməsi avtomatik olaraq `Garbage Collector (GC)` və JVM-in yaddaş strukturları (`Heap və Stack`)
+vasitəsilə həyata keçirilir. Bu, geliştiricilərin əl ilə yaddaş ayırma və azad etmə yükünü azaldır, yaddaş sızması (
+memory leak) və digər səhvləri minimuma endirir.
 
 **Yaddaş İdarəetməsinin Əsas Komponentləri:**
 
 - **Yaddaş Bölgələri:**
-  - **`Heap`:** Obyektlər və onların instans dəyişənləri heap yaddaşında saxlanılır. Heap, Garbage Collector tərəfindən idarə olunur.
-  - **`Stack`:** Metod çağırışları, lokal dəyişənlər və istinadlar (references) stack yaddaşında saxlanılır. Stack avtomatik idarə olunur (LIFO - Last In, First Out).
-  - **`Metaspace`:** Sinif metadata (sinif strukturunun təsviri) saxlanılır (Java 8-dən sonra PermGen-in yerini almışdır).
+    - **`Heap`:** Obyektlər və onların instans dəyişənləri heap yaddaşında saxlanılır. Heap, Garbage Collector
+      tərəfindən idarə olunur.
+    - **`Stack`:** Metod çağırışları, lokal dəyişənlər və istinadlar (references) stack yaddaşında saxlanılır. Stack
+      avtomatik idarə olunur (LIFO - Last In, First Out).
+    - **`Metaspace`:** Sinif metadata (sinif strukturunun təsviri) saxlanılır (Java 8-dən sonra PermGen-in yerini
+      almışdır).
 - **Garbage Collection:**
-  - GC istifadə olunmayan (unreachable) obyektləri heap-dən təmizləyir.
-  - Mark-and-Sweep: Obyektləri işarələyir və istifadə olunmayanları silir.
-  - Generational GC: Heap gənc (Young Generation) və köhnə (Old Generation) nəsillərə bölünür. Gənc nəsildə tez-tez təmizləmə aparılır.
+    - GC istifadə olunmayan (unreachable) obyektləri heap-dən təmizləyir.
+    - Mark-and-Sweep: Obyektləri işarələyir və istifadə olunmayanları silir.
+    - Generational GC: Heap gənc (Young Generation) və köhnə (Old Generation) nəsillərə bölünür. Gənc nəsildə tez-tez
+      təmizləmə aparılır.
 - **Yaddaş Optimallaşdırması:**
-  - JIT Compiler: Bytecode-u optimallaşdırılmış maşın koduna çevirir.
-  - Memory Pools: Eden Space, Survivor Space, Tenured Space kimi bölmələr heap-i effektiv idarə edir.
-  - GC Alqoritmləri: Serial, Parallel, G1, ZGC kimi alqoritmlər performans və gecikmə tələblərinə uyğun seçilir.
+    - JIT Compiler: Bytecode-u optimallaşdırılmış maşın koduna çevirir.
+    - Memory Pools: Eden Space, Survivor Space, Tenured Space kimi bölmələr heap-i effektiv idarə edir.
+    - GC Alqoritmləri: Serial, Parallel, G1, ZGC kimi alqoritmlər performans və gecikmə tələblərinə uyğun seçilir.
 - **Əsas Xüsusiyyətlər:**
-  - **Avtomatik Yaddaş Azad Etmə:** Geliştiricilər yaddaşı əl ilə azad etmir, GC bunu avtomatik edir.
-  - **Təhlükəsizlik:** Yanlış yaddaş idarəetməsi nəticəsində yaranan səhvlər (məsələn, dangling pointers) qarşısı alınır.
-  - **Tunable GC:** Geliştiricilər JVM parametrləri (məsələn, `-Xmx`, `-Xms`) ilə GC-ni optimallaşdıra bilər.
+    - **Avtomatik Yaddaş Azad Etmə:** Geliştiricilər yaddaşı əl ilə azad etmir, GC bunu avtomatik edir.
+    - **Təhlükəsizlik:** Yanlış yaddaş idarəetməsi nəticəsində yaranan səhvlər (məsələn, dangling pointers) qarşısı
+      alınır.
+    - **Tunable GC:** Geliştiricilər JVM parametrləri (məsələn, `-Xmx`, `-Xms`) ilə GC-ni optimallaşdıra bilər.
 
 **Kod Nümunəsi:**
 
@@ -347,7 +407,9 @@ public class MemoryManagementExample {
 }
 ```
 
-**Nəzəri İzahat:** Java-da yaddaş idarəetməsi avtomatik və təhlükəsizdir, lakin performans kritik tətbiqlərdə GC alqoritmini və heap ölçüsünü düzgün konfiqurasiya etmək vacibdir. Heap və Stack-in fərqli funksiyaları yaddaşın səmərəli istifadəsini təmin edir.
+**Nəzəri İzahat:** Java-da yaddaş idarəetməsi avtomatik və təhlükəsizdir, lakin performans kritik tətbiqlərdə GC
+alqoritmini və heap ölçüsünü düzgün konfiqurasiya etmək vacibdir. Heap və Stack-in fərqli funksiyaları yaddaşın səmərəli
+istifadəsini təmin edir.
 
 ---
 
@@ -355,37 +417,38 @@ public class MemoryManagementExample {
 
 **Cavab:**
 
-Java-da yaddaş iki əsas bölgəyə bölünür: `Heap` və `Stack`. Bu bölgələr fərqli məqsədlər üçün istifadə olunur və fərqli idarəetmə mexanizmlərinə malikdir.
+Java-da yaddaş iki əsas bölgəyə bölünür: `Heap` və `Stack`. Bu bölgələr fərqli məqsədlər üçün istifadə olunur və fərqli
+idarəetmə mexanizmlərinə malikdir.
 
 - **Heap Yaddaş:**
-  - **Təyinat:** Obyektlər, instans dəyişənləri və sinif üzvləri heap-də saxlanılır.
-  - **İdarəetmə:** Garbage Collector tərəfindən avtomatik idarə olunur.
-  - **Ömür:** Obyektlər istinad edildiyi müddətcə yaşayır, istinadlar itəndə GC tərəfindən təmizlənir.
-  - **Struktur:** Heap, Young Generation (Eden, Survivor) və Old Generation kimi bölmələrə ayrılır.
-  - **Xüsusiyyətlər:**
-    - Böyük həcmdə yaddaş saxlaya bilər.
-    - Dinamik olaraq böyüyür (-Xmx parametri ilə məhdudlaşdırılır).
-    - Çox axınlı mühitlərdə paylaşılan yaddaştır.
+    - **Təyinat:** Obyektlər, instans dəyişənləri və sinif üzvləri heap-də saxlanılır.
+    - **İdarəetmə:** Garbage Collector tərəfindən avtomatik idarə olunur.
+    - **Ömür:** Obyektlər istinad edildiyi müddətcə yaşayır, istinadlar itəndə GC tərəfindən təmizlənir.
+    - **Struktur:** Heap, Young Generation (Eden, Survivor) və Old Generation kimi bölmələrə ayrılır.
+    - **Xüsusiyyətlər:**
+        - Böyük həcmdə yaddaş saxlaya bilər.
+        - Dinamik olaraq böyüyür (-Xmx parametri ilə məhdudlaşdırılır).
+        - Çox axınlı mühitlərdə paylaşılan yaddaştır.
 
 - **Stack Yaddaş:**
-  - **Təyinat:** Metod çağırışları, lokal dəyişənlər və istinadlar (references) stack-də saxlanılır.
-  - **İdarəetmə:** LIFO (Last In, First Out) prinsipi ilə avtomatik idarə olunur.
-  - **Ömür:** Metod başa çatdıqda stack-dəki müvafiq çərçivə (stack frame) avtomatik silinir.
-  - **Struktur:** Hər axın (thread) öz stack-ınə malikdir, bu da izolyasiyanı təmin edir.
-  - **Xüsusiyyətlər:**
-    - Daha kiçik ölçüdədir və sabitdir.
-    - Çox sürətli işləyir, çünki sadə LIFO strukturuna malikdir.
-    - Hər axın üçün ayrı stack yaddaşı ayrılır.
+    - **Təyinat:** Metod çağırışları, lokal dəyişənlər və istinadlar (references) stack-də saxlanılır.
+    - **İdarəetmə:** LIFO (Last In, First Out) prinsipi ilə avtomatik idarə olunur.
+    - **Ömür:** Metod başa çatdıqda stack-dəki müvafiq çərçivə (stack frame) avtomatik silinir.
+    - **Struktur:** Hər axın (thread) öz stack-ınə malikdir, bu da izolyasiyanı təmin edir.
+    - **Xüsusiyyətlər:**
+        - Daha kiçik ölçüdədir və sabitdir.
+        - Çox sürətli işləyir, çünki sadə LIFO strukturuna malikdir.
+        - Hər axın üçün ayrı stack yaddaşı ayrılır.
 
 **Əsas Fərqlər:**
 
-| Xüsusiyyət            | Heap                              | Stack                               |
-|-----------------------|-----------------------------------|-------------------------------------|
-| **Saxlanılan Məlumat** | Obyektlər, instans dəyişənləri   | Lokal dəyişənlər, metod çağırışları |
-| **İdarəetmə**         | Garbage Collector                | Avtomatik (LIFO)                     |
-| **Ömür**              | İstinad olunduğu müddətcə        | Metodun ömrü ilə məhdudlaşır         |
-| **Paylaşım**          | Bütün axınlar tərəfindən paylaşılır | Axına xasdır                      |
-| **Performans**        | Daha yavaş (GC səbəbindən)       | Daha sürətli                         |
+| Xüsusiyyət             | Heap                                | Stack                               |
+|------------------------|-------------------------------------|-------------------------------------|
+| **Saxlanılan Məlumat** | Obyektlər, instans dəyişənləri      | Lokal dəyişənlər, metod çağırışları |
+| **İdarəetmə**          | Garbage Collector                   | Avtomatik (LIFO)                    |
+| **Ömür**               | İstinad olunduğu müddətcə           | Metodun ömrü ilə məhdudlaşır        |
+| **Paylaşım**           | Bütün axınlar tərəfindən paylaşılır | Axına xasdır                        |
+| **Performans**         | Daha yavaş (GC səbəbindən)          | Daha sürətli                        |
 
 **Kod Nümunəsi:**
 
@@ -421,7 +484,9 @@ Lokal dəyişən (Stack): 42
 İnstans dəyişəni (Heap): Heap-də saxlanılır
 ```
 
-**Nəzəri İzahat:** `Heap` və `Stack` fərqli məqsədlər üçün optimallaşdırılmışdır. Heap böyük və dinamik obyektlər üçün, Stack isə sürətli və qısa ömürlü metod çağırışları üçün istifadə olunur. Garbage Collection heap-i idarə edərkən, Stack avtomatik təmizlənir, bu da Java-nın yaddaş idarəetməsini səmərəli edir.
+**Nəzəri İzahat:** `Heap` və `Stack` fərqli məqsədlər üçün optimallaşdırılmışdır. Heap böyük və dinamik obyektlər üçün,
+Stack isə sürətli və qısa ömürlü metod çağırışları üçün istifadə olunur. Garbage Collection heap-i idarə edərkən, Stack
+avtomatik təmizlənir, bu da Java-nın yaddaş idarəetməsini səmərəli edir.
 
 ---
 
@@ -429,18 +494,20 @@ Lokal dəyişən (Stack): 42
 
 **Cavab:**
 
-Package Java-da sinifləri, interfeysləri və digər resursları mütəşəkkil şəkildə qruplaşdırmaq üçün istifadə olunan bir mexanizmdir. Paketlər, böyük layihələrdə kodun idarə olunmasını asanlaşdırır və ad çakışmalarının qarşısını alır.
+Package Java-da sinifləri, interfeysləri və digər resursları mütəşəkkil şəkildə qruplaşdırmaq üçün istifadə olunan bir
+mexanizmdir. Paketlər, böyük layihələrdə kodun idarə olunmasını asanlaşdırır və ad çakışmalarının qarşısını alır.
 
 - **Nə üçün istifadə olunur?**
-  - **Təşkilatlanma:** Sinifləri məntiqi qruplara ayırır (məsələn, `java.util`, `java.io`).
-  - **Ad çakışmalarının qarşısını almaq:** Eyni adlı siniflər fərqli paketlərdə ola bilər.
-  - **Giriş nəzarəti:** Paketlər giriş tənzimləyiciləri ilə siniflərə və ya metodlara girişi məhdudlaşdıra bilər.
-  - **Yenidən istifadə:** Paketlər modullaşdırmanı təmin edir, bu da kodun təkrar istifadəsini asanlaşdırır.
+    - **Təşkilatlanma:** Sinifləri məntiqi qruplara ayırır (məsələn, `java.util`, `java.io`).
+    - **Ad çakışmalarının qarşısını almaq:** Eyni adlı siniflər fərqli paketlərdə ola bilər.
+    - **Giriş nəzarəti:** Paketlər giriş tənzimləyiciləri ilə siniflərə və ya metodlara girişi məhdudlaşdıra bilər.
+    - **Yenidən istifadə:** Paketlər modullaşdırmanı təmin edir, bu da kodun təkrar istifadəsini asanlaşdırır.
 
 **Kod Nümunəsi:**
 
 ```java
 // Paket yaratmaq və istifadə etmək
+
 package com.example.myapp; // Paket adı
 
 public class MyClass {
@@ -451,8 +518,8 @@ public class MyClass {
 ```
 
 - **Şərh:**
-  - `package com.example.myapp;` - Bu sətir sinifi com.example.myapp paketində yerləşdirir.
-  - Paket adları adətən tərs domen adlandırma qaydasından istifadə edir (məsələn, `com.şirkətadı.layihəadı`).
+    - `package com.example.myapp;` - Bu sətir sinifi com.example.myapp paketində yerləşdirir.
+    - Paket adları adətən tərs domen adlandırma qaydasından istifadə edir (məsələn, `com.şirkətadı.layihəadı`).
 
 ---
 
@@ -460,17 +527,20 @@ public class MyClass {
 
 **Cavab:**
 
-mport açar sözü Java-da başqa paketlərdə olan sinifləri, interfeysləri və ya statik üzvləri cari faylda istifadə etmək üçün gətirməyə imkan verir. Bu, tam kvalifikasiya olunmuş adlar (fully qualified names) yazmaq əvəzinə kodun qısa və oxunaqlı olmasına kömək edir.
+mport açar sözü Java-da başqa paketlərdə olan sinifləri, interfeysləri və ya statik üzvləri cari faylda istifadə etmək
+üçün gətirməyə imkan verir. Bu, tam kvalifikasiya olunmuş adlar (fully qualified names) yazmaq əvəzinə kodun qısa və
+oxunaqlı olmasına kömək edir.
 
 - **Nə üçün lazımdır?**
-  - **Kodun qısaldılması:** java.util.ArrayList kimi uzun adları təkrar yazmağa ehtiyac qalmır.
-  - **Oxunaqlılıq:** Kod daha təmiz və anlaşıqlı olur.
-  - **Modulluğun dəstəklənməsi:** Fərqli paketlərdən resursları asanlıqla istifadə etməyə imkan verir.
+    - **Kodun qısaldılması:** java.util.ArrayList kimi uzun adları təkrar yazmağa ehtiyac qalmır.
+    - **Oxunaqlılıq:** Kod daha təmiz və anlaşıqlı olur.
+    - **Modulluğun dəstəklənməsi:** Fərqli paketlərdən resursları asanlıqla istifadə etməyə imkan verir.
 
 **Kod Nümunəsi**
 
 ```java
 // import açar sözünün istifadəsi
+
 import java.util.ArrayList; // ArrayList sinifini idxal edir
 import java.util.List; // List interfeysini idxal edir
 
@@ -484,20 +554,21 @@ public class ImportExample {
 ```
 
 - **Şərh:**
-  - `import java.util.ArrayList;` - ArrayList sinifini idxal edir ki, tam ad (java.util.ArrayList) yazılmasın.
-  - Əgər `import` istifadə edilməsə, hər dəfə tam ad yazılmalı olacaq.
+    - `import java.util.ArrayList;` - ArrayList sinifini idxal edir ki, tam ad (java.util.ArrayList) yazılmasın.
+    - Əgər `import` istifadə edilməsə, hər dəfə tam ad yazılmalı olacaq.
 
 ---
 
 13. Java-da **access modifiers** (giriş tənzimləyiciləri) hansılardır?
 
-**Access modifiers** Java-da siniflərin, metodların, dəyişənlərin və konstruktorların giriş səviyyəsini təyin etmək üçün istifadə olunur. Onlar kapsulyasiyanı təmin edir və məlumatların təhlükəsizliyini artırır.
+**Access modifiers** Java-da siniflərin, metodların, dəyişənlərin və konstruktorların giriş səviyyəsini təyin etmək üçün
+istifadə olunur. Onlar kapsulyasiyanı təmin edir və məlumatların təhlükəsizliyini artırır.
 
 - **Giriş tənzimləyiciləri:**
-  - **`public`:** Üzv hər yerdən əlçatan olur.
-  - **`protected`:** Üzv eyni paketdə və ya miras alan siniflərdə əlçatandır.
-  - **`default`:** (paket-səviyyəli, heç bir tənzimləyici göstərilməzsə): Üzv yalnız eyni paketdə əlçatandır.
-  - **`private`:** Üzv yalnız eyni sinif daxilində əlçatandır.
+    - **`public`:** Üzv hər yerdən əlçatan olur.
+    - **`protected`:** Üzv eyni paketdə və ya miras alan siniflərdə əlçatandır.
+    - **`default`:** (paket-səviyyəli, heç bir tənzimləyici göstərilməzsə): Üzv yalnız eyni paketdə əlçatandır.
+    - **`private`:** Üzv yalnız eyni sinif daxilində əlçatandır.
 
 **Kod Nümunəsi**
 
@@ -528,21 +599,22 @@ class Test {
 ```
 
 - **Şərh:**
-  - `publicVar` hər yerdən əlçatandır.
-  - `protectedVar` eyni paketdə və ya miras alan siniflərdə istifadə oluna bilər.
-  - `defaultVar` yalnız eyni paketdə əlçatandır.
-  - `privateVar` yalnız AccessModifiers sinifində əlçatandır.
+    - `publicVar` hər yerdən əlçatandır.
+    - `protectedVar` eyni paketdə və ya miras alan siniflərdə istifadə oluna bilər.
+    - `defaultVar` yalnız eyni paketdə əlçatandır.
+    - `privateVar` yalnız AccessModifiers sinifində əlçatandır.
 
 ---
 
 **14. **static** açar sözü nə üçün istifadə olunur?**
 
-**`static`** açar sözü sinifə aid olan üzvləri (dəyişənlər, metodlar, bloklar və ya daxili siniflər) təyin etmək üçün istifadə olunur. Statik üzvlər sinifin nümunəsi (obyekti) yaradılmadan istifadə edilə bilər.
+**`static`** açar sözü sinifə aid olan üzvləri (dəyişənlər, metodlar, bloklar və ya daxili siniflər) təyin etmək üçün
+istifadə olunur. Statik üzvlər sinifin nümunəsi (obyekti) yaradılmadan istifadə edilə bilər.
 
 - **Nə üçün istifadə olunur?**
-  - **Sinif səviyyəsində resurslar:** Statik üzvlər bütün obyektlər tərəfindən paylaşılır.
-  - **Yaddaşın səmərəli istifadəsi:** Statik dəyişənlər yalnız bir dəfə yaddaşda saxlanılır.
-  - **Utility metodlar:** Sinifə aid ümumi funksiyalar üçün istifadə olunur (məsələn, Math.sqrt()).
+    - **Sinif səviyyəsində resurslar:** Statik üzvlər bütün obyektlər tərəfindən paylaşılır.
+    - **Yaddaşın səmərəli istifadəsi:** Statik dəyişənlər yalnız bir dəfə yaddaşda saxlanılır.
+    - **Utility metodlar:** Sinifə aid ümumi funksiyalar üçün istifadə olunur (məsələn, Math.sqrt()).
 
 Kod Nümunəsi
 
@@ -567,20 +639,21 @@ public class StaticExample {
 ```
 
 - **Şərh:**
-  - `static` int count bütün obyektlər üçün ortaqdır.
-  - `static void displayCount()` sinif adı ilə çağırılır, obyekt yaratmağa ehtiyac yoxdur.
-  - Statik metodlar yalnız statik dəyişənlərə və ya metodlara daxil ola bilər.
+    - `static` int count bütün obyektlər üçün ortaqdır.
+    - `static void displayCount()` sinif adı ilə çağırılır, obyekt yaratmağa ehtiyac yoxdur.
+    - Statik metodlar yalnız statik dəyişənlərə və ya metodlara daxil ola bilər.
 
 ---
 
 15. **this** açar sözünün məqsədi nədir?
 
-**`this`** açar sözü cari obyektə istinad etmək üçün istifadə olunur. O, sinifin dəyişənlərini və metodlarını eyni adlı parametr və ya yerli dəyişənlərdən fərqləndirmək üçün faydalıdır.
+**`this`** açar sözü cari obyektə istinad etmək üçün istifadə olunur. O, sinifin dəyişənlərini və metodlarını eyni adlı
+parametr və ya yerli dəyişənlərdən fərqləndirmək üçün faydalıdır.
 
 - **Məqsədləri:**
-  - Dəyişən çakışmalarını həll etmək: Sinif dəyişəni ilə parametr arasında fərq qoymaq.
-  - Konstruktor çağırışı: Bir konstruktor daxilində digər konstruktoru çağırmaq.
-  - Cari obyektə istinad: Metodlara və ya obyektlərə cari obyekti ötürmək.
+    - Dəyişən çakışmalarını həll etmək: Sinif dəyişəni ilə parametr arasında fərq qoymaq.
+    - Konstruktor çağırışı: Bir konstruktor daxilində digər konstruktoru çağırmaq.
+    - Cari obyektə istinad: Metodlara və ya obyektlərə cari obyekti ötürmək.
 
 Kod Nümunəsi
 
@@ -604,19 +677,20 @@ public class ThisExample {
 ```
 
 - **Şərh:**
-  - `this.number = number;` - this sinifin number dəyişəninə istinad edir, parametrə deyil.
-  - `this` istifadə edilməsə, parametr sinif dəyişənini əvəz edər və yanlış nəticə alınar.
+    - `this.number = number;` - this sinifin number dəyişəninə istinad edir, parametrə deyil.
+    - `this` istifadə edilməsə, parametr sinif dəyişənini əvəz edər və yanlış nəticə alınar.
 
 ---
 
 **16. **super** açar sözü nə üçün istifadə olunur?**
 
-**`super`** açar sözü miras alınan sinifin (superclass) üzvlərinə (dəyişənlər, metodlar və konstruktorlar) daxil olmaq üçün istifadə olunur.
+**`super`** açar sözü miras alınan sinifin (superclass) üzvlərinə (dəyişənlər, metodlar və konstruktorlar) daxil olmaq
+üçün istifadə olunur.
 
 - **Məqsədləri:**
-  - **Superclass konstruktorunu çağırmaq:** Alt sinifdən ana sinifin konstruktoruna müraciət.
-  - **Superclass metodlarına daxil olmaq:** Superclass-da müəyyən edilmiş metodları çağırmaq.
-  - **Superclass dəyişənlərinə daxil olmaq:** Eyni adlı dəyişənləri fərqləndirmək.
+    - **Superclass konstruktorunu çağırmaq:** Alt sinifdən ana sinifin konstruktoruna müraciət.
+    - **Superclass metodlarına daxil olmaq:** Superclass-da müəyyən edilmiş metodları çağırmaq.
+    - **Superclass dəyişənlərinə daxil olmaq:** Eyni adlı dəyişənləri fərqləndirmək.
 
 Kod Nümunəsi
 
@@ -657,23 +731,24 @@ public class SuperExample {
 ```
 
 - **Şərh:**
-  - `super()` - Ana sinifin konstruktorunu çağırır.
-  - `super.name` - Ana sinifin name dəyişəninə istinad edir.
-  - `super.sound()` - Ana sinifin sound metodunu çağırır.
+    - `super()` - Ana sinifin konstruktorunu çağırır.
+    - `super.name` - Ana sinifin name dəyişəninə istinad edir.
+    - `super.sound()` - Ana sinifin sound metodunu çağırır.
 
 ---
 
 **19. Java-da **boxing** və **unboxing** nədir?**
 
-**Boxing** primitiv verilənlər tipini (məsələn, `int`, `double`) onların müvafiq `wrapper` sinifinə (`Integer`, `Double`) çevirmə prosesidir. Unboxing isə əksinə, wrapper sinifindən primitiv tipə çevirmədir.
+**Boxing** primitiv verilənlər tipini (məsələn, `int`, `double`) onların müvafiq `wrapper` sinifinə (`Integer`,
+`Double`) çevirmə prosesidir. Unboxing isə əksinə, wrapper sinifindən primitiv tipə çevirmədir.
 
 - **Boxing:**
-  - Primitiv tip wrapper sinifinə "qablaşdırılır".
-  - Məsələn, `int` → `Integer`.
+    - Primitiv tip wrapper sinifinə "qablaşdırılır".
+    - Məsələn, `int` → `Integer`.
 
 - **Unboxing:**
-  - Wrapper sinifi primitiv tipə "açılır".
-  - Məsələn, `Integer` → `int`.
+    - Wrapper sinifi primitiv tipə "açılır".
+    - Məsələn, `Integer` → `int`.
 
 Kod Nümunəsi
 
@@ -694,22 +769,23 @@ public class BoxingUnboxing {
 ```
 
 - **Şərh:**
-  - `Integer wrapperInt = primitiveInt;` - int dəyəri Integer obyektinə çevrilir (boxing).
-  - `int primitiveInt2 = wrapperInt2;` - Integer obyektindən int dəyəri alınır (unboxing).
+    - `Integer wrapperInt = primitiveInt;` - int dəyəri Integer obyektinə çevrilir (boxing).
+    - `int primitiveInt2 = wrapperInt2;` - Integer obyektindən int dəyəri alınır (unboxing).
 
 ---
 
 **20. **autoboxing** və **auto-unboxing** necə işləyir?**
 
-`Autoboxing` və `auto-unboxing` Java-da primitiv tiplər və onların wrapper sinifləri arasında avtomatik çevrilmə prosesləridir. Bu mexanizmlər Java 5-də təqdim edilib və kod yazımını asanlaşdırır.
+`Autoboxing` və `auto-unboxing` Java-da primitiv tiplər və onların wrapper sinifləri arasında avtomatik çevrilmə
+prosesləridir. Bu mexanizmlər Java 5-də təqdim edilib və kod yazımını asanlaşdırır.
 
 - **Autoboxing:**
-  - Primitiv tipin avtomatik olaraq wrapper sinifinə çevrilməsi.
-  - Məsələn, `int` dəyəri Integer obyektinə çevrilir.
+    - Primitiv tipin avtomatik olaraq wrapper sinifinə çevrilməsi.
+    - Məsələn, `int` dəyəri Integer obyektinə çevrilir.
 
 - **Auto-unboxing:**
-  - Wrapper sinifinin avtomatik olaraq primitiv tipə çevrilməsi.
-  - Məsələn, `Integer` obyektindən int dəyəri alınır.
+    - Wrapper sinifinin avtomatik olaraq primitiv tipə çevrilməsi.
+    - Məsələn, `Integer` obyektindən int dəyəri alınır.
 
 **Kod Nümunəsi**
 
@@ -732,9 +808,9 @@ public class AutoBoxingExample {
 ```
 
 - **Şərh:**
-  - `list.add(42); - 42 (int)` avtomatik olaraq Integer obyektinə çevrilir (autoboxing).
-  - `int sum = wrapperInt + 50;` - wrapperInt (Integer) avtomatik olaraq int tipinə çevrilir (auto-unboxing).
-  - Bu proseslər Java kompilyatoru tərəfindən avtomatik idarə olunur.
+    - `list.add(42); - 42 (int)` avtomatik olaraq Integer obyektinə çevrilir (autoboxing).
+    - `int sum = wrapperInt + 50;` - wrapperInt (Integer) avtomatik olaraq int tipinə çevrilir (auto-unboxing).
+    - Bu proseslər Java kompilyatoru tərəfindən avtomatik idarə olunur.
 
 ---
 
@@ -744,11 +820,15 @@ public class AutoBoxingExample {
 
 **Cavab:**
 
-`Inheritance` (Mirasalma) Java-da bir sinifin (alt sinif və ya subclass) başqa bir sinifin (superclass) xüsusiyyətlərini (dəyişənlər, metodlar) və davranışlarını miras alması mexanizmidir. Bu, kodun təkrar istifadəsini (`reusability`) təmin edir və siniflər arasında "`is-a`" (bir növdür) əlaqəsi yaradır.
+`Inheritance` (Mirasalma) Java-da bir sinifin (alt sinif və ya subclass) başqa bir sinifin (superclass)
+xüsusiyyətlərini (dəyişənlər, metodlar) və davranışlarını miras alması mexanizmidir. Bu, kodun təkrar istifadəsini (
+`reusability`) təmin edir və siniflər arasında "`is-a`" (bir növdür) əlaqəsi yaradır.
 
 **Real Dünya Nümunəsi:**
 
-Bir avtomobil şirkətində ümumi Vehicle (Nəqliyyat vasitəsi) sinifi ola bilər. Car (Avtomobil) və Truck (Yük maşını) sinifləri bu sinifdən miras alaraq ümumi xüsusiyyətləri (məsələn, təkər sayı, mühərrik) paylaşır, lakin özünəməxsus xüsusiyyətləri (məsələn, yük daşıma qabiliyyəti) əlavə edir.
+Bir avtomobil şirkətində ümumi Vehicle (Nəqliyyat vasitəsi) sinifi ola bilər. Car (Avtomobil) və Truck (Yük maşını)
+sinifləri bu sinifdən miras alaraq ümumi xüsusiyyətləri (məsələn, təkər sayı, mühərrik) paylaşır, lakin özünəməxsus
+xüsusiyyətləri (məsələn, yük daşıma qabiliyyəti) əlavə edir.
 
 **Kod Nümunəsi:**
 
@@ -792,27 +872,32 @@ public class InheritanceExample {
 ```
 
 - **Şərh:**
-  - `extends` açar sözü ilə Car sinifi Vehicle sinifindən miras alır.
-  - `super(wheels, brand)`; superclass-ın konstruktorunu çağırır.
-  - Car sinifi özünəməxsus doors dəyişəni və `displayInfo()` metodunu əlavə edir, lakin `drive()` metodunu miras alır.
-  
+    - `extends` açar sözü ilə Car sinifi Vehicle sinifindən miras alır.
+    - `super(wheels, brand)`; superclass-ın konstruktorunu çağırır.
+    - Car sinifi özünəməxsus doors dəyişəni və `displayInfo()` metodunu əlavə edir, lakin `drive()` metodunu miras alır.
+
 ---
 
 **22. Java-da **multiple inheritance** (çoxlu mirasalma) niyə dəstəklənmir?**
 
-**Multiple inheritance (Çoxlu mirasalma)** bir sinifin birdən çox sinifdən miras almasıdır. Java-da bu mexanizm siniflər üçün dəstəklənmir, çünki diamond problem (almas problemi) kimi tanınan qarışıqlıq yarana bilər. Bunun əvəzinə Java interface (interfeys) vasitəsilə çoxlu mirasalmaya bənzər funksionallıq təmin edir.
+**Multiple inheritance (Çoxlu mirasalma)** bir sinifin birdən çox sinifdən miras almasıdır. Java-da bu mexanizm siniflər
+üçün dəstəklənmir, çünki diamond problem (almas problemi) kimi tanınan qarışıqlıq yarana bilər. Bunun əvəzinə Java
+interface (interfeys) vasitəsilə çoxlu mirasalmaya bənzər funksionallıq təmin edir.
 
 - **Diamond Problem Nümunəsi:**
-  - Əgər Class C həm Class A, həm də Class B-dən miras alırsa və hər iki sinifdə eyni adlı metod varsa, Class C hansı metodu miras alacağını bilməyəcək. Bu, kodda qarışıqlığa səbəb olur.
+    - Əgər Class C həm Class A, həm də Class B-dən miras alırsa və hər iki sinifdə eyni adlı metod varsa, Class C hansı
+      metodu miras alacağını bilməyəcək. Bu, kodda qarışıqlığa səbəb olur.
 
 - **Niyə dəstəklənmir?**
-  - **Qarışıqlığın qarşısını almaq:** Eyni adlı metodların hansının istifadə olunacağı bəlli olmayacaq.
-  - **Sadəlik:** Java dizaynı sadə və başa düşülən saxlamaq üçün çoxlu mirasalmadan imtina edib.
-  - **Alternativ həll:** Interface və default methods ilə çoxlu mirasalmanın üstünlükləri təmin edilir.
+    - **Qarışıqlığın qarşısını almaq:** Eyni adlı metodların hansının istifadə olunacağı bəlli olmayacaq.
+    - **Sadəlik:** Java dizaynı sadə və başa düşülən saxlamaq üçün çoxlu mirasalmadan imtina edib.
+    - **Alternativ həll:** Interface və default methods ilə çoxlu mirasalmanın üstünlükləri təmin edilir.
 
 - **Real Dünya Nümunəsi:**
-  - Bir şirkətdə bir işçi həm Manager, həm də Developer siniflərindən miras almaq istəsə, hər iki sinifdə calculateSalary() metodu varsa, hansı metodun istifadə olunacağı bəlli olmaz. Java bu problemi interfeyslərlə həll edir.
- 
+    - Bir şirkətdə bir işçi həm Manager, həm də Developer siniflərindən miras almaq istəsə, hər iki sinifdə
+      calculateSalary() metodu varsa, hansı metodun istifadə olunacağı bəlli olmaz. Java bu problemi interfeyslərlə həll
+      edir.
+
 **Kod Nümunəsi (Interfeys ilə)**
 
 ```java
@@ -845,21 +930,26 @@ public class MultipleInheritanceExample {
 ```
 
 - **Şərh:**
-  - Java siniflər üçün multiple inheritance dəstəkləmir, lakin `interface` ilə bu problemi həll edir.
-  - Manager.`super.work()` və `Developer.super.work()` ilə hansı metodun çağırılacağı dəqiqləşdirilir.
+    - Java siniflər üçün multiple inheritance dəstəkləmir, lakin `interface` ilə bu problemi həll edir.
+    - Manager.`super.work()` və `Developer.super.work()` ilə hansı metodun çağırılacağı dəqiqləşdirilir.
 
 ---
 
 **23. **Polymorphism** (Çoxformalıq) nədir və növləri hansılardır?**
 
-**`Polymorphism`** (Çoxformalıq) bir obyektin fərqli formalarda davranması qabiliyyətidir. Java-da bu, bir sinifin metodlarının fərqli siniflərdə fərqli şəkildə reallaşdırılması ilə təmin olunur. Polimorfizm "bir interfeys, çoxlu reallaşdırma" prinsipinə əsaslanır.
+**`Polymorphism`** (Çoxformalıq) bir obyektin fərqli formalarda davranması qabiliyyətidir. Java-da bu, bir sinifin
+metodlarının fərqli siniflərdə fərqli şəkildə reallaşdırılması ilə təmin olunur. Polimorfizm "bir interfeys, çoxlu
+reallaşdırma" prinsipinə əsaslanır.
 
 - **Növləri:**
-  - **`Compile-time Polymorphism` (Kompilyasiya zamanı çoxformalıq):** `Method overloading` (metodun yenidən yüklənməsi) və ya `operator overloading` (operator yenidən yüklənməsi, Java-da məhduddur) ilə əldə edilir.
-  - **`Run-time Polymorphism` (İcra zamanı çoxformalıq):** `Method overriding` (metodun yenidən təyin olunması) və inheritance (mirasalma) vasitəsilə reallaşır.
+    - **`Compile-time Polymorphism` (Kompilyasiya zamanı çoxformalıq):** `Method overloading` (metodun yenidən
+      yüklənməsi) və ya `operator overloading` (operator yenidən yüklənməsi, Java-da məhduddur) ilə əldə edilir.
+    - **`Run-time Polymorphism` (İcra zamanı çoxformalıq):** `Method overriding` (metodun yenidən təyin olunması) və
+      inheritance (mirasalma) vasitəsilə reallaşır.
 
 - **Real Dünya Nümunəsi:**
-  - Bir bank sistemində Account sinifi ümumi calculateInterest() metoduna malikdir. SavingsAccount və CurrentAccount sinifləri bu metodu özünəməxsus şəkildə reallaşdırır.
+    - Bir bank sistemində Account sinifi ümumi calculateInterest() metoduna malikdir. SavingsAccount və CurrentAccount
+      sinifləri bu metodu özünəməxsus şəkildə reallaşdırır.
 
 **Kod Nümunəsi**
 
@@ -895,17 +985,19 @@ public class PolymorphismExample {
 ```
 
 - **Şərh:**
-  - `Account acc1 = new SavingsAccount();` - Run-time polymorphism sayəsində obyektin tipi icra zamanı müəyyənləşir.
-  - `@Override` ilə metodlar superclass-da müəyyən edilmiş metodu yenidən təyin edir.
+    - `Account acc1 = new SavingsAccount();` - Run-time polymorphism sayəsində obyektin tipi icra zamanı müəyyənləşir.
+    - `@Override` ilə metodlar superclass-da müəyyən edilmiş metodu yenidən təyin edir.
 
 ---
 
 **24. **Method Overloading** (Metodun yenidən yüklənməsi) nədir?**
 
-**`Method Overloading`** (Metodun yenidən yüklənməsi) eyni sinifdə eyni adlı, lakin fərqli parametrlərə (sayı, tip və ya sırası) malik metodların müəyyən edilməsidir. Bu, `compile-time polymorphism` nümunəsidir.
+**`Method Overloading`** (Metodun yenidən yüklənməsi) eyni sinifdə eyni adlı, lakin fərqli parametrlərə (sayı, tip və ya
+sırası) malik metodların müəyyən edilməsidir. Bu, `compile-time polymorphism` nümunəsidir.
 
 - **Real Dünya Nümunəsi:**
-  - Bir kalkulyator tətbiqində add metodu fərqli sayda və ya tipdə rəqəmləri toplamaq üçün müxtəlif formalarda yazıla bilər (məsələn, iki tam ədəd, üç tam ədəd və ya iki onluq ədəd).
+    - Bir kalkulyator tətbiqində add metodu fərqli sayda və ya tipdə rəqəmləri toplamaq üçün müxtəlif formalarda yazıla
+      bilər (məsələn, iki tam ədəd, üç tam ədəd və ya iki onluq ədəd).
 
 **Kod Nümunəsi**
 
@@ -934,17 +1026,19 @@ public class MethodOverloadingExample {
 ```
 
 - **Şərh:**
-  - `add` metodu üç fərqli formada müəyyən edilib: iki int, üç int və iki double.
-  - Kompilyator metod çağırışında parametrlərin tipinə və sayına əsasən hansı metodun çağırılacağına qərar verir.
+    - `add` metodu üç fərqli formada müəyyən edilib: iki int, üç int və iki double.
+    - Kompilyator metod çağırışında parametrlərin tipinə və sayına əsasən hansı metodun çağırılacağına qərar verir.
 
 ---
 
 **25. **Method Overriding** (Metodun yenidən təyin olunması) nədir?**
 
-**`Method Overriding`** (Metodun yenidən təyin olunması) alt sinifdə (subclass) superclass-da müəyyən edilmiş metodu eyni imza (ad, parametr tipləri, qaytarma tipi) ilə yenidən təyin etməkdir. Bu, `run-time polymorphism` nümunəsidir.
+**`Method Overriding`** (Metodun yenidən təyin olunması) alt sinifdə (subclass) superclass-da müəyyən edilmiş metodu
+eyni imza (ad, parametr tipləri, qaytarma tipi) ilə yenidən təyin etməkdir. Bu, `run-time polymorphism` nümunəsidir.
 
 - **Real Dünya Nümunəsi:**
-  - Bir restoran sistemində Menu sinifi ümumi `prepareDish()` metoduna malikdir. `ItalianMenu` və `MexicanMenu` sinifləri bu metodu özünəməxsus şəkildə (məsələn, pizza və ya takos hazırlamaq) reallaşdırır.
+    - Bir restoran sistemində Menu sinifi ümumi `prepareDish()` metoduna malikdir. `ItalianMenu` və `MexicanMenu`
+      sinifləri bu metodu özünəməxsus şəkildə (məsələn, pizza və ya takos hazırlamaq) reallaşdırır.
 
 **Kod Nümunəsi**
 
@@ -980,17 +1074,20 @@ public class MethodOverridingExample {
 ```
 
 - **Şərh:**
-  - `@Override` annotasiyası metodu yenidən təyin etdiyini göstərir və səhvlərin qarşısını alır.
-  - Metodun icrası obyektin real tipinə əsasən müəyyənləşir (`run-time polymorphism`).
+    - `@Override` annotasiyası metodu yenidən təyin etdiyini göstərir və səhvlərin qarşısını alır.
+    - Metodun icrası obyektin real tipinə əsasən müəyyənləşir (`run-time polymorphism`).
 
 ---
 
 **26. **Encapsulation** (Kapsulyasiya) nədir?**
 
-**`Encapsulation`** (Kapsulyasiya) sinifin daxili məlumatlarını (dəyişənlər) xarici müdaxilədən qorumaq və onlara yalnız müəyyən metodlar (getters və setters) vasitəsilə girişi təmin etmək prinsipidir. Bu, məlumatların təhlükəsizliyini və kodun modullaşdırılmasını artırır.
+**`Encapsulation`** (Kapsulyasiya) sinifin daxili məlumatlarını (dəyişənlər) xarici müdaxilədən qorumaq və onlara yalnız
+müəyyən metodlar (getters və setters) vasitəsilə girişi təmin etmək prinsipidir. Bu, məlumatların təhlükəsizliyini və
+kodun modullaşdırılmasını artırır.
 
 - **Real Dünya Nümunəsi:**
-  - Bir bank hesabında balans yalnız deposit (əmanət) və withdraw (çıxarış) metodları vasitəsilə dəyişdirilə bilər. Balans dəyişəninə birbaşa giriş qadağandır.
+    - Bir bank hesabında balans yalnız deposit (əmanət) və withdraw (çıxarış) metodları vasitəsilə dəyişdirilə bilər.
+      Balans dəyişəninə birbaşa giriş qadağandır.
 
 **Kod Nümunəsi**
 
@@ -1037,18 +1134,21 @@ public class BankAccount {
 ```
 
 - **Şərh:**
-  - `private double balance;` dəyişənə birbaşa giriş qadağandır.
-  - `getBalance()` və `setBalance()` metodları məlumatlara nəzarətli giriş təmin edir.
-  - `deposit()` və `withdraw()` metodları məlumatların dəyişdirilməsini təhlükəsiz idarə edir.
+    - `private double balance;` dəyişənə birbaşa giriş qadağandır.
+    - `getBalance()` və `setBalance()` metodları məlumatlara nəzarətli giriş təmin edir.
+    - `deposit()` və `withdraw()` metodları məlumatların dəyişdirilməsini təhlükəsiz idarə edir.
 
 ---
 
 **27. **Abstraction** (Abstraksiya) nədir?**
 
-**`Abstraction`** (Abstraksiya) mürəkkəb sistemlərin detallarını gizlədərək yalnız zəruri xüsusiyyətləri istifadəçiyə təqdim etmək prinsipidir. Java-da bu, `abstract` classes (abstrakt siniflər) və interfaces (interfeyslər) vasitəsilə reallaşır.
+**`Abstraction`** (Abstraksiya) mürəkkəb sistemlərin detallarını gizlədərək yalnız zəruri xüsusiyyətləri istifadəçiyə
+təqdim etmək prinsipidir. Java-da bu, `abstract` classes (abstrakt siniflər) və interfaces (interfeyslər) vasitəsilə
+reallaşır.
 
 - **Real Dünya Nümunəsi:**
-  - Bir avtomobilin sürücüsü yalnız pedalları və sükanı idarə edir. Mühərrikin daxili işləmə mexanizmi (məsələn, yanacaq vurulması) ondan gizlədilir.
+    - Bir avtomobilin sürücüsü yalnız pedalları və sükanı idarə edir. Mühərrikin daxili işləmə mexanizmi (məsələn,
+      yanacaq vurulması) ondan gizlədilir.
 
 **Kod Nümunəsi**
 
@@ -1078,17 +1178,20 @@ public class AbstractionExample {
 ```
 
 - **Şərh:**
-  - `abstract void makeSound();` konkret reallaşdırma tələb edir.
-  - `Dog` sinifi abstrakt metodu reallaşdırır.
-  - `Abstraction` sayəsində istifadəçi yalnız `makeSound()` metodunun nə etdiyini bilməlidir, daxili detallar gizlədilir.
+    - `abstract void makeSound();` konkret reallaşdırma tələb edir.
+    - `Dog` sinifi abstrakt metodu reallaşdırır.
+    - `Abstraction` sayəsində istifadəçi yalnız `makeSound()` metodunun nə etdiyini bilməlidir, daxili detallar
+      gizlədilir.
 
 ---
 
 **28. **Abstract Class** (Abstrakt Sinif) ilə **Interface** (İnterfeys) arasındakı fərq nədir?**
 
-**`Abstract Class`** (Abstrakt Sinif) və **`Interface`** (İnterfeys) hər ikisi abstraksiyanı təmin etsə də, onların istifadə məqsədləri və xüsusiyyətləri fərqlidir.
+**`Abstract Class`** (Abstrakt Sinif) və **`Interface`** (İnterfeys) hər ikisi abstraksiyanı təmin etsə də, onların
+istifadə məqsədləri və xüsusiyyətləri fərqlidir.
 
 ### Fərqlər:
+
 | **Xüsusiyyət**       | **Abstract Class**                                           | **Interface**                                                                                       |
 |----------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 | **Mirasalma**        | Yalnız bir abstrakt sinifdən miras almaq olar (**extends**). | Birdən çox interfeysdən miras almaq olar (**implements**).                                          |
@@ -1098,8 +1201,10 @@ public class AbstractionExample {
 | **İstifadə məqsədi** | Ümumi xüsusiyyətləri paylaşan siniflər üçün.                 | Müxtəlif siniflərə ümumi davranış təmin etmək üçün.                                                 |
 
 - **Real Dünya Nümunəsi:**
-  - Abstract Class: Vehicle sinifi müxtəlif nəqliyyat vasitələri üçün ümumi xüsusiyyətləri (məsələn, təkər sayı) təmin edir.
-  - Interface: Drivable interfeysi avtomobil, motosiklet və ya velosiped kimi fərqli nəqliyyat vasitələrinin sürülmə davranışını təmin edir.
+    - Abstract Class: Vehicle sinifi müxtəlif nəqliyyat vasitələri üçün ümumi xüsusiyyətləri (məsələn, təkər sayı) təmin
+      edir.
+    - Interface: Drivable interfeysi avtomobil, motosiklet və ya velosiped kimi fərqli nəqliyyat vasitələrinin sürülmə
+      davranışını təmin edir.
 
 Kod Nümunəsi
 
@@ -1146,24 +1251,27 @@ public class AbstractVsInterface {
 ```
 
 - **Şərh:**
-  - `Vehicle `abstrakt sinifi ümumi xüsusiyyətləri (məsələn, `stop()`) təmin edir.
-  - `Drivable` interfeysi davranış (məsələn, `drive()`) təmin edir.
-  - `Car` sinifi həm abstrakt sinifdən, həm də interfeysdən miras alır.
+    - `Vehicle `abstrakt sinifi ümumi xüsusiyyətləri (məsələn, `stop()`) təmin edir.
+    - `Drivable` interfeysi davranış (məsələn, `drive()`) təmin edir.
+    - `Car` sinifi həm abstrakt sinifdən, həm də interfeysdən miras alır.
 
 ---
 
 **29. Java-da **interface** nə üçün istifadə olunur?**
 
-**`Interface`** (İnterfeys) Java-da siniflərə müəyyən davranışları təmin etmək üçün istifadə olunan tamamilə abstrakt bir strukturdur. O, siniflərə "nə etməli" olduğunu göstərir, amma "necə etməli" olduğunu təyin etmir.
+**`Interface`** (İnterfeys) Java-da siniflərə müəyyən davranışları təmin etmək üçün istifadə olunan tamamilə abstrakt
+bir strukturdur. O, siniflərə "nə etməli" olduğunu göstərir, amma "necə etməli" olduğunu təyin etmir.
 
 - **Nə üçün istifadə olunur?**
-  - **Çoxlu mirasalma simulyasiyası:** Java-da siniflər birdən çox sinifdən miras ala bilməz, lakin birdən çox interfeysi reallaşdıra bilər.
-  - **Abstraksiya:** Daxili detalları gizlədərək yalnız zəruri metodları təqdim edir.
-  - **Loose coupling:** Siniflər arasında asılılığı azaldır.
-  - **Standartlaşdırma:** Fərqli siniflərə eyni metodları reallaşdırmağa məcbur edir.
+    - **Çoxlu mirasalma simulyasiyası:** Java-da siniflər birdən çox sinifdən miras ala bilməz, lakin birdən çox
+      interfeysi reallaşdıra bilər.
+    - **Abstraksiya:** Daxili detalları gizlədərək yalnız zəruri metodları təqdim edir.
+    - **Loose coupling:** Siniflər arasında asılılığı azaldır.
+    - **Standartlaşdırma:** Fərqli siniflərə eyni metodları reallaşdırmağa məcbur edir.
 
 - **Real Dünya Nümunəsi:**
-  - Bir ödəniş sistemində Payable interfeysi CreditCard, PayPal və BankTransfer siniflərinə pay() metodunu reallaşdırmağı tələb edir.
+    - Bir ödəniş sistemində Payable interfeysi CreditCard, PayPal və BankTransfer siniflərinə pay() metodunu
+      reallaşdırmağı tələb edir.
 
 **Kod Nümunəsi**
 
@@ -1197,23 +1305,26 @@ public class InterfaceExample {
 ```
 
 - **Şərh:**
-  - `Payable` interfeysi `pay()` metodunu tələb edir.
-  - `CreditCard` və `PayPal` sinifləri bu metodu özünəməxsus şəkildə reallaşdırır.
-  - `İnterfeys` sayəsində fərqli ödəniş növləri eyni şəkildə idarə oluna bilər.
+    - `Payable` interfeysi `pay()` metodunu tələb edir.
+    - `CreditCard` və `PayPal` sinifləri bu metodu özünəməxsus şəkildə reallaşdırır.
+    - `İnterfeys` sayəsində fərqli ödəniş növləri eyni şəkildə idarə oluna bilər.
 
 ---
 
 **30. **default** metodlar interfeysdə nə üçün təqdim olunub?**
 
-**`Default methods`** (Varsayılan metodlar) Java 8-də interfeyslərə əlavə edildi. Bu metodlar interfeysdə konkret reallaşdırmaya malik olur və reallaşdırıcı siniflər tərəfindən yenidən təyin edilmədən istifadə oluna bilər.
+**`Default methods`** (Varsayılan metodlar) Java 8-də interfeyslərə əlavə edildi. Bu metodlar interfeysdə konkret
+reallaşdırmaya malik olur və reallaşdırıcı siniflər tərəfindən yenidən təyin edilmədən istifadə oluna bilər.
 
 - **Nə üçün təqdim olunub?**
-  - **Geriyə uyğunluq:** Mövcud interfeyslərə yeni metodlar əlavə edərkən köhnə siniflərin səhv verməsinin qarşısını alır.
-  - **Funksionallığın genişləndirilməsi:** İnterfeyslərə konkret davranış əlavə etməyə imkan verir.
-  - **Təkrar kodun azaldılması:** Ümumi metodlar interfeysdə təyin oluna bilər.
+    - **Geriyə uyğunluq:** Mövcud interfeyslərə yeni metodlar əlavə edərkən köhnə siniflərin səhv verməsinin qarşısını
+      alır.
+    - **Funksionallığın genişləndirilməsi:** İnterfeyslərə konkret davranış əlavə etməyə imkan verir.
+    - **Təkrar kodun azaldılması:** Ümumi metodlar interfeysdə təyin oluna bilər.
 
 - **Real Dünya Nümunəsi:**
-  - Bir oyun sistemində Playable interfeysi bütün oyun personajlarına move() metodunu tələb edir. Yeni bir attack() funksiyası əlavə edilərsə, default metod kimi təyin oluna bilər ki, köhnə personaj sinifləri dəyişdirilməsin.
+    - Bir oyun sistemində Playable interfeysi bütün oyun personajlarına move() metodunu tələb edir. Yeni bir attack()
+      funksiyası əlavə edilərsə, default metod kimi təyin oluna bilər ki, köhnə personaj sinifləri dəyişdirilməsin.
 
 **Kod Nümunəsi**
 
@@ -1258,9 +1369,9 @@ public class DefaultMethodExample {
 ```
 
 - **Şərh:**
-  - default void attack() interfeysdə ümumi reallaşdırma təmin edir.
-  - Soldier sinifi default metodu istifadə edir, Knight isə onu yenidən təyin edir.
-  - Default metodlar geriyə uyğunluğu qoruyur və interfeysləri daha çevik edir.
+    - default void attack() interfeysdə ümumi reallaşdırma təmin edir.
+    - Soldier sinifi default metodu istifadə edir, Knight isə onu yenidən təyin edir.
+    - Default metodlar geriyə uyğunluğu qoruyur və interfeysləri daha çevik edir.
 
 ---
 
@@ -1276,6 +1387,7 @@ public class DefaultMethodExample {
 40. **anonymous class** (anonim sinif) nədir və nə üçün istifadə olunur?
 
 ## Data Tipləri və Dəyişənlər
+
 41. Java-da **primitive** və **reference** tipləri arasındakı fərq nədir?
 42. **int** və **Integer** arasındakı fərq nədir?
 43. Java-da **default** dəyərlər hansılardır?
@@ -1298,6 +1410,7 @@ public class DefaultMethodExample {
 60. Java-da **short-circuit evaluation** (qısa dövrə qiymətləndirmə) nədir?
 
 ## Exception Handling
+
 61. **Exception** (İstisna) nədir?
 62. **Checked** və **Unchecked** istisnalar arasındakı fərq nədir?
 63. **Error** və **Exception** arasındakı fərq nədir?
@@ -1320,6 +1433,7 @@ public class DefaultMethodExample {
 80. **try-with-resources** ilə **AutoCloseable** interfeysi arasındakı əlaqə nədir?
 
 ## Collections Framework
+
 81. **Collections Framework** (Kolleksiyalar Çərçivəsi) nədir?
 82. **List**, **Set** və **Map** interfeysləri nədir?
 83. **ArrayList** və **LinkedList** arasındakı fərq nədir?
@@ -1342,6 +1456,7 @@ public class DefaultMethodExample {
 100. **EnumSet** və **EnumMap** nədir?
 
 ## Multithreading
+
 101. **Thread** (Axın) nədir?
 102. **Thread** sinfi ilə **Runnable** interfeysi arasındakı fərq nədir?
 103. **synchronized** açar sözü nə üçün istifadə olunur?
@@ -1364,6 +1479,7 @@ public class DefaultMethodExample {
 120. **Semaphore** nədir?
 
 ## String və StringBuilder
+
 121. **String** nə üçün **immutable** (dəyişilməz)dir?
 122. **StringBuilder** və **StringBuffer** arasındakı fərq nədir?
 123. **String Pool** (Sətir Hovuzu) nədir?
@@ -1376,6 +1492,7 @@ public class DefaultMethodExample {
 130. **String** sinfində **replace()** və **replaceAll()** arasındakı fərq nədir?
 
 ## Java I/O
+
 131. **InputStream** və **OutputStream** nədir?
 132. **Reader** və **Writer** sinifləri nə üçün istifadə olunur?
 133. **BufferedReader** və **BufferedWriter** nədir?
@@ -1388,6 +1505,7 @@ public class DefaultMethodExample {
 140. **FileChannel** nədir?
 
 ## Generics
+
 141. **Generics** (Ümumiləşdirmə) nədir?
 142. **Type Safety** (Tip Təhlükəsizliyi) generics ilə necə təmin olunur?
 143. **Wildcard** (<?>**) generics-də nədir?
@@ -1400,6 +1518,7 @@ public class DefaultMethodExample {
 150. **PECS** (Producer Extends, Consumer Super) prinsipi nədir?
 
 ## Lambda İfadələri və Stream API
+
 151. **Lambda Expressions** (Lambda İfadələri) nədir?
 152. **Functional Interface** (Funksional İnterfeys) nədir?
 153. **Stream API** nədir?
@@ -1412,6 +1531,7 @@ public class DefaultMethodExample {
 160. **Intermediate** və **Terminal** əməliyyatlar nədir?
 
 ## Digər Mövzular
+
 161. **Annotations** (Annotasiyalar) nədir?
 162. **@Override** annotasiyasının rolu nədir?
 163. **Reflection API** nədir?
@@ -1557,58 +1677,443 @@ public class DefaultMethodExample {
 
 # Java və Hibernate Müsahibə Sualları
 
-Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java və Hibernate-ın əsas mövzularını başdan sona əhatə edir.
+Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java və Hibernate-ın
+əsas mövzularını başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
-  - [Ümumi Suallar](#hibernate-ümumi-suallar)
-  - [Konfiqurasiya və Arxitektura](#konfiqurasiya-və-arxitektura)
-  - [Mapping və Əlaqələr](#mapping-və-əlaqələr)
-  - [HQL və Criteria API](#hql-və-criteria-api)
-  - [Caching](#caching)
-  - [Transaction Management](#transaction-management)
-  - [Performance Optimization](#performance-optimization)
-  - [JPA ilə Əlaqə](#jpa-ilə-əlaqə)
-  - [Digər Mövzular](#hibernate-digər-mövzular)
+    - [Ümumi Suallar](#hibernate-ümumi-suallar)
+    - [Konfiqurasiya və Arxitektura](#konfiqurasiya-və-arxitektura)
+    - [Mapping və Əlaqələr](#mapping-və-əlaqələr)
+    - [HQL və Criteria API](#hql-və-criteria-api)
+    - [Caching](#caching)
+    - [Transaction Management](#transaction-management)
+    - [Performance Optimization](#performance-optimization)
+    - [JPA ilə Əlaqə](#jpa-ilə-əlaqə)
+    - [Digər Mövzular](#hibernate-digər-mövzular)
 
 ## Hibernate
 
 ### Hibernate Ümumi Suallar
-1. **Hibernate** nədir və nə üçün istifadə olunur?
-2. **ORM** (Object-Relational Mapping - Obyekt-Relyasiya Xəritələşdirmə) nədir?
-3. Hibernate-ın **JDBC** ilə müqayisədə üstünlükləri nələrdir?
+
+#### **1. **Hibernate** nədir və nə üçün istifadə olunur?**
+
+`Hibernate`, Java proqramlarında obyektləri SQL verilənlər bazasına `map` etmək (xəritələndirmək) üçün istifadə olunan
+`ORM` (`
+Object-Relational Mapping`) alətidir.
+
+Yəni, bizdə User kimi Java obyektləri var, bunları users adlı SQL cədvəlinə rahat şəkildə yazmaq, oxumaq, silmək üçün
+`Hibernate` bizə kömək edir. `SQL` yazmadan obyektlərlə işləmək olur.
+
+#### **2. **ORM** (Object-Relational Mapping - Obyekt-Relyasiya Xəritələşdirmə) nədir?**
+
+ORM, Java obyektləri ilə SQL cədvəlləri arasında avtomatik əlaqə yaradan texnikadır.
+
+Məsələn, bir User obyektini, users cədvəlinə manual SQL yazmadan insert etmək, update etmək, delete etmək üçün ORM
+istifadə olunur.
+
+#### **3. Hibernate-ın **JDBC** ilə müqayisədə üstünlükləri nələrdir?**
+
+| Hibernate                                                    | JDBC                                                   |
+|--------------------------------------------------------------|--------------------------------------------------------|
+| SQL yazmağa ehtiyac yoxdur (HQL istifadə olunur)             | SQL özün yazmalısan                                    |
+| Lazy loading, caching, transaction management daxildən gəlir | Manual idarə etməlisən                                 |
+| POJO (Plain Old Java Object) ilə işləyir                     | `ResultSet`, `Statement` kimi strukturlarla işləyirsən |
+| Daha az kod, daha çox iş                                     | Daha çox kod, daha çox idarə etmə lazım olur           |
+
 4. Hibernate-ın əsas komponentləri hansılardır?
+
+- `Configuration` – hibernate.cfg.xml faylı vasitəsilə konfiqurasiyalar təyin olunur
+- `SessionFactory` – əlaqələri və sessiyaları idarə edir
+- `Session` – konkret olaraq bir transaction çərçivəsində obyektlərlə işləyir
+- `Transaction` – əməliyyatları idarə edir (begin, commit, rollback)
+- `Query` / `HQL` – Hibernate Query Language vasitəsilə sorğular yazılır
+
 5. Hibernate-ın digər **ORM** alətləri ilə fərqi nədir?
-6. Hibernate-ın tarixi və inkişafı haqqında nə bilirsiniz?
-7. Hibernate-ın əsas xüsusiyyətləri hansılardır?
-8. Hibernate-ın hansı verilənlər bazalarını dəstəkləyir?
-9. Hibernate-ın açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?
-10. Hibernate-ın istifadəsində hansı çətinliklər ola bilər?
+
+- **Hibernate:**
+    - Ən məşhur Java ORM framework-üdür
+    - Böyük community və çoxlu resurs var
+    - Əlavə xüsusiyyətləri çoxdur (Lazy Load, Cascade, Cache, HQL və s.)
+- Digər ORM-lər (məsələn, MyBatis) daha çox manual SQL yazmağa üstünlük verir. Hibernate isə daha avtomatlaşdırılmış bir
+  ORM-dir.
+
+#### **6. Hibernate-ın tarixi və inkişafı haqqında nə bilirsiniz?**
+
+- Hibernate ilk dəfə 2001-ci ildə Gavin King tərəfindən yaradılıb
+- Əsas məqsəd Java proqramlarında JDBC ilə bağlı problemləri aradan qaldırmaq idi
+- Daha sonra Hibernate JPA spesifikasiyasını dəstəkləməyə başladı
+- İndi Hibernate həm ORM, həm də JPA provider kimi istifadə olunur
+
+#### **7. Hibernate-ın əsas xüsusiyyətləri hansılardır?**
+
+- `Automatic SQL Generation` – SQL yazmağa ehtiyac yoxdur
+- `HQL (Hibernate Query Language)` – obyekt yönlü sorğu dili
+- `Lazy Loading` – ehtiyac olduqda məlumat bazasından məlumat çəkir
+- `Caching` – performansı artırır
+- `Transaction Management` – əməliyyatları idarə etmə
+- `Cascade Operations` – əlaqəli obyektlər üzərində əməliyyatlar
+
+#### **8. Hibernate-ın hansı verilənlər bazalarını dəstəkləyir?**
+
+**Hibernate aşağıdakı verilənlər bazaları ilə işləyə bilər:**
+
+- MySQL
+- PostgreSQL
+- Oracle
+- SQL Server
+- H2 (in-memory)
+- SQLite və daha çox...
+
+Sadəcə dialect konfiqurasiyasını təyin etməklə istifadə edə bilərsən.
+
+#### **9. Hibernate-ın açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?**
+
+- Pulsuzdur
+- Community dəstəyi güclüdür
+- Davamlı inkişaf etdirilir
+- Dokumentasiyası genişdir
+- Kodlar açıqdır, istəsən source code-larına baxa bilərsən
+
+#### **10. Hibernate-ın istifadəsində hansı çətinliklər ola bilər?**
+
+- Performans məsələləri: Yanlış istifadə edildikdə yavaş işləyə bilər (məsələn, Lazy load səhv tətbiq olunarsa)
+- Debug etmək çətindir, çünki SQL sorğularını öz-özünə yaradır
+- N+1 problem, LazyInitializationException kimi Hibernate-ə xas problemlər var
+- Kompleks query-lərdə HQL və ya Criteria API-nin yazılması çətin ola bilər
 
 ### Konfiqurasiya və Arxitektura
-11. **SessionFactory** (Sessiya Fabriki) nədir və necə istifadə olunur?
-12. **Session** (Sessiya) nədir və onun rolu nədir?
-13. **Configuration** (Konfiqurasiya) obyekti nə üçün istifadə olunur?
-14. Hibernate-da **hibernate.cfg.xml** faylının məqsədi nədir?
-15. Hibernate-da **hibernate.properties** faylı necə istifadə olunur?
-16. **SessionFactory** ilə **Session** arasındakı fərq nədir?
-17. Hibernate-da **dialect** (dialekt) nədir və niyə vacibdir?
-18. Hibernate-da **connection pool** (əlaqə hovuzu) necə konfiqurasiya olunur?
-19. Hibernate-da **thread safety** (axın təhlükəsizliyi) necə təmin olunur?
-20. **SessionFactory** thread-safe-dirmi?
-21. **Session** obyekti thread-safe-dirmi?
-22. Hibernate-da **mapping** (xəritələşdirmə) necə təyin olunur?
-23. **Annotation-based** (annotasiya əsaslı) və **XML-based** (XML əsaslı) konfiqurasiya arasındakı fərq nədir?
-24. Hibernate-da **JNDI** (Java Naming and Directory Interface) ilə inteqrasiya necə aparılır?
-25. Hibernate-da **SchemaUpdate** (Sxem Yeniləməsi) aləti nədir?
-26. Hibernate-da **auto schema generation** (avtomatik sxem yaradılması) necə işləyir?
-27. Hibernate-da **Transaction** (Tranzaksiya) obyekti nədir?
-28. Hibernate-da **Query** (Sorğu) obyekti nədir?
-29. Hibernate-da **Criteria** (Kriteriya) obyekti nədir?
-30. Hibernate-da **bootstrap** (başlanğıc yükləmə) prosesi necə işləyir?
+
+#### **11. **SessionFactory** (Sessiya Fabriki) nədir və necə istifadə olunur?**
+
+`SessionFactory` Hibernate-in əsas interfeyslərindən biridir. Bu obyekt verilənlər bazası ilə əlaqə yaratmaq üçün
+Session obyektləri yaradır.
+
+- 🔹 SessionFactory yalnız bir dəfə yaradılır (tətbiq işə düşəndə).
+- 🔹 Ağır obyektdir — çoxlu resurs istifadə edir.
+- 🔹 Verilənlər bazası ilə əlaqələri optimallaşdırmaq üçün connection pool və caching ilə işləyir.
+
+**➡️ Kod nümunəsi:**
+
+```java
+SessionFactory sessionFactory = new Configuration()
+        .configure("hibernate.cfg.xml")
+        .buildSessionFactory();
+```
+
+#### **12. **Session** (Sessiya) nədir və onun rolu nədir?**
+
+`Session` Hibernate vasitəsilə verilənlər bazası ilə əlaqə yaratmaq üçün istifadə olunan obyektdir.
+
+- 🔹 Session — qısa ömürlüdür.
+- 🔹 Bir dəfə əməliyyat (transaction) üçün açılır və sonra bağlanır.
+- 🔹 CRUD əməliyyatları (`save`, `update`, `delete`, `get`) bu obyekt vasitəsilə edilir.
+- 🔹 Session həmçinin cache (first-level) idarə edir.
+
+**➡️ Misal:**
+
+```java
+Session session = sessionFactory.openSession();
+session.
+
+beginTransaction();
+
+User user = session.get(User.class, 1);
+
+session.
+
+getTransaction().
+
+commit();
+session.
+
+close();
+```
+
+#### **13. **Configuration** (Konfiqurasiya) obyekti nə üçün istifadə olunur?**
+
+`Configuration` obyekti Hibernate-in ayarlarını və entitiləri oxumaq üçün istifadə olunur.
+
+- 🔹 `hibernate.cfg.xml` və ya `hibernate.properties` faylını oxuyur
+- 🔹 Annotasiya ilə yazılmış entity siniflərini əlavə edir
+- 🔹 Sonunda `SessionFactory` obyektini qurur
+
+**➡️ Misal:**
+
+```java
+Configuration cfg = new Configuration();
+cfg.
+
+configure("hibernate.cfg.xml");
+cfg.
+
+addAnnotatedClass(User .class);
+
+SessionFactory factory = cfg.buildSessionFactory();
+```
+
+#### **14. Hibernate-da **hibernate.cfg.xml** faylının məqsədi nədir?**
+
+**Bu XML faylı Hibernate konfiqurasiya parametrlərini saxlayır:**
+
+- Verilənlər bazasına bağlantı (url, username, password)
+- Hibernate dialect
+- Entity class-lar
+- SQL loglama (show_sql)
+- Connection pool parametrləri
+
+**➡️ Nümunə:**
+
+```xml
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/test</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <mapping class="com.example.User"/>
+    </session-factory>
+</hibernate-configuration>
+```
+
+#### **15. Hibernate-da **hibernate.properties** faylı necə istifadə olunur?**
+
+**Bu fayl alternativ olaraq XML yerinə propertilər şəklində ayarları saxlayır.**
+
+**➡️ Nümunə:**
+
+```properties
+hibernate.connection.driver_class=org.postgresql.Driver
+hibernate.connection.url=jdbc:postgresql://localhost:5432/test
+hibernate.connection.username=postgres
+hibernate.connection.password=root
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+hibernate.show_sql=true
+```
+
+- ⚠️ XML qədər geniş imkanlar verməsə də sadə konfiqurasiya üçün yetərlidir.
+
+#### **16. **SessionFactory** ilə **Session** arasındakı fərq nədir?**
+
+| Xüsusiyyət    | `SessionFactory`                   | `Session`                                |
+|---------------|------------------------------------|------------------------------------------|
+| Ömrü          | Uzunömürlü (tətbiq boyunca 1 dəfə) | Qısaömürlü (1 request və ya transaction) |
+| Ağır/Light    | Ağır obyekt                        | Yüngül                                   |
+| Thread-safe   | ✅ Bəli                             | ❌ Xeyr                                   |
+| Məqsəd        | `Session` yaratmaq                 | CRUD və transaction əməliyyatları        |
+| Cache dəstəyi | Second-level cache                 | First-level cache                        |
+
+#### **17. Hibernate-da **dialect** (dialekt) nədir və niyə vacibdir?**
+
+Dialect Hibernate-ə hansı verilənlər bazası növü ilə işlədiyini bildirir. Çünki hər RDBMS özünəməxsus SQL sintaksisindən
+istifadə edir.
+
+- 🔹 `PostgreSQL`, `MySQL`, `Oracle`, `H2` və s. hərəsi üçün fərqli dialect var.
+- 🔹 Hibernate SQL-i həmin dialect-ə uyğun şəkildə yaradır.
+
+**➡️ Misal:**
+
+***Xml:***
+
+```xml
+
+<property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+```
+
+***properties:***
+
+```properties
+hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+```
+
+#### **18. Hibernate-da **connection pool** (əlaqə hov uzu) necə konfiqurasiya olunur?**
+
+Hibernate özü ilə sadə c3p0, HikariCP və digər connection pool-ları dəstəkləyir.
+
+**➡️ Misal (hibernate.cfg.xml ilə HikariCP):**
+
+***Xml:***
+
+```xml
+
+<property name="hibernate.hikari.maximumPoolSize">10</property>
+<property name="hibernate.hikari.idleTimeout">30000</property>
+<property name="hibernate.hikari.connectionTimeout">20000</property>
+```
+
+***properties:***
+
+```properties
+hibernate.hikari.maximumPoolSize=10
+hibernate.hikari.idleTimeout=30000
+hibernate.hikari.connectionTimeout=20000
+```
+
+#### **19. Hibernate-da **thread safety** (axın təhlükəsizliyi) necə təmin olunur?**
+
+- 🔹 `SessionFactory` thread-safe olduğu üçün onu çoxlu thread-lər paylaşa bilər.
+- 🔹 Amma `Session` thread-safe deyil, hər thread öz `Session`-ını istifadə etməlidir.
+
+**✅ Ən yaxşı yanaşma:**
+
+- `SessionFactory` → bir dəfə yaradılır və paylaşılır.
+- `Session` → hər thread öz `Session`-ını `openSession()` ilə açır.
+
+#### **20. **SessionFactory** thread-safe-dirmi?**
+
+✅ Bəli, SessionFactory thread-safe-dir.
+
+Bu o deməkdir ki, onu çoxlu thread-lər eyni anda təhlükəsiz şəkildə istifadə edə bilər. Obyekt paylaşımı üçün idealdır.
+
+#### **21. **Session** obyekti thread-safe-dirmi?**
+
+Xeyr. Session obyekti thread-safe deyil. Yəni bir Session obyektindən eyni anda bir neçə thread istifadə edərsə,
+ConcurrentModificationException kimi istənməyən nəticələr yarana bilər. Hər thread üçün ayrı Session yaradılması best
+practice sayılır.
+
+#### **22. Hibernate-da **mapping** (xəritələşdirmə) necə təyin olunur?**
+
+Hibernate-da mapping (yəni Java obyektlərini SQL cədvəllərinə bağlamaq) iki əsas üsulla təyin olunur:
+
+- XML-based mapping: *.hbm.xml faylları ilə.
+
+```xml
+
+<class name="User" table="users">
+    <id name="id" column="id"/>
+    <property name="name" column="name"/>
+</class>
+```
+
+- Annotation-based mapping: Java kodunda `@Entity`, `@Table`, `@Id` kimi annotasiyalarla.
+
+```java
+
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    private Long id;
+
+    @Column(name = "name")
+    private String name;
+}
+```
+
+#### **23. **Annotation-based** (annotasiya əsaslı) və **XML-based** (XML əsaslı) konfiqurasiya arasındakı fərq nədir?**
+
+| Xüsusiyyət         | Annotation-based        | XML-based                       |
+|--------------------|-------------------------|---------------------------------|
+| Kodda yerdəyişmə   | Java faylının içində    | Ayrı faylda                     |
+| Oxunaqlılıq        | Təmiz və sadə           | Konfiqurasiya ilə kod ayrılır   |
+| İdarəetmə          | Daha az çevik           | Daha çox konfiqurasiya azadlığı |
+| Refactoring zamanı | Annotasiya dəyişə bilər | XML daha sabit qalır            |
+
+#### **24. Hibernate-da **JNDI** (Java Naming and Directory Interface) ilə inteqrasiya necə aparılır?**
+
+**JNDI ilə Hibernate, DataSource obyektlərini Java EE konteynerindən alır. Bu zaman Hibernate konfiqurasiyasında
+aşağıdakı
+kimi hibernate.connection.datasource verilir:**
+
+***Xml:***
+
+```xml
+
+<property name="hibernate.connection.datasource">java:/MyDataSource</property>
+```
+
+***properties:***
+
+```properties
+hibernate.connection.datasource=java:/MyDataSource
+```
+
+- JNDI vasitəsilə əlaqə hovuzu konteyner tərəfindən idarə olunur (məs. Tomcat, WildFly).
+
+#### **25. Hibernate-da **SchemaUpdate** (Sxem Yeniləməsi) aləti nədir?**
+
+`SchemaUpdate` Hibernate tərəfindən verilən bir alətdir. Mövcud Entity modellərinizə əsaslanaraq mövcud verilənlər
+bazasında dəyişikliklər edir, yəni mövcud cədvəlləri yeniləyir (drop etmədən). Əvvəllər
+`org.hibernate.tool.hbm2ddl.SchemaUpdate` istifadə olunurdu.
+
+Yeni Hibernate versiyalarında bu avtomatik olaraq `hibernate.hbm2ddl.auto=update` ilə edilir.
+
+#### **26. Hibernate-da **auto schema generation** (avtomatik sxem yaradılması) necə işləyir?**
+
+Bu xüsusiyyət Hibernate-in Entity class-larınıza əsaslanaraq avtomatik SQL cədvəlləri yaratmasını təmin edir.
+
+```properies
+hibernate.hbm2ddl.auto=create  // hər dəfə yenidən yaradacaq
+hibernate.hbm2ddl.auto=update  // dəyişiklikləri tətbiq edəcək
+hibernate.hbm2ddl.auto=validate  // sxemi yoxlayacaq, dəyişiklik etməyəcək
+hibernate.hbm2ddl.auto=none     // heç nə etməyəcək
+```
+
+#### **27. Hibernate-da **Transaction** (Tranzaksiya) obyekti nədir?**
+
+Hibernate-də `Transaction` obyekti, verilənlər bazasında birdən çox əməliyyatı atomik şəkildə yerinə yetirmək üçün
+istifadə olunur.
+
+```java
+Session session = sessionFactory.openSession();
+Transaction tx = session.beginTransaction();
+
+try{
+        // əməliyyatlar
+        session.save(entity);
+        tx.commit();
+}catch(
+Exception e){
+        tx.rollback();
+}
+```
+
+- Bu, ACID prinsipinə uyğun işləyir.
+
+#### **28. Hibernate-da **Query** (Sorğu) obyekti nədir?**
+
+Query, Hibernate-də HQL (Hibernate Query Language) və ya native SQL sorğuları işlətmək üçün istifadə olunur.
+
+```java
+Query query = session.createQuery("from User where name = :name");
+query.setParameter("name","Tarkhan");
+List<User> users = query.list();
+```
+
+#### **29. Hibernate-da **Criteria** (Kriteriya) obyekti nədir?**
+
+Criteria API daha dinamik və obyekt yönlü sorğular yazmağa imkan verir (Hibernate 5-dən sonra `CriteriaBuilder` və JPA
+Criteria API ilə əvəz olunub):
+
+```java
+CriteriaBuilder cb = session.getCriteriaBuilder();
+CriteriaQuery<User> cq = cb.createQuery(User.class);
+Root<User> root = cq.from(User.class);
+cq.select(root).where(cb.equal(root.get("name"), "Tarkhan"));
+List<User> users = session.createQuery(cq).getResultList();
+```
+
+#### **30. Hibernate-da **bootstrap** (başlanğıc yükləmə) prosesi necə işləyir?**
+
+**Hibernate-in bootstrap prosesi adətən belə işləyir:**
+
+1. Configuration obyektindən konfiqurasiya oxunur.
+2. Mapping-lər yüklənir (annotation və ya XML).
+3. SessionFactory yaradılır.
+4. Session obyektləri vasitəsilə əlaqə qurulur.
+
+**Kod nümunəsi:**
+
+```java
+Configuration cfg = new Configuration().configure(); // hibernate.cfg.xml oxuyur
+SessionFactory sessionFactory = cfg.buildSessionFactory();
+Session session = sessionFactory.openSession();
+```
 
 ### Mapping və Əlaqələr
+
 31. Hibernate-da **entity** (varlıq) nədir?
 32. **@Entity** annotasiyasının rolu nədir?
 33. **@Table** annotasiyası nə üçün istifadə olunur?
@@ -1641,6 +2146,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 60. Hibernate-da **association** (əlaqə) idarəetməsi necə aparılır?
 
 ### HQL və Criteria API
+
 61. **HQL** (Hibernate Query Language - Hibernate Sorğu Dili) nədir?
 62. HQL ilə SQL arasındakı fərq nədir?
 63. HQL-də **named queries** (adlandırılmış sorğular) nədir?
@@ -1663,6 +2169,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 80. Hibernate-da **SQL injection** (SQL inyeksiyası) necə qarşısı alınır?
 
 ### Caching
+
 81. Hibernate-da **first-level cache** (birinci səviyyəli keş) nədir?
 82. **Second-level cache** (ikinci səviyyəli keş) nədir?
 83. **First-level cache** ilə **second-level cache** arasındakı fərq nədir?
@@ -1685,6 +2192,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 100. Hibernate-da **cache** istifadəsinin riskləri nələrdir?
 
 ### Transaction Management
+
 101. Hibernate-da **transaction** (tranzaksiya) nədir?
 102. **Transaction management** (tranzaksiya idarəetməsi) Hibernate-da necə həyata keçirilir?
 103. **@Transactional** annotasiyasının rolu nədir?
@@ -1707,6 +2215,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 120. Hibernate-da **distributed transactions** (paylanmış tranzaksiyalar) necə idarə olunur?
 
 ### Performance Optimization
+
 121. Hibernate-da **N+1 SELECT** problemi nədir?
 122. **N+1 SELECT** probleminin qarşısını necə almaq olar?
 123. **Batch processing** (toplu emal) Hibernate-da necə həyata keçirilir?
@@ -1729,6 +2238,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 140. Hibernate-da **large datasets** (böyük məlumat dəstləri) ilə işləyərkən hansı strategiyalar istifadə olunur?
 
 ### JPA ilə Əlaqə
+
 141. **JPA** (Java Persistence API) nədir?
 142. Hibernate ilə **JPA** arasındakı fərq nədir?
 143. Hibernate-ın **JPA provider** (JPA təminatçısı) kimi rolu nədir?
@@ -1751,6 +2261,7 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 160. Hibernate-da **JPA** ilə **Spring Data JPA** inteqrasiyası necə aparılır?
 
 ### Hibernate Digər Mövzular
+
 161. Hibernate-da **interceptor** (araya daxil olan) nədir?
 162. **Hibernate Event Listeners** (Hibernate Hadisə Dinləyiciləri) nədir?
 163. Hibernate-da **filters** (süzgəclər) necə istifadə olunur?
@@ -1796,26 +2307,29 @@ Bu sənəd Java və Hibernate ilə bağlı müsahibə suallarının başlıqlar�
 
 # Spring Boot Müsahibə Sualları
 
-Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java, Hibernate və Spring Boot-un əsas və qabaqcıl mövzularını başdan sona əhatə edir.
+Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java,
+Hibernate və Spring Boot-un əsas və qabaqcıl mövzularını başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
-  - [Ümumi Suallar](#spring-boot-ümumi-suallar)
-  - [Arxitektura və Konfiqurasiya](#arxitektura-və-konfiqurasiya)
-  - [REST API və Web](#rest-api-və-web)
-  - [Spring Data və JPA](#spring-data-və-jpa)
-  - [Security](#security)
-  - [Testing](#testing)
-  - [Microservices](#microservices)
-  - [Performance və Optimization](#performance-və-optimization)
-  - [Actuator və Monitoring](#actuator-və-monitoring)
-  - [Digər Mövzular](#spring-boot-digər-mövzular)
+    - [Ümumi Suallar](#spring-boot-ümumi-suallar)
+    - [Arxitektura və Konfiqurasiya](#arxitektura-və-konfiqurasiya)
+    - [REST API və Web](#rest-api-və-web)
+    - [Spring Data və JPA](#spring-data-və-jpa)
+    - [Security](#security)
+    - [Testing](#testing)
+    - [Microservices](#microservices)
+    - [Performance və Optimization](#performance-və-optimization)
+    - [Actuator və Monitoring](#actuator-və-monitoring)
+    - [Digər Mövzular](#spring-boot-digər-mövzular)
 
 ## Spring Boot
 
 ### Spring Boot Ümumi Suallar
+
 1. **Spring Boot** nədir və nə üçün istifadə olunur?
 2. **Spring Framework** ilə **Spring Boot** arasındakı fərq nədir?
 3. Spring Boot-un əsas xüsusiyyətləri hansılardır?
@@ -1833,6 +2347,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 15. Spring Boot-da **dependency injection** (asılılıq yeridilməsi) necə işləyir?
 
 ### Arxitektura və Konfiqurasiya
+
 16. **Spring Boot Application** necə işə salınır?
 17. **@SpringBootApplication** annotasiyasının daxilində hansı annotasiyalar var?
 18. **@EnableAutoConfiguration** annotasiyasının rolu nədir?
@@ -1865,6 +2380,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 45. Spring Boot-da **hot swapping** (isti dəyişmə) necə işləyir?
 
 ### REST API və Web
+
 46. Spring Boot-da **REST API** necə yaradılır?
 47. **@RestController** annotasiyası nədir?
 48. **@Controller** ilə **@RestController** arasındakı fərq nədir?
@@ -1902,6 +2418,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 80. Spring Boot-da **REST versioning** (REST versiyalaşdırma) necə aparılır?
 
 ### Spring Data və JPA
+
 81. **Spring Data JPA** nədir?
 82. **Spring Data** ilə Hibernate arasındakı əlaqə nədir?
 83. **@Repository** annotasiyasının rolu nədir?
@@ -1934,6 +2451,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 110. Spring Data-da **transaction management** (tranzaksiya idarəetmə) necə həyata keçirilir?
 
 ### Security
+
 111. **Spring Security** nədir və Spring Boot ilə necə inteqrasiya olunur?
 112. **@EnableWebSecurity** annotasiyasının rolu nədir?
 113. Spring Security-də **authentication** (autentifikasiya) necə işləyir?
@@ -1961,6 +2479,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 135. Spring Security-də **stateless authentication** (vəziyyətsiz autentifikasiya) necə təyin olunur?
 
 ### Testing
+
 136. **Spring Boot Test** nədir və necə istifadə olunur?
 137. **@SpringBootTest** annotasiyasının rolu nədir?
 138. **@WebMvcTest** ilə **@DataJpaTest** arasındakı fərq nədir?
@@ -1984,6 +2503,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 156. **@ActiveProfiles** annotasiyası testlərdə necə istifadə olunur?
 
 ### Microservices
+
 157. Spring Boot ilə **microservices** (mikroservis) arxitekturası necə qurulur?
 158. **Spring Cloud** nədir və Spring Boot ilə necə inteqrasiya olunur?
 159. **Eureka** ilə **service discovery** (xidmət kəşfi) necə həyata keçirilir?
@@ -2010,6 +2530,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 180. **CQRS** (Command Query Responsibility Segregation) Spring Boot ilə necə həyata keçirilir?
 
 ### Performance və Optimization
+
 181. Spring Boot-da **performance tuning** (performans tənzimləmə) necə aparılır?
 182. **Spring Boot Actuator** ilə performans monitorinqi necə həyata keçirilir?
 183. Spring Boot-da **connection pooling** (əlaqə hovuzu) necə optimallaşdırılır?
@@ -2032,6 +2553,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 200. Spring Boot-da **memory management** (yaddaş idarəetmə) necə optimallaşdırılır?
 
 ### Actuator və Monitoring
+
 201. **Spring Boot Actuator** nədir?
 202. **Actuator endpoints** (Aktuator uç nöqtələri) hansılardır?
 203. **/health** endpoint-i necə fərdiləşdirilir?
@@ -2049,6 +2571,7 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 215. **Actuator** təhlükəsizliyi necə təmin olunur?
 
 ### Spring Boot Digər Mövzular
+
 216. **Spring Boot** ilə **WebSocket** necə həyata keçirilir?
 217. **@EnableWebSocket** annotasiyasının rolu nədir?
 218. **STOMP** protokolu Spring Boot-da necə istifadə olunur?
@@ -2139,32 +2662,37 @@ Bu sənəd Java, Hibernate və Spring Boot ilə bağlı müsahibə suallarının
 
 # Data Structures/Collections Müsahibə Sualları
 
-Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar Core Java, Hibernate, Spring Boot və Data Structures/Collections-un əsas və qabaqcıl mövzularını başdan sona əhatə edir.
+Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə bağlı müsahibə suallarının başlıqlarını əhatə
+edir. Suallar Core Java, Hibernate, Spring Boot və Data Structures/Collections-un əsas və qabaqcıl mövzularını başdan
+sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
 - [Data Structures və Collections](#data-structures-və-collections)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Array və String](#array-və-string)
-  - [List və Set](#list-və-set)
-  - [Map](#map)
-  - [Queue və Stack](#queue-və-stack)
-  - [Tree və Graph](#tree-və-graph)
-  - [Hashing və Performance](#hashing-və-performance)
-  - [Algorithms və Collections](#algorithms-və-collections)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Array və String](#array-və-string)
+    - [List və Set](#list-və-set)
+    - [Map](#map)
+    - [Queue və Stack](#queue-və-stack)
+    - [Tree və Graph](#tree-və-graph)
+    - [Hashing və Performance](#hashing-və-performance)
+    - [Algorithms və Collections](#algorithms-və-collections)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## Data Structures və Collections
 
 ### Ümumi Suallar
+
 1. **Data Structure** (Məlumat Strukturu) nədir və niyə vacibdir?
 2. **Collections Framework** (Kolleksiyalar Çərçivəsi) Java-da nədir?
 3. **Collection** interfeysi ilə **Collections** sinfi arasındakı fərq nədir?
 4. Java-da **List**, **Set** və **Map** interfeyslərinin əsas xüsusiyyətləri nələrdir?
 5. **Data Structure** növləri hansılardır?
-6. **Linear Data Structure** (Xətti Məlumat Strukturu) ilə **Non-linear Data Structure** (Qeyri-xətti Məlumat Strukturu) arasındakı fərq nədir?
+6. **Linear Data Structure** (Xətti Məlumat Strukturu) ilə **Non-linear Data Structure** (Qeyri-xətti Məlumat Strukturu)
+   arasındakı fərq nədir?
 7. Java-da **dynamic data structures** (dinamik məlumat strukturları) hansılardır?
 8. **Time Complexity** (Vaxt Mürəkkəbliyi) və **Space Complexity** (Yer Mürəkkəbliyi) nədir?
 9. Java-da **boxing** və **unboxing** Collections ilə necə əlaqəlidir?
@@ -2176,6 +2704,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 15. **Type safety** (tip təhlükəsizliyi) Collections-da necə təmin olunur?
 
 ### Array və String
+
 16. **Array** (Massiv) nədir və Java-da necə təyin olunur?
 17. **Static Array** (Statik Massiv) ilə **Dynamic Array** (Dinamik Massiv) arasındakı fərq nədir?
 18. Java-da **multidimensional array** (çoxölçülü massiv) necə işləyir?
@@ -2193,6 +2722,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 30. Java-da **immutable** (dəyişilməz) String-in üstünlükləri nələrdir?
 
 ### List və Set
+
 31. **List** (Siyahı) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
 32. **ArrayList** nədir və necə işləyir?
 33. **LinkedList** nədir və necə işləyir?
@@ -2215,6 +2745,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 50. **Collections.unmodifiableList()** və **Collections.unmodifiableSet()** nə edir?
 
 ### Map
+
 51. **Map** (Xəritə) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
 52. **HashMap** nədir və necə işləyir?
 53. **LinkedHashMap** ilə **HashMap** arasındakı fərq nədir?
@@ -2237,6 +2768,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 70. **TreeMap**-də **Red-Black Tree** (Qırmızı-Qara Ağac) necə işləyir?
 
 ### Queue və Stack
+
 71. **Queue** (Növbə) interfeysi nədir və hansı siniflər tərəfindən implement edilir?
 72. **PriorityQueue** nədir və necə işləyir?
 73. **Deque** (İkiucalı Növbə) nədir və necə istifadə olunur?
@@ -2259,6 +2791,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 90. **Queue** ilə **List** arasındakı fərqlər nələrdir?
 
 ### Tree və Graph
+
 91. **Tree** (Ağac) məlumat strukturu nədir?
 92. **Binary Tree** (İkili Ağac) nədir?
 93. **Binary Search Tree** (İkili Axtarış Ağacı) nədir və necə işləyir?
@@ -2270,7 +2803,8 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 99. **Min-Heap** və **Max-Heap** arasındakı fərq nədir?
 100. **PriorityQueue** ilə **Heap** arasındakı əlaqə nədir?
 101. **Graph** (Qrafik) məlumat strukturu nədir?
-102. **Directed Graph** (İstiqamətləndirilmiş Qrafik) ilə **Undirected Graph** (İstiqamətsiz Qrafik) arasındakı fərq nədir?
+102. **Directed Graph** (İstiqamətləndirilmiş Qrafik) ilə **Undirected Graph** (İstiqamətsiz Qrafik) arasındakı fərq
+     nədir?
 103. **Weighted Graph** (Çəkili Qrafik) nədir?
 104. **Adjacency Matrix** (Qoşulma Matrisi) nədir?
 105. **Adjacency List** (Qoşulma Siyahısı) nədir?
@@ -2281,6 +2815,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 110. **Dijkstra’s Algorithm** (Dijkstra Alqoritmi) qrafiklərdə necə istifadə olunur?
 
 ### Hashing və Performance
+
 111. **Hashing** (Xəşləmə) nədir və Java-da necə işləyir?
 112. **Hash Function** (Xəş Funksiyası) nədir?
 113. **Hash Table** (Xəş Cədvəli) nədir və necə işləyir?
@@ -2303,6 +2838,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 130. **ConcurrentHashMap**-də **read** və **write** əməliyyatlarının performansı necədir?
 
 ### Algorithms və Collections
+
 131. **Sorting** (Sıralama) alqoritmləri Java-da Collections ilə necə istifadə olunur?
 132. **Collections.sort()** metodu hansı alqoritmdən istifadə edir?
 133. **TimSort** alqoritmi nədir və necə işləyir?
@@ -2325,6 +2861,7 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 150. **Collections.nCopies()** metodu nə edir?
 
 ### Digər Mövzular
+
 151. **Linked List** (Bağlı Siyahı) daxili strukturu necədir?
 152. **Singly Linked List** (Tək Bağlı Siyahı) ilə **Doubly Linked List** (İkiqat Bağlı Siyahı) arasındakı fərq nədir?
 153. **Circular Linked List** (Dairəvi Bağlı Siyahı) nədir?
@@ -2480,24 +3017,27 @@ Bu sənəd Java, Hibernate, Spring Boot və Data Structures/Collections ilə ba�
 
 # Design Patterns Müsahibə Sualları
 
-Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design Patterns ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design Patterns ilə bağlı müsahibə suallarının
+başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
 - [Data Structures və Collections](#data-structures-və-collections)
 - [Design Patterns](#design-patterns)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Creational Patterns](#creational-patterns)
-  - [Structural Patterns](#structural-patterns)
-  - [Behavioral Patterns](#behavioral-patterns)
-  - [Real-World Tətbiqlər](#real-world-tətbiqlər)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Creational Patterns](#creational-patterns)
+    - [Structural Patterns](#structural-patterns)
+    - [Behavioral Patterns](#behavioral-patterns)
+    - [Real-World Tətbiqlər](#real-world-tətbiqlər)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## Design Patterns
 
 ### Ümumi Suallar
+
 1. **Design Pattern** (Dizayn Nümunəsi) nədir və niyə vacibdir?
 2. **Gang of Four** (Dörd Nəfərlik Dəstə) kimlərdir və Design Patterns-ə töhfələri nədir?
 3. **Creational Patterns** (Yaradıcı Nümunələr) nədir və hansılardır?
@@ -2515,9 +3055,11 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 15. **Design Patterns** ilə **maintainability** (baxım asanlığı) necə artır?
 
 ### Creational Patterns
+
 16. **Singleton Pattern** (Tək Nümunə Nümunəsi) nədir?
 17. **Singleton Pattern**-də **thread safety** (axın təhlükəsizliyi) necə təmin olunur?
-18. **Eager Initialization** (Həvəsli İlkinləşdirmə) ilə **Lazy Initialization** (Tənbəl İlkinləşdirmə) arasındakı fərq nədir?
+18. **Eager Initialization** (Həvəsli İlkinləşdirmə) ilə **Lazy Initialization** (Tənbəl İlkinləşdirmə) arasındakı fərq
+    nədir?
 19. **Double-Checked Locking** (İkiqat Yoxlamalı Kilidləmə) Singleton-da nə üçün istifadə olunur?
 20. **Bill Pugh Singleton** nədir və üstünlükləri nələrdir?
 21. **Singleton Pattern**-də **serialization** (seriyalaşdırma) problemi necə həll olunur?
@@ -2542,6 +3084,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 40. **Creational Patterns** hansı problemləri həll edir?
 
 ### Structural Patterns
+
 41. **Adapter Pattern** (Adapter Nümunəsi) nədir?
 42. **Adapter Pattern** ilə **Bridge Pattern** arasındakı fərq nədir?
 43. **Bridge Pattern** (Körpü Nümunəsi) nədir?
@@ -2574,6 +3117,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 70. **Structural Patterns** Java-da **inheritance** (mirasalma) ilə necə əlaqəlidir?
 
 ### Behavioral Patterns
+
 71. **Chain of Responsibility Pattern** (Məsuliyyət Zənciri Nümunəsi) nədir?
 72. **Command Pattern** (Əmr Nümunəsi) nədir?
 73. **Interpreter Pattern** (Tərcüməçi Nümunəsi) nədir?
@@ -2616,6 +3160,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 110. **Memento Pattern** Java-da **serialization** ilə necə istifadə olunur?
 
 ### Real-World Tətbiqlər
+
 111. **Singleton Pattern** real dünya tətbiqlərində hansı hallarda istifadə olunur?
 112. **Factory Method Pattern** Spring-də **Bean Factory** ilə necə tətbiq olunur?
 113. **Abstract Factory Pattern** Java-da **JDBC** ilə necə istifadə olunur?
@@ -2653,6 +3198,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 145. **Template Method Pattern** Spring-də **JdbcTemplate** ilə necə tətbiq olunur?
 
 ### Digər Mövzular
+
 146. **Null Object Pattern** (Boş Obyekt Nümunəsi) nədir?
 147. **Repository Pattern** (Anbar Nümunəsi) nədir və Java-da necə tətbiq olunur?
 148. **Service Locator Pattern** (Xidmət Tapıcı Nümunəsi) nədir?
@@ -2813,29 +3359,32 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections və Design 
 
 # Algorithms Müsahibə Sualları
 
-Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns və Algorithms ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns və Algorithms ilə bağlı müsahibə
+suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
 - [Data Structures və Collections](#data-structures-və-collections)
 - [Design Patterns](#design-patterns)
 - [Algorithms](#algorithms)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Sorting Algorithms](#sorting-algorithms)
-  - [Searching Algorithms](#searching-algorithms)
-  - [Tree Algorithms](#tree-algorithms)
-  - [Graph Algorithms](#graph-algorithms)
-  - [Dynamic Programming](#dynamic-programming)
-  - [Greedy Algorithms](#greedy-algorithms)
-  - [Divide and Conquer](#divide-and-conquer)
-  - [Hashing Algorithms](#hashing-algorithms)
-  - [Other Algorithms](#other-algorithms)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Sorting Algorithms](#sorting-algorithms)
+    - [Searching Algorithms](#searching-algorithms)
+    - [Tree Algorithms](#tree-algorithms)
+    - [Graph Algorithms](#graph-algorithms)
+    - [Dynamic Programming](#dynamic-programming)
+    - [Greedy Algorithms](#greedy-algorithms)
+    - [Divide and Conquer](#divide-and-conquer)
+    - [Hashing Algorithms](#hashing-algorithms)
+    - [Other Algorithms](#other-algorithms)
 
 ## Algorithms
 
 ### Ümumi Suallar
+
 1. **Algorithm** (Alqoritm) nədir və niyə vacibdir?
 2. **Time Complexity** (Vaxt Mürəkkəbliyi) nədir və necə hesablanır?
 3. **Space Complexity** (Yer Mürəkkəbliyi) nədir və necə ölçülür?
@@ -2853,6 +3402,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 15. Java-da alqoritmlərin performansını ölçmək üçün hansı alətlər istifadə olunur?
 
 ### Sorting Algorithms
+
 16. **Bubble Sort** (Köpüklü Sıralama) nədir?
 17. **Selection Sort** (Seçim Sıralaması) nədir?
 18. **Insertion Sort** (Daxil Etmə Sıralaması) nədir?
@@ -2880,6 +3430,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 40. **Heap Sort**-da **heapify** (yığınlaşdırma) prosesi nədir?
 
 ### Searching Algorithms
+
 41. **Linear Search** (Xətti Axtarış) nədir?
 42. **Binary Search** (İkili Axtarış) nədir?
 43. **Jump Search** (Sıçrayış Axtarışı) nədir?
@@ -2902,6 +3453,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 60. **Graph**-də **search** alqoritmləri hansılardır?
 
 ### Tree Algorithms
+
 61. **Binary Tree Traversal** (İkili Ağac Keçidi) növləri hansılardır?
 62. **In-order Traversal** (Sıralı Keçid) nədir?
 63. **Pre-order Traversal** (Əvvəlcədən Keçid) nədir?
@@ -2934,6 +3486,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 90. **Segment Tree**-də **range queries** (aralıq sorğuları) necə aparılır?
 
 ### Graph Algorithms
+
 91. **Depth-First Search** (Dərinlik Axtarışı) nədir?
 92. **Breadth-First Search** (Eninə Axtarış) nədir?
 93. **Dijkstra’s Algorithm** (Dijkstra Alqoritmi) nədir?
@@ -2966,6 +3519,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 120. **All-Pairs Shortest Path** (Bütün Cütlərin Ən Qısa Yolu) necə hesablanır?
 
 ### Dynamic Programming
+
 121. **Dynamic Programming** (Dinamik Proqramlaşdırma) nədir?
 122. **Memoization** (Yadda Saxlama) ilə **Tabulation** (Cədvəlləşdirmə) arasındakı fərq nədir?
 123. **Fibonacci Sequence** (Fibonacci Sırası) dinamik proqramlaşdırma ilə necə hesablanır?
@@ -2988,6 +3542,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 140. **Dynamic Programming**-də **state transition** (vəziyyət keçidi) necə təyin olunur?
 
 ### Greedy Algorithms
+
 141. **Greedy Algorithm** (Acgöz Alqoritm) nədir?
 142. **Huffman Coding** (Huffman Kodlaşdırması) nədir?
 143. **Kruskal’s Algorithm** ilə **Greedy** yanaşma necə tətbiq olunur?
@@ -3001,7 +3556,8 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 151. **Huffman Coding**-də **prefix codes** (prefiks kodları) necə yaradılır?
 152. **Activity Selection Problem**-də **greedy choice property** (acgöz seçim xüsusiyyəti) nədir?
 153. **Minimum Coin Change** (Minimum Sikkə Dəyişmə) problemi Greedy ilə necə həll olunur?
-154. **Greedy Algorithm**-də **local optimum** (lokal optimal) ilə **global optimum** (qlobal optimal) arasındakı fərq nədir?
+154. **Greedy Algorithm**-də **local optimum** (lokal optimal) ilə **global optimum** (qlobal optimal) arasındakı fərq
+     nədir?
 155. **Interval Scheduling** (Interval Planlaşdırma) problemi necə həll olunur?
 156. **Greedy Algorithm**-də **proof of correctness** (doğruluğun sübutu) necə aparılır?
 157. **Kruskal’s Algorithm**-də **disjoint set** (ayrılmış dəst) necə istifadə olunur?
@@ -3010,6 +3566,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 160. **Huffman Coding**-də **binary tree** (ikili ağac) necə qurulur?
 
 ### Divide and Conquer
+
 161. **Divide and Conquer** (Böl və Hökm Et) strategiyası nədir?
 162. **Merge Sort** ilə **Divide and Conquer** necə tətbiq olunur?
 163. **Quick Sort** ilə **Divide and Conquer** necə istifadə olunur?
@@ -3032,6 +3589,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 180. **Quick Sort**-da **tail recursion** (quyruq rekursiyası) necə optimallaşdırılır?
 
 ### Hashing Algorithms
+
 181. **Hashing** (Xəşləmə) nədir və alqoritmlərdə necə istifadə olunur?
 182. **Hash Function** (Xəş Funksiyası) nədir və necə işləyir?
 183. **Collision Resolution** (Toqquşma Həlli) üsulları hansılardır?
@@ -3054,6 +3612,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 200. **Consistent Hashing**-də **virtual nodes** (virtual düyünlər) necə istifadə olunur?
 
 ### Other Algorithms
+
 201. **Backtracking** (Geri Dönüş) alqoritmləri nədir?
 202. **N-Queens Problem** (N Vəzir Problemi) necə həll olunur?
 203. **Sudoku Solver** (Sudoku Həlledicisi) necə işləyir?
@@ -3159,9 +3718,12 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 
 # RabbitMQ Müsahibə Sualları
 
-Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms və RabbitMQ ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms və RabbitMQ ilə bağlı
+müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə
+edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -3169,188 +3731,301 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 - [Design Patterns](#design-patterns)
 - [Algorithms](#algorithms)
 - [RabbitMQ](#rabbitmq)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Arxitektura və Komponentlər](#arxitektura-və-komponentlər)
-  - [Exchange Növləri](#exchange-növləri)
-  - [Queue İdarəetmə](#queue-idarəetmə)
-  - [Mesajlaşma Nümunələri](#mesajlaşma-nümunələri)
-  - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
-  - [Təhlükəsizlik](#təhlükəsizlik)
-  - [Clustering və Yüksək Əlçatanlıq](#clustering-və-yüksək-əlçatanlıq)
-  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Arxitektura və Komponentlər](#arxitektura-və-komponentlər)
+    - [Exchange Növləri](#exchange-növləri)
+    - [Queue İdarəetmə](#queue-idarəetmə)
+    - [Mesajlaşma Nümunələri](#mesajlaşma-nümunələri)
+    - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
+    - [Təhlükəsizlik](#təhlükəsizlik)
+    - [Clustering və Yüksək Əlçatanlıq](#clustering-və-yüksək-əlçatanlıq)
+    - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## RabbitMQ
 
 ### Ümumi Suallar
-1. **RabbitMQ** nədir və nə üçün istifadə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+
+1. **RabbitMQ** nədir və nə üçün istifadə
+   olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
 2. **AMQP** (Advanced Message Queuing Protocol - Qabaqcıl Mesaj Növbələmə Protokolu) nədir?
-3. **RabbitMQ**-nun digər mesaj brokerləri ilə müqayisədə üstünlükləri nələrdir?[](https://mindmajix.com/rabbitmq-interview-questions)
+3. **RabbitMQ**-nun digər mesaj brokerləri ilə müqayisədə üstünlükləri
+   nələrdir?[](https://mindmajix.com/rabbitmq-interview-questions)
 4. **RabbitMQ**-nun **Kafka** ilə fərqləri nələrdir?[](https://www.interviewbit.com/kafka-interview-questions/)
-5. **RabbitMQ**-nun **ActiveMQ** ilə müqayisədə fərqləri nələrdir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-6. **RabbitMQ**-nun açıq mənbəli (open-source) olmasının üstünlükləri nələrdir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-7. **RabbitMQ**-nun hansı proqramlaşdırma dillərini dəstəklədiyi nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+5. **RabbitMQ**-nun **ActiveMQ** ilə müqayisədə fərqləri
+   nələrdir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+6. **RabbitMQ**-nun açıq mənbəli (open-source) olmasının üstünlükləri
+   nələrdir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+7. **RabbitMQ**-nun hansı proqramlaşdırma dillərini dəstəklədiyi
+   nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
 8. **RabbitMQ**-nun mikroservis arxitekturasında rolu nədir?[](https://mindmajix.com/rabbitmq-interview-questions)
 9. **RabbitMQ**-nun əsas xüsusiyyətləri hansılardır?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-10. **RabbitMQ**-nun istifadəsi zamanı qarşılaşılacaq çətinliklər nələrdir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-11. **RabbitMQ**-nun **Erlang** dilində yazılmasının üstünlükləri nələrdir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-12. **RabbitMQ**-nun hansı protokolları dəstəklədiyi nədir (AMQP, MQTT, STOMP)?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
-13. **RabbitMQ**-nun **message-oriented middleware** (mesaj yönümlü ara proqram) kimi rolu nədir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-14. **RabbitMQ**-nun **asynchronous messaging** (asinxron mesajlaşma) üçün faydaları nələrdir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+10. **RabbitMQ**-nun istifadəsi zamanı qarşılaşılacaq çətinliklər
+    nələrdir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+11. **RabbitMQ**-nun **Erlang** dilində yazılmasının üstünlükləri
+    nələrdir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+12. **RabbitMQ**-nun hansı protokolları dəstəklədiyi nədir (AMQP, MQTT,
+    STOMP)?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+13. **RabbitMQ**-nun **message-oriented middleware** (mesaj yönümlü ara proqram) kimi rolu
+    nədir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+14. **RabbitMQ**-nun **asynchronous messaging** (asinxron mesajlaşma) üçün faydaları
+    nələrdir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
 15. **RabbitMQ**-nun **enterprise** tətbiqlərdə istifadəsi necədir?
 
 ### Arxitektura və Komponentlər
-16. **Producer** (Mesaj İstehsalçısı) nədir və RabbitMQ-da rolu nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-17. **Consumer** (Mesaj İstehlakçısı) nədir və necə işləyir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-18. **Queue** (Növbə) nədir və RabbitMQ-da hansı funksiyanı yerinə yetirir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-19. **Exchange** (Mübadilə) nədir və mesaj yönləndirməsində rolu nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-20. **Binding** (Bağlama) nədir və necə təyin olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
-21. **Routing Key** (Yönləndirmə Açarı) nədir və necə istifadə olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
-22. **Virtual Host** (Virtual Host - Virtual Ev Sahibi) nədir və nə üçün istifadə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-23. **Channel** (Kanal) nədir və RabbitMQ-da necə işləyir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-24. **Connection** (Əlaqə) ilə **Channel** arasındakı fərq nədir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-25. **Message Acknowledgment** (Mesaj Təsdiqləmə) nədir və niyə vacibdir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-26. **Publisher Confirms** (Nəşriyyat Təsdiqləri) nədir?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+
+16. **Producer** (Mesaj İstehsalçısı) nədir və RabbitMQ-da rolu
+    nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+17. **Consumer** (Mesaj İstehlakçısı) nədir və necə
+    işləyir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+18. **Queue** (Növbə) nədir və RabbitMQ-da hansı funksiyanı yerinə
+    yetirir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+19. **Exchange** (Mübadilə) nədir və mesaj yönləndirməsində rolu
+    nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+20. **Binding** (Bağlama) nədir və necə təyin
+    olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+21. **Routing Key** (Yönləndirmə Açarı) nədir və necə istifadə
+    olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+22. **Virtual Host** (Virtual Host - Virtual Ev Sahibi) nədir və nə üçün istifadə
+    olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+23. **Channel** (Kanal) nədir və RabbitMQ-da necə
+    işləyir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+24. **Connection** (Əlaqə) ilə **Channel** arasındakı fərq
+    nədir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+25. **Message Acknowledgment** (Mesaj Təsdiqləmə) nədir və niyə
+    vacibdir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+26. **Publisher Confirms** (Nəşriyyat Təsdiqləri)
+    nədir?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
 27. **Dead Letter Queue** (Ölü Məktub Növbəsi) nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-28. **Dead Letter Exchange** (Ölü Məktub Mübadiləsi) nədir və necə işləyir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+28. **Dead Letter Exchange** (Ölü Məktub Mübadiləsi) nədir və necə
+    işləyir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
 29. **Message Durability** (Mesaj Davamlılığı) nədir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-30. **Persistent Messages** (Davamlı Mesajlar) ilə **Transient Messages** (Müvəqqəti Mesajlar) arasındakı fərq nədir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-31. **RabbitMQ**-nun **message flow** (mesaj axını) prosesi necədir?[](https://www.techgeeknext.com/java/rabbitmq-interview-questions)
-32. **RabbitMQ**-nun **broker** (broker) kimi rolu nədir?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+30. **Persistent Messages** (Davamlı Mesajlar) ilə **Transient Messages** (Müvəqqəti Mesajlar) arasındakı fərq
+    nədir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+31. **RabbitMQ**-nun **message flow** (mesaj axını) prosesi
+    necədir?[](https://www.techgeeknext.com/java/rabbitmq-interview-questions)
+32. **RabbitMQ**-nun **broker** (broker) kimi rolu
+    nədir?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
 33. **RabbitMQ**-da **message format** (mesaj formatı) necə təyin olunur?
-34. **RabbitMQ**-da **message priority** (mesaj prioriteti) necə idarə olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-35. **RabbitMQ**-nun **AMQP 0-9-1** protokolu ilə bağlı xüsusiyyətləri nələrdir?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+34. **RabbitMQ**-da **message priority** (mesaj prioriteti) necə idarə
+    olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+35. **RabbitMQ**-nun **AMQP 0-9-1** protokolu ilə bağlı xüsusiyyətləri
+    nələrdir?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
 
 ### Exchange Növləri
-36. **Direct Exchange** (Birbaşa Mübadilə) nədir və nə vaxt istifadə olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
-37. **Fanout Exchange** (Fanout Mübadiləsi) nədir və necə işləyir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-38. **Topic Exchange** (Mövzu Mübadiləsi) nədir və nə üçün istifadə olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
-39. **Headers Exchange** (Başlıq Mübadiləsi) nədir və necə tətbiq olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
-40. **Direct Exchange** ilə **Topic Exchange** arasındakı fərq nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
-41. **Fanout Exchange** ilə **Topic Exchange** arasındakı fərq nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
-42. **Headers Exchange** ilə **Topic Exchange** arasındakı performans fərqi nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+
+36. **Direct Exchange** (Birbaşa Mübadilə) nədir və nə vaxt istifadə
+    olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+37. **Fanout Exchange** (Fanout Mübadiləsi) nədir və necə
+    işləyir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+38. **Topic Exchange** (Mövzu Mübadiləsi) nədir və nə üçün istifadə
+    olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+39. **Headers Exchange** (Başlıq Mübadiləsi) nədir və necə tətbiq
+    olunur?[](https://medium.com/%40razzak.cse65/rabbitmq-interview-q-a-grouped-by-difficulty-level-6ce55df26674)
+40. **Direct Exchange** ilə **Topic Exchange** arasındakı fərq
+    nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+41. **Fanout Exchange** ilə **Topic Exchange** arasındakı fərq
+    nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+42. **Headers Exchange** ilə **Topic Exchange** arasındakı performans fərqi
+    nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
 43. **Exchange Type** (Mübadilə Növü) seçimi hansı amillərdən asılıdır?
 44. **Default Exchange** (Standart Mübadilə) nədir və necə işləyir?
-45. **Exchange**-də **routing key** ilə **binding key** arasındakı fərq nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
-46. **Topic Exchange**-də **wildcard matching** (joker simvol uyğunluğu) necə işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-47. **Fanout Exchange**-də mesajların bütün növbələrə paylanması necə təmin olunur?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-48. **Headers Exchange**-də **header attributes** (başlıq atributları) necə istifadə olunur?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+45. **Exchange**-də **routing key** ilə **binding key** arasındakı fərq
+    nədir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+46. **Topic Exchange**-də **wildcard matching** (joker simvol uyğunluğu) necə
+    işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+47. **Fanout Exchange**-də mesajların bütün növbələrə paylanması necə təmin
+    olunur?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+48. **Headers Exchange**-də **header attributes** (başlıq atributları) necə istifadə
+    olunur?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
 49. **Exchange**-də **alternate exchange** (alternativ mübadilə) nədir?
 50. **Exchange**-də **auto-delete** (avtomatik silinmə) xüsusiyyəti nədir?
 
 ### Queue İdarəetmə
-51. **Queue** (Növbə) necə yaradılır və konfiqurasiya olunur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-52. **Durable Queue** (Davamlı Növbə) ilə **Non-Durable Queue** (Qeyri-Davamlı Növbə) arasındakı fərq nədir?[](https://mindmajix.com/rabbitmq-interview-questions)
-53. **Exclusive Queue** (Eksklüziv Növbə) nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
-54. **Auto-Delete Queue** (Avtomatik Silinən Növbə) nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
-55. **Queue Length Limit** (Növbə Uzunluğu Limiti) necə təyin olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-56. **Message TTL** (Mesaj Yaşama Müddəti) nədir və necə konfiqurasiya olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
-57. **Queue Mirroring** (Növbə Güzgülənməsi) nədir və necə işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-58. **Dead Letter Queue** (Ölü Məktub Növbəsi) hansı hallarda istifadə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+
+51. **Queue** (Növbə) necə yaradılır və konfiqurasiya
+    olunur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+52. **Durable Queue** (Davamlı Növbə) ilə **Non-Durable Queue** (Qeyri-Davamlı Növbə) arasındakı fərq
+    nədir?[](https://mindmajix.com/rabbitmq-interview-questions)
+53. **Exclusive Queue** (Eksklüziv Növbə)
+    nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+54. **Auto-Delete Queue** (Avtomatik Silinən Növbə)
+    nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+55. **Queue Length Limit** (Növbə Uzunluğu Limiti) necə təyin
+    olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+56. **Message TTL** (Mesaj Yaşama Müddəti) nədir və necə konfiqurasiya
+    olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+57. **Queue Mirroring** (Növbə Güzgülənməsi) nədir və necə
+    işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+58. **Dead Letter Queue** (Ölü Məktub Növbəsi) hansı hallarda istifadə
+    olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
 59. **x-dead-letter-exchange** parametri nədir?[](https://interviewprep.org/rabbitmq-interview-questions/)
 60. **x-dead-letter-routing-key** parametri nədir?[](https://interviewprep.org/rabbitmq-interview-questions/)
 61. **Queue**-də **message expiration** (mesajın müddəti bitməsi) necə idarə olunur?
-62. **Queue**-də **priority queues** (prioritet növbələri) necə təyin olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-63. **Queue**-də **consumer tag** (istehlakçı etiketi) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+62. **Queue**-də **priority queues** (prioritet növbələri) necə təyin
+    olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+63. **Queue**-də **consumer tag** (istehlakçı etiketi)
+    nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
 64. **Queue**-də **message prefetch count** (mesaj öncədən yükləmə sayı) necə təyin olunur?
 65. **Queue**-də **requeue** (yenidən növbəyə qaytarma) necə işləyir?
-66. **Queue**-də **message rejection** (mesaj rədd etmə) necə həyata keçirilir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+66. **Queue**-də **message rejection** (mesaj rədd etmə) necə həyata
+    keçirilir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
 67. **Queue**-də **basic.qos** metodu nə üçün istifadə olunur?
 68. **Queue**-də **purge** (təmizləmə) əməliyyatı nədir?
 69. **Queue**-də **overflow behavior** (daşma davranışı) necə idarə olunur?
 70. **Queue**-də **lazy queues** (tənbəl növbələr) nədir və nə üçün istifadə olunur?
 
 ### Mesajlaşma Nümunələri
-71. **Point-to-Point** (Nöqtədən-Nöqtəyə) mesajlaşma nümunəsi nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-72. **Publish/Subscribe** (Nəşr/Abunə) mesajlaşma nümunəsi nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-73. **Request/Reply** (Sorğu/Cavab) mesajlaşma nümunəsi nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
-74. **Work Queue** (İş Növbəsi) nümunəsi nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
-75. **Publish/Subscribe** ilə **Point-to-Point** arasındakı fərq nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+
+71. **Point-to-Point** (Nöqtədən-Nöqtəyə) mesajlaşma nümunəsi
+    nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+72. **Publish/Subscribe** (Nəşr/Abunə) mesajlaşma nümunəsi
+    nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+73. **Request/Reply** (Sorğu/Cavab) mesajlaşma nümunəsi
+    nədir?[](https://www.geeksforgeeks.org/blogs/introduction-to-rabbitmq/)
+74. **Work Queue** (İş Növbəsi) nümunəsi
+    nədir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+75. **Publish/Subscribe** ilə **Point-to-Point** arasındakı fərq
+    nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
 76. **Request/Reply** nümunəsində **correlation ID** (korrelyasiya ID) nədir?
-77. **Work Queue** ilə **load balancing** (yük balanslaşdırması) necə təmin olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-78. **Publish/Subscribe** nümunəsində **Fanout Exchange** necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+77. **Work Queue** ilə **load balancing** (yük balanslaşdırması) necə təmin
+    olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+78. **Publish/Subscribe** nümunəsində **Fanout Exchange** necə istifadə
+    olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
 79. **Request/Reply** nümunəsində **temporary queues** (müvəqqəti növbələr) necə yaradılır?
-80. **Work Queue**-də **fair dispatch** (ədalətli göndəriş) necə təmin olunur?[](https://www.slideshare.net/slideshow/rabbitmq-interview-questions-and-answers/254165925)
-81. **Publish/Subscribe** ilə **Topic Exchange** necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
-82. **Point-to-Point** ilə **Direct Exchange** necə əlaqəlidir?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+80. **Work Queue**-də **fair dispatch** (ədalətli göndəriş) necə təmin
+    olunur?[](https://www.slideshare.net/slideshow/rabbitmq-interview-questions-and-answers/254165925)
+81. **Publish/Subscribe** ilə **Topic Exchange** necə istifadə
+    olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+82. **Point-to-Point** ilə **Direct Exchange** necə
+    əlaqəlidir?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
 83. **Request/Reply** nümunəsində **reply-to queue** (cavab növbəsi) nədir?
 84. **Work Queue**-də **multiple consumers** (çoxsaylı istehlakçılar) necə idarə olunur?
 85. **Publish/Subscribe** nümunəsində **message filtering** (mesaj süzgəcləmə) necə aparılır?
 
 ### Performans və Optimallaşdırma
-86. **RabbitMQ**-da **performance monitoring** (performans monitorinqi) necə həyata keçirilir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-87. **RabbitMQ Management Plugin** ilə performans necə monitorinq edilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-88. **RabbitMQ**-da **message rate** (mesaj sürəti) necə ölçülür?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-89. **RabbitMQ**-da **queue depth** (növbə dərinliyi) necə izlənilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-90. **RabbitMQ**-da **connection count** (əlaqə sayı) necə optimallaşdırılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+
+86. **RabbitMQ**-da **performance monitoring** (performans monitorinqi) necə həyata
+    keçirilir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+87. **RabbitMQ Management Plugin** ilə performans necə monitorinq
+    edilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+88. **RabbitMQ**-da **message rate** (mesaj sürəti) necə
+    ölçülür?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+89. **RabbitMQ**-da **queue depth** (növbə dərinliyi) necə
+    izlənilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+90. **RabbitMQ**-da **connection count** (əlaqə sayı) necə
+    optimallaşdırılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
 91. **RabbitMQ**-da **channel multiplexing** (kanal çoxsaylılığı) nədir?
 92. **RabbitMQ**-da **message batching** (mesaj toplulaşdırması) necə tətbiq olunur?
 93. **RabbitMQ**-da **prefetch count** (öncədən yükləmə sayı) performansına necə təsir edir?
 94. **RabbitMQ**-da **lazy queues** performans baxımından necə üstünlük təmin edir?
 95. **RabbitMQ**-da **message compression** (mesaj sıxışdırması) necə həyata keçirilir?
-96. **RabbitMQ**-da **message size** (mesaj ölçüsü) performansına necə təsir edir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-97. **RabbitMQ**-da **queue mirroring** performansına necə təsir edir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+96. **RabbitMQ**-da **message size** (mesaj ölçüsü) performansına necə təsir
+    edir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+97. **RabbitMQ**-da **queue mirroring** performansına necə təsir
+    edir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
 98. **RabbitMQ**-da **high throughput** (yüksək ötürmə qabiliyyəti) necə təmin olunur?
 99. **RabbitMQ**-da **low latency** (aşağı gecikmə) necə əldə olunur?
-100. **RabbitMQ**-da **bottleneck** (darboğaz) problemləri necə aşkarlanır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-101. **RabbitMQ**-da **message persistence** (mesaj davamlılığı) performansına necə təsir edir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+100. **RabbitMQ**-da **bottleneck** (darboğaz) problemləri necə
+     aşkarlanır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+101. **RabbitMQ**-da **message persistence** (mesaj davamlılığı) performansına necə təsir
+     edir?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
 102. **RabbitMQ**-da **disk I/O** (disk giriş/çıxış) optimallaşdırması necə aparılır?
 103. **RabbitMQ**-da **memory usage** (yaddaş istifadəsi) necə optimallaşdırılır?
 104. **RabbitMQ**-da **CPU usage** (prosessor istifadəsi) necə idarə olunur?
-105. **RabbitMQ**-da **Prometheus** və **Grafana** ilə monitorinq necə qurulur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+105. **RabbitMQ**-da **Prometheus** və **Grafana** ilə monitorinq necə
+     qurulur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
 
 ### Təhlükəsizlik
-106. **RabbitMQ**-da **authentication** (autentifikasiya) necə konfiqurasiya olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-107. **RabbitMQ**-da **authorization** (səlahiyyətləndirmə) necə təmin olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-108. **RabbitMQ**-da **SSL/TLS** şifrələməsi necə aktivləşdirilir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-109. **RabbitMQ**-da **Access Control Lists (ACLs)** (Giriş Nəzarət Siyahıları) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-110. **RabbitMQ**-da **message spoofing** (mesaj saxtalaşdırması) necə qarşısı alınır?[](https://www.projectpractical.com/rabbitmq-interview-questions-and-answers/)
-111. **RabbitMQ**-da **message replay** (mesaj təkrar oynatma) hücumlarına qarşı necə qorunulur?[](https://www.projectpractical.com/rabbitmq-interview-questions-and-answers/)
-112. **RabbitMQ**-da **user management** (istifadəçi idarəetmə) necə aparılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-113. **RabbitMQ**-da **password policies** (şifrə siyasətləri) necə təyin olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-114. **RabbitMQ**-da **network security** (şəbəkə təhlükəsizliyi) necə təmin olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-115. **RabbitMQ**-da **firewall** konfiqurasiyası necə aparılır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+
+106. **RabbitMQ**-da **authentication** (autentifikasiya) necə konfiqurasiya
+     olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+107. **RabbitMQ**-da **authorization** (səlahiyyətləndirmə) necə təmin
+     olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+108. **RabbitMQ**-da **SSL/TLS** şifrələməsi necə
+     aktivləşdirilir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+109. **RabbitMQ**-da **Access Control Lists (ACLs)** (Giriş Nəzarət Siyahıları)
+     nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+110. **RabbitMQ**-da **message spoofing** (mesaj saxtalaşdırması) necə qarşısı
+     alınır?[](https://www.projectpractical.com/rabbitmq-interview-questions-and-answers/)
+111. **RabbitMQ**-da **message replay** (mesaj təkrar oynatma) hücumlarına qarşı necə
+     qorunulur?[](https://www.projectpractical.com/rabbitmq-interview-questions-and-answers/)
+112. **RabbitMQ**-da **user management** (istifadəçi idarəetmə) necə
+     aparılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+113. **RabbitMQ**-da **password policies** (şifrə siyasətləri) necə təyin
+     olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+114. **RabbitMQ**-da **network security** (şəbəkə təhlükəsizliyi) necə təmin
+     olunur?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+115. **RabbitMQ**-da **firewall** konfiqurasiyası necə
+     aparılır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
 116. **RabbitMQ**-da **secure communication** (təhlükəsiz rabitə) üçün hansı protokollar istifadə olunur?
 117. **RabbitMQ**-da **role-based access control** (rol əsaslı giriş nəzarəti) necə tətbiq olunur?
 118. **RabbitMQ**-da **encryption at rest** (sabit vəziyyətdə şifrələmə) necə təmin olunur?
 119. **RabbitMQ**-da **audit logging** (audit qeydiyyatı) necə aktivləşdirilir?
-120. **RabbitMQ**-da **LDAP** inteqrasiyası necə həyata keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+120. **RabbitMQ**-da **LDAP** inteqrasiyası necə həyata
+     keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
 
 ### Clustering və Yüksək Əlçatanlıq
-121. **RabbitMQ Cluster** (RabbitMQ Klasteri) nədir və necə konfiqurasiya olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-122. **RabbitMQ**-da **mirrored queues** (güzgülənmiş növbələr) necə işləyir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-123. **RabbitMQ**-da **high availability** (yüksək əlçatanlıq) necə təmin olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-124. **RabbitMQ**-da **load balancing** (yük balanslaşdırması) necə həyata keçirilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-125. **RabbitMQ**-da **failover** (əks funksionallıq) necə idarə olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-126. **RabbitMQ**-da **node failure** (düyün sıradan çıxması) zamanı mesajlar necə qorunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-127. **RabbitMQ**-da **clustering** performansına necə təsir edir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-128. **RabbitMQ**-da **federation** nədir və necə konfiqurasiya olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-129. **RabbitMQ Federation Plugin** ilə mesaj mübadiləsi necə həyata keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-130. **RabbitMQ Shovel Plugin** nədir və nə üçün istifadə olunur?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
-131. **RabbitMQ**-da **network partitioning** (şəbəkə bölünməsi) necə idarə olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+
+121. **RabbitMQ Cluster** (RabbitMQ Klasteri) nədir və necə konfiqurasiya
+     olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+122. **RabbitMQ**-da **mirrored queues** (güzgülənmiş növbələr) necə
+     işləyir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+123. **RabbitMQ**-da **high availability** (yüksək əlçatanlıq) necə təmin
+     olunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+124. **RabbitMQ**-da **load balancing** (yük balanslaşdırması) necə həyata
+     keçirilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+125. **RabbitMQ**-da **failover** (əks funksionallıq) necə idarə
+     olunur?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+126. **RabbitMQ**-da **node failure** (düyün sıradan çıxması) zamanı mesajlar necə
+     qorunur?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+127. **RabbitMQ**-da **clustering** performansına necə təsir
+     edir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+128. **RabbitMQ**-da **federation** nədir və necə konfiqurasiya
+     olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+129. **RabbitMQ Federation Plugin** ilə mesaj mübadiləsi necə həyata
+     keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+130. **RabbitMQ Shovel Plugin** nədir və nə üçün istifadə
+     olunur?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+131. **RabbitMQ**-da **network partitioning** (şəbəkə bölünməsi) necə idarə
+     olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
 132. **RabbitMQ**-da **net_ticktime** parametri nədir?[](https://interviewprep.org/rabbitmq-interview-questions/)
-133. **RabbitMQ**-da **mirrored queues** ilə **federation** arasındakı fərq nədir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-134. **RabbitMQ**-da **cluster scalability** (klaster miqyaslılığı) necə təmin olunur?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
-135. **RabbitMQ**-da **dynamic cluster expansion** (dinamik klaster genişlənməsi) necə aparılır?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+133. **RabbitMQ**-da **mirrored queues** ilə **federation** arasındakı fərq
+     nədir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+134. **RabbitMQ**-da **cluster scalability** (klaster miqyaslılığı) necə təmin
+     olunur?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+135. **RabbitMQ**-da **dynamic cluster expansion** (dinamik klaster genişlənməsi) necə
+     aparılır?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
 136. **RabbitMQ**-da **HAProxy** ilə yük balanslaşdırması necə qurulur?
 137. **RabbitMQ**-da **quorum queues** (kvorum növbələri) nədir?
 138. **RabbitMQ**-da **classic queues** (klassik növbələr) ilə **quorum queues** arasındakı fərq nədir?
 139. **RabbitMQ**-da **queue master location** (növbə ustası yeri) necə təyin olunur?
-140. **RabbitMQ**-da **replication** (təkrarlanma) necə işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+140. **RabbitMQ**-da **replication** (təkrarlanma) necə
+     işləyir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
 
 ### Spring ilə İnteqrasiya
-141. **Spring AMQP** ilə RabbitMQ inteqrasiyası necə həyata keçirilir?[](https://www.slideshare.net/slideshow/rabbitmq-interview-questions-and-answers/254165925)
-142. **Spring Boot** ilə RabbitMQ necə konfiqurasiya olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-143. **Spring Cloud Stream** ilə RabbitMQ inteqrasiyası nədir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-144. **@RabbitListener** annotasiyası nədir və necə istifadə olunur?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+
+141. **Spring AMQP** ilə RabbitMQ inteqrasiyası necə həyata
+     keçirilir?[](https://www.slideshare.net/slideshow/rabbitmq-interview-questions-and-answers/254165925)
+142. **Spring Boot** ilə RabbitMQ necə konfiqurasiya
+     olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+143. **Spring Cloud Stream** ilə RabbitMQ inteqrasiyası
+     nədir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+144. **@RabbitListener** annotasiyası nədir və necə istifadə
+     olunur?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
 145. **RabbitTemplate** sinfi nədir və necə işləyir?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
 146. **Spring AMQP**-də **message converter** (mesaj çeviricisi) necə təyin olunur?
-147. **Spring Boot**-da **RabbitMQ listener** (RabbitMQ dinləyicisi) necə yaradılır?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
-148. **Spring AMQP**-də **retry mechanism** (təkrar sınaq mexanizmi) necə konfiqurasiya olunur?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
-149. **Spring Cloud Stream**-də **binding** (bağlama) necə təyin olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-150. **Spring Boot**-da **RabbitMQ exchange types** (mübadilə növləri) necə tətbiq olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+147. **Spring Boot**-da **RabbitMQ listener** (RabbitMQ dinləyicisi) necə
+     yaradılır?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+148. **Spring AMQP**-də **retry mechanism** (təkrar sınaq mexanizmi) necə konfiqurasiya
+     olunur?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+149. **Spring Cloud Stream**-də **binding** (bağlama) necə təyin
+     olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+150. **Spring Boot**-da **RabbitMQ exchange types** (mübadilə növləri) necə tətbiq
+     olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
 151. **Spring AMQP**-də **message acknowledgment** (mesaj təsdiqləmə) necə idarə olunur?
-152. **Spring Boot**-da **Dead Letter Queue** necə konfiqurasiya olunur?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
+152. **Spring Boot**-da **Dead Letter Queue** necə konfiqurasiya
+     olunur?[](https://github.com/rhidoyhasanmahmud/The-Anatomy-of-RabbitMQ)
 153. **Spring AMQP**-də **error handling** (səhv idarəetmə) necə həyata keçirilir?
 154. **Spring Cloud Stream**-də **consumer groups** (istehlakçı qrupları) necə istifadə olunur?
 155. **Spring Boot**-da **RabbitMQ connection pooling** (əlaqə hovuzu) necə təmin olunur?
@@ -3361,27 +4036,42 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 160. **Spring Boot**-da **RabbitMQ monitoring** (RabbitMQ monitorinqi) necə qurulur?
 
 ### Digər Mövzular
-161. **RabbitMQ Management Plugin** nədir və necə aktivləşdirilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
-162. **rabbitmqctl** komanda xətti aləti nədir və necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
-163. **RabbitMQ**-da **policies** (siyasətlər) nədir və necə təyin olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
-164. **RabbitMQ**-da **message tracing** (mesaj izləmə) necə həyata keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-165. **RabbitMQ**-da **federation plugin** ilə klasterlər arası mesajlaşma necə təmin olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-166. **RabbitMQ Shovel Plugin** ilə mesaj ötürülməsi necə aparılır?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
-167. **RabbitMQ**-da **STOMP** protokolu nədir və necə istifadə olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
-168. **RabbitMQ**-da **MQTT** protokolu nədir və necə dəstəklənir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
-169. **RabbitMQ**-da **HTTP API** necə istifadə olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
-170. **RabbitMQ**-da **plugins** (plaginlər) necə aktivləşdirilir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
-171. **RabbitMQ**-da **message retry** (mesaj təkrar sınağı) necə konfiqurasiya olunur?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+
+161. **RabbitMQ Management Plugin** nədir və necə
+     aktivləşdirilir?[](https://www.remoterocketship.com/advice/10-rabbitmq-interview-questions-and-answers-in-2023)
+162. **rabbitmqctl** komanda xətti aləti nədir və necə istifadə
+     olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+163. **RabbitMQ**-da **policies** (siyasətlər) nədir və necə təyin
+     olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+164. **RabbitMQ**-da **message tracing** (mesaj izləmə) necə həyata
+     keçirilir?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+165. **RabbitMQ**-da **federation plugin** ilə klasterlər arası mesajlaşma necə təmin
+     olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+166. **RabbitMQ Shovel Plugin** ilə mesaj ötürülməsi necə
+     aparılır?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+167. **RabbitMQ**-da **STOMP** protokolu nədir və necə istifadə
+     olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+168. **RabbitMQ**-da **MQTT** protokolu nədir və necə
+     dəstəklənir?[](https://www.devopsschool.com/blog/top-50-rabbitmq-interview-questions-answer/)
+169. **RabbitMQ**-da **HTTP API** necə istifadə
+     olunur?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+170. **RabbitMQ**-da **plugins** (plaginlər) necə
+     aktivləşdirilir?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+171. **RabbitMQ**-da **message retry** (mesaj təkrar sınağı) necə konfiqurasiya
+     olunur?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
 172. **RabbitMQ**-da **message expiration policies** (mesaj müddəti siyasətləri) necə təyin olunur?
 173. **RabbitMQ**-da **consumer priorities** (istehlakçı prioritetləri) necə idarə olunur?
 174. **RabbitMQ**-da **message headers** (mesaj başlıqları) necə istifadə olunur?
 175. **RabbitMQ**-da **message properties** (mesaj xassələri) hansılardır?
 176. **RabbitMQ**-da **alternate exchange** necə təyin olunur?
-177. **RabbitMQ**-da **queue policies** (növbə siyasətləri) necə tətbiq olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
+177. **RabbitMQ**-da **queue policies** (növbə siyasətləri) necə tətbiq
+     olunur?[](https://interviewprep.org/rabbitmq-interview-questions/)
 178. **RabbitMQ**-da **exchange policies** (mübadilə siyasətləri) nədir?
-179. **RabbitMQ**-da **message routing** (mesaj yönləndirmə) optimallaşdırması necə aparılır?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+179. **RabbitMQ**-da **message routing** (mesaj yönləndirmə) optimallaşdırması necə
+     aparılır?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
 180. **RabbitMQ**-da **message deduplication** (mesaj təkrarlanmasının qarşısını alma) necə həyata keçirilir?
-181. **RabbitMQ**-da **message ordering** (mesaj sıralaması) necə təmin olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
+181. **RabbitMQ**-da **message ordering** (mesaj sıralaması) necə təmin
+     olunur?[](https://www.wisdomjobs.com/e-university/rabbitmq-interview-questions.html)
 182. **RabbitMQ**-da **message batch processing** (mesaj toplu emalı) necə aparılır?
 183. **RabbitMQ**-da **consumer cancellation** (istehlakçı ləğvi) necə idarə olunur?
 184. **RabbitMQ**-da **message redelivery** (mesaj yenidən göndərilməsi) necə işləyir?
@@ -3395,12 +4085,16 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 192. **RabbitMQ**-da **exchange monitoring** (mübadilə monitorinqi) necə aparılır?
 193. **RabbitMQ**-da **connection monitoring** (əlaqə monitorinqi) necə təmin olunur?
 194. **RabbitMQ**-da **health checks** (sağlamlıq yoxlamaları) necə qurulur?
-195. **RabbitMQ**-da **metrics** (metrikalar) hansılardır və necə toplanır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-196. **RabbitMQ**-da **Prometheus** ilə inteqrasiya necə aparılır?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-197. **RabbitMQ**-da **Grafana** ilə vizualizasiya necə qurulur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+195. **RabbitMQ**-da **metrics** (metrikalar) hansılardır və necə
+     toplanır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+196. **RabbitMQ**-da **Prometheus** ilə inteqrasiya necə
+     aparılır?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+197. **RabbitMQ**-da **Grafana** ilə vizualizasiya necə
+     qurulur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
 198. **RabbitMQ**-da **message tracing** ilə **debugging** (sazlama) necə aparılır?
 199. **RabbitMQ**-da **log aggregation** (qeyd toplama) necə həyata keçirilir?
-200. **RabbitMQ**-da **distributed tracing** (paylanmış izləmə) necə tətbiq olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
+200. **RabbitMQ**-da **distributed tracing** (paylanmış izləmə) necə tətbiq
+     olunur?[](https://www.javainuse.com/misc/rabbitmq-interview-questions)
 201. **RabbitMQ**-da **message serialization** (mesaj seriyalaşdırması) necə idarə olunur?
 202. **RabbitMQ**-da **message deserialization** (mesaj deserializasiyası) necə aparılır?
 203. **RabbitMQ**-da **message validation** (mesaj doğrulaması) üçün hansı alətlər istifadə olunur?
@@ -3418,11 +4112,17 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 215. **RabbitMQ**-da **message routing** ilə **message filtering** arasındakı fərq nədir?
 
 ### Əlavə Mövzular
-216. **RabbitMQ**-da **management console** (idarəetmə konsolu) necə istifadə olunur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
-217. **RabbitMQ**-da **CLI tools** (komanda xətti alətləri) hansılardır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-218. **RabbitMQ**-da **rabbitmqadmin** aləti nədir?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
-219. **RabbitMQ**-da **plugins** (plaginlər) hansı funksiyaları təmin edir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
-220. **RabbitMQ**-da **federation** ilə **shovel** arasındakı fərq nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
+
+216. **RabbitMQ**-da **management console** (idarəetmə konsolu) necə istifadə
+     olunur?[](https://www.finalroundai.com/blog/rabbitmq-interview-questions)
+217. **RabbitMQ**-da **CLI tools** (komanda xətti alətləri)
+     hansılardır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+218. **RabbitMQ**-da **rabbitmqadmin** aləti
+     nədir?[](https://www.onlineinterviewquestions.com/rabbitmq-interview-questions/)
+219. **RabbitMQ**-da **plugins** (plaginlər) hansı funksiyaları təmin
+     edir?[](https://www.mytectra.com/interview-question/frequently-asked-rabbitmq-interview-questions-and-answers)
+220. **RabbitMQ**-da **federation** ilə **shovel** arasındakı fərq
+     nədir?[](https://www.scmgalaxy.com/tutorials/top-50-rabbitmq-interview-questions-with-answers/)
 221. **RabbitMQ**-da **consistent hashing exchange** (sabit xəşləmə mübadiləsi) nədir?
 222. **RabbitMQ**-da **message priority** ilə **queue priority** arasındakı fərq nədir?
 223. **RabbitMQ**-da **message batching** ilə **message compression** arasındakı fərq nədir?
@@ -3434,14 +4134,21 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 229. **RabbitMQ**-da **message encryption** ilə **SSL/TLS** arasındakı fərq nədir?
 230. **RabbitMQ**-da **queue policies** ilə **exchange policies** arasındakı fərq nədir?
 231. **RabbitMQ**-da **message retry** ilə **dead letter queue** arasındakı əlaqə nədir?
-232. **RabbitMQ**-da **message acknowledgment modes** (mesaj təsdiqləmə rejimləri) hansılardır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-233. **RabbitMQ**-da **automatic acknowledgment** (avtomatik təsdiqləmə) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-234. **RabbitMQ**-da **manual acknowledgment** (əl ilə təsdiqləmə) necə işləyir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
-235. **RabbitMQ**-da **negative acknowledgment (NACK)** (mənfi təsdiqləmə) nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+232. **RabbitMQ**-da **message acknowledgment modes** (mesaj təsdiqləmə rejimləri)
+     hansılardır?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+233. **RabbitMQ**-da **automatic acknowledgment** (avtomatik təsdiqləmə)
+     nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+234. **RabbitMQ**-da **manual acknowledgment** (əl ilə təsdiqləmə) necə
+     işləyir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
+235. **RabbitMQ**-da **negative acknowledgment (NACK)** (mənfi təsdiqləmə)
+     nədir?[](https://hellointern.in/blog/rabbitmq-interview-questions-and-answers-54896)
 236. **RabbitMQ**-da **message durability** ilə **queue durability** arasındakı fərq nədir?
-237. **RabbitMQ**-da **message store** (mesaj anbarı) necə işləyir?[](https://mindmajix.com/rabbitmq-interview-questions)
-238. **RabbitMQ**-da **Mnesia** verilənlər bazası nədir və necə istifadə olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
-239. **RabbitMQ**-da **external database** (xarici verilənlər bazası) inteqrasiyası necə aparılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+237. **RabbitMQ**-da **message store** (mesaj anbarı) necə
+     işləyir?[](https://mindmajix.com/rabbitmq-interview-questions)
+238. **RabbitMQ**-da **Mnesia** verilənlər bazası nədir və necə istifadə
+     olunur?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
+239. **RabbitMQ**-da **external database** (xarici verilənlər bazası) inteqrasiyası necə
+     aparılır?[](https://www.acte.in/rabbitmq-interview-questions-and-answers)
 240. **RabbitMQ**-da **message delivery semantics** (mesaj çatdırılma semantikası) nədir?
 241. **RabbitMQ**-da **message routing** ilə **message delivery** arasındakı fərq nədir?
 242. **RabbitMQ**-da **message headers** ilə **message properties** arasındakı fərq nədir?
@@ -3473,7 +4180,8 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 268. **RabbitMQ**-da **message expiration** ilə **message TTL** arasındakı fərq nədir?
 269. **RabbitMQ**-da **consumer cancellation** ilə **message rejection** arasındakı fərq nədir?
 270. **RabbitMQ**-da **message priority** ilə **queue priority** arasındakı fərq nədir?
-271. **RabbitMQ**-da **federation** ilə **clustering** arasındakı fərq nədir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
+271. **RabbitMQ**-da **federation** ilə **clustering** arasındakı fərq
+     nədir?[](https://tutorialspedia.com/rabbitmq-interview-questions-answers/)
 272. **RabbitMQ**-da **message compression** ilə **message batching** arasındakı fərq nədir?
 273. **RabbitMQ**-da **message encryption** ilə **SSL/TLS** arasındakı fərq nədir?
 274. **RabbitMQ**-da **message validation** ilə **message filtering** arasındakı fərq nədir?
@@ -3508,9 +4216,11 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 
 # Kafka/Kafka Streams Müsahibə Sualları
 
-Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və
+qabaqcıl aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -3519,20 +4229,21 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 - [Algorithms](#algorithms)
 - [RabbitMQ](#rabbitmq)
 - [Kafka və Kafka Streams](#kafka-və-kafka-streams)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Kafka Arxitekturası](#kafka-arxitekturası)
-  - [Topic və Partition](#topic-və-partition)
-  - [Producer və Consumer](#producer-və-consumer)
-  - [Kafka Streams](#kafka-streams)
-  - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
-  - [Təhlükəsizlik](#təhlükəsizlik)
-  - [Clustering və Yüksək Əlçatanlıq](#clustering-və-yüksək-əlçatanlıq)
-  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Kafka Arxitekturası](#kafka-arxitekturası)
+    - [Topic və Partition](#topic-və-partition)
+    - [Producer və Consumer](#producer-və-consumer)
+    - [Kafka Streams](#kafka-streams)
+    - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
+    - [Təhlükəsizlik](#təhlükəsizlik)
+    - [Clustering və Yüksək Əlçatanlıq](#clustering-və-yüksək-əlçatanlıq)
+    - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## Kafka və Kafka Streams
 
 ### Ümumi Suallar
+
 1. **Apache Kafka** nədir və nə üçün istifadə olunur?
 2. **Kafka Streams** nədir və necə işləyir?
 3. **Kafka**-nın **RabbitMQ** ilə müqayisədə fərqləri nələrdir?
@@ -3550,6 +4261,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 15. **Kafka**-nın **distributed system** (paylanmış sistem) kimi xüsusiyyətləri nələrdir?
 
 ### Kafka Arxitekturası
+
 16. **Kafka Broker** (Kafka Brokeri) nədir və rolu nədir?
 17. **Kafka Cluster** (Kafka Klasteri) necə işləyir?
 18. **Topic** (Mövzu) nədir və Kafka-da necə təyin olunur?
@@ -3572,6 +4284,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 35. **Kafka**-da **broker configuration** (broker konfiqurasiyası) hansı parametrləri əhatə edir?
 
 ### Topic və Partition
+
 36. **Kafka Topic** (Kafka Mövzusu) necə yaradılır?
 37. **Partition** sayının seçimi Kafka-da hansı amillərdən asılıdır?
 38. **Kafka**-da **partition key** (bölmə açarı) nədir və necə istifadə olunur?
@@ -3589,6 +4302,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 50. **Kafka**-da **multi-partition topics** (çoxbölməli mövzular) necə idarə olunur?
 
 ### Producer və Consumer
+
 51. **Kafka Producer** (Kafka İstehsalçısı) nədir və necə işləyir?
 52. **Kafka Consumer** (Kafka İstehlakçısı) nədir və necə işləyir?
 53. **Producer**-də **message batching** (mesaj toplulaşdırması) nədir?
@@ -3611,6 +4325,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 70. **Kafka**-da **dead letter topic** (ölü məktub mövzusu) nədir?
 
 ### Kafka Streams
+
 71. **Kafka Streams** nədir və hansı problemləri həll edir?
 72. **Kafka Streams** ilə **Kafka Consumer** arasındakı fərq nədir?
 73. **KStream** nədir və necə istifadə olunur?
@@ -3643,6 +4358,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 100. **Kafka Streams**-də **repartitioning** (yenidən bölüşdürmə) necə işləyir?
 
 ### Performans və Optimallaşdırma
+
 101. **Kafka**-da **performance tuning** (performans tənzimləmə) necə aparılır?
 102. **Kafka**-da **broker performance** (broker performansı) necə optimallaşdırılır?
 103. **Kafka**-da **producer performance** (istehsalçı performansı) necə artır?
@@ -3665,6 +4381,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 120. **Kafka**-da **CPU usage** (prosessor istifadəsi) necə optimallaşdırılır?
 
 ### Təhlükəsizlik
+
 121. **Kafka**-da **authentication** (autentifikasiya) necə konfiqurasiya olunur?
 122. **Kafka**-da **authorization** (səlahiyyətləndirmə) necə təmin olunur?
 123. **Kafka**-da **SSL/TLS** şifrələməsi necə aktivləşdirilir?
@@ -3682,6 +4399,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 135. **Kafka**-da **secure communication** (təhlükəsiz rabitə) üçün hansı protokollar istifadə olunur?
 
 ### Clustering və Yüksək Əlçatanlıq
+
 136. **Kafka Cluster** (Kafka Klasteri) necə konfiqurasiya olunur?
 137. **Kafka**-da **replication** (təkrarlanma) necə təmin olunur?
 138. **Kafka**-da **high availability** (yüksək əlçatanlıq) necə təmin olunur?
@@ -3699,6 +4417,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 150. **Kafka**-da **Zookeeper ensemble** (Zookeeper ansamblı) necə konfiqurasiya olunur?
 
 ### Spring ilə İnteqrasiya
+
 151. **Spring Kafka** ilə Kafka inteqrasiyası necə həyata keçirilir?
 152. **Spring Boot** ilə Kafka necə konfiqurasiya olunur?
 153. **Spring Cloud Stream** ilə Kafka inteqrasiyası nədir?
@@ -3721,6 +4440,7 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 170. **Spring Kafka**-da **interactive queries** necə tətbiq olunur?
 
 ### Digər Mövzular
+
 171. **Kafka Connect** nədir və necə istifadə olunur?
 172. **Kafka Connect Source Connector** (Mənbə Konnektoru) nədir?
 173. **Kafka Connect Sink Connector** (Çıxış Konnektoru) nədir?
@@ -3856,9 +4576,11 @@ Bu sənəd Kafka/Kafka Streams ilə bağlı müsahibə suallarının başlıqlar
 
 # Liquibase Müsahibə Sualları
 
-Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və
+qabaqcıl aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -3868,16 +4590,17 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 - [RabbitMQ](#rabbitmq)
 - [Kafka və Kafka Streams](#kafka-və-kafka-streams)
 - [Liquibase](#liquibase)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Changelog və Changeset](#changelog-və-changeset)
-  - [Konfiqurasiya və İdarəetmə](#konfiqurasiya-və-idarəetmə)
-  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
-  - [Performans və Best Practices](#performans-və-best-practices)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Changelog və Changeset](#changelog-və-changeset)
+    - [Konfiqurasiya və İdarəetmə](#konfiqurasiya-və-idarəetmə)
+    - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+    - [Performans və Best Practices](#performans-və-best-practices)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## Liquibase
 
 ### Ümumi Suallar
+
 1. **Liquibase** nədir və nə üçün istifadə olunur?
 2. **Database Migration** (Verilənlər Bazası Miqrasiyası) nədir və Liquibase ilə necə həyata keçirilir?
 3. **Liquibase**-in digər migration alətləri ilə (məsələn, Flyway) fərqləri nələrdir?
@@ -3895,6 +4618,7 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 15. **Liquibase**-in **platform independence** (platformadan asılı olmama) xüsusiyyəti nədir?
 
 ### Changelog və Changeset
+
 16. **Changelog** (Dəyişiklik Jurnalı) nədir və Liquibase-da rolu nədir?
 17. **Changeset** (Dəyişiklik Dəsti) nədir və necə təyin olunur?
 18. **Changelog File** (Dəyişiklik Jurnalı Faylı) hansı formatlarda ola bilər (XML, YAML, JSON, SQL)?
@@ -3917,6 +4641,7 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 35. **Liquibase**-də **databaseChangeLogLock** cədvəli nə üçün istifadə olunur?
 
 ### Konfiqurasiya və İdarəetmə
+
 36. **Liquibase**-də **database connection** (verilənlər bazası əlaqəsi) necə konfiqurasiya olunur?
 37. **Liquibase**-də **properties file** (xassələr faylı) necə istifadə olunur?
 38. **Liquibase**-də **JDBC URL** necə təyin olunur?
@@ -3939,6 +4664,7 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 55. **Liquibase**-də **stored procedures** (saxlanılan prosedurlar) necə miqrasiya edilir?
 
 ### Spring ilə İnteqrasiya
+
 56. **Spring Boot** ilə Liquibase inteqrasiyası necə həyata keçirilir?
 57. **Spring Boot**-da **liquibase.enabled** xassəsi nədir?
 58. **Spring Boot**-da **liquibase.change-log** xassəsi necə təyin olunur?
@@ -3961,6 +4687,7 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 75. **Spring Boot**-da **Liquibase rollback** ilə **Spring transaction** arasındakı fərq nədir?
 
 ### Performans və Best Practices
+
 76. **Liquibase**-də **performance optimization** (performans optimallaşdırması) necə aparılır?
 77. **Liquibase**-də **large migrations** (böyük miqrasiyalar) necə idarə olunur?
 78. **Liquibase**-də **database locking** (verilənlər bazası kilidlənməsi) necə işləyir?
@@ -3983,6 +4710,7 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 95. **Liquibase**-də **incremental migrations** (addım-addım miqrasiyalar) necə həyata keçirilir?
 
 ### Digər Mövzular
+
 96. **Liquibase Maven Plugin** nədir və necə istifadə olunur?
 97. **Liquibase Gradle Plugin** nədir və necə konfiqurasiya olunur?
 98. **Liquibase**-də **SQL-based changesets** (SQL əsaslı dəyişiklik dəstləri) necə təyin olunur?
@@ -3997,7 +4725,8 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 107. **Liquibase**-də **foreign keys migration** (xarici açarlar miqrasiyası) necə idarə olunur?
 108. **Liquibase**-də **constraints migration** (məhdudiyyətlər miqrasiyası) necə tətbiq olunur?
 109. **Liquibase**-də **database functions migration** (verilənlər bazası funksiyaları miqrasiyası) necə aparılır?
-110. **Liquibase**-də **database schema synchronization** (verilənlər bazası sxemi sinxronizasiyası) necə həyata keçirilir?
+110. **Liquibase**-də **database schema synchronization** (verilənlər bazası sxemi sinxronizasiyası) necə həyata
+     keçirilir?
 111. **Liquibase**-də **database diff** ilə **database snapshot** arasındakı fərq nədir?
 112. **Liquibase**-də **changelog locking** (dəyişiklik jurnalı kilidlənməsi) necə işləyir?
 113. **Liquibase**-də **multi-tenant databases** (çoxkirayəçi verilənlər bazaları) necə idarə olunur?
@@ -4043,9 +4772,11 @@ Bu sənəd Java, Liquibase ilə bağlı müsahibə suallarının başlıqların�
 
 # GitHub Müsahibə Sualları
 
-Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl
+aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -4056,18 +4787,19 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 - [Kafka və Kafka Streams](#kafka-və-kafka-streams)
 - [Liquibase](#liquibase)
 - [GitHub](#github)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Repository İdarəetmə](#repository-idarəetmə)
-  - [Branching və Merging](#branching-və-merging)
-  - [Pull Requests və Code Review](#pull-requests-və-code-review)
-  - [GitHub Actions](#github-actions)
-  - [Təhlükəsizlik](#təhlükəsizlik)
-  - [İnteqrasiyalar və API](#inteqrasiyalar-və-api)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Repository İdarəetmə](#repository-idarəetmə)
+    - [Branching və Merging](#branching-və-merging)
+    - [Pull Requests və Code Review](#pull-requests-və-code-review)
+    - [GitHub Actions](#github-actions)
+    - [Təhlükəsizlik](#təhlükəsizlik)
+    - [İnteqrasiyalar və API](#inteqrasiyalar-və-api)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## GitHub
 
 ### Ümumi Suallar
+
 1. **GitHub** nədir və nə üçün istifadə olunur?
 2. **Git** ilə **GitHub** arasındakı fərq nədir?
 3. **GitHub**-un **version control** (versiya nəzarəti) üçün rolu nədir?
@@ -4085,6 +4817,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 15. **GitHub**-un **DevOps** təcrübələrində rolu nədir?
 
 ### Repository İdarəetmə
+
 16. **GitHub Repository** necə yaradılır?
 17. **Public Repository** (İctimai Anbar) ilə **Private Repository** (Şəxsi Anbar) arasındakı fərq nədir?
 18. **GitHub**-da **repository permissions** (anbar icazələri) necə idarə olunur?
@@ -4102,6 +4835,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 30. **GitHub**-da **repository watching** (anbar izləmə) nədir?
 
 ### Branching və Merging
+
 31. **Git Branch** (Git Şaxəsi) nədir və necə yaradılır?
 32. **GitHub**-da **branching strategy** (şaxələnmə strategiyası) hansılardır?
 33. **GitHub Flow** nədir?
@@ -4119,6 +4853,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 45. **GitHub**-da **branch naming conventions** (şaxə adlandırma qaydaları) nələrdir?
 
 ### Pull Requests və Code Review
+
 46. **Pull Request** (Çəkmə Sorğusu) nədir və necə yaradılır?
 47. **GitHub**-da **Pull Request** ilə **Merge Request** arasındakı fərq nədir?
 48. **GitHub**-da **code review** (kod baxışı) necə həyata keçirilir?
@@ -4136,6 +4871,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 60. **GitHub**-da **Pull Request status checks** (çəkmə sorğusu status yoxlamaları) nədir?
 
 ### GitHub Actions
+
 61. **GitHub Actions** nədir və nə üçün istifadə olunur?
 62. **GitHub Actions Workflow** (GitHub Actions İş Axını) nədir?
 63. **GitHub Actions**-da **workflow file** (iş axını faylı) necə təyin olunur?
@@ -4158,6 +4894,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 80. **GitHub Actions**-da **CI/CD** (Continuous Integration/Continuous Deployment) necə qurulur?
 
 ### Təhlükəsizlik
+
 81. **GitHub**-da **repository permissions** (anbar icazələri) necə təhlükəsiz idarə olunur?
 82. **GitHub**-da **two-factor authentication** (iki faktorlu autentifikasiya) necə aktivləşdirilir?
 83. **GitHub**-da **dependabot** nədir və necə işləyir?
@@ -4175,6 +4912,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 95. **GitHub**-da **dependabot security updates** (dependabot təhlükəsizlik yeniləmələri) nədir?
 
 ### İnteqrasiyalar və API
+
 96. **GitHub API** nədir və necə istifadə olunur?
 97. **GitHub REST API** ilə **GitHub GraphQL API** arasındakı fərq nədir?
 98. **GitHub**-da **webhooks** (veb çəngəlləri) nədir və necə konfiqurasiya olunur?
@@ -4192,6 +4930,7 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 110. **GitHub**-da **GitHub Marketplace** nədir?
 
 ### Digər Mövzular
+
 111. **GitHub Issues** nədir və necə istifadə olunur?
 112. **GitHub Projects** nədir və necə idarə olunur?
 113. **GitHub Wiki** nədir və nə üçün istifadə olunur?
@@ -4237,9 +4976,11 @@ Bu sənəd GitHub ilə bağlı müsahibə suallarının başlıqlarını əhatə
 
 # Docker Müsahibə Sualları
 
-Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl
+aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -4251,20 +4992,21 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 - [Liquibase](#liquibase)
 - [GitHub](#github)
 - [Docker](#docker)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Images və Containers](#images-və-containers)
-  - [Dockerfile](#dockerfile)
-  - [Networking](#networking)
-  - [Storage](#storage)
-  - [Docker Compose](#docker-compose)
-  - [Security](#security)
-  - [Orchestration](#orchestration)
-  - [CI/CD İnteqrasiyası](#ci-cd-inteqrasiyası)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Images və Containers](#images-və-containers)
+    - [Dockerfile](#dockerfile)
+    - [Networking](#networking)
+    - [Storage](#storage)
+    - [Docker Compose](#docker-compose)
+    - [Security](#security)
+    - [Orchestration](#orchestration)
+    - [CI/CD İnteqrasiyası](#ci-cd-inteqrasiyası)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## Docker
 
 ### Ümumi Suallar
+
 1. **Docker** nədir və nə üçün istifadə olunur?
 2. **Containerization** (Konteynerləşdirmə) nədir və virtual maşınlardan fərqi nədir?
 3. **Docker**-ın **Kubernetes** ilə fərqi nədir?
@@ -4282,6 +5024,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 15. **Docker**-ın **continuous deployment** (davamlı yerləşdirmə) ilə əlaqəsi nədir?
 
 ### Images və Containers
+
 16. **Docker Image** (Docker Şəkli) nədir və necə yaradılır?
 17. **Docker Container** (Docker Konteyneri) nədir və necə işləyir?
 18. **Docker Image** ilə **Docker Container** arasındakı fərq nədir?
@@ -4299,6 +5042,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 30. **Docker**-da **docker commit** ilə şəkil necə yaradılır?
 
 ### Dockerfile
+
 31. **Dockerfile** nədir və necə yazılır?
 32. **Dockerfile**-da **FROM** direktivi nə üçün istifadə olunur?
 33. **Dockerfile**-da **RUN** ilə **CMD** arasındakı fərq nədir?
@@ -4321,6 +5065,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 50. **Dockerfile**-da **ignore files** (.dockerignore) nə üçün istifadə olunur?
 
 ### Networking
+
 51. **Docker Networking** (Docker Şəbəkəsi) nədir?
 52. **Docker**-da **bridge network** (körpü şəbəkəsi) necə işləyir?
 53. **Docker**-da **host network** (ev sahibi şəbəkəsi) nədir?
@@ -4338,6 +5083,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 65. **Docker**-da **network isolation** (şəbəkə izolyasiyası) necə tətbiq olunur?
 
 ### Storage
+
 66. **Docker**-da **volume** (həcm) nədir və necə istifadə olunur?
 67. **Docker**-da **bind mount** (bağlama nöqtəsi) nədir?
 68. **Docker**-da **tmpfs mount** (müvəqqəti fayl sistemi bağlaması) nədir?
@@ -4355,6 +5101,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 80. **Docker**-da **volume lifecycle** (həcm həyat dövrü) necə idarə olunur?
 
 ### Docker Compose
+
 81. **Docker Compose** nədir və nə üçün istifadə olunur?
 82. **docker-compose.yml** faylı necə yazılır?
 83. **Docker Compose**-da **services** (xidmətlər) nədir?
@@ -4372,6 +5119,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 95. **Docker Compose**-da **extends** direktivi nədir?
 
 ### Security
+
 96. **Docker**-da **container security** (konteyner təhlükəsizliyi) necə təmin olunur?
 97. **Docker**-da **user namespaces** (istifadəçi ad məkanları) nədir?
 98. **Docker**-da **rootless containers** (kök olmayan konteynerlər) nədir?
@@ -4389,6 +5137,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 110. **Docker**-da **container isolation** (konteyner izolyasiyası) necə təmin olunur?
 
 ### Orchestration
+
 111. **Docker Swarm** nədir və necə işləyir?
 112. **Docker Swarm** ilə **Kubernetes** arasındakı fərq nədir?
 113. **Docker Swarm**-da **services** (xidmətlər) necə təyin olunur?
@@ -4406,6 +5155,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 125. **Docker Swarm**-da **stack deployment** (yığın yerləşdirmə) necə aparılır?
 
 ### CI/CD İnteqrasiyası
+
 126. **Docker**-da **CI/CD** (Continuous Integration/Continuous Deployment) necə qurulur?
 127. **Docker**-da **GitHub Actions** ilə inteqrasiya necə həyata keçirilir?
 128. **Docker**-da **Jenkins** ilə CI/CD necə qurulur?
@@ -4423,6 +5173,7 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 140. **Docker**-da **rolling deployment** (sürüşən yerləşdirmə) necə təmin olunur?
 
 ### Digər Mövzular
+
 141. **Docker CLI** (Docker Komanda Xətti İnterfeysi) nədir və necə istifadə olunur?
 142. **Docker**-da **docker ps** komandası nə edir?
 143. **Docker**-da **docker logs** komandası nə üçün istifadə olunur?
@@ -4468,7 +5219,8 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 183. **Docker**-da **image optimization** ilə **container optimization** arasındakı fərq nədir?
 184. **Docker**-da **Docker Hub** ilə **private container registry** arasındakı fərq nədir?
 185. **Docker**-da **Docker CLI** ilə **Docker API** arasındakı fərq nədir?
-186. **Docker**-da **container orchestration** ilə **container scheduling** (konteyner planlaşdırma) arasındakı fərq nədir?
+186. **Docker**-da **container orchestration** ilə **container scheduling** (konteyner planlaşdırma) arasındakı fərq
+     nədir?
 187. **Docker**-da **container logging** ilə **log aggregation** arasındakı fərq nədir?
 188. **Docker**-da **container monitoring** ilə **resource monitoring** arasındakı fərq nədir?
 189. **Docker**-da **container healthcheck** ilə **application healthcheck** arasındakı fərq nədir?
@@ -4488,9 +5240,12 @@ Bu sənəd Docker ilə bağlı müsahibə suallarının başlıqlarını əhatə
 
 # Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms, RabbitMQ, Kafka/Kafka Streams, Liquibase, GitHub, Docker və Redis Müsahibə Sualları
 
-Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms, RabbitMQ, Kafka/Kafka Streams, Liquibase, GitHub, Docker və Redis ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
+Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Patterns, Algorithms, RabbitMQ, Kafka/Kafka
+Streams, Liquibase, GitHub, Docker və Redis ilə bağlı müsahibə suallarının başlıqlarını əhatə edir. Suallar hər bir
+mövzunun əsas və qabaqcıl aspektlərini başdan sona əhatə edir.
 
 ## Mündəricat
+
 - [Core Java](#ümumi-suallar)
 - [Hibernate](#hibernate)
 - [Spring Boot](#spring-boot)
@@ -4503,19 +5258,20 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 - [GitHub](#github)
 - [Docker](#docker)
 - [Redis](#redis)
-  - [Ümumi Suallar](#ümumi-suallar)
-  - [Data Structures](#data-structures)
-  - [Persistence](#persistence)
-  - [Pub/Sub](#pub-sub)
-  - [Clustering](#clustering)
-  - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
-  - [Təhlükəsizlik](#təhlükəsizlik)
-  - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
-  - [Digər Mövzular](#digər-mövzular)
+    - [Ümumi Suallar](#ümumi-suallar)
+    - [Data Structures](#data-structures)
+    - [Persistence](#persistence)
+    - [Pub/Sub](#pub-sub)
+    - [Clustering](#clustering)
+    - [Performans və Optimallaşdırma](#performans-və-optimallaşdırma)
+    - [Təhlükəsizlik](#təhlükəsizlik)
+    - [Spring ilə İnteqrasiya](#spring-ilə-inteqrasiya)
+    - [Digər Mövzular](#digər-mövzular)
 
 ## Redis
 
 ### Ümumi Suallar
+
 1. **Redis** nədir və nə üçün istifadə olunur?
 2. **In-memory Database** (Yaddaşda Verilənlər Bazası) nədir və Redis-in rolu nədir?
 3. **Redis**-in digər verilənlər bazaları ilə (məsələn, Memcached) fərqləri nələrdir?
@@ -4533,6 +5289,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 15. **Redis**-in **scalability** (miqyaslılıq) imkanları nələrdir?
 
 ### Data Structures
+
 16. **Redis**-də **String** data strukturu nədir və necə istifadə olunur?
 17. **Redis**-də **List** data strukturu nədir?
 18. **Redis**-də **Set** data strukturu nədir və necə işləyir?
@@ -4550,6 +5307,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 30. **Redis**-də **Geo** data strukturu ilə geolokasiya əməliyyatları necə aparılır?
 
 ### Persistence
+
 31. **Redis Persistence** (Redis Davamlılığı) nədir?
 32. **Redis**-də **RDB** (Redis Database Backup) nədir və necə işləyir?
 33. **Redis**-də **AOF** (Append-Only File) nədir?
@@ -4567,6 +5325,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 45. **Redis**-də **AOF compaction** (AOF sıxışdırması) necə tətbiq olunur?
 
 ### Pub/Sub
+
 46. **Redis Pub/Sub** (Nəşr/Abunə) nədir və necə işləyir?
 47. **Redis**-də **publish** (nəşr) komandası nədir?
 48. **Redis**-də **subscribe** (abunə) komandası nədir?
@@ -4584,6 +5343,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 60. **Redis Pub/Sub**-də **message retry** (mesaj təkrar sınağı) necə idarə olunur?
 
 ### Clustering
+
 61. **Redis Cluster** (Redis Klasteri) nədir və necə konfiqurasiya olunur?
 62. **Redis**-də **sharding** (bölüşdürmə) necə işləyir?
 63. **Redis Cluster**-də **hash slots** (xəş yuvaları) nədir?
@@ -4601,6 +5361,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 75. **Redis Cluster**-də **network partitioning** (şəbəkə bölünməsi) necə idarə olunur?
 
 ### Performans və Optimallaşdırma
+
 76. **Redis**-də **performance tuning** (performans tənzimləmə) necə aparılır?
 77. **Redis**-də **latency** (gecikmə) necə azaldılır?
 78. **Redis**-də **throughput** (ötürmə qabiliyyəti) necə artır?
@@ -4618,6 +5379,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 90. **Redis**-də **command latency** (komanda gecikməsi) necə ölçülür?
 
 ### Təhlükəsizlik
+
 91. **Redis**-də **authentication** (autentifikasiya) necə konfiqurasiya olunur?
 92. **Redis**-də **password protection** (şifrə qoruması) necə təyin olunur?
 93. **Redis**-də **SSL/TLS** şifrələməsi necə aktivləşdirilir?
@@ -4635,6 +5397,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 105. **Redis**-də **vulnerability scanning** (zəiflik skan etmə) necə aparılır?
 
 ### Spring ilə İnteqrasiya
+
 106. **Spring Data Redis** nədir və necə istifadə olunur?
 107. **Spring Boot** ilə Redis inteqrasiyası necə həyata keçirilir?
 108. **Spring Data Redis**-də **RedisTemplate** sinfi nədir?
@@ -4652,6 +5415,7 @@ Bu sənəd Java, Hibernate, Spring Boot, Data Structures/Collections, Design Pat
 120. **Spring Boot**-da **Redis monitoring** (Redis monitorinqi) necə qurulur?
 
 ### Digər Mövzular
+
 121. **Redis CLI** (Redis Komanda Xətti İnterfeysi) nədir və necə istifadə olunur?
 122. **Redis**-də **SET** ilə **SETNX** komandaları arasındakı fərq nədir?
 123. **Redis**-də **EXPIRE** ilə **SETEX** komandaları arasındakı fərq nədir?
