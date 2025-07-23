@@ -2114,23 +2114,379 @@ Session session = sessionFactory.openSession();
 
 ### Mapping və Əlaqələr
 
-31. Hibernate-da **entity** (varlıq) nədir?
-32. **@Entity** annotasiyasının rolu nədir?
-33. **@Table** annotasiyası nə üçün istifadə olunur?
-34. **@Id** annotasiyası nədir və necə istifadə olunur?
-35. **@GeneratedValue** annotasiyası ilə hansı strategiyalar dəstəklənir?
-36. **@Column** annotasiyasının məqsədi nədir?
-37. Hibernate-da **one-to-one** (bir-bir) əlaqə necə xəritələşdirilir?
-38. Hibernate-da **one-to-many** (bir-çox) əlaqə necə təyin olunur?
-39. Hibernate-da **many-to-one** (çox-bir) əlaqə necə konfiqurasiya olunur?
-40. Hibernate-da **many-to-many** (çox-çox) əlaqə necə yaradılır?
-41. **@JoinColumn** annotasiyası nədir?
-42. **@JoinTable** annotasiyası nə üçün istifadə olunur?
-43. **Unidirectional** (biristiqamətli) və **bidirectional** (ikistiqamətli) əlaqələr arasındakı fərq nədir?
-44. Hibernate-da **inheritance mapping** (mirasalma xəritələşdirmə) strategiyaları hansılardır?
-45. **Single Table** (Tək Cədvəl) strategiyası nədir?
-46. **Table per Class** (Hər Sinif üçün Cədvəl) strategiyası nədir?
-47. **Joined** strategiyası nədir?
+#### **31. Hibernate-da **entity** (varlıq) nədir?**
+
+`Entity`, Hibernate üçün verilənlər bazasında bir cədvəli təmsil edən Java sinfidir. 
+Hər instansiyası (obyekti) cədvəldə bir sətrə qarşılıq gəlir.
+
+#### **32. **@Entity** annotasiyasının rolu nədir?**
+
+`@Entity`, Hibernate-ə bu sinfin bir varlıq olduğunu bildirir. Bu annotasiya ilə sinf Hibernate tərəfindən idarə olunacaq.
+
+```java
+@Entity
+public class User {
+    // fields...
+}
+```
+
+#### **33. **@Table** annotasiyası nə üçün istifadə olunur?**
+
+`@Table` annotasiyası ilə `@Entity` sinfinin hansı cədvələ map olunduğu göstərilir. Əgər yazılmasa, 
+sinf adı avtomatik cədvəl adı kimi istifadə olunur.
+
+```java
+@Entity
+@Table(name = "users")
+public class User {
+    // ...
+}
+```
+
+#### **34. **@Id** annotasiyası nədir və necə istifadə olunur?**
+
+`@Id` annotasiyası primary key sahəsini göstərmək üçün istifadə olunur. 
+Hibernate bu sahəni obyektləri identifikasiya etmək üçün istifadə edir.
+
+```java
+@Id
+private Long id;
+```
+
+#### **35. **@GeneratedValue** annotasiyası ilə hansı strategiyalar dəstəklənir?**
+
+**Bu annotasiya @Id sahəsinin avtomatik dəyər alması üçün istifadə olunur. Dəstəklənən strategiyalar:**
+
+- `GenerationType.AUTO` – Hibernate özü qərar verir.
+- `GenerationType.IDENTITY` – DB-nin identity sütunu (MySQL).
+- `GenerationType.SEQUENCE` – Sequence istifadə olunur (PostgreSQL, Oracle).
+- `GenerationType.TABLE` – ID-lər üçün ayrıca cədvəl istifadə olunur.
+
+```java
+@Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+private Long id;
+```
+
+#### **36. **@Column** annotasiyasının məqsədi nədir?**
+
+@Column, bir sahənin verilənlər bazasındakı sütunla necə map olunduğunu göstərmək üçün istifadə olunur. 
+Ad, unikal olub-olmaması, nullable və s. xüsusiyyətlər təyin edilə bilər.
+
+```java
+@Column(name = "email", nullable = false, unique = true)
+private String email;
+```
+
+#### **37. Hibernate-da **one-to-one** (bir-bir) əlaqə necə xəritələşdirilir?**
+
+Bir varlıq başqa bir varlıqla birə-bir əlaqədədirsə, `@OneToOne` annotasiyası ilə göstərilir.
+
+```java
+@OneToOne
+@JoinColumn(name = "profile_id")
+private Profile profile;
+```
+
+#### **38. Hibernate-da **one-to-many** (bir-çox) əlaqə necə təyin olunur?**
+
+Bir varlığın digər varlıqla birə-çox əlaqəsi varsa `@OneToMany` annotasiyası istifadə olunur. Əks tərəfdə isə `@ManyToOne` olur.
+
+```java
+@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+private List<Post> posts;
+```
+
+```java
+@ManyToOne
+@JoinColumn(name = "user_id")
+private User user;
+```
+
+#### **39. Hibernate-da **many-to-one** (çox-bir) əlaqə necə konfiqurasiya olunur?**
+
+Bir çox varlıq eyni bir varlığa aid olduqda `@ManyToOne` annotasiyası ilə göstərilir.
+
+```java
+@ManyToOne
+@JoinColumn(name = "department_id")
+private Department department;
+```
+
+#### **40. Hibernate-da **many-to-many** (çox-çox) əlaqə necə yaradılır?**
+
+İki varlığın bir-biriylə çox-çox əlaqəsi varsa, `@ManyToMany` annotasiyası və vasitəçi cədvəl (`join table`) istifadə olunur.
+
+```java
+@ManyToMany
+@JoinTable(
+  name = "student_course",
+  joinColumns = @JoinColumn(name = "student_id"),
+  inverseJoinColumns = @JoinColumn(name = "course_id")
+)
+private List<Course> courses;
+```
+
+#### **41. **@JoinColumn** annotasiyası nədir?**
+
+`@JoinColumn` iki cədvəl arasında xarici açar (foreign key) sütununu göstərmək üçün istifadə olunur.
+
+Nümunə:
+
+```java
+@OneToOne
+@JoinColumn(name = "address_id")
+private Address address;
+```
+
+- Burada `address_id` xarici açardır və `Address` cədvəlinə işarə edir.
+
+#### **42. **@JoinTable** annotasiyası nə üçün istifadə olunur?**
+
+Çox-çox (`Many-to-Many`) əlaqələrdə orta cədvəl (`join table`) təyin etmək üçün istifadə olunur.
+
+**Nümunə:**
+```java
+@ManyToMany
+@JoinTable(
+    name = "student_course",
+    joinColumns = @JoinColumn(name = "student_id"),
+    inverseJoinColumns = @JoinColumn(name = "course_id")
+)
+private Set<Course> courses;
+```
+
+#### **43. **Unidirectional** (biristiqamətli) və **bidirectional** (ikistiqamətli) əlaqələr arasındakı fərq nədir?**
+
+| Tip                | Açıqlama                                                                    |
+| ------------------ | --------------------------------------------------------------------------- |
+| **Unidirectional** | Əlaqə yalnız bir tərəfdən görünür. Yalnız bir obyekt digərinə istinad edir. |
+| **Bidirectional**  | Hər iki obyekt bir-birinə istinad edir. İki tərəf də əlaqəni bilir.         |
+
+**Unidirectional:**
+```java
+@OneToMany
+private List<Book> books;
+```
+
+**Bidirectional:**
+
+```java
+// Author.java
+@OneToMany(mappedBy = "author")
+private List<Book> books;
+
+// Book.java
+@ManyToOne
+@JoinColumn(name = "author_id")
+private Author author;
+```
+
+#### **44. Hibernate-da **inheritance mapping** (mirasalma xəritələşdirmə) strategiyaları hansılardır?**
+
+**Hibernate-da OOP miraslama strukturunu SQL-ə çevirmək üçün 3 strategiya var:**
+
+1. Single Table (Tək Cədvəl) \
+**Bütün alt siniflər bir cədvəldə saxlanılır. Ən sadə və performanslısıdır.**
+
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "vehicle_type")
+public class Vehicle {}
+
+@Entity
+@DiscriminatorValue("Car")
+public class Car extends Vehicle {}
+```
+
+2. Table per Class (Hər Sinif üçün Cədvəl) \
+   Hər alt sinif üçün ayrıca bir cədvəl yaradılır.
+
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public class Vehicle {}
+
+@Entity
+public class Bike extends Vehicle {}
+```
+
+3. Joined (Qoşulmuş Cədvəl) \
+   Super sinif və alt siniflər üçün ayrı-ayrı cədvəllər yaradılır və `JOIN` vasitəsilə birləşdirilir.
+
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Vehicle {}
+
+@Entity
+public class Truck extends Vehicle {}
+```
+
+| Strategiya      | Cədvəl Sayı  | JOIN Lazımdır? | Boş Xanalar   | Performans | Normalizasiya |
+| --------------- | ------------ | -------------- | ------------- | ---------- | ------------- |
+| Single Table    | 1            | Xeyr           | Çox ola bilər | Yüksək     | Aşağı         |
+| Table Per Class | Hər sinifə 1 | Xeyr           | Yox           | Orta       | Orta          |
+| Joined          | Hər sinifə 1 | Bəli           | Yox           | Aşağı      | Yüksək        |
+
+
+#### **45. **Single Table** (Tək Cədvəl) strategiyası nədir?**
+
+Hibernate-də mirasalma (inheritance) üçün istifadə olunan 3 əsas strategiyadan biridir. 
+Bu strategiyada bütün irs alınan siniflər (superclass və subclass-lar) üçün məlumatlar eyni cədvəldə saxlanılır.
+
+**Bu annotasiyalar `SINGLE_TABLE` strategiyasında istifadə olunur:**
+
+- `@DiscriminatorColumn`: Hər obyektin hansı sinifə aid olduğunu göstərmək üçün istifadə olunan sütunu təyin edir.
+- `@DiscriminatorValue`: Hər alt sinif üçün sütunda nə yazılacağını göstərir.
+
+**Nümunə:**
+
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "type")
+public class Payment {}
+
+@Entity
+@DiscriminatorValue("CREDIT")
+public class CreditCardPayment extends Payment {}
+```
+
+#### **46. **Table per Class** (Hər Sinif üçün Cədvəl) strategiyası nədir?**
+
+Hibernate-də Table per Class mirasalma strategiyasında, hər bir sinif üçün ayrı bir cədvəl yaradılır. 
+Bu, həm valideyn (superclass), həm də onun alt sinifləri (subclasses) üçün keçərlidir.
+
+**🔹 Necə işləyir?**
+- Valideyn sinifə @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS) annotasiyası əlavə olunur.
+- Hər bir alt sinifin öz fərdi cədvəli olur.
+- Valideyn sinifin sahələri də alt sinif cədvəlinə kopyalanır (sütunlar təkrarlanır).
+- JOIN əməliyyatı aparılmır — məlumat birbaşa alt sinifin cədvəlindən alınır.
+
+**✅ Üstünlükləri:**
+- Sadə `SELECT` sorğuları üçün daha sürətlidir (çünki JOIN yoxdur).
+- Hər bir cədvəl yalnız öz sinifinə aid məlumatları saxlayır.
+
+**❌ Çatışmazlıqları:**
+- Məlumat təkrarlanması baş verir (alt sinif cədvəllərində valideyn sahələri təkrarlanır).
+- `UNION` istifadə olunduğu üçün `findAll()` kimi sorğular performansa mənfi təsir edə bilər.
+- `ID` generation (id təyin etmə) çətin ola bilər — bütün cədvəllər üçün universal id lazımdır.
+
+**🧪 Misal:**
+
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+public abstract class Vehicle {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String manufacturer;
+}
+```
+
+```java
+@Entity
+public class Car extends Vehicle {
+    private int numberOfDoors;
+}
+```
+
+```java
+@Entity
+public class Bike extends Vehicle {
+    private boolean hasCarrier;
+}
+```
+
+**Bu nümunədə Vehicle, Car və Bike üçün ayrı-ayrı cədvəllər yaranacaq:**
+
+- vehicle
+- car (manufacturer + numberOfDoors)
+- bike (manufacturer + hasCarrier)
+
+#### **47. **Joined** strategiyası nədir?**
+
+Joined strategiyası, Hibernate-də miras (inheritance) strukturunu ən çox normalizasiya olunmuş (normalized) şəkildə 
+cədvəllərə ayırmaq üçün istifadə olunur.
+
+**Bu strategiyada:**
+
+- Valideyn (superclass) və bütün alt siniflər (subclass) üçün ayrı-ayrı cədvəllər yaradılır.
+- Valideynin sahələri yalnız valideyn cədvəlində saxlanılır.
+- Alt sinif cədvəli yalnız öz spesifik sahələrini saxlayır.
+- ORM bu cədvəlləri JOIN ilə birləşdirərək tam obyekt qurur.
+- 
+**🔹 Annotasiya:**
+
+```java
+@Inheritance(strategy = InheritanceType.JOINED)
+```
+
+**🧠 Necə işləyir?**
+- Valideyn sinifdə `@Inheritance(strategy = InheritanceType.JOINED)` yazılır.
+- Hibernate hər sinif üçün ayrıca cədvəl yaradır.
+- Alt sinif cədvəlləri, valideynin `id` sütununa foreign key ilə bağlanır.
+- Sorğular zamanı bu cədvəllər `JOIN` olunaraq məlumat əldə olunur.
+
+**✅ Üstünlükləri:**
+- Məlumat təkrarı yoxdur (valideyn sahələri bir dəfə saxlanılır).
+- Ən optimal verilənlər bazası dizaynıdır (3NF — üçüncü normal forma).
+
+**❌ Çatışmazlıqları:**
+- Sorğular zamanı JOIN əməliyyatı lazım olduğu üçün performans digər strategiyalara görə bir qədər aşağı ola bilər.
+- ORM üçün müəyyən qədər mürəkkəblik yarada bilər.
+**🧪 Misal:**
+```java
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Vehicle {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String manufacturer;
+}
+```
+
+```java
+@Entity
+public class Car extends Vehicle {
+    private int numberOfDoors;
+}
+```
+
+```java
+@Entity
+public class Bike extends Vehicle {
+    private boolean hasCarrier;
+}
+```
+
+**🔄 Yaradılacaq cədvəllər:**
+- `vehicle` → `id`, `manufacturer`
+- `car` → `id (FK to vehicle.id)`, `number_of_doors`
+- `bike` → `id (FK to vehicle.id)`, `has_carrier` 
+
+**ORM Car obyektini tapmaq istədikdə:**
+
+```sql
+SELECT * FROM vehicle v
+JOIN car c ON v.id = c.id
+```
+
+**📌 Qısa Müqayisə:**
+
+| Strategiya      | JOIN var? | Cədvəl sayı  | Təkrarlanma | Performans |
+| --------------- | --------- | ------------ | ----------- | ---------- |
+| Single Table    | Yox       | 1            | Çox         | Yüksək     |
+| Table per Class | Yox       | Hər sinifə 1 | Çox         | Orta       |
+| Joined          | ✔️        | Hər sinifə 1 | Yox         | Aşağı-Orta |
+
+
 48. **@DiscriminatorColumn** və **@DiscriminatorValue** annotasiyaları nə üçün istifadə olunur?
 49. Hibernate-da **composite key** (mürəkkəb açar) necə təyin olunur?
 50. **@Embedded** və **@Embeddable** annotasiyaları nədir?
